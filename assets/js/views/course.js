@@ -32,12 +32,22 @@ export default async function course({ params, query }) {
       <a class="btn primary" href="#/c/${esc(c.id)}/exam">🎯 Mock exam</a>`,
   });
 
-  if (!c.stats.theories && !c.stats.questions) {
-    return head + empty(
-      'This course has no content yet',
-      `Create <code>content/courses/${esc(c.id)}.json</code> — copy the template from <code>content/courses/_template.json</code>.`,
-      '<a class="btn primary" href="#/help" style="margin-top:14px">Authoring guide</a>');
+  // A course counts as empty only when it has no syllabus either — a chapter
+  // list or imported notes are already worth showing.
+  if (!c.chapters.length && !c.stats.theories && !c.stats.questions && !c.stats.notes) {
+    return head + (c.description
+      ? `<div class="card"><div class="prose" style="max-width:none">${md(c.description)}</div></div>`
+      : empty('This course has no content yet',
+          `Create <code>content/courses/${esc(c.id)}.json</code> — copy the template from <code>content/courses/_template.json</code>.`,
+          '<a class="btn primary" href="#/help" style="margin-top:14px">Authoring guide</a>'));
   }
+
+  const sampleWarning = c.sampleContent ? `<div class="card" style="border-color:var(--warn);background:var(--warn-soft);margin-bottom:18px">
+    <b>⚠ Contains seeded practice content, not real past papers.</b>
+    <p style="margin:6px 0 0;font-size:13.5px">The questions in this course were written to demonstrate the
+    format and to give you something to practise against — the years and batches on them are invented.
+    Replace them with your actual past papers, then delete <code>"sampleContent": true</code> from
+    <code>${esc(c.id)}.json</code> to remove this banner.</p></div>` : '';
 
   const overview = `<div class="grid g4" style="margin-bottom:20px">
     ${statCard(`${readN}/${c.stats.theories}`, 'theories read')}
@@ -64,6 +74,45 @@ export default async function course({ params, query }) {
         <td style="padding:6px">${esc(s.marks ?? '')}</td></tr>`).join('')}</tbody></table>` : ''}
   </div>` : '';
 
+  // Syllabus map — shown whenever chapters carry a reading reference,
+  // an instructor or a summary, which is what makes it worth a table.
+  const hasSyllabusDetail = c.chapters.some((ch) => ch.ref || ch.instructor || ch.summary);
+  const anyInstructor = c.chapters.some((ch) => ch.instructor);
+  const syllabus = hasSyllabusDetail ? `<section style="margin-bottom:22px">
+    <h2 style="margin-top:0">Syllabus map</h2>
+    <div class="card pad0" style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:13.5px">
+        <thead><tr>
+          <th style="text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);width:1%">#</th>
+          <th style="text-align:left;padding:9px 12px;border-bottom:1px solid var(--line)">Chapter / topic</th>
+          <th style="text-align:left;padding:9px 12px;border-bottom:1px solid var(--line)">Reading</th>
+          ${anyInstructor ? '<th style="text-align:left;padding:9px 12px;border-bottom:1px solid var(--line)">By</th>' : ''}
+          <th style="text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);width:1%">Content</th>
+        </tr></thead>
+        <tbody>${c.chapters.map((ch) => {
+          const nT = c.theories.filter((t) => t.chapterId === ch.id).length;
+          const nQ = c.questions.filter((q) => q.chapterId === ch.id).length;
+          const nN = c.notes.filter((n) => n.chapterId === ch.id).length;
+          return `<tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:9px 12px;color:var(--fg-3);font-family:var(--mono)">${esc(ch.no ?? '')}</td>
+            <td style="padding:9px 12px">
+              <a href="#/c/${esc(c.id)}?ch=${esc(ch.id)}"><b>${esc(ch.title)}</b></a>
+              ${ch.titleBn ? `<div style="font-family:var(--bangla);color:var(--fg-3);font-size:12.5px">${esc(ch.titleBn)}</div>` : ''}
+              ${ch.summary ? `<div class="muted" style="font-size:12.5px;margin-top:3px">${esc(ch.summary)}</div>` : ''}
+            </td>
+            <td style="padding:9px 12px;color:var(--fg-2);white-space:nowrap">${esc(ch.ref || '—')}</td>
+            ${anyInstructor ? `<td style="padding:9px 12px"><span class="tag">${esc(ch.instructor || '—')}</span></td>` : ''}
+            <td style="padding:9px 12px;white-space:nowrap">
+              ${nT ? `<span class="tag">${nT}&nbsp;th</span>` : ''}
+              ${nQ ? `<span class="tag">${nQ}&nbsp;Q</span>` : ''}
+              ${nN ? `<span class="tag">${nN}&nbsp;note</span>` : ''}
+              ${!nT && !nQ && !nN ? '<span class="muted" style="font-size:12px">empty</span>' : ''}
+            </td></tr>`;
+        }).join('')}</tbody>
+      </table>
+    </div>
+  </section>` : '';
+
   const chapterChips = `<div class="chipbar" style="margin-bottom:10px">
     <button class="chip${chapterFilter ? '' : ' on'}" data-ch="">All chapters</button>
     ${c.chapters.map((ch) => {
@@ -84,10 +133,18 @@ export default async function course({ params, query }) {
 
   const list = theories.length
     ? `<div class="grid g2">${theories.map((t) => theoryRow(t, c)).join('')}</div>`
-    : empty('No theories match these filters');
+    : c.theories.length
+      ? empty('No theories match these filters')
+      : empty('No theories written yet',
+          `The syllabus is mapped out above — add entries to the <code>theories</code> array of
+           <code>${esc(c.id)}.json</code> and they appear here, each one linked to its chapter.`,
+          '<a class="btn primary" href="#/help" style="margin-top:14px">Authoring guide</a>');
 
-  const html = head + overview + desc + pattern +
-    `<h2 style="margin-top:0">Theories</h2>` + search + chapterChips + diffChips + list;
+  const theorySection = c.theories.length
+    ? `<h2>Theories</h2>${search}${chapterChips}${diffChips}${list}`
+    : `<h2>Theories</h2>${list}`;
+
+  const html = head + sampleWarning + overview + desc + pattern + syllabus + theorySection;
 
   return {
     html,

@@ -8,7 +8,7 @@ content/
   index.json              the course registry + site title
   courses/
     _template.json        copy this to start a new course
-    course-1.json         one file per course; everything for that course
+    adv-micro.json        one file per course; everything for that course
   textbooks/              drop textbook PDFs here
   files/                  drop lecture slides / scanned papers here
 ```
@@ -37,7 +37,7 @@ six now and fill them in one at a time.
 
 ```json
 {
-  "id": "econ-401",
+  "id": "adv-micro",
   "code": "ECON 401",
   "short": "Advanced Micro",
   "title": "Advanced Microeconomics",
@@ -48,24 +48,53 @@ six now and fill them in one at a time.
 }
 ```
 
-`id` becomes the filename (`content/courses/econ-401.json`) and the URL
-(`#/c/econ-401`). Pick it once and don't change it.
+`id` becomes the filename (`content/courses/adv-micro.json`) and the URL
+(`#/c/adv-micro`). Pick it once and don't change it.
 
 Or let the helper do both steps:
 
 ```bash
-python tools/new_course.py econ-407 "ECON 407" "Development Economics"
+python tools/new_course.py env-econ "ECON 407" "Environmental Economics"
 ```
 
 ## Chapters
 
 ```json
-{ "id": "ch1", "no": 1, "title": "Consumer Theory", "titleBn": "ভোক্তা তত্ত্ব", "summary": "" }
+{
+  "id": "ch8", "no": 8,
+  "title": "Choice", "titleBn": "নির্বাচন",
+  "ref": "Varian Ch. 8 · 8.1–8.4, 8.6–8.11",
+  "instructor": "MM",
+  "summary": "Excluded: 8.5 The integrability problem. Assignment-1."
+}
 ```
 
 Chapters drive the chapter-wise filters everywhere — theory list, question
 bank, recall decks, mock exam scope. Every theory and question should carry a
 `chapterId`.
+
+`no` is the number in the **textbook**, not the teaching order — list the
+chapters in the order they are taught and the syllabus map keeps that order
+while still showing the real chapter number.
+
+`ref`, `instructor` and `summary` are all optional. If any chapter has one, the
+course page grows a **Syllabus map** table showing the reading for each chapter,
+who teaches it, and how much content you have written against it so far. That
+table is the fastest way to see where the gaps are.
+
+Put the syllabus's exclusions in `summary` — "Excluded: 8.5 The integrability
+problem" is worth more at 2 a.m. than any note you will write later.
+
+## Marking a course as seeded
+
+```json
+"sampleContent": true
+```
+
+Set this at the top level of a course file while it still contains example
+questions rather than real past papers. The app shows a warning banner on the
+course page so you never mistake invented years and batches for the real thing.
+Delete the flag once the questions are genuine.
 
 ## Theories
 
@@ -173,7 +202,7 @@ Point Claude at the question and the marking pattern. What works:
 > Return it as the JSON object for my question bank.
 
 Then paste the object into the `questions` array. The sample course
-(`content/courses/course-1.json`) shows the standard this is aiming at.
+(`content/courses/adv-micro.json`) shows the standard this is aiming at.
 
 ## Exercises
 

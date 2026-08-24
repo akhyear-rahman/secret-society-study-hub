@@ -1,64 +1,155 @@
 {
-  "id": "course-1",
+  "id": "adv-micro",
   "code": "ECON 401",
-  "title": "Advanced Microeconomics",
-  "titleBn": "উচ্চতর ব্যষ্টিক অর্থনীতি",
+  "title": "Advanced Microeconomics-I",
+  "titleBn": "উচ্চতর ব্যষ্টিক অর্থনীতি-১",
   "color": "#7c8cff",
   "credits": 4,
   "semester": 7,
-  "description": "**This is sample content.** It exists so you can see every feature of the app working before you write your own. Replace it course by course — the shape of this file is the whole contract.\n\nCovers consumer duality, the Slutsky decomposition, and non-cooperative game theory as they actually appear in past papers.",
-
+  "sampleContent": true,
+  "description": "Chapter structure taken from **7th Semester (FINAL SYLLABUS)** — Varian, *Microeconomic Analysis*, chapters 7, 8, 1, 2 and 4, taught in that order.\n\nChapters 7 and 8 carry **Assignment-1**; chapters 1, 2 and 4 carry **Assignment-2**.",
   "examPattern": {
     "durationMin": 180,
-    "notes": "Final examination carries **70 marks**; in-course carries 30. Section A is compulsory short-answer; from Section B any **four of six** long questions must be answered. Past papers repeat heavily — a question that appeared twice in the last eight years is close to a certainty.",
+    "notes": "**Placeholder — confirm against your department's paper before relying on it.** Set up as a 70-mark final: a compulsory short-answer section plus four of six long questions. Edit `examPattern` in this file once you have a real past paper.",
     "sections": [
-      { "name": "Section A — Short answer (compulsory)", "answer": 5, "outOf": 5, "marks": 4 },
-      { "name": "Section B — Long answer (any four)", "answer": 4, "outOf": 6, "marks": 12 }
+      {
+        "name": "Section A — Short answer (compulsory)",
+        "answer": 5,
+        "outOf": 5,
+        "marks": 4
+      },
+      {
+        "name": "Section B — Long answer (any four)",
+        "answer": 4,
+        "outOf": 6,
+        "marks": 12
+      }
     ]
   },
-
   "chapters": [
-    { "id": "ch1", "no": 1, "title": "Consumer Theory & Duality", "titleBn": "ভোক্তা তত্ত্ব ও দ্বৈততা",
-      "summary": "Utility maximisation, expenditure minimisation, and the identities that connect them." },
-    { "id": "ch2", "no": 2, "title": "Game Theory", "titleBn": "গেম তত্ত্ব",
-      "summary": "Normal-form games, Nash equilibrium, and equilibrium refinements." }
-  ],
-
-  "textbooks": [
     {
-      "id": "tb-varian", "title": "Microeconomic Analysis", "author": "Hal R. Varian",
-      "edition": "3rd", "year": 1992, "prescribed": true,
-      "chaptersCovered": "Ch. 7–10 (consumer), Ch. 15 (games)",
-      "notes": "The standard reference for duality. Chapter 7's derivation of the Slutsky equation is the one examiners expect.",
-      "file": "", "url": ""
+      "id": "ch7",
+      "no": 7,
+      "title": "Utility Maximization",
+      "titleBn": "উপযোগ সর্বাধিককরণ",
+      "ref": "Varian Ch. 7 · Appendices 7.1–7.5",
+      "summary": "Utility maximization implies expenditure minimization, and the converse. Excluded: EXAMPLE — The existence of a utility function. Assignment-1.",
+      "assignment": "Assignment-1"
     },
     {
-      "id": "tb-mwg", "title": "Microeconomic Theory", "author": "Mas-Colell, Whinston & Green",
-      "edition": "1st", "year": 1995, "prescribed": false,
-      "chaptersCovered": "Ch. 2–3, Ch. 8",
-      "notes": "Use for rigour when a question asks you to *prove* a property rather than state it.",
-      "file": "", "url": ""
+      "id": "ch8",
+      "no": 8,
+      "title": "Choice",
+      "titleBn": "নির্বাচন",
+      "ref": "Varian Ch. 8 · 8.1–8.4, 8.6–8.11",
+      "summary": "Excluded: 8.5 The integrability problem. Assignment-1.",
+      "assignment": "Assignment-1"
+    },
+    {
+      "id": "ch1",
+      "no": 1,
+      "title": "Technology",
+      "titleBn": "প্রযুক্তি",
+      "ref": "Varian Ch. 1 · 1.1–1.11",
+      "summary": "Assignment-2.",
+      "assignment": "Assignment-2"
+    },
+    {
+      "id": "ch2",
+      "no": 2,
+      "title": "Profit Maximization",
+      "titleBn": "মুনাফা সর্বাধিককরণ",
+      "ref": "Varian Ch. 2 · 2.1–2.6",
+      "summary": "2.3 is an optional reading. Assignment-2.",
+      "assignment": "Assignment-2"
+    },
+    {
+      "id": "ch4",
+      "no": 4,
+      "title": "Cost Minimization",
+      "titleBn": "ব্যয় ন্যূনতমকরণ",
+      "ref": "Varian Ch. 4 · 4.1",
+      "summary": "Included: EXAMPLE — Cost function for the Cobb-Douglas technology; EXAMPLE — The cost function for the Leontief technology. Assignment-2.",
+      "assignment": "Assignment-2"
     }
   ],
-
+  "textbooks": [
+    {
+      "id": "tb-varian",
+      "title": "Microeconomic Analysis",
+      "author": "Hal R. Varian",
+      "edition": "3rd",
+      "year": 1992,
+      "prescribed": true,
+      "chaptersCovered": "Ch. 7, 8, 1, 2, 4 (syllabus order)",
+      "notes": "The prescribed text for the whole course. Note the syllabus exclusions: the *existence of a utility function* example in Ch. 7, and **8.5 The integrability problem**.",
+      "file": "",
+      "url": ""
+    },
+    {
+      "id": "tb-mwg",
+      "title": "Microeconomic Theory",
+      "author": "Mas-Colell, Whinston & Green",
+      "edition": "1st",
+      "year": 1995,
+      "prescribed": false,
+      "chaptersCovered": "Ch. 2–3 (consumer), Ch. 5 (production)",
+      "notes": "Use for rigour when a question asks you to *prove* a property rather than state it.",
+      "file": "",
+      "url": ""
+    }
+  ],
   "theories": [
     {
       "id": "th-duality",
-      "chapterId": "ch1",
+      "chapterId": "ch7",
       "title": "Marshallian vs Hicksian Demand and the Duality Relations",
       "titleBn": "মার্শালীয় বনাম হিকসীয় চাহিদা এবং দ্বৈততা সম্পর্ক",
       "difficulty": "intermediate",
       "importance": 5,
-      "tags": ["duality", "demand", "consumer"],
-      "questionIds": ["q-2019-f-3a", "q-2016-f-2b"],
-      "exerciseIds": ["ex-varian-7-3"],
+      "tags": [
+        "duality",
+        "demand",
+        "consumer"
+      ],
+      "questionIds": [
+        "q-2019-f-3a",
+        "q-2016-f-2b"
+      ],
+      "exerciseIds": [
+        "ex-varian-7-3"
+      ],
       "keyTerms": [
-        { "en": "Marshallian (uncompensated) demand", "bn": "মার্শালীয় চাহিদা", "def": "Quantity demanded when the consumer maximises utility subject to a money-income budget constraint." },
-        { "en": "Hicksian (compensated) demand", "bn": "হিকসীয় চাহিদা", "def": "Quantity demanded when the consumer minimises expenditure subject to holding utility fixed." },
-        { "en": "Indirect utility function", "bn": "পরোক্ষ উপযোগ ফাংশন", "def": "v(p, m) — the maximum utility attainable at prices p and income m." },
-        { "en": "Expenditure function", "bn": "ব্যয় ফাংশন", "def": "e(p, u) — the minimum outlay needed to reach utility u at prices p." },
-        { "en": "Roy's identity", "bn": "রয়ের অভেদ", "def": "Recovers Marshallian demand from the indirect utility function." },
-        { "en": "Shephard's lemma", "bn": "শেফার্ডের উপপাদ্য", "def": "Recovers Hicksian demand as the price-derivative of the expenditure function." }
+        {
+          "en": "Marshallian (uncompensated) demand",
+          "bn": "মার্শালীয় চাহিদা",
+          "def": "Quantity demanded when the consumer maximises utility subject to a money-income budget constraint."
+        },
+        {
+          "en": "Hicksian (compensated) demand",
+          "bn": "হিকসীয় চাহিদা",
+          "def": "Quantity demanded when the consumer minimises expenditure subject to holding utility fixed."
+        },
+        {
+          "en": "Indirect utility function",
+          "bn": "পরোক্ষ উপযোগ ফাংশন",
+          "def": "v(p, m) — the maximum utility attainable at prices p and income m."
+        },
+        {
+          "en": "Expenditure function",
+          "bn": "ব্যয় ফাংশন",
+          "def": "e(p, u) — the minimum outlay needed to reach utility u at prices p."
+        },
+        {
+          "en": "Roy's identity",
+          "bn": "রয়ের অভেদ",
+          "def": "Recovers Marshallian demand from the indirect utility function."
+        },
+        {
+          "en": "Shephard's lemma",
+          "bn": "শেফার্ডের উপপাদ্য",
+          "def": "Recovers Hicksian demand as the price-derivative of the expenditure function."
+        }
       ],
       "formulas": [
         "x_i(p, m)        Marshallian demand      from  max u(x)  s.t.  p·x = m",
@@ -71,28 +162,69 @@
       "bn": "## মূল ধারণা\n\nভোক্তার সিদ্ধান্তকে দুইভাবে দেখা যায়, এবং দুটো দৃষ্টিভঙ্গি একই বাস্তবতার দুই পিঠ। এই দুই পিঠের সম্পর্ককেই বলা হয় {{Duality}}।\n\n**প্রথম দৃষ্টিভঙ্গি — {{Utility Maximisation Problem}} (UMP):** ভোক্তার হাতে নির্দিষ্ট আয় `m` আছে, বাজারে দাম `p` দেওয়া আছে। সে প্রশ্ন করে — *এই টাকায় সর্বোচ্চ কত সুখ পাওয়া সম্ভব?* এর সমাধান থেকে যে চাহিদা ফাংশন আসে সেটিই {{Marshallian Demand}}, লেখা হয় `x(p, m)`। আর যে সর্বোচ্চ উপযোগ পাওয়া যায় তার নাম {{Indirect Utility Function}}, `v(p, m)`।\n\n**দ্বিতীয় দৃষ্টিভঙ্গি — {{Expenditure Minimisation Problem}} (EMP):** ভোক্তা এবার উল্টো প্রশ্ন করে — *একটি নির্দিষ্ট সুখের স্তর `u` ছুঁতে হলে সবচেয়ে কম কত খরচ করতে হবে?* এর সমাধান হলো {{Hicksian Demand}} বা {{Compensated Demand}}, `h(p, u)`। আর ন্যূনতম খরচটির নাম {{Expenditure Function}}, `e(p, u)`।\n\n> মনে রাখার সহজ উপায় — Marshallian-এ **আয় ধরা থাকে, উপযোগ পরিবর্তনশীল**; Hicksian-এ **উপযোগ ধরা থাকে, আয় পরিবর্তনশীল**। পরীক্ষায় এই এক লাইনটিই প্রথমে লিখে ফেলুন।\n\n## কেন Hicksian চাহিদা বাস্তবে দেখা যায় না\n\nএটি পরীক্ষায় প্রায়ই জিজ্ঞেস করা হয়। কারণটি সরল — `h(p, u)`-এর ভেতরে `u` আছে, আর {{Utility}} সরাসরি পরিমাপযোগ্য নয়। বাজারে আমরা যা পর্যবেক্ষণ করি তা হলো দাম, আয় এবং কেনা পরিমাণ — অর্থাৎ Marshallian চাহিদা। Hicksian চাহিদা তাই একটি {{Theoretical Construct}}; এর মূল্য এখানে যে এটি {{Substitution Effect}}-কে বিশুদ্ধভাবে আলাদা করে দেখায়।\n\n## চারটি অভেদ (Four Identities)\n\nদ্বৈততার পুরো কাঠামো এই চারটি সম্পর্কের উপর দাঁড়িয়ে আছে। পরীক্ষায় ১২ নম্বরের প্রশ্নে চারটিই লিখতে হবে।\n\n| # | অভেদ | কী বলছে |\n|---|---|---|\n| ১ | `e(p, v(p,m)) = m` | যে উপযোগ আয় `m` দিয়ে অর্জিত, তা ছুঁতে খরচ ঠিক `m`-ই লাগে |\n| ২ | `v(p, e(p,u)) = u` | যে খরচে উপযোগ `u` অর্জিত, সেই আয়ে সর্বোচ্চ উপযোগ `u`-ই |\n| ৩ | `x_i(p, e(p,u)) = h_i(p,u)` | আয়কে ক্ষতিপূরণ দিলে Marshallian চাহিদা Hicksian-এ রূপ নেয় |\n| ৪ | `h_i(p, v(p,m)) = x_i(p,m)` | এর বিপরীত রূপান্তর |\n\n## দুটি হাতিয়ার — Roy ও Shephard\n\n{{Roy's Identity}} বলে, পরোক্ষ উপযোগ ফাংশন জানা থাকলে চাহিদা আলাদা করে বের করার দরকার নেই:\n\n```\nx_i(p, m) = − (∂v/∂p_i) ÷ (∂v/∂m)\n```\n\nঋণাত্মক চিহ্নটি স্বাভাবিক — দাম বাড়লে পরোক্ষ উপযোগ কমে, তাই লব ঋণাত্মক, এবং ভাগফল ধনাত্মক হয়ে চাহিদা দেয়।\n\n{{Shephard's Lemma}} আরও সরাসরি:\n\n```\nh_i(p, u) = ∂e(p, u) / ∂p_i\n```\n\nঅর্থাৎ ব্যয় ফাংশনকে কেবল `i`-তম দামের সাপেক্ষে অন্তরীকরণ করলেই Hicksian চাহিদা পাওয়া যায়। এর অন্তর্দৃষ্টি হলো {{Envelope Theorem}} — অনুকূল বিন্দুতে সামান্য দাম পরিবর্তনে ভোক্তার পুনর্বিন্যাসজনিত প্রভাব {{Second Order}} এবং তাই উপেক্ষণীয়।\n\n## ব্যয় ফাংশনের ধর্মাবলি\n\n1. দামে {{Homogeneous of Degree One}} — সব দাম দ্বিগুণ হলে খরচও দ্বিগুণ।\n2. দামে {{Increasing}} এবং উপযোগে কঠোরভাবে বর্ধমান।\n3. দামে {{Concave}} — এটিই সবচেয়ে গুরুত্বপূর্ণ, কারণ এখান থেকেই প্রমাণ হয় `∂h_i/∂p_i ≤ 0`।\n4. {{Continuous}} দামে।\n\n> **নম্বর পাওয়ার কৌশল:** ধর্ম শুধু তালিকা করলে অর্ধেক নম্বর। প্রতিটির পাশে এক লাইনে *কেন* লিখলে পুরো নম্বর ওঠে।",
       "en": "## The core idea\n\nA consumer's problem can be posed in two mirror-image ways, and the relationship between them is what we call **duality**.\n\n**The Utility Maximisation Problem (UMP).** Income `m` is fixed and prices `p` are given; the consumer asks *what is the most satisfaction I can buy?* Its solution is **Marshallian (uncompensated) demand** `x(p, m)`, and the maximised value is the **indirect utility function** `v(p, m)`.\n\n**The Expenditure Minimisation Problem (EMP).** Now utility `u` is fixed and the consumer asks *what is the cheapest way to reach it?* Its solution is **Hicksian (compensated) demand** `h(p, u)`, and the minimised value is the **expenditure function** `e(p, u)`.\n\n> One line worth memorising: Marshallian holds **income** constant and lets utility vary; Hicksian holds **utility** constant and lets income vary.\n\n## Why Hicksian demand is never observed\n\nBecause `h(p, u)` is indexed by utility, and utility is not measurable. What markets reveal is prices, incomes and quantities — that is Marshallian demand. Hicksian demand is a theoretical construct whose value is that it isolates the **substitution effect** cleanly.\n\n## The four identities\n\n| # | Identity | Reading |\n|---|---|---|\n| 1 | `e(p, v(p,m)) = m` | The cost of the utility that income `m` buys is exactly `m` |\n| 2 | `v(p, e(p,u)) = u` | The utility affordable at the minimum cost of `u` is `u` |\n| 3 | `x_i(p, e(p,u)) = h_i(p,u)` | Compensate income and Marshallian becomes Hicksian |\n| 4 | `h_i(p, v(p,m)) = x_i(p,m)` | The reverse substitution |\n\n## Two recovery tools\n\n**Roy's identity** recovers demand from indirect utility without re-solving the UMP:\n\n```\nx_i(p, m) = − (∂v/∂p_i) ÷ (∂v/∂m)\n```\n\nThe minus sign is natural: a higher price lowers `v`, so the numerator is negative and the ratio is positive.\n\n**Shephard's lemma** is more direct still:\n\n```\nh_i(p, u) = ∂e(p, u) / ∂p_i\n```\n\nThe intuition is the **envelope theorem** — at the optimum, the consumer's re-optimising response to a small price change is second-order and can be ignored.\n\n## Properties of the expenditure function\n\n1. Homogeneous of degree one in prices.\n2. Increasing in prices, strictly increasing in utility.\n3. **Concave in prices** — this is the one that delivers `∂h_i/∂p_i ≤ 0`.\n4. Continuous in prices.\n\n> **Mark-scoring note:** listing the properties earns half the marks. Adding one line of justification to each earns all of them.",
       "recall": [
-        { "q": "In one sentence, what is held constant in Marshallian demand and what is held constant in Hicksian demand?", "a": "Marshallian holds **money income** constant and lets utility adjust. Hicksian holds **utility** constant and lets income adjust (income is compensated).", "difficulty": "beginner" },
-        { "q": "State Roy's identity and explain the minus sign.", "a": "`x_i(p,m) = −(∂v/∂p_i)/(∂v/∂m)`. A price rise reduces attainable utility, so `∂v/∂p_i < 0`; the minus sign flips it so that demand comes out positive.", "difficulty": "intermediate" },
-        { "q": "Why is concavity of e(p,u) in prices the economically important property?", "a": "Concavity implies the own-price second derivative is non-positive, i.e. `∂h_i/∂p_i = ∂²e/∂p_i² ≤ 0` — the compensated demand curve cannot slope upward. This is the formal statement of the law of demand once the income effect is stripped out.", "difficulty": "advanced" },
-        { "q": "Why can Hicksian demand never be estimated directly from market data?", "a": "It is indexed by utility, which is unobservable and only ordinally meaningful. Market data reveal prices, incomes and quantities, which identify Marshallian demand; Hicksian demand must be recovered indirectly, e.g. through the Slutsky equation.", "difficulty": "intermediate" }
+        {
+          "q": "In one sentence, what is held constant in Marshallian demand and what is held constant in Hicksian demand?",
+          "a": "Marshallian holds **money income** constant and lets utility adjust. Hicksian holds **utility** constant and lets income adjust (income is compensated).",
+          "difficulty": "beginner"
+        },
+        {
+          "q": "State Roy's identity and explain the minus sign.",
+          "a": "`x_i(p,m) = −(∂v/∂p_i)/(∂v/∂m)`. A price rise reduces attainable utility, so `∂v/∂p_i < 0`; the minus sign flips it so that demand comes out positive.",
+          "difficulty": "intermediate"
+        },
+        {
+          "q": "Why is concavity of e(p,u) in prices the economically important property?",
+          "a": "Concavity implies the own-price second derivative is non-positive, i.e. `∂h_i/∂p_i = ∂²e/∂p_i² ≤ 0` — the compensated demand curve cannot slope upward. This is the formal statement of the law of demand once the income effect is stripped out.",
+          "difficulty": "advanced"
+        },
+        {
+          "q": "Why can Hicksian demand never be estimated directly from market data?",
+          "a": "It is indexed by utility, which is unobservable and only ordinally meaningful. Market data reveal prices, incomes and quantities, which identify Marshallian demand; Hicksian demand must be recovered indirectly, e.g. through the Slutsky equation.",
+          "difficulty": "intermediate"
+        }
       ]
     },
-
     {
       "id": "th-slutsky",
-      "chapterId": "ch1",
+      "chapterId": "ch8",
       "title": "The Slutsky Equation: Income and Substitution Effects",
       "titleBn": "স্লুটস্কি সমীকরণ: আয় ও প্রতিস্থাপন প্রভাব",
       "difficulty": "advanced",
       "importance": 5,
-      "tags": ["slutsky", "demand", "giffen"],
-      "questionIds": ["q-2019-f-3a", "q-2021-f-4a", "q-2014-i-1c"],
-      "exerciseIds": ["ex-varian-8-2"],
+      "tags": [
+        "slutsky",
+        "demand",
+        "giffen"
+      ],
+      "questionIds": [
+        "q-2019-f-3a",
+        "q-2021-f-4a",
+        "q-2014-i-1c"
+      ],
+      "exerciseIds": [
+        "ex-varian-8-2"
+      ],
       "keyTerms": [
-        { "en": "Substitution effect", "bn": "প্রতিস্থাপন প্রভাব", "def": "The change in quantity demanded from a relative price change, holding utility constant. Always weakly negative for an own-price rise." },
-        { "en": "Income effect", "bn": "আয় প্রভাব", "def": "The change in quantity demanded from the change in real purchasing power caused by the price change." },
-        { "en": "Giffen good", "bn": "গিফেন দ্রব্য", "def": "An inferior good whose income effect outweighs its substitution effect, producing an upward-sloping demand curve." },
-        { "en": "Slutsky matrix", "bn": "স্লুটস্কি ম্যাট্রিক্স", "def": "The matrix of compensated price derivatives; symmetric and negative semi-definite." }
+        {
+          "en": "Substitution effect",
+          "bn": "প্রতিস্থাপন প্রভাব",
+          "def": "The change in quantity demanded from a relative price change, holding utility constant. Always weakly negative for an own-price rise."
+        },
+        {
+          "en": "Income effect",
+          "bn": "আয় প্রভাব",
+          "def": "The change in quantity demanded from the change in real purchasing power caused by the price change."
+        },
+        {
+          "en": "Giffen good",
+          "bn": "গিফেন দ্রব্য",
+          "def": "An inferior good whose income effect outweighs its substitution effect, producing an upward-sloping demand curve."
+        },
+        {
+          "en": "Slutsky matrix",
+          "bn": "স্লুটস্কি ম্যাট্রিক্স",
+          "def": "The matrix of compensated price derivatives; symmetric and negative semi-definite."
+        }
       ],
       "formulas": [
         "∂x_i/∂p_j  =  ∂h_i/∂p_j  −  x_j · (∂x_i/∂m)",
@@ -103,48 +235,51 @@
       "bn": "## সমীকরণটি কী বলছে\n\nদাম বদলালে চাহিদা কেন বদলায়? স্লুটস্কি দেখালেন কারণটা আসলে **দুটি আলাদা কারণ একসাথে**, এবং সেগুলো গাণিতিকভাবে আলাদা করা যায়:\n\n```\n∂x_i/∂p_j  =  ∂h_i/∂p_j  −  x_j · (∂x_i/∂m)\n   মোট প্রভাব     প্রতিস্থাপন প্রভাব        আয় প্রভাব\n```\n\n**{{Substitution Effect}}:** দ্রব্যটি অন্যগুলোর তুলনায় দামি হয়ে গেল, তাই ভোক্তা তুলনামূলক সস্তার দিকে সরে যায়। এখানে {{Real Income}} কল্পনাগতভাবে ক্ষতিপূরণ দেওয়া হয়, অর্থাৎ ভোক্তাকে একই {{Indifference Curve}}-এ রাখা হয়। এই প্রভাব **সর্বদাই** নিজ-দামের বিপরীত দিকে যায় — এটি অনুমান নয়, `e(p,u)`-এর {{Concavity}} থেকে প্রমাণিত সিদ্ধান্ত।\n\n**{{Income Effect}}:** দাম বাড়ায় ভোক্তার প্রকৃত ক্রয়ক্ষমতা কমে গেল। এর দিক নির্ভর করে দ্রব্যটি {{Normal}} না {{Inferior}} তার উপর। `x_j` গুণকটি বলছে — যে দ্রব্যে বাজেটের বড় অংশ ব্যয় হয়, তার দাম বদলালে আয় প্রভাবও তত বড় হয়।\n\n## গিফেন দ্রব্য — কেন এত বিরল\n\nপরীক্ষায় প্রায় প্রতি বছর আসে। যুক্তির শৃঙ্খলটি এভাবে সাজান:\n\n1. প্রতিস্থাপন প্রভাব সর্বদা ঋণাত্মক (দাম ↑ → পরিমাণ ↓)।\n2. চাহিদা রেখা ঊর্ধ্বমুখী হতে হলে মোট প্রভাব ধনাত্মক হতে হবে।\n3. তাই আয় প্রভাবকে **ধনাত্মক** হতে হবে — অর্থাৎ দ্রব্যটি অবশ্যই {{Inferior Good}}।\n4. শুধু নিকৃষ্ট হলেই যথেষ্ট নয়; আয় প্রভাবকে প্রতিস্থাপন প্রভাবের চেয়ে **বড়** হতে হবে।\n5. আয় প্রভাবের আকার `x_j`, অর্থাৎ {{Budget Share}}-এর সমানুপাতিক। তাই গিফেন দ্রব্য হতে হলে দ্রব্যটিকে বাজেটের বিরাট অংশ দখল করতে হবে।\n\n> **উপসংহার যেটা নম্বর আনে:** প্রতিটি গিফেন দ্রব্য নিকৃষ্ট, কিন্তু প্রতিটি নিকৃষ্ট দ্রব্য গিফেন নয়। শর্তগুলোর সংযুক্তি — নিকৃষ্টতা *এবং* বিশাল বাজেট অংশ — বাস্তবে একসাথে খুব কম ঘটে।\n\n## স্লুটস্কি ম্যাট্রিক্সের দুই ধর্ম\n\n{{Symmetry}} — `∂h_i/∂p_j = ∂h_j/∂p_i`। কারণ দুটোই `e(p,u)`-এর দ্বিতীয় ক্রমের আংশিক অন্তরজ, আর {{Young's Theorem}} অনুযায়ী ক্রম বদলালে মান বদলায় না।\n\n{{Negative Semi-definiteness}} — `e(p,u)` অবতল হওয়ায় এর {{Hessian}} ঋণাত্মক অর্ধ-নির্দিষ্ট। এর কর্ণের উপাদানগুলো `∂h_i/∂p_i ≤ 0`, যা {{Law of Demand}}-এর ক্ষতিপূরিত সংস্করণ।\n\nএই দুই ধর্মই {{Integrability}}-র ভিত্তি: পর্যবেক্ষিত চাহিদা থেকে অন্তর্নিহিত {{Preference}} পুনরুদ্ধার করা যায় কি না, তার শর্ত।\n\n## স্লুটস্কি বনাম হিকস ক্ষতিপূরণ\n\nদুই ধরনের ক্ষতিপূরণ আছে এবং পরীক্ষায় পার্থক্যটা চাওয়া হয়:\n\n- **হিকসীয় ক্ষতিপূরণ:** আয় এমনভাবে সমন্বয় করা হয় যাতে ভোক্তা **আগের উপযোগ স্তরে** ফিরে যায়।\n- **স্লুটস্কি ক্ষতিপূরণ:** আয় এমনভাবে সমন্বয় করা হয় যাতে ভোক্তা **আগের বান্ডিলটি** ঠিক কিনতে পারে।\n\nস্লুটস্কি সংস্করণটি পর্যবেক্ষণযোগ্য উপাত্ত দিয়ে হিসাব করা যায়, তাই {{Empirical Work}}-এ এটিই ব্যবহৃত হয়। দাম পরিবর্তন ক্ষুদ্র হলে দুটি প্রায় অভিন্ন।",
       "en": "## What the equation says\n\nWhy does demand change when a price changes? Slutsky showed it is two distinct forces at once, and that they separate cleanly:\n\n```\n∂x_i/∂p_j  =  ∂h_i/∂p_j  −  x_j · (∂x_i/∂m)\n   total       substitution       income\n```\n\n**Substitution effect.** The good has become relatively dearer, so the consumer moves toward cheaper alternatives. Real income is notionally compensated, keeping the consumer on the same indifference curve. For an own-price change this term is *always* weakly negative — not an assumption, but a consequence of the concavity of `e(p,u)`.\n\n**Income effect.** The price rise has cut real purchasing power. Its sign depends on whether the good is normal or inferior. The multiplier `x_j` says the income effect is larger for goods that absorb a larger share of the budget.\n\n## Giffen goods — why they are so rare\n\nBuild the argument as a chain:\n\n1. The substitution effect is always negative.\n2. An upward-sloping demand curve requires the total effect to be positive.\n3. So the income effect must be **positive** — the good must be **inferior**.\n4. Inferiority alone is not enough: the income effect must **outweigh** the substitution effect.\n5. The size of the income effect scales with `x_j`, the budget share. So the good must also absorb a large part of the budget.\n\n> **The conclusion that earns the marks:** every Giffen good is inferior, but not every inferior good is Giffen. The conjunction of conditions — inferiority *and* a large budget share — rarely holds in practice.\n\n## Two properties of the Slutsky matrix\n\n**Symmetry:** `∂h_i/∂p_j = ∂h_j/∂p_i`, because both are second cross-partials of `e(p,u)` and Young's theorem makes the order irrelevant.\n\n**Negative semi-definiteness:** concavity of `e(p,u)` makes its Hessian negative semi-definite. The diagonal entries give `∂h_i/∂p_i ≤ 0`, the compensated law of demand.\n\nTogether these are the integrability conditions — the test of whether observed demand can have come from a well-behaved preference ordering.\n\n## Slutsky vs Hicks compensation\n\n- **Hicksian compensation** adjusts income so the consumer returns to the *original utility level*.\n- **Slutsky compensation** adjusts income so the consumer can just afford the *original bundle*.\n\nThe Slutsky version is computable from observable data, so empirical work uses it. For small price changes the two coincide.",
       "recall": [
-        { "q": "Write the Slutsky equation and name each term.", "a": "`∂x_i/∂p_j = ∂h_i/∂p_j − x_j(∂x_i/∂m)`. Left: total (Marshallian) price effect. First right term: substitution effect (compensated). Second: income effect, scaled by the quantity of good j already bought.", "difficulty": "beginner" },
-        { "q": "Give the full five-step argument for why Giffen goods are rare.", "a": "(1) The substitution effect is always negative. (2) Upward-sloping demand needs a positive total effect. (3) Hence the income effect must be positive, so the good is inferior. (4) It must also dominate the substitution effect in magnitude. (5) Its magnitude scales with the budget share, so the good must absorb a large share of spending. Inferiority *and* a large budget share rarely coincide.", "difficulty": "advanced" },
-        { "q": "Why is the Slutsky matrix symmetric?", "a": "Its entries are `∂h_i/∂p_j = ∂²e/∂p_j∂p_i`. By Young's theorem the order of cross-partial differentiation of the twice-differentiable expenditure function does not matter, so the matrix equals its transpose.", "difficulty": "intermediate" },
-        { "q": "What is the difference between Slutsky and Hicks compensation?", "a": "Hicks compensates income to restore the original *utility level*; Slutsky compensates to restore affordability of the original *bundle*. Slutsky compensation is observable from market data; the two converge as the price change becomes small.", "difficulty": "intermediate" }
-      ]
-    },
-
-    {
-      "id": "th-nash",
-      "chapterId": "ch2",
-      "title": "Nash Equilibrium in Normal-Form Games",
-      "titleBn": "সাধারণ রূপের গেমে ন্যাশ ভারসাম্য",
-      "difficulty": "intermediate",
-      "importance": 4,
-      "tags": ["game-theory", "nash", "equilibrium"],
-      "questionIds": ["q-2021-f-5a", "q-2018-i-2a"],
-      "exerciseIds": ["ex-varian-15-1"],
-      "keyTerms": [
-        { "en": "Normal form game", "bn": "সাধারণ রূপের গেম", "def": "A specification of players, the strategy set of each, and payoffs over strategy profiles." },
-        { "en": "Best response", "bn": "সর্বোত্তম প্রতিক্রিয়া", "def": "The strategy maximising a player's payoff given the strategies of the others." },
-        { "en": "Nash equilibrium", "bn": "ন্যাশ ভারসাম্য", "def": "A strategy profile in which every player's strategy is a best response to the others'." },
-        { "en": "Mixed strategy", "bn": "মিশ্র কৌশল", "def": "A probability distribution over a player's pure strategies." },
-        { "en": "Dominant strategy", "bn": "প্রাধান্যকারী কৌশল", "def": "A strategy that is a best response regardless of what the others do." }
-      ],
-      "bn": "## সংজ্ঞা\n\nএকটি {{Strategy Profile}} `(s₁*, s₂*, …, sₙ*)` হলো {{Nash Equilibrium}} যদি প্রত্যেক খেলোয়াড় `i`-এর জন্য —\n\n```\nu_i(s_i*, s_-i*) ≥ u_i(s_i, s_-i*)   সকল s_i ∈ S_i -এর জন্য\n```\n\nঅর্থাৎ, **অন্যরা যা করছে তা ধরে নিলে, কোনো একজন খেলোয়াড়ও একা কৌশল বদলে লাভবান হতে পারে না**। এটিই {{No Profitable Unilateral Deviation}} শর্ত — সংজ্ঞা লেখার সময় এই বাক্যটি অবশ্যই থাকবে।\n\n## যা ন্যাশ ভারসাম্য *নয়*\n\nপরীক্ষায় সবচেয়ে বেশি ভুল হয় এখানে। ন্যাশ ভারসাম্য মানে —\n\n- **সামষ্টিক সর্বোচ্চ কল্যাণ নয়।** {{Prisoner's Dilemma}}-তে একমাত্র ন্যাশ ভারসাম্য `(Confess, Confess)` হলেও উভয়ের জন্য `(Deny, Deny)` ভালো। ভারসাম্যটি {{Pareto Inefficient}}।\n- **সমঝোতা বা চুক্তি নয়।** এটি {{Non-cooperative}} ধারণা; কোনো বাধ্যতামূলক চুক্তি ধরে নেওয়া হয় না।\n- **অনন্য নয়।** {{Battle of the Sexes}}-এ দুটি বিশুদ্ধ কৌশলের ভারসাম্য এবং একটি মিশ্র কৌশলের ভারসাম্য আছে।\n\n## অস্তিত্ব — ন্যাশের উপপাদ্য\n\n> সসীম সংখ্যক খেলোয়াড় এবং প্রত্যেকের সসীম কৌশল-সেট বিশিষ্ট প্রতিটি গেমে অন্তত একটি ন্যাশ ভারসাম্য বিদ্যমান, যদি {{Mixed Strategy}} অনুমোদিত হয়।\n\nপ্রমাণের কাঠামো ({{Kakutani Fixed Point Theorem}}) এভাবে মনে রাখুন — মিশ্র কৌশলের সেটটি {{Compact}} ও {{Convex}}; {{Best Response Correspondence}} উপরি-অর্ধ-সন্তত এবং এর মান-সেট অশূন্য ও উত্তল; সুতরাং একটি {{Fixed Point}} আছে, আর সেই স্থির বিন্দুই ন্যাশ ভারসাম্য।\n\nবিশুদ্ধ কৌশলে ভারসাম্য না-ও থাকতে পারে — {{Matching Pennies}} এর ক্লাসিক উদাহরণ। সেখানে একমাত্র ভারসাম্য হলো উভয়ের `(½, ½)` মিশ্রণ।\n\n## মিশ্র কৌশল বের করার নিয়ম\n\nমূল অন্তর্দৃষ্টি — মিশ্রণে থাকা প্রতিটি বিশুদ্ধ কৌশল থেকে **সমান প্রত্যাশিত প্রতিদান** আসতে হবে, নইলে খেলোয়াড় ভালোটিতেই পুরো ওজন দিত। এই {{Indifference Condition}} থেকেই সমীকরণ তৈরি করে সমাধান করুন। লক্ষ করুন — খেলোয়াড় ১-এর মিশ্রণের সম্ভাবনা নির্ধারিত হয় **খেলোয়াড় ২-এর প্রতিদান** থেকে, উল্টোটা নয়। এই বিষয়টিতে পরীক্ষার্থীরা সবচেয়ে বেশি ভুল করে।",
-      "en": "## Definition\n\nA strategy profile `(s₁*, …, sₙ*)` is a **Nash equilibrium** if for every player `i`:\n\n```\nu_i(s_i*, s_-i*) ≥ u_i(s_i, s_-i*)   for all s_i ∈ S_i\n```\n\nIn words: **taking the others' strategies as given, no single player can gain by deviating alone**. That no-profitable-unilateral-deviation sentence should appear in every definition you write.\n\n## What Nash equilibrium is *not*\n\n- **Not a social optimum.** The unique equilibrium of the Prisoner's Dilemma is `(Confess, Confess)`, which is Pareto inefficient.\n- **Not an agreement.** It is a non-cooperative concept; no binding contracts are assumed.\n- **Not unique.** Battle of the Sexes has two pure-strategy equilibria plus a mixed one.\n\n## Existence — Nash's theorem\n\n> Every game with finitely many players and finite strategy sets has at least one Nash equilibrium, provided mixed strategies are allowed.\n\nRemember the proof skeleton (Kakutani's fixed point theorem): the mixed-strategy simplex is compact and convex; the best-response correspondence is upper hemi-continuous with non-empty convex values; therefore a fixed point exists, and a fixed point *is* an equilibrium.\n\nPure-strategy equilibria need not exist — Matching Pennies is the standard counter-example, where the only equilibrium is both players mixing `(½, ½)`.\n\n## Solving for mixed strategies\n\nThe key insight: every pure strategy played with positive probability must yield the **same expected payoff**, otherwise the player would shift all weight to the better one. Build your equations from that indifference condition. Note carefully that player 1's mixing probabilities are pinned down by **player 2's** payoffs, not their own — this is the most common exam mistake.",
-      "recall": [
-        { "q": "State the definition of Nash equilibrium precisely.", "a": "A profile `(s₁*,…,sₙ*)` such that for every player i and every alternative `s_i ∈ S_i`, `u_i(s_i*, s_-i*) ≥ u_i(s_i, s_-i*)` — no player can gain by a unilateral deviation.", "difficulty": "beginner" },
-        { "q": "Why does the Prisoner's Dilemma show that Nash equilibrium need not be efficient?", "a": "Its unique equilibrium `(Confess, Confess)` is Pareto-dominated by `(Deny, Deny)`. Each player's dominant strategy is to confess, so individually rational play produces a jointly worse outcome — the equilibrium concept says nothing about welfare.", "difficulty": "intermediate" },
-        { "q": "What guarantees existence of a Nash equilibrium, and what is the proof strategy?", "a": "Finite players with finite strategy sets, allowing mixed strategies (Nash 1950). Proof via Kakutani's fixed point theorem: the mixed strategy space is compact and convex, the best-response correspondence is upper hemi-continuous with non-empty convex values, so it has a fixed point — which is precisely an equilibrium.", "difficulty": "advanced" },
-        { "q": "When solving for a mixed-strategy equilibrium, whose payoffs determine player 1's probabilities?", "a": "Player 2's. Player 1 mixes in the proportions that make player 2 indifferent between their pure strategies, and vice versa. Reversing this is the classic exam error.", "difficulty": "intermediate" }
+        {
+          "q": "Write the Slutsky equation and name each term.",
+          "a": "`∂x_i/∂p_j = ∂h_i/∂p_j − x_j(∂x_i/∂m)`. Left: total (Marshallian) price effect. First right term: substitution effect (compensated). Second: income effect, scaled by the quantity of good j already bought.",
+          "difficulty": "beginner"
+        },
+        {
+          "q": "Give the full five-step argument for why Giffen goods are rare.",
+          "a": "(1) The substitution effect is always negative. (2) Upward-sloping demand needs a positive total effect. (3) Hence the income effect must be positive, so the good is inferior. (4) It must also dominate the substitution effect in magnitude. (5) Its magnitude scales with the budget share, so the good must absorb a large share of spending. Inferiority *and* a large budget share rarely coincide.",
+          "difficulty": "advanced"
+        },
+        {
+          "q": "Why is the Slutsky matrix symmetric?",
+          "a": "Its entries are `∂h_i/∂p_j = ∂²e/∂p_j∂p_i`. By Young's theorem the order of cross-partial differentiation of the twice-differentiable expenditure function does not matter, so the matrix equals its transpose.",
+          "difficulty": "intermediate"
+        },
+        {
+          "q": "What is the difference between Slutsky and Hicks compensation?",
+          "a": "Hicks compensates income to restore the original *utility level*; Slutsky compensates to restore affordability of the original *bundle*. Slutsky compensation is observable from market data; the two converge as the price change becomes small.",
+          "difficulty": "intermediate"
+        }
       ]
     }
   ],
-
   "questions": [
     {
-      "id": "q-2019-f-3a", "chapterId": "ch1", "examType": "final", "year": 2019,
-      "batch": "2015-16", "qNo": "3(a)", "marks": 12, "difficulty": "advanced",
-      "topics": ["Duality", "Slutsky equation"],
-      "repeats": [2014, 2011],
-      "theoryIds": ["th-duality", "th-slutsky"],
+      "id": "q-2019-f-3a",
+      "chapterId": "ch8",
+      "examType": "final",
+      "year": 2019,
+      "batch": "2015-16",
+      "qNo": "3(a)",
+      "marks": 12,
+      "difficulty": "advanced",
+      "topics": [
+        "Duality",
+        "Slutsky equation"
+      ],
+      "repeats": [
+        2014,
+        2011
+      ],
+      "theoryIds": [
+        "th-duality",
+        "th-slutsky"
+      ],
       "text": "Derive the Slutsky equation and use it to explain why a Giffen good must be inferior but an inferior good need not be Giffen.",
       "answerPoints": [
         "Set up the identity `x_i(p, e(p,u)) = h_i(p,u)` and state why it holds — 2 marks",
@@ -157,11 +292,23 @@
       "answerBn": "**ধাপ ১ — দ্বৈততার অভেদ থেকে শুরু।**\n\nআয়কে `m = e(p,u)` ধরে ক্ষতিপূরণ দিলে মার্শালীয় ও হিকসীয় চাহিদা মিলে যায়:\n\n```\nx_i(p, e(p, u)) = h_i(p, u)\n```\n\nএটি `p`-এর সাপেক্ষে একটি অভেদ, তাই উভয় পক্ষ অন্তরীকরণ করা যায়।\n\n**ধাপ ২ — `p_j`-এর সাপেক্ষে অন্তরীকরণ।**\n\nবাম পক্ষ `p_j`-এর উপর সরাসরি এবং `e(p,u)`-এর মাধ্যমে — উভয়ভাবে নির্ভরশীল। {{Chain Rule}} প্রয়োগে:\n\n```\n∂x_i/∂p_j + (∂x_i/∂m)(∂e/∂p_j) = ∂h_i/∂p_j\n```\n\n**ধাপ ৩ — শেফার্ডের উপপাদ্য প্রয়োগ।**\n\n`∂e/∂p_j = h_j = x_j` বসিয়ে সাজালে:\n\n```\n∂x_i/∂p_j = ∂h_i/∂p_j − x_j(∂x_i/∂m)\n```\n\nডান পাশের প্রথম পদ {{Substitution Effect}}, দ্বিতীয়টি {{Income Effect}}। ∎\n\n**ধাপ ৪ — প্রতিস্থাপন প্রভাবের চিহ্ন।**\n\nনিজ-দামের ক্ষেত্রে `∂h_i/∂p_i = ∂²e/∂p_i²`। `e(p,u)` দামে {{Concave}} হওয়ায় এর {{Hessian}} ঋণাত্মক অর্ধ-নির্দিষ্ট, তাই `∂h_i/∂p_i ≤ 0`। ক্ষতিপূরিত চাহিদা রেখা কখনোই ঊর্ধ্বমুখী হতে পারে না — এটি অনুমান নয়, উপপাদ্য।\n\n**ধাপ ৫ — গিফেন যুক্তি।**\n\nগিফেন হতে হলে `∂x_i/∂p_i > 0` লাগবে। প্রথম পদ অ-ধনাত্মক, তাই `∂x_i/∂m < 0` হতেই হবে — অর্থাৎ দ্রব্যটি **নিকৃষ্ট**। এটি আবশ্যিক শর্ত।\n\nকিন্তু যথেষ্ট নয়, দুই কারণে — (১) আয় প্রভাবকে `|∂h_i/∂p_i|`-এর চেয়ে **বড়** হতে হবে; (২) আয় পদটি `x_i` দ্বারা গুণিত, অর্থাৎ {{Budget Share}} বড় হতে হবে। স্থিতিস্থাপকতার রূপে: `ε_ii = ε^h_ii − s_i·η_i`।\n\n**উপসংহার:** নিকৃষ্টতা আবশ্যিক কিন্তু যথেষ্ট নয়। প্রবল নিকৃষ্টতা **এবং** বিশাল বাজেট অংশ — এই দুইয়ের একসাথে ঘটা বাস্তবে বিরল, তাই গিফেন দ্রব্যও বিরল।"
     },
     {
-      "id": "q-2016-f-2b", "chapterId": "ch1", "examType": "final", "year": 2016,
-      "batch": "2012-13", "qNo": "2(b)", "marks": 12, "difficulty": "intermediate",
-      "topics": ["Duality"],
-      "repeats": [2013],
-      "theoryIds": ["th-duality"],
+      "id": "q-2016-f-2b",
+      "chapterId": "ch7",
+      "examType": "final",
+      "year": 2016,
+      "batch": "2012-13",
+      "qNo": "2(b)",
+      "marks": 12,
+      "difficulty": "intermediate",
+      "topics": [
+        "Duality"
+      ],
+      "repeats": [
+        2013
+      ],
+      "theoryIds": [
+        "th-duality"
+      ],
       "text": "State and prove Roy's identity. Why is it useful in applied demand analysis?",
       "answerPoints": [
         "Correct statement of the identity — 2 marks",
@@ -173,11 +320,22 @@
       "answerBn": ""
     },
     {
-      "id": "q-2021-f-4a", "chapterId": "ch1", "examType": "final", "year": 2021,
-      "batch": "2017-18", "qNo": "4(a)", "marks": 12, "difficulty": "advanced",
-      "topics": ["Slutsky equation", "Integrability"],
+      "id": "q-2021-f-4a",
+      "chapterId": "ch8",
+      "examType": "final",
+      "year": 2021,
+      "batch": "2017-18",
+      "qNo": "4(a)",
+      "marks": 12,
+      "difficulty": "advanced",
+      "topics": [
+        "Slutsky equation",
+        "Integrability"
+      ],
       "repeats": [],
-      "theoryIds": ["th-slutsky"],
+      "theoryIds": [
+        "th-slutsky"
+      ],
       "text": "Show that the Slutsky matrix is symmetric and negative semi-definite. What is the economic content of each property?",
       "answerPoints": [
         "Define the Slutsky matrix in terms of compensated derivatives — 2 marks",
@@ -189,11 +347,23 @@
       "answerBn": ""
     },
     {
-      "id": "q-2014-i-1c", "chapterId": "ch1", "examType": "incourse", "year": 2014,
-      "batch": "2010-11", "qNo": "1(c)", "marks": 4, "difficulty": "beginner",
-      "topics": ["Slutsky equation"],
-      "repeats": [2017],
-      "theoryIds": ["th-slutsky"],
+      "id": "q-2014-i-1c",
+      "chapterId": "ch8",
+      "examType": "incourse",
+      "year": 2014,
+      "batch": "2010-11",
+      "qNo": "1(c)",
+      "marks": 4,
+      "difficulty": "beginner",
+      "topics": [
+        "Slutsky equation"
+      ],
+      "repeats": [
+        2017
+      ],
+      "theoryIds": [
+        "th-slutsky"
+      ],
       "text": "Distinguish between Hicksian and Slutsky compensation.",
       "answerPoints": [
         "Define Hicksian compensation — 1.5 marks",
@@ -202,72 +372,44 @@
       ],
       "answer": "Both adjust income after a price change so that the substitution effect can be isolated, but they target different things.\n\n**Hicksian compensation** adjusts income by just enough to return the consumer to the **original utility level** — back to the original indifference curve. The resulting demand change is the pure substitution effect of theory.\n\n**Slutsky compensation** adjusts income by just enough that the consumer can still afford the **original bundle**. The consumer is generally left slightly better off than before, because the original bundle is no longer optimal at the new prices and re-optimising raises utility.\n\n**Which is used, and when.** Slutsky compensation is computable from observable data — one only needs the old bundle and the new prices, never the utility function. Hicksian compensation requires knowing the indifference map. Empirical work therefore uses the Slutsky version. For infinitesimal price changes the two coincide exactly, which is why the theoretical Slutsky equation is stated in Hicksian terms with no loss.",
       "answerBn": "দুটোই দাম পরিবর্তনের পর আয় সমন্বয় করে প্রতিস্থাপন প্রভাব আলাদা করার কৌশল, কিন্তু লক্ষ্য ভিন্ন।\n\n**হিকসীয় ক্ষতিপূরণ:** আয় এমনভাবে সমন্বয় করা হয় যাতে ভোক্তা **আগের উপযোগ স্তরে** ফিরে যায়, অর্থাৎ আগের {{Indifference Curve}}-এ। এতে যে চাহিদা পরিবর্তন হয় সেটিই তাত্ত্বিক বিশুদ্ধ {{Substitution Effect}}।\n\n**স্লুটস্কি ক্ষতিপূরণ:** আয় এমনভাবে সমন্বয় করা হয় যাতে ভোক্তা **আগের বান্ডিলটি** ঠিক কিনতে পারে। এতে ভোক্তা সাধারণত সামান্য ভালো অবস্থায় থাকে, কারণ নতুন দামে পুরোনো বান্ডিল আর অনুকূল নয় — পুনর্বিন্যাস করলে উপযোগ বাড়ে।\n\n**কোনটি কখন:** স্লুটস্কি সংস্করণ পর্যবেক্ষণযোগ্য উপাত্ত দিয়েই হিসাব করা যায় — শুধু পুরোনো বান্ডিল ও নতুন দাম জানলেই চলে, {{Utility Function}} লাগে না। তাই {{Empirical Work}}-এ এটিই ব্যবহৃত হয়। অতি ক্ষুদ্র দাম পরিবর্তনে দুটি হুবহু মিলে যায়।"
-    },
-    {
-      "id": "q-2021-f-5a", "chapterId": "ch2", "examType": "final", "year": 2021,
-      "batch": "2017-18", "qNo": "5(a)", "marks": 12, "difficulty": "intermediate",
-      "topics": ["Nash equilibrium", "Existence"],
-      "repeats": [2018, 2015],
-      "theoryIds": ["th-nash"],
-      "text": "Define Nash equilibrium. Prove that every finite game has at least one Nash equilibrium in mixed strategies, and explain why the Prisoner's Dilemma shows equilibrium need not be efficient.",
-      "answerPoints": [
-        "Formal definition with the unilateral-deviation condition — 3 marks",
-        "Statement of Nash's existence theorem with its hypotheses — 2 marks",
-        "Fixed-point proof sketch: compactness, convexity, upper hemi-continuity — 4 marks",
-        "Prisoner's Dilemma payoff matrix and the Pareto-dominance point — 3 marks"
-      ],
-      "answer": "**Definition.** In a normal-form game `G = ⟨N, (S_i), (u_i)⟩`, a profile `s* = (s₁*, …, sₙ*)` is a **Nash equilibrium** if for every player `i ∈ N`,\n\n```\nu_i(s_i*, s*_-i) ≥ u_i(s_i, s*_-i)   for all s_i ∈ S_i\n```\n\nEquivalently, each `s_i*` is a best response to `s*_-i`: no player can raise their payoff by deviating **unilaterally**, taking the others' play as fixed.\n\n**Nash's theorem (1950).** Every game with a finite set of players, each having a finite set of pure strategies, possesses at least one Nash equilibrium in mixed strategies.\n\n**Proof sketch.** Let `Σ_i` be the simplex of probability distributions over `S_i`, and `Σ = Σ₁ × … × Σₙ`.\n\n1. Each `Σ_i` is a simplex in `ℝ^{|S_i|}` — non-empty, **compact** and **convex**. Hence so is the product `Σ`.\n2. Define the best-response correspondence `B : Σ ⇉ Σ` by `B(σ) = ×_i B_i(σ_-i)` where `B_i(σ_-i) = argmax_{σ_i ∈ Σ_i} u_i(σ_i, σ_-i)`.\n3. `u_i` is linear — hence continuous — in `σ_i`. A continuous function on a compact set attains its maximum, so each `B_i(σ_-i)` is **non-empty**. Because `u_i` is linear in `σ_i`, the set of maximisers is a face of the simplex and therefore **convex**.\n4. By the maximum theorem, `B` is **upper hemi-continuous** with closed graph.\n5. Kakutani's fixed point theorem applies: a upper hemi-continuous correspondence from a non-empty compact convex set into itself, with non-empty convex values, has a fixed point `σ*` with `σ* ∈ B(σ*)`.\n6. `σ* ∈ B(σ*)` says precisely that each player's mixed strategy is a best response to the others'. That is a Nash equilibrium. ∎\n\n**Efficiency — the Prisoner's Dilemma.**\n\n| P1 \\ P2 | Deny | Confess |\n|---|---|---|\n| **Deny** | −1, −1 | −10, 0 |\n| **Confess** | 0, −10 | −5, −5 |\n\nFor each player, *Confess* yields a strictly higher payoff whatever the opponent does (0 > −1 and −5 > −10), so *Confess* is a **strictly dominant strategy**. The unique Nash equilibrium is therefore `(Confess, Confess)` with payoffs `(−5, −5)`.\n\nBut `(Deny, Deny)` gives `(−1, −1)`, which both players strictly prefer. The equilibrium is **Pareto dominated**.\n\n**The lesson.** Nash equilibrium is a positive concept describing individually rational, self-enforcing behaviour; it carries no normative claim. Efficiency would require a binding agreement, which the non-cooperative framework rules out by construction. This gap between individual rationality and collective welfare is the analytical basis for studying repeated games, contracts, and regulation.",
-      "answerBn": ""
-    },
-    {
-      "id": "q-2018-i-2a", "chapterId": "ch2", "examType": "incourse", "year": 2018,
-      "batch": "2014-15", "qNo": "2(a)", "marks": 4, "difficulty": "beginner",
-      "topics": ["Nash equilibrium", "Mixed strategies"],
-      "repeats": [],
-      "theoryIds": ["th-nash"],
-      "text": "Find all Nash equilibria of Matching Pennies and explain why no pure-strategy equilibrium exists.",
-      "answerPoints": [
-        "Payoff matrix stated — 1 mark",
-        "Cycle argument ruling out each pure profile — 1.5 marks",
-        "Mixed equilibrium (½, ½) derived from the indifference condition — 1.5 marks"
-      ],
-      "answer": "**The game.** Player 1 wins if the coins match; player 2 wins if they differ.\n\n| P1 \\ P2 | Heads | Tails |\n|---|---|---|\n| **Heads** | 1, −1 | −1, 1 |\n| **Tails** | −1, 1 | 1, −1 |\n\n**No pure equilibrium.** Check each of the four profiles: at `(H, H)` player 2 gains by switching to T; at `(H, T)` player 1 gains by switching to T; at `(T, T)` player 2 gains by switching to H; at `(T, H)` player 1 gains by switching to H. Every profile has a profitable unilateral deviation, so none is an equilibrium. The deviations form a cycle — the hallmark of a strictly competitive game with no pure equilibrium.\n\n**Mixed equilibrium.** Let player 1 play H with probability `p` and player 2 play H with probability `q`.\n\nPlayer 1 is indifferent when the expected payoff to H equals that to T:\n\n```\nq(1) + (1−q)(−1) = q(−1) + (1−q)(1)\n2q − 1 = 1 − 2q   ⟹   q = ½\n```\n\nSymmetrically, player 2's indifference requires `p = ½`.\n\n**The unique Nash equilibrium is `((½, ½), (½, ½))`**, with expected payoff 0 to each. Note that player 1's probability `p` is fixed by *player 2's* indifference condition, not their own — this is the point most often reversed in exam scripts."
     }
   ],
-
   "exercises": [
     {
-      "id": "ex-varian-7-3", "textbookId": "tb-varian", "chapterId": "ch1",
-      "ref": "Varian, Ch. 7, Q3", "difficulty": "intermediate",
+      "id": "ex-varian-7-3",
+      "textbookId": "tb-varian",
+      "chapterId": "ch7",
+      "ref": "Varian, Ch. 7, Q3",
+      "difficulty": "intermediate",
       "text": "Given the indirect utility function v(p₁, p₂, m) = m / (p₁ + p₂), find the Marshallian demands and the expenditure function.",
       "solution": "**Marshallian demand — apply Roy's identity.**\n\n```\n∂v/∂p₁ = − m / (p₁ + p₂)²\n∂v/∂m  =   1 / (p₁ + p₂)\n\nx₁ = − (∂v/∂p₁)/(∂v/∂m) = m / (p₁ + p₂)\n```\n\nBy symmetry `x₂ = m / (p₁ + p₂)`. The two goods are perfect complements consumed in a 1 : 1 ratio.\n\n**Expenditure function — invert the indirect utility function.**\n\nSet `v(p, m) = u` and solve for `m`:\n\n```\nm / (p₁ + p₂) = u   ⟹   e(p, u) = u(p₁ + p₂)\n```\n\n**Check with Shephard's lemma:** `h₁ = ∂e/∂p₁ = u`, and substituting `u = m/(p₁+p₂)` recovers `x₁` exactly as required by the duality identity."
     },
     {
-      "id": "ex-varian-8-2", "textbookId": "tb-varian", "chapterId": "ch1",
-      "ref": "Varian, Ch. 8, Q2", "difficulty": "advanced",
+      "id": "ex-varian-8-2",
+      "textbookId": "tb-varian",
+      "chapterId": "ch8",
+      "ref": "Varian, Ch. 8, Q2",
+      "difficulty": "advanced",
       "text": "Show that if a consumer spends their entire budget on a single good, that good cannot be Giffen.",
       "solution": "If all income goes to good 1, then `p₁x₁ = m`, so `x₁ = m/p₁`.\n\nDifferentiating directly:\n\n```\n∂x₁/∂p₁ = − m / p₁² < 0\n```\n\nThe demand curve is strictly downward sloping, so the good is not Giffen.\n\n**Reading it through Slutsky.** With one good there is nothing to substitute toward, so `∂h₁/∂p₁ = 0`. The Slutsky equation reduces to the income effect alone:\n\n```\n∂x₁/∂p₁ = − x₁(∂x₁/∂m) = − (m/p₁)(1/p₁) = − m/p₁²\n```\n\nSince `∂x₁/∂m = 1/p₁ > 0`, the single good is necessarily **normal** — a budget-exhausting good cannot be inferior, and inferiority is necessary for the Giffen case. The result illustrates why the Giffen argument needs *at least two* goods: inferiority requires income to be diverted elsewhere as it rises."
-    },
-    {
-      "id": "ex-varian-15-1", "textbookId": "tb-varian", "chapterId": "ch2",
-      "ref": "Varian, Ch. 15, Q1", "difficulty": "beginner",
-      "text": "Find all pure and mixed strategy Nash equilibria of the Battle of the Sexes game.",
-      "solution": "| A \\ B | Opera | Football |\n|---|---|---|\n| **Opera** | 2, 1 | 0, 0 |\n| **Football** | 0, 0 | 1, 2 |\n\n**Pure equilibria.** `(Opera, Opera)` and `(Football, Football)`. In each, neither player gains by deviating alone — deviating drops them to a payoff of 0.\n\n**Mixed equilibrium.** Let A play Opera with probability `p`, B with probability `q`.\n\nA is indifferent when `2q + 0(1−q) = 0·q + 1(1−q)`, giving `2q = 1 − q`, so `q = 1/3`.\n\nB is indifferent when `1·p + 0 = 0 + 2(1−p)`, giving `p = 2 − 2p`, so `p = 2/3`.\n\nThe mixed equilibrium is `(p, q) = (2/3, 1/3)`, with expected payoff `2/3` to each — **worse for both** than either pure equilibrium. This coordination failure is the standard illustration of why multiplicity of equilibria is an economically substantive problem, not a technical nuisance."
     }
   ],
-
   "notes": [
     {
-      "id": "n-lec3", "chapterId": "ch1", "title": "Lecture 3 — Duality, worked through",
-      "date": "2026-08-18", "source": "Lecture", "theoryIds": ["th-duality", "th-slutsky"],
-      "tags": ["duality", "slutsky"],
+      "id": "n-lec3",
+      "chapterId": "ch7",
+      "title": "Lecture 3 — Duality, worked through",
+      "date": "2026-08-18",
+      "source": "Lecture",
+      "theoryIds": [
+        "th-duality",
+        "th-slutsky"
+      ],
+      "tags": [
+        "duality",
+        "slutsky"
+      ],
       "body": "## What the lecturer stressed\n\nThe whole of duality is one diagram: two optimisation problems, four identities connecting them, two lemmas for moving between them. Draw that diagram at the top of your answer sheet and the structure of any 12-mark question falls out of it.\n\n### Points flagged as exam-likely\n\n- The derivation of the Slutsky equation **from the identity** `x(p, e(p,u)) = h(p,u)` — not the geometric two-diagram version. The algebraic route is what gets full marks.\n- Concavity of `e(p,u)`: be able to prove it, not just assert it. The proof is three lines and appears as a sub-question.\n- Roy's identity **including the envelope-theorem justification**. Stating it without the proof caps you at half marks.\n\n### An aside worth remembering\n\nWhen asked *why* economists bother with Hicksian demand at all given that it is unobservable, the expected answer is welfare measurement: compensating and equivalent variation are areas under the *Hicksian* curve, not the Marshallian one. Consumer surplus measured on the Marshallian curve is an approximation whose error is exactly the income effect.\n\n> Replace this file's content with your own notes — the format is plain Markdown inside the `body` field."
-    },
-    {
-      "id": "n-game-tut", "chapterId": "ch2", "title": "Tutorial — solving mixed strategies without panicking",
-      "date": "2026-08-21", "source": "Tutorial", "theoryIds": ["th-nash"],
-      "tags": ["game-theory"],
-      "body": "## The recipe\n\n1. Write the payoff matrix. Label rows player 1, columns player 2.\n2. Check for dominant strategies first — if one exists the problem often collapses.\n3. Look for pure equilibria by underlining each player's best response in every column/row. A cell with both payoffs underlined is a pure equilibrium.\n4. For the mixed equilibrium, set up **the opponent's** indifference condition. Player 1's probability `p` comes from making **player 2** indifferent.\n5. Sanity check: probabilities in `[0,1]`, and the expected payoffs should be consistent.\n\n## The mistake everyone makes\n\nSolving for `p` using player 1's own payoffs. It feels natural and it is wrong. Say it out loud once: *I mix to keep my opponent guessing, so my mixture is pinned down by their payoffs.*\n\n## Worked pattern from the 2018 in-course\n\nMatching Pennies came up as a 4-mark question. Full marks needed exactly three things: the matrix, the deviation cycle showing no pure equilibrium exists, and `(½, ½)` derived from the indifference condition. Nothing more. Do not write an essay for a 4-mark question — the marker is looking for those three items."
     }
   ]
 }

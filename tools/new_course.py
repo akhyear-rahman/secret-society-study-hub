@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Create a course content file from the template and register it.
 
-    python tools/new_course.py econ-407 "ECON 407" "Development Economics"
+    python tools/new_course.py env-econ "ECON 407" "Environmental Economics"
 
 Safe to re-run: it will refuse to overwrite an existing content file.
 """

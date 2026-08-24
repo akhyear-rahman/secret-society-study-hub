@@ -1,0 +1,77 @@
+{
+  "id": "research-methods",
+  "code": "ECON 412",
+  "title": "Research Methodology",
+  "titleBn": "গবেষণা পদ্ধতি",
+  "color": "#f0b429",
+  "credits": 4,
+  "semester": 7,
+  "description": "Topic list taken from **7th Semester (FINAL SYLLABUS)** — thirteen topics split between two instructors, **SHS** and **MM**.\n\nThe syllabus links two material folders:\n\n- [Lecture Materials — updated 15/12/2025](https://drive.google.com/drive/folders/1mANqmFCSHcEbZDr3DGQWxGh5juIXc-YY)\n- [Reading Materials](https://drive.google.com/drive/folders/1Bk9PlJGvVBknAZHi5PbgVmYlPX3jJPbW)\n\nNeither folder was readable from here, so nothing has been imported from them yet.\n\n> **Note on this course:** unlike 401 and 403, this one is taught topic-by-topic rather than chapter-by-chapter, and only four topics have a named reading. Expect the exam to reward structure and vocabulary over derivation.",
+
+  "examPattern": {
+    "durationMin": 180,
+    "notes": "**Placeholder — replace once you have a past paper.** Methodology papers at this level usually mix short definitional answers with one or two design questions (\"propose a research design for …\"). Record the real structure here so mock papers match it.",
+    "sections": [
+      { "name": "Section A — Short answer", "answer": 5, "outOf": 5, "marks": 4 },
+      { "name": "Section B — Long answer / research design", "answer": 4, "outOf": 6, "marks": 12 }
+    ]
+  },
+
+  "chapters": [
+    { "id": "t1", "no": 1, "title": "Introduction to Research", "titleBn": "গবেষণার সূচনা",
+      "instructor": "SHS", "ref": "—", "summary": "What counts as research, and the paradigms behind it." },
+    { "id": "t2", "no": 2, "title": "Research Problem and Research Question(s)", "titleBn": "গবেষণা সমস্যা ও গবেষণা প্রশ্ন",
+      "instructor": "MM", "ref": "Ranjit Kumar, Ch. 4", "summary": "Turning a broad interest into a researchable, answerable question." },
+    { "id": "t3", "no": 3, "title": "Management of Research Project", "titleBn": "গবেষণা প্রকল্প ব্যবস্থাপনা",
+      "instructor": "MM", "ref": "—", "summary": "Planning, timelines, resourcing and supervision." },
+    { "id": "t4", "no": 4, "title": "Reviewing Literature and Identifying Contribution", "titleBn": "সাহিত্য পর্যালোচনা ও অবদান নির্ধারণ",
+      "instructor": "SHS", "ref": "—", "summary": "Reading the field well enough to locate the gap your work fills." },
+    { "id": "t5", "no": 5, "title": "Qualitative Research Techniques", "titleBn": "গুণগত গবেষণা কৌশল",
+      "instructor": "MM", "ref": "Lune & Berg, Ch. 4–5", "summary": "Interviewing, focus groups, ethnography and case study design." },
+    { "id": "t6", "no": 6, "title": "Quantitative Techniques for Non-Causal Research", "titleBn": "অ-কার্যকারণ পরিমাণগত কৌশল",
+      "instructor": "MM", "ref": "Ranjit Kumar, Ch. 8", "summary": "Descriptive and associational work: when correlation is the honest claim." },
+    { "id": "t7", "no": 7, "title": "Qualitative Methods in Data Collection and Analysis", "titleBn": "গুণগত উপাত্ত সংগ্রহ ও বিশ্লেষণ",
+      "instructor": "SHS", "ref": "—", "summary": "Fieldwork practice, coding, thematic analysis and trustworthiness." },
+    { "id": "t8", "no": 8, "title": "Quantitative Research Techniques (Causal)", "titleBn": "কার্যকারণ পরিমাণগত কৌশল",
+      "instructor": "MM", "ref": "Angrist & Pischke, Ch. 2–5", "summary": "The experimental ideal, regression, instrumental variables and fixed effects / difference-in-differences." },
+    { "id": "t9", "no": 9, "title": "Sampling Design and Data Collection", "titleBn": "নমুনায়ন নকশা ও উপাত্ত সংগ্রহ",
+      "instructor": "SHS", "ref": "—", "summary": "Probability and non-probability sampling, sample size, and instrument design." },
+    { "id": "t10", "no": 10, "title": "Research Ethics (1 and 2)", "titleBn": "গবেষণা নৈতিকতা",
+      "instructor": "SHS", "ref": "—", "summary": "Two sessions: informed consent, confidentiality, harm, and research integrity." },
+    { "id": "t11", "no": 11, "title": "Data Cleaning", "titleBn": "উপাত্ত পরিশোধন",
+      "instructor": "MM", "ref": "—", "summary": "Missing values, outliers, consistency checks and a reproducible cleaning log." },
+    { "id": "t12", "no": 12, "title": "Data Analysis", "titleBn": "উপাত্ত বিশ্লেষণ",
+      "instructor": "MM", "ref": "—", "summary": "Choosing the analysis that answers the question you actually asked." },
+    { "id": "t13", "no": 13, "title": "Presenting Research", "titleBn": "গবেষণা উপস্থাপন",
+      "instructor": "MM", "ref": "—", "summary": "Structuring a paper, tables and figures, and defending the work." }
+  ],
+
+  "textbooks": [
+    {
+      "id": "tb-kumar", "title": "Research Methodology: A Step-by-Step Guide for Beginners",
+      "author": "Ranjit Kumar", "edition": "", "year": null, "prescribed": true,
+      "chaptersCovered": "Ch. 4 (topic 2), Ch. 8 (topic 6)",
+      "notes": "The syllabus cites only these two chapters, but the book's operational-definition and variable-measurement material is the fastest way into topics 9 and 11 as well.",
+      "file": "", "url": ""
+    },
+    {
+      "id": "tb-lune-berg", "title": "Qualitative Research Methods for the Social Sciences",
+      "author": "Howard Lune & Bruce L. Berg", "edition": "", "year": null, "prescribed": true,
+      "chaptersCovered": "Ch. 4–5 (topic 5)",
+      "notes": "The syllabus prints this as *\"Luna Berg\"* — almost certainly **Lune & Berg**. Confirm the edition with your instructor before buying, since the chapter numbering moves between editions.",
+      "file": "", "url": ""
+    },
+    {
+      "id": "tb-angrist", "title": "Mostly Harmless Econometrics: An Empiricist's Companion",
+      "author": "Joshua D. Angrist & Jörn-Steffen Pischke", "edition": "1st", "year": 2009, "prescribed": true,
+      "chaptersCovered": "Ch. 2–5 (topic 8)",
+      "notes": "Chapters 2–5 are the experimental ideal, regression, instrumental variables, and fixed effects / differences-in-differences. **Verify which Angrist & Pischke book is meant** — the same authors' *Mastering 'Metrics* covers the same ground more gently, and the syllabus does not name the title.",
+      "file": "", "url": ""
+    }
+  ],
+
+  "theories": [],
+  "questions": [],
+  "exercises": [],
+  "notes": []
+}

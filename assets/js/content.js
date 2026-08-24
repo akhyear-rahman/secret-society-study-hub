@@ -40,6 +40,8 @@ function hydrate(raw, meta) {
     credits: raw.credits ?? meta.credits ?? null,
     semester: raw.semester ?? meta.semester ?? null,
     description: raw.description || '',
+    // Set in a course file to flag seeded/demo questions rather than real papers.
+    sampleContent: !!raw.sampleContent,
     examPattern: raw.examPattern || null,
     chapters: raw.chapters || [],
     theories: raw.theories || [],

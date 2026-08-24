@@ -8,78 +8,77 @@
     "session": "2025-26"
   },
   "_comment": [
-    "Register every course here. `file` is optional — it defaults to",
-    "content/courses/<id>.json. A course listed here with no content file",
-    "still shows up in the sidebar and reports itself as empty, so you can",
-    "register all six now and fill them in one at a time.",
-    "Rename the ids to whatever you like; nothing else references them."
+    "Course structures below are taken from '7th Semester (FINAL SYLLABUS).pdf'.",
+    "`file` is optional — it defaults to content/courses/<id>.json.",
+    "A course registered here with no content file still appears in the sidebar",
+    "and reports itself as empty, so all six can sit here while you fill them in."
   ],
   "courses": [
     {
-      "id": "course-1",
+      "id": "adv-micro",
       "code": "ECON 401",
       "short": "Advanced Micro",
-      "title": "Advanced Microeconomics",
-      "titleBn": "উচ্চতর ব্যষ্টিক অর্থনীতি",
+      "title": "Advanced Microeconomics-I",
+      "titleBn": "উচ্চতর ব্যষ্টিক অর্থনীতি-১",
       "color": "#7c8cff",
       "credits": 4,
       "semester": 7,
       "current": true
     },
     {
-      "id": "course-2",
-      "code": "ECON 402",
-      "short": "Course 2",
-      "title": "Course 2 — rename me",
-      "titleBn": "",
+      "id": "adv-macro",
+      "code": "ECON 403",
+      "short": "Advanced Macro",
+      "title": "Advanced Macroeconomics-I",
+      "titleBn": "উচ্চতর সামষ্টিক অর্থনীতি-১",
       "color": "#3ddc97",
       "credits": 4,
       "semester": 7,
       "current": true
     },
     {
-      "id": "course-3",
-      "code": "ECON 403",
-      "short": "Course 3",
-      "title": "Course 3 — rename me",
-      "titleBn": "",
+      "id": "research-methods",
+      "code": "ECON 412",
+      "short": "Research Methodology",
+      "title": "Research Methodology",
+      "titleBn": "গবেষণা পদ্ধতি",
       "color": "#f0b429",
       "credits": 4,
       "semester": 7,
       "current": true
     },
     {
-      "id": "course-4",
-      "code": "ECON 404",
-      "short": "Course 4",
-      "title": "Course 4 — rename me",
-      "titleBn": "",
-      "color": "#ff6b81",
+      "id": "env-econ",
+      "code": "TBD",
+      "short": "Environmental Econ",
+      "title": "Environmental Economics",
+      "titleBn": "পরিবেশ অর্থনীতি",
+      "color": "#5ac8fa",
       "credits": 4,
       "semester": 7,
       "current": true
     },
     {
-      "id": "course-5",
-      "code": "ECON 405",
-      "short": "Course 5",
-      "title": "Course 5 — rename me",
+      "id": "improvement-1",
+      "code": "TBD",
+      "short": "Improvement 1",
+      "title": "Improvement course 1 — details pending",
       "titleBn": "",
-      "color": "#5ac8fa",
-      "credits": 2,
-      "semester": 7,
-      "current": true
+      "color": "#ff6b81",
+      "credits": null,
+      "semester": null,
+      "current": false
     },
     {
-      "id": "course-6",
-      "code": "ECON 406",
-      "short": "Course 6",
-      "title": "Course 6 — rename me",
+      "id": "improvement-2",
+      "code": "TBD",
+      "short": "Improvement 2",
+      "title": "Improvement course 2 — details pending",
       "titleBn": "",
       "color": "#c084fc",
-      "credits": 2,
-      "semester": 7,
-      "current": true
+      "credits": null,
+      "semester": null,
+      "current": false
     }
   ]
 }

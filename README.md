@@ -84,8 +84,11 @@ The short version:
    flags questions still missing a model answer.
 5. Commit and push; Pages redeploys.
 
-`content/courses/course-1.json` is fully worked sample content demonstrating
-every field. Delete or overwrite it once your own first course is in.
+`content/courses/adv-micro.json` carries seeded practice content demonstrating
+every field — its chapter structure is real (from your syllabus) but the
+questions on it are written examples, not actual past papers. It is flagged
+with `"sampleContent": true`, which shows a warning banner in the app; delete
+that flag once you have replaced them.
 
 ## Project layout
 

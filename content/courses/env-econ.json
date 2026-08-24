@@ -1,0 +1,18 @@
+{
+  "id": "env-econ",
+  "code": "TBD",
+  "title": "Environmental Economics",
+  "titleBn": "পরিবেশ অর্থনীতি",
+  "color": "#5ac8fa",
+  "credits": 4,
+  "semester": 7,
+  "description": "**Awaiting details.** This course is not in *7th Semester (FINAL SYLLABUS).pdf* — that document covers 401, 403, 405 and 412 — so nothing here has been filled in yet.\n\nTo set it up, send through (or add yourself):\n\n1. The **course code**, so `code` above can replace `TBD`.\n2. The **syllabus** — chapter or topic list with the prescribed readings.\n3. Any **past papers** you have.\n\nThe file is already registered in `content/index.json`, so anything added here appears in the app immediately. Copy the shape from `adv-micro.json` or the annotated `_template.json`.",
+
+  "examPattern": null,
+  "chapters": [],
+  "textbooks": [],
+  "theories": [],
+  "questions": [],
+  "exercises": [],
+  "notes": []
+}

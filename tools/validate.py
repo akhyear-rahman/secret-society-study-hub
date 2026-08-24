@@ -54,11 +54,12 @@ def check_unique(where: str, kind: str, items: list, seen: set) -> None:
             seen.add(i)
 
 
-def validate_course(path: Path, meta: dict) -> tuple[int, int]:
+def validate_course(path: Path, meta: dict) -> tuple[int, int, int, int]:
+    """Returns (theories, questions, chapters, notes)."""
     where = str(path.relative_to(ROOT))
     data = load(path)
     if data is None:
-        return 0, 0
+        return 0, 0, 0, 0
 
     chapters = data.get("chapters", [])
     theories = data.get("theories", [])
@@ -139,7 +140,10 @@ def validate_course(path: Path, meta: dict) -> tuple[int, int]:
             if t not in theory_ids:
                 err(w, f"theoryIds references unknown theory {t!r}")
 
-    return len(theories), len(questions)
+    if chapters and not theories:
+        warn(where, f"{len(chapters)} chapters mapped but no theories written yet")
+
+    return len(theories), len(questions), len(chapters), len(notes)
 
 
 def main() -> int:
@@ -171,12 +175,12 @@ def main() -> int:
 
         path = ROOT / (meta.get("file") or f"content/courses/{cid}.json")
         if not path.exists():
-            print(f"  - {cid:<12} no content file yet ({path.relative_to(ROOT)})")
+            print(f"  - {cid:<18} no content file yet ({path.relative_to(ROOT)})")
             continue
-        t, q = validate_course(path, meta)
+        t, q, ch, n = validate_course(path, meta)
         total_t += t
         total_q += q
-        print(f"  - {cid:<12} {t:>3} theories, {q:>3} questions")
+        print(f"  - {cid:<18} {ch:>2} chapters, {t:>3} theories, {q:>3} questions, {n:>2} notes")
 
     print(f"\nTotal: {total_t} theories, {total_q} questions")
 

@@ -18,7 +18,9 @@ export default async function home() {
   const due = allCards.filter((c) => cardDue(c.id));
   const readCount = courses.flatMap((c) => c.theories).filter((t) => isRead(t.id)).length;
   const today = state.days[todayKey()] || { xp: 0, cards: 0 };
-  const empties = courses.filter((c) => c.stats.theories === 0 && c.stats.questions === 0);
+  // "Empty" means nothing at all — a mapped syllabus or imported notes count.
+  const empties = courses.filter((c) =>
+    !c.chapters.length && !c.stats.theories && !c.stats.questions && !c.stats.notes);
 
   const hero = `<section class="hero">
     <div class="spread">
