@@ -84,11 +84,24 @@ The short version:
    flags questions still missing a model answer.
 5. Commit and push; Pages redeploys.
 
-`content/courses/adv-micro.json` carries seeded practice content demonstrating
-every field — its chapter structure is real (from your syllabus) but the
-questions on it are written examples, not actual past papers. It is flagged
-with `"sampleContent": true`, which shows a warning banner in the app; delete
-that flag once you have replaced them.
+### Where each course stands
+
+| Course | Syllabus | Questions | Notes | Theories |
+|---|---|---|---|---|
+| **ECON 401** Advanced Micro | 5 chapters (Varian 7, 8, 1, 2, 4) | 4 — **seeded examples, not real papers** | 1 | 2 |
+| **ECON 403** Advanced Macro | 8 chapters (Mankiw 9e + Romer 5e) | — | 5 imported class notes, lectures 1–13 | — |
+| **ECON 409** Environmental | 21 chapters | **108**, from 15 papers 2010–2022 | 1 (97th syllabus) | — |
+| **ECON 412** Research Methodology | 13 topics | — | — | — |
+| Improvement ×2 | — | — | — | — |
+
+Advanced Micro is flagged `"sampleContent": true`, which shows a warning banner
+in the app — its chapter structure is real but the questions on it are written
+examples with invented years. Delete the flag once real papers replace them.
+
+Environmental Economics has the full past-paper archive but **no model answers
+yet**; that is the next job. Its 17 environmental-accounting items are tagged
+`practice` rather than given a year, because they come from a compiled "likely
+questions" list rather than a sat paper.
 
 ## Project layout
 

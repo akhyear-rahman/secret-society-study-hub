@@ -178,7 +178,13 @@ Inside JSON, a newline is `\n`. A code block is
 ```
 
 `examType` must be one of `incourse`, `midterm`, `final`, `tutorial`, `viva`,
-`assignment`.
+`assignment`, `practice`.
+
+Use **`practice`** for anything that was not actually sat — a compiled
+"likely questions" list, a question you wrote yourself, a suggestion from a
+senior. Leave its `year` and `marks` empty. It then filters out cleanly when
+you want to see only what has genuinely appeared, and the validator stops
+asking for marks it was never given.
 
 Two fields carry more weight than they look:
 

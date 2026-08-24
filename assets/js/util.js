@@ -59,10 +59,13 @@ export function shuffle(arr, rand = Math.random) {
 
 export const DIFFS = ['beginner', 'intermediate', 'advanced'];
 export const DIFF_LABEL = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'Advanced' };
-export const EXAM_TYPES = ['incourse', 'midterm', 'final', 'tutorial', 'viva', 'assignment'];
+// 'practice' is not a real sitting — it marks anticipated or compiled
+// questions so they never get mistaken for something that actually appeared.
+export const EXAM_TYPES = ['incourse', 'midterm', 'final', 'tutorial', 'viva', 'assignment', 'practice'];
 export const EXAM_LABEL = {
   incourse: 'In-course', midterm: 'Midterm', final: 'Final',
   tutorial: 'Tutorial', viva: 'Viva', assignment: 'Assignment',
+  practice: 'Practice / anticipated',
 };
 
 export const stars = (n) => '★'.repeat(clamp(n | 0, 0, 5)) + '☆'.repeat(5 - clamp(n | 0, 0, 5));

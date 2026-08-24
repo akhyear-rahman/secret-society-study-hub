@@ -19,18 +19,37 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DIFFS = {"beginner", "intermediate", "advanced"}
-EXAM_TYPES = {"incourse", "midterm", "final", "tutorial", "viva", "assignment"}
+EXAM_TYPES = {"incourse", "midterm", "final", "tutorial", "viva", "assignment", "practice"}
 
 errors: list[str] = []
-warnings: list[str] = []
+# (file, item, message) — grouped on output so one missing field across a
+# hundred questions prints as one line, not a hundred.
+warnings: list[tuple[str, str, str]] = []
 
 
 def err(where: str, msg: str) -> None:
     errors.append(f"{where}: {msg}")
 
 
-def warn(where: str, msg: str) -> None:
-    warnings.append(f"{where}: {msg}")
+def warn(where: str, msg: str, item: str = "") -> None:
+    warnings.append((where, item, msg))
+
+
+def print_warnings() -> None:
+    grouped: dict[tuple[str, str], list[str]] = {}
+    for where, item, msg in warnings:
+        grouped.setdefault((where, msg), []).append(item)
+    print(f"\n{len(warnings)} warning(s) in {len(grouped)} group(s):")
+    for (where, msg), items in grouped.items():
+        named = [i for i in items if i]
+        if len(named) > 1:
+            shown = ", ".join(named[:4])
+            more = f" +{len(named) - 4} more" if len(named) > 4 else ""
+            print(f"  ! {where}: {len(named)} x {msg}  ({shown}{more})")
+        elif named:
+            print(f"  ! {where} {named[0]}: {msg}")
+        else:
+            print(f"  ! {where}: {msg}")
 
 
 def load(path: Path):
@@ -84,7 +103,7 @@ def validate_course(path: Path, meta: dict) -> tuple[int, int, int, int]:
 
     for t in theories:
         tid = t.get("id", "?")
-        w = f"{where} theory {tid}"
+        w = where
         if not t.get("title"):
             err(w, "missing title")
         if t.get("chapterId") and t["chapterId"] not in chapter_ids:
@@ -98,15 +117,15 @@ def validate_course(path: Path, meta: dict) -> tuple[int, int, int, int]:
             if x not in exercise_ids:
                 err(w, f"exerciseIds references unknown exercise {x!r}")
         if not t.get("bn") and not t.get("en"):
-            warn(w, "has neither a bn nor an en explanation")
+            warn(w, "theory has neither a bn nor an en explanation", tid)
         elif not t.get("bn"):
-            warn(w, "no Bangla explanation yet")
+            warn(w, "theory has no Bangla explanation yet", tid)
         if not t.get("recall"):
-            warn(w, "no recall cards — active recall will skip it")
+            warn(w, "theory has no recall cards", tid)
 
     for q in questions:
         qid = q.get("id", "?")
-        w = f"{where} question {qid}"
+        w = where
         if not q.get("text"):
             err(w, "missing text")
         if q.get("chapterId") and q["chapterId"] not in chapter_ids:
@@ -119,21 +138,21 @@ def validate_course(path: Path, meta: dict) -> tuple[int, int, int, int]:
             if t not in theory_ids:
                 err(w, f"theoryIds references unknown theory {t!r}")
         if not q.get("answer"):
-            warn(w, "no model answer")
-        if not q.get("marks"):
-            warn(w, "no marks recorded — mock exams cannot weight it")
+            warn(w, "question has no model answer", qid)
+        if not q.get("marks") and q.get("examType") != "practice":
+            warn(w, "question has no marks recorded", qid)
         if not q.get("topics"):
-            warn(w, "no topics — it lands in 'Uncategorised' in topic-wise view")
+            warn(w, "question has no topics", qid)
 
     for x in exercises:
-        w = f"{where} exercise {x.get('id', '?')}"
+        w, xid = where, x.get("id", "?")
         if x.get("textbookId") and x["textbookId"] not in book_ids:
             err(w, f'textbookId {x["textbookId"]!r} does not exist')
         if not x.get("solution"):
-            warn(w, "no solution written")
+            warn(w, "exercise has no solution written", xid)
 
     for n in notes:
-        w = f"{where} note {n.get('id', '?')}"
+        w = where
         if n.get("chapterId") and n["chapterId"] not in chapter_ids:
             err(w, f'chapterId {n["chapterId"]!r} does not exist')
         for t in n.get("theoryIds", []):
@@ -185,9 +204,7 @@ def main() -> int:
     print(f"\nTotal: {total_t} theories, {total_q} questions")
 
     if warnings:
-        print(f"\n{len(warnings)} warning(s):")
-        for w in warnings:
-            print(f"  ! {w}")
+        print_warnings()
     if errors:
         print(f"\n{len(errors)} error(s):")
         for e in errors:
