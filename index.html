@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="bn" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Semester 7 — Study Hub</title>
+<meta name="description" content="Theories, past-year questions, model answers, notes and gamified practice for Semester 7 — all in one offline-capable app.">
+<meta name="theme-color" content="#0b0f14">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <button class="icon-btn nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+  <a class="brand" href="#/">
+    <span class="brand-mark">৭</span>
+    <span class="brand-text">
+      <strong id="brandTitle">Semester 7</strong>
+      <small id="brandSub">Study Hub</small>
+    </span>
+  </a>
+
+  <form class="omni" id="omniForm" role="search" autocomplete="off">
+    <svg class="omni-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input id="omni" type="search" placeholder="Search theories, questions, notes…  (press /)" aria-label="Search everything">
+    <kbd>/</kbd>
+  </form>
+
+  <div class="topbar-right">
+    <button class="pill lang-toggle" id="langToggle" title="Toggle explanation language (L)">
+      <span class="lang-a">বাংলা</span><span class="lang-b">EN</span>
+    </button>
+    <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme (T)">
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="ico-moon"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+    <a class="streak" href="#/progress" id="streakChip" title="Study streak &amp; XP">
+      <span class="flame">🔥</span><span id="streakNum">0</span>
+      <span class="xp" id="xpNum">0 XP</span>
+    </a>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="sidebar" id="sidebar" aria-label="Main">
+    <div class="side-scroll">
+      <div class="side-group">
+        <div class="side-label">Overview</div>
+        <a class="side-link" href="#/" data-match="^/$"><i>🏠</i>Dashboard</a>
+        <a class="side-link" href="#/progress" data-match="^/progress"><i>📈</i>Progress</a>
+      </div>
+      <div class="side-group">
+        <div class="side-label">Courses</div>
+        <div id="courseNav" class="course-nav"></div>
+      </div>
+      <div class="side-group">
+        <div class="side-label">Practice</div>
+        <a class="side-link" href="#/questions" data-match="^/questions"><i>🗂️</i>Question Bank</a>
+        <a class="side-link" href="#/recall" data-match="^/recall"><i>🧠</i>Active Recall</a>
+        <a class="side-link" href="#/exam" data-match="^/exam"><i>🎯</i>Mock Exam</a>
+      </div>
+      <div class="side-group">
+        <div class="side-label">Library</div>
+        <a class="side-link" href="#/notes" data-match="^/notes"><i>📝</i>Notes</a>
+        <a class="side-link" href="#/textbooks" data-match="^/textbooks"><i>📚</i>Textbooks</a>
+      </div>
+    </div>
+    <div class="side-foot">
+      <a class="side-link tiny" href="#/help"><i>❓</i>How to add content</a>
+    </div>
+  </nav>
+
+  <div class="scrim" id="scrim" hidden></div>
+
+  <main id="main" class="main" tabindex="-1">
+    <div id="view" class="view"><div class="loading">Loading…</div></div>
+  </main>
+</div>
+
+<div class="palette" id="palette" hidden>
+  <div class="palette-box" role="dialog" aria-label="Search results">
+    <input id="paletteInput" type="search" placeholder="Search theories, questions, notes…" aria-label="Search">
+    <div id="paletteResults" class="palette-results"></div>
+    <div class="palette-foot"><kbd>↑</kbd><kbd>↓</kbd> navigate · <kbd>↵</kbd> open · <kbd>esc</kbd> close</div>
+  </div>
+</div>
+
+<div id="toast" class="toast" hidden></div>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

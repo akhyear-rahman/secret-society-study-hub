@@ -1,0 +1,85 @@
+{
+  "site": {
+    "title": "Semester 7",
+    "subtitle": "Theories, past papers, model answers and practice — in one place.",
+    "shortSubtitle": "Study Hub",
+    "greeting": "Ready when you are.",
+    "owner": "",
+    "session": "2025-26"
+  },
+  "_comment": [
+    "Register every course here. `file` is optional — it defaults to",
+    "content/courses/<id>.json. A course listed here with no content file",
+    "still shows up in the sidebar and reports itself as empty, so you can",
+    "register all six now and fill them in one at a time.",
+    "Rename the ids to whatever you like; nothing else references them."
+  ],
+  "courses": [
+    {
+      "id": "course-1",
+      "code": "ECON 401",
+      "short": "Advanced Micro",
+      "title": "Advanced Microeconomics",
+      "titleBn": "উচ্চতর ব্যষ্টিক অর্থনীতি",
+      "color": "#7c8cff",
+      "credits": 4,
+      "semester": 7,
+      "current": true
+    },
+    {
+      "id": "course-2",
+      "code": "ECON 402",
+      "short": "Course 2",
+      "title": "Course 2 — rename me",
+      "titleBn": "",
+      "color": "#3ddc97",
+      "credits": 4,
+      "semester": 7,
+      "current": true
+    },
+    {
+      "id": "course-3",
+      "code": "ECON 403",
+      "short": "Course 3",
+      "title": "Course 3 — rename me",
+      "titleBn": "",
+      "color": "#f0b429",
+      "credits": 4,
+      "semester": 7,
+      "current": true
+    },
+    {
+      "id": "course-4",
+      "code": "ECON 404",
+      "short": "Course 4",
+      "title": "Course 4 — rename me",
+      "titleBn": "",
+      "color": "#ff6b81",
+      "credits": 4,
+      "semester": 7,
+      "current": true
+    },
+    {
+      "id": "course-5",
+      "code": "ECON 405",
+      "short": "Course 5",
+      "title": "Course 5 — rename me",
+      "titleBn": "",
+      "color": "#5ac8fa",
+      "credits": 2,
+      "semester": 7,
+      "current": true
+    },
+    {
+      "id": "course-6",
+      "code": "ECON 406",
+      "short": "Course 6",
+      "title": "Course 6 — rename me",
+      "titleBn": "",
+      "color": "#c084fc",
+      "credits": 2,
+      "semester": 7,
+      "current": true
+    }
+  ]
+}

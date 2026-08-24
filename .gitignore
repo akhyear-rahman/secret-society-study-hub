@@ -1,0 +1,16 @@
+# OS / editor cruft
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Local scratch
+tmp/
+*.log
+
+# Keep the folders, ignore heavy binaries you may drop in locally.
+# Delete these two lines if you DO want to commit your PDFs.
+content/textbooks/*.pdf
+content/files/*.pdf

@@ -1,0 +1,14 @@
+{
+  "name": "Semester 7 Study Hub",
+  "short_name": "Sem 7",
+  "description": "Theories, past-year questions, model answers, notes and gamified practice.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b0f14",
+  "theme_color": "#0b0f14",
+  "icons": [
+    { "src": "assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
