@@ -35,7 +35,14 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      # enablement:true switches the repo's Pages source to GitHub Actions if
+      # it is not already set that way. Without it this step fails outright on
+      # a repo still using the classic branch source, which is the default —
+      # and the classic Jekyll build then serves whatever folder it was
+      # pointed at, giving a 404 rather than an error anyone can act on.
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
