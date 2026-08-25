@@ -1,9 +1,10 @@
 {
   "site": {
-    "title": "Semester 7",
-    "subtitle": "Theories, past papers, model answers and practice — in one place.",
+    "title": "Secret Society Study Hub",
+    "brand": "Secret Society",
+    "subtitle": "Every question the examiners have ever asked, and the answers that score them — kept in one place, sub rosa.",
     "shortSubtitle": "Study Hub",
-    "greeting": "Ready when you are.",
+    "greeting": "The Order convenes.",
     "owner": "",
     "session": "2025-26"
   },

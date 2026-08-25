@@ -1,14 +1,19 @@
 {
-  "name": "Semester 7 Study Hub",
-  "short_name": "Sem 7",
-  "description": "Theories, past-year questions, model answers, notes and gamified practice.",
+  "name": "Secret Society Study Hub",
+  "short_name": "Secret Society",
+  "description": "Theories, past-year questions, model answers, notes and gamified practice — sub rosa.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#0b0f14",
-  "theme_color": "#0b0f14",
+  "background_color": "#0a0908",
+  "theme_color": "#0a0908",
   "icons": [
-    { "src": "assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+    {
+      "src": "assets/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
   ]
 }

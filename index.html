@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Semester 7 — Study Hub</title>
-<meta name="description" content="Theories, past-year questions, model answers, notes and gamified practice for Semester 7 — all in one offline-capable app.">
-<meta name="theme-color" content="#0a0c11">
+<title>Secret Society Study Hub</title>
+<meta name="description" content="Secret Society Study Hub — theories, past-year questions, model answers, notes and gamified practice for Semester 7, kept in one offline-capable app.">
+<meta name="theme-color" content="#0a0908">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/css/app.css">
@@ -40,16 +40,28 @@
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
   </button>
   <a class="brand" href="#/">
-    <span class="brand-mark">৭</span>
+    <span class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 64 64">
+        <defs><linearGradient id="bgold" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#f0d67a"/><stop offset=".5" stop-color="#d4af37"/>
+          <stop offset="1" stop-color="#9c7415"/></linearGradient></defs>
+        <g fill="none" stroke="url(#bgold)" stroke-linejoin="round">
+          <circle cx="32" cy="32" r="24" stroke-width="1.6" opacity=".55"/>
+          <path d="M32 12 L51 46 H13 Z" stroke-width="2.4"/>
+          <path d="M20 33c6.5-8.5 17.5-8.5 24 0-6.5 8.5-17.5 8.5-24 0z" stroke-width="2"/>
+        </g>
+        <circle cx="32" cy="33" r="4.6" fill="url(#bgold)"/>
+      </svg>
+    </span>
     <span class="brand-text">
-      <strong id="brandTitle">Semester 7</strong>
+      <strong id="brandTitle">Secret Society</strong>
       <small id="brandSub">Study Hub</small>
     </span>
   </a>
 
   <form class="omni" id="omniForm" role="search" autocomplete="off">
     <svg class="omni-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-    <input id="omni" type="search" placeholder="Search theories, questions, notes…  (press /)" aria-label="Search everything">
+    <input id="omni" type="search" placeholder="Search the archive…  (press /)" aria-label="Search everything">
     <kbd>/</kbd>
   </form>
 
@@ -72,29 +84,30 @@
   <nav class="sidebar" id="sidebar" aria-label="Main">
     <div class="side-scroll">
       <div class="side-group">
-        <div class="side-label">Overview</div>
+        <div class="side-label">The Order</div>
         <a class="side-link" href="#/" data-match="^/$"><i>🏠</i>Dashboard</a>
         <a class="side-link" href="#/plan" data-match="^/plan"><i>🎓</i>Study Plan</a>
         <a class="side-link" href="#/progress" data-match="^/progress"><i>📈</i>Progress</a>
       </div>
       <div class="side-group">
-        <div class="side-label">Courses</div>
+        <div class="side-label">Disciplines</div>
         <div id="courseNav" class="course-nav"></div>
       </div>
       <div class="side-group">
-        <div class="side-label">Practice</div>
+        <div class="side-label">Trials</div>
         <a class="side-link" href="#/questions" data-match="^/questions"><i>🗂️</i>Question Bank</a>
         <a class="side-link" href="#/recall" data-match="^/recall"><i>🧠</i>Active Recall<span class="badge-n" id="dueBadge" hidden>0</span></a>
         <a class="side-link" href="#/exam" data-match="^/exam"><i>🎯</i>Mock Exam</a>
       </div>
       <div class="side-group">
-        <div class="side-label">Library</div>
+        <div class="side-label">The Archive</div>
         <a class="side-link" href="#/notes" data-match="^/notes"><i>📝</i>Notes</a>
         <a class="side-link" href="#/textbooks" data-match="^/textbooks"><i>📚</i>Textbooks</a>
       </div>
     </div>
     <div class="side-foot">
       <a class="side-link tiny" href="#/help"><i>❓</i>How to add content</a>
+      <span class="motto">Sub&nbsp;Rosa · <b>MMXXVI</b></span>
     </div>
   </nav>
 
@@ -109,7 +122,7 @@
 
 <div class="palette" id="palette" hidden>
   <div class="palette-box" role="dialog" aria-label="Search results">
-    <input id="paletteInput" type="search" placeholder="Search theories, questions, notes…" aria-label="Search">
+    <input id="paletteInput" type="search" placeholder="Search the archive…" aria-label="Search">
     <div id="paletteResults" class="palette-results"></div>
     <div class="palette-foot"><kbd>↑</kbd><kbd>↓</kbd> navigate · <kbd>↵</kbd> open · <kbd>esc</kbd> close</div>
   </div>

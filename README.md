@@ -1,4 +1,6 @@
-# Semester 7 Study Hub
+# Secret Society Study Hub
+
+> *Sub rosa* — under the rose. What is said beneath it stays there.
 
 One offline-capable web app holding every course of the semester: the theories
 that actually recur in past papers, the past-year questions themselves with

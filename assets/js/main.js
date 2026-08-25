@@ -23,7 +23,7 @@ function applyTheme() {
   $('#themeIcon').innerHTML = THEME_ICON[pref] || THEME_ICON.dark;
   $('#themeToggle').title = `Theme: ${pref} — click to cycle (T)`;
   const meta = document.querySelector('meta[name="theme-color"]');
-  if (meta) meta.content = effectiveTheme() === 'dark' ? '#0a0c11' : '#f7f6f3';
+  if (meta) meta.content = effectiveTheme() === 'dark' ? '#0a0908' : '#efe8d6';
 }
 
 $('#themeToggle').addEventListener('click', () => {
@@ -69,7 +69,8 @@ $('#scrim').addEventListener('click', closeNav);
 async function buildCourseNav() {
   const idx = await siteIndex();
   const site = idx.site || {};
-  if (site.title) { $('#brandTitle').textContent = site.title; document.title = site.title; }
+  if (site.brand) $('#brandTitle').textContent = site.brand;
+  if (site.title) document.title = site.title;
   if (site.shortSubtitle) $('#brandSub').textContent = site.shortSubtitle;
 
   $('#courseNav').innerHTML = (idx.courses || []).map((c) => `
