@@ -66,6 +66,10 @@
 /* ------------------------------------------- 2 reset and base ---- */
 
 *,*::before,*::after{box-sizing:border-box}
+/* The UA rule for [hidden] is display:none at element specificity, so any
+   class that sets display — .palette does — silently defeats it. Keep this
+   above everything that sets display. */
+[hidden]{display:none!important}
 html,body{margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--top-h) + 20px)}
 body{
