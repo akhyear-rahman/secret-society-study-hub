@@ -200,7 +200,17 @@ Two fields carry more weight than they look:
 
 `answerBn` is optional; when present, each answer gets a বাংলায় দেখুন toggle.
 
+**`source`** names the book and chapter the answer follows — it renders in
+italics beneath the answer. An answer that uses the notation of the book the
+paper was set from reads, to the examiner, as someone who did the reading.
+
 ### Getting model answers written
+
+**Read [ANSWER-SPEC.md](ANSWER-SPEC.md) first.** It binds the
+`econ-question-bank` method to this repo: which textbook each course answers
+from, the answer structure an examiner rewards, how long an answer should run
+given the time the paper actually allows, and the exact JSON to produce. It
+also carries the prompt to paste when handing Claude a new set of questions.
 
 Point Claude at the question and the marking pattern. What works:
 

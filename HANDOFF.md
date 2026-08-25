@@ -58,6 +58,9 @@ a sat paper. They filter out cleanly when you want real past questions only.
 1. **Model answers for ECON 409.** 94 of 108 questions still have none. The 14
    written cover the highest-frequency topics. Work down the frequency ranking
    at `#/plan` — Coase theorem is 8 appearances and 91 marks of the archive.
+   **Follow `docs/ANSWER-SPEC.md`** — it carries the textbook per course, the
+   answer structure, the length calibration, the JSON shape and the prompt to
+   paste. `python tools/topics.py --near` before adding topic labels.
 2. **ECON 403, 405, 412 have syllabus but no theories or questions.** No past
    papers have been sourced for any of them. That is the single biggest gap.
 3. **ECON 401 needs real past papers** to replace the seeded four.

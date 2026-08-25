@@ -61,6 +61,7 @@ export function questionCard(q, opts = {}) {
         ${scheme}
         <div class="prose ans-body" data-lang="en">${md(q.answer)}</div>
         ${q.answerBn ? `<div class="prose bn ans-body" data-lang="bn" hidden>${md(q.answerBn)}</div>` : ''}
+        ${q.source ? `<p class="ans-source">Source — ${esc(q.source)}</p>` : ''}
         ${(q.theoryIds || []).length && opts.showTheoryLink !== false
           ? `<p class="muted" style="font-size:12.5px;margin-top:14px">Theory: ${
               (q.theoryIds).map((t) => `<a href="#/c/${esc(q.courseId)}/theory/${esc(t)}">${esc(t)}</a>`).join(', ')}</p>`

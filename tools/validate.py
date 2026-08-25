@@ -18,6 +18,38 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+
+# Words a complete answer runs to, calibrated from the time the paper actually
+# allows rather than a generic table — see docs/ANSWER-SPEC.md §4. The bands are
+# deliberately wide; a derivation-heavy answer legitimately runs long.
+LENGTH_TARGETS = [(2, 90), (5, 200), (10, 430), (12.5, 600), (20, 820), (30, 1100)]
+
+
+def target_words(marks):
+    """(low, high) word band for an answer worth `marks`."""
+    if not marks:
+        return None
+    pts = LENGTH_TARGETS
+    if marks <= pts[0][0]:
+        mid = pts[0][1]
+    elif marks >= pts[-1][0]:
+        mid = pts[-1][1]
+    else:
+        mid = pts[-1][1]
+        for (m1, w1), (m2, w2) in zip(pts, pts[1:]):
+            if m1 <= marks <= m2:
+                mid = w1 + (w2 - w1) * (marks - m1) / (m2 - m1)
+                break
+    return int(mid * 0.55), int(mid * 1.75)
+
+
+def answer_words(text):
+    import re
+    t = re.sub(r"```.*?```", " ", text or "", flags=re.S)     # drop code blocks
+    t = re.sub(r"[#*`|>_-]", " ", t)
+    return len(t.split())
+
+
 DIFFS = {"beginner", "intermediate", "advanced"}
 EXAM_TYPES = {"incourse", "midterm", "final", "tutorial", "viva", "assignment", "practice"}
 
@@ -139,6 +171,21 @@ def validate_course(path: Path, meta: dict) -> tuple[int, int, int, int]:
                 err(w, f"theoryIds references unknown theory {t!r}")
         if not q.get("answer"):
             warn(w, "question has no model answer", qid)
+        else:
+            # An answered question must also carry its rubric and its authority.
+            if not q.get("answerPoints"):
+                warn(w, "answer has no answerPoints checklist", qid)
+            if not q.get("source"):
+                warn(w, "answer does not name its source book", qid)
+            band = target_words(q.get("marks"))
+            if band:
+                n = answer_words(q["answer"])
+                if n < band[0]:
+                    warn(w, f"answer looks short for {q['marks']} marks "
+                            f"({n} words, expected {band[0]}-{band[1]})", qid)
+                elif n > band[1]:
+                    warn(w, f"answer looks long for {q['marks']} marks "
+                            f"({n} words, expected {band[0]}-{band[1]})", qid)
         if not q.get("marks") and q.get("examType") != "practice":
             warn(w, "question has no marks recorded", qid)
         if not q.get("topics"):

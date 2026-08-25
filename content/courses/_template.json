@@ -112,7 +112,8 @@
         "What the next 4 marks are for"
       ],
       "answer": "The model answer in Markdown, written to score every mark.",
-      "answerBn": ""
+      "answerBn": "",
+      "source": "Book, Ch. N — the authority this answer follows"
     }
   ],
   "exercises": [

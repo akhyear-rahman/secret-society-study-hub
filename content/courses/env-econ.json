@@ -1048,7 +1048,8 @@
       "text": "(A) Explain the purposes of source reduction / waste prevention in the context of urban waste management. (3) (B) What possible actions would you suggest to reduce waste generation? (4) (C) Explain the significance of recycling. (3)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2022-i-2",
@@ -1068,7 +1069,8 @@
       "text": "Consider two types of regional market supply curve. The supply curve of a group of farms after the damage of agricultural land from industrial toxic waste is S = 10 + 10q, and the supply curve of the same group of farms before the damage was S = 10 + 5q. Suppose the changes in the regional supply curve do not have any effect on the whole market prices in the economy. Consider the overall market demand and supply of the agricultural product are D = 1000 − 5P and S = 40 + 15P respectively. Now measure the impact of the industrial toxic waste on the agricultural farmers (show also graphically). (5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2022-m-1",
@@ -1089,7 +1091,8 @@
       "text": "(a) How do externalities create market failure? Explain. (4) (b) Consider a monopoly market where the demand function is P = 100 − 2Q and MC = 10 + 10Q. The production of the firm imposes some cost on the people living beside the firm; assume the social marginal cost function is SMC = 3Q. Find the equilibrium level of private production. What is the socially optimal level of production? Explain your result. (6)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2022-m-2",
@@ -1110,7 +1113,8 @@
       "text": "(a) Why does unrestricted entry lead to the over-exploitation of natural resources? Explain the relevant model using a graphical approach. (5) (b) Each member of a group of neighbouring farmers prefers to allow his cow to graze on the commons rather than keeping it on his own inadequate land, but the commons will be rendered unsuitable for grazing if it is overgrazed. The value of milk produced f(c) depends on the number of cows on the common land and the production function follows diminishing marginal productivity. A cow costs a dollars and can be grazed on common land. Explain the concept of the tragedy of the commons using the payoff matrix (game) based on the above production and cost functions. (5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2022-m-3",
@@ -1131,7 +1135,8 @@
       "text": "Assume that during the cold months of winter, household i obtains utility from indoor temperature comfort (T) and from consumption of other goods (Z). Meanwhile the household members suffer from the adverse effects of wood-burning air pollution, so they perceive negative utility from exposure to local ambient air pollution (E). Let Uᵢ = U(T, Z, E). Indoor temperature comfort is a function of wood-fuel usage (w) and the choking of the woodstove's damper (c): T = T(w, c). Household-level emissions are e = e(w, c) and aggregate ambient air pollution is E = Σeᵢ(w, c). Households face a budget constraint in which disposable income must be no less than total expenditure on consumption goods and wood fuel, where the price of the composite consumption good Z is set equal to one and P_w denotes the price of wood fuel. (i) Prepare the budget constraint for a hypothetical household. (1) (ii) Set up the Lagrangian for the household. (1) (iii) Find the optimal condition for the household using the maximisation condition. (3) (iv) Find the optimal condition from the social planner's perspective. (3)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2021-f-1",
@@ -1156,7 +1161,8 @@
       "text": "(A) What do you mean by market failure? What are the sources of market failure? (4.5) (B) Explain the concepts of renewable resources and non-renewable resources, and also explain the differences between these two. (4) (C) What is biological diversity? What is the economic benefit of biological diversity? (4)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2021-f-2",
@@ -1181,7 +1187,8 @@
       "text": "(A) Explain the concept of the Coase theorem and write down its limitations. (6) (B) Explain that a monopoly firm produces an inefficient level of output for the society, but from a resource conservation point of view a monopoly firm is good. (6.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2021-f-3",
@@ -1201,7 +1208,8 @@
       "text": "(A) What is externality? Suppose two firms are located by a river. The first produces steel (located upstream) and the second (located downstream) operates a resort hotel, and they are owned by separate owners. The steel factory uses the river as a receptacle for its waste, while the hotel uses the river for attracting customers seeking water recreation. The steel factory pollutes the water and this badly affects the business of the resort hotel, which needs unpolluted water. Draw a diagram for the market for steel and show that because of this negative externality the steel factory produces an inefficient level of steel for the society. (6.5) (B) What is an 'open-access resource'? Why may this kind of open-access resource lead to overuse? Explain. (6)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2021-f-4",
@@ -1233,7 +1241,8 @@
         "Apply the framework concretely to Hakaluki Haor, component by component — 3.5 marks"
       ],
       "answer": "## What total economic value means\n\nThe **total economic value** of an environmental good is the complete set of benefits people derive from it, whether or not they ever use it. It is an anthropocentric measure — it captures value *to people* — and it decomposes as:\n\n```\n                 Total Economic Value\n                 /                  \\\n          Use Value              Non-use Value\n         /    |     \\             /      |      \\\n   Direct  Indirect  Option   Bequest  Existence  Altruistic\n```\n\n## Use values\n\n**Direct use value** comes from using the resource itself. It splits into *consumptive* uses that remove something (fishing, timber, fuelwood, grazing) and *non-consumptive* uses that do not (boating, birdwatching, research).\n\n**Indirect use value** comes from ecosystem services that support economic activity elsewhere — flood regulation, groundwater recharge, nutrient cycling, carbon storage, nursery habitat. These are typically far larger than direct use values and almost always omitted from project appraisal, which is why wetlands are so persistently undervalued and so easily converted.\n\n**Option value** is the premium a person will pay to keep the *possibility* of future use open under uncertainty about their own future demand. Distinguish it from **quasi-option value** — the value of postponing an irreversible decision in order to learn more — which exists even for a risk-neutral decision maker and is the formal argument for precaution where losses are irreversible.\n\n## Non-use values\n\nAlso called passive use values, these accrue to people who make no use of the asset at all.\n\n- **Bequest value** — from knowing the resource will be available to future generations.\n- **Existence value** — from knowing it simply exists, even if one will never see it. A person in Dhaka who will never visit the Sundarbans may still be measurably worse off if it disappears.\n\n**The methodological consequence is the examinable point:** non-use value leaves no behavioural trace. Nobody travels, buys or spends because of it, so revealed-preference methods cannot detect it. It can be measured **only** by stated-preference techniques such as contingent valuation — which is why CVM, for all its acknowledged biases, remains indispensable.\n\n## Applying the framework: Hakaluki Haor\n\nHakaluki Haor in the north-east is Bangladesh's largest freshwater wetland — a seasonally flooded basin supporting several hundred thousand people and a major migratory bird population.\n\n| Component | Value at Hakaluki Haor |\n|---|---|\n| **Direct use — consumptive** | Capture fisheries (the dominant local livelihood), boro paddy on the drawdown land, aquatic plants, reeds and fuelwood, dry-season cattle grazing |\n| **Direct use — non-consumptive** | Boat transport between villages, birdwatching and small-scale tourism, research and education |\n| **Indirect use** | Flood-water retention that protects downstream settlements; groundwater recharge; sediment and nutrient trapping that maintains soil fertility; nursery habitat sustaining fisheries far beyond the haor; carbon storage in wetland soils |\n| **Option value** | Keeping open future tourism development, and future use of genetic material from its aquatic species |\n| **Bequest value** | The willingness of present residents and of Bangladeshis generally to pay to ensure the haor survives for their children |\n| **Existence value** | Willingness to pay by people nationally and internationally simply for the haor to continue as habitat for migratory waterfowl, independent of any visit |\n\n**Why the exercise matters.** A proposal to drain part of the haor for agriculture would be appraised on direct use values alone, which are the easiest to observe. Those are a fraction of the total. The indirect use values — flood regulation and fishery support — accrue to people outside the project boundary, and the non-use values accrue to people who never go there. Omitting them systematically biases appraisal toward conversion. **The purpose of the TEV framework is precisely to make those omitted categories visible before the decision is taken.**",
-      "answerBn": ""
+      "answerBn": "",
+      "source": "Perman et al., Ch. 12"
     },
     {
       "id": "q-2021-f-5",
@@ -1266,7 +1275,8 @@
         "Show how consumer surplus is obtained and aggregated — 2 marks"
       ],
       "answer": "## What the travel cost method is\n\nMost recreation sites — a national park, a beach, a haor — charge little or nothing. There is no market price and therefore no observable demand curve. The **travel cost method** solves this by recognising that although admission may be free, *reaching* the site is not. The expenditure a visitor incurs to get there functions as an **implicit price**.\n\nVariation in that implicit price comes from variation in distance: cheap for those living nearby, expensive for those far away. If visits fall as trip cost rises, we can trace out a downward-sloping demand curve for the site, and the area beneath it measures consumer surplus — the site's recreational **use value**.\n\nThe method is a **revealed-preference** technique. Its estimates rest on what people actually did, not what they say they would do, which is its principal strength over contingent valuation.\n\n## When it applies\n\n1. **Valuing recreational use** of a non-priced natural site — the core application.\n2. **Estimating access value**: what would be lost if the site closed, as in damage assessment after an oil spill or a development that eliminates a wildlife area.\n3. **Valuing a change in site quality**, such as improved water quality, though the multiple-site random utility model handles this better.\n4. **Cost–benefit analysis** of a proposed park, reservoir or conservation project.\n\n**The limitation must be stated:** because it infers value from behaviour, TCM captures **use value only**. Existence and bequest values — held by people who never visit and therefore never travel — are structurally invisible to it. For those, contingent valuation is required.\n\n## Applying the individual travel cost method\n\nThe ITCM takes the **individual visitor** as the unit of observation and explains how many trips they make in a season.\n\n**Theoretical basis.** The visitor maximises `u(x, v, q)` — other goods, trips, site quality — subject to both a money and a *time* constraint. Substituting time into the budget constraint yields the **full price of a visit**:\n\n```\ntc = f + p_d·d + p_w(t₁ + t₂)\n```\n\nwhere `f` is the admission fee, `p_d·d` the monetary cost of the round-trip distance, `t₁` travel time and `t₂` on-site time, both valued at some fraction of the wage `p_w`. Maximisation delivers the **trip generating function** `v = f(tc, Y, q)`.\n\n**Step 1 — Identify the site** and collect data on visitor flows over the season.\n\n**Step 2 — Design the questionnaire.** It must capture: origin (for distance), number of visits this season, all cost components, time taken, purpose of the visit (to identify multi-purpose trips), awareness and cost of substitute sites, and socio-economic characteristics — income, age, education, household size.\n\n**Step 3 — Survey a sample of visitors.** On-site interception is usual. Train enumerators, run a pilot, and spread the survey across weekdays, weekends and seasons so the sample is representative.\n\n**Step 4 — Clean the data and construct the cost variable.** Compute distance cost as per-km cost times round-trip distance. Value time at a fraction of the wage rate — conventionally one-third as a lower bound and the full wage as an upper bound; report both, since results are highly sensitive to this choice.\n\n**Step 5 — Estimate the trip generating function.** For visitor `i`:\n\n```\nV_i = α + β₁·TC_i + β₂·TCS_i + β₃·Y_i + β₄·Z_i + ε_i\n```\n\nwith `TCS` the cost of substitute sites and `Z` socio-economic controls. Linear, semi-log and double-log forms should all be tried. Accept a specification only if `β₁ < 0` and significant, the other coefficients carry sensible signs (`β₂ > 0`, `β₃ > 0`), and the fit is acceptable. Because the dependent variable is a non-negative count observed only for visitors, truncated or count-data estimators are preferable to OLS.\n\n**Step 6 — Compute consumer surplus.** Integrate the fitted demand curve from the mean travel cost up to the **choke price** — the trip cost at which predicted visits reach zero. For the linear form,\n\n```\nCS per visitor per season = (TC* − TC̄)² / (2·|β₁|)\n```\n\n**Step 7 — Aggregate.** Multiply mean individual surplus by total seasonal visitors to obtain the site's annual access value, then discount the stream over the project horizon.\n\n## Caveats to state\n\nMulti-purpose trips make cost attribution arbitrary; the value of time is a judgement that drives the result; omitting substitute sites biases the travel-cost coefficient; sampling only visitors truncates the distribution and over-represents frequent visitors; and people who moved near the site because they value it make trip cost endogenous. A competent study reports how each was handled.",
-      "answerBn": ""
+      "answerBn": "",
+      "source": "Travel Cost Method lecture sheet (98th)"
     },
     {
       "id": "q-2021-f-6",
@@ -1298,7 +1308,8 @@
         "Note the principal biases and the NOAA safeguards — 1.5 marks"
       ],
       "answer": "## The concept\n\nThe **contingent valuation method** is a stated-preference valuation technique. A carefully constructed hypothetical market is described to a respondent, who is then asked directly what they would be willing to pay for a specified environmental improvement, or willing to accept to tolerate a specified deterioration. The value is *contingent* on the hypothetical scenario — hence the name.\n\nIt is the only method capable of measuring the full total economic value of an environmental asset, because it is the only one that reaches non-use value.\n\n## When it is applicable\n\nCVM is the appropriate choice in four circumstances:\n\n1. **When non-use value must be measured.** Existence and bequest values generate no observable behaviour — no trips, no purchases, no defensive expenditure. Revealed-preference methods are therefore structurally incapable of detecting them, and CVM is not merely convenient but necessary.\n2. **When the change has not yet occurred.** Ex-ante appraisal of a proposed policy or project has no historical behaviour to observe.\n3. **When no surrogate market exists.** Travel cost needs travel; hedonic pricing needs a property market that capitalises the amenity. Where neither exists — valuing improved air quality in a village, or protection of an endangered species — nothing is left to observe.\n4. **In natural resource damage assessment**, particularly for litigation. The method's prominence dates from the Exxon Valdez case, where CVM estimates of lost passive-use value were entered as evidence.\n\nIt is *not* the right choice where a revealed-preference method is available and the value is purely use value: actual behaviour is always better evidence than a hypothetical answer.\n\n## How it is applied — five steps\n\n**Step 1: Construct the hypothetical market.** Three elements must be specified. The *reason for payment* — what improvement is being bought. The *bid vehicle* — the payment mechanism, such as an addition to a utility bill, a local tax, or a contribution to a trust fund; it must be realistic, incentive compatible, and perceived as fair. And the *provision rule* — how the good will actually be supplied as a function of the values stated.\n\n**Step 2: Obtain the data.** Draw a probability sample of the affected population and administer the survey. Face-to-face interviews are strongly preferred: they raise engagement, reduce misunderstanding, and allow the interviewer to probe. Mail and telephone surveys suffer higher non-response and less comprehension.\n\nThe elicitation format must be chosen. Options are the *bidding game*, the *payment card*, the *open-ended question*, and the *single- or double-bounded referendum*. The referendum — a single take-it-or-leave-it yes/no bid — is incentive compatible and free of anchoring, though it yields only one bound per respondent and therefore needs a larger sample.\n\n**Step 3: Estimate mean WTP.** Direct averaging suffices for open-ended and bidding-game data. With referendum data the analyst must estimate a response probability function by logit or probit and derive mean WTP from the fitted model.\n\n**Step 4: Estimate the bid curve.** Regress stated WTP on income, education, age, use of the asset, distance and attitudes:\n\n```\nWTP_i = f(Y_i, E_i, A_i, U_i, X_i) + ε_i\n```\n\nThis serves two purposes: it permits benefit transfer to other sites, and it is a **validity test** — if WTP does not rise with income, or does not fall with distance for a use value, the responses are not behaving like economic values and the study is suspect.\n\n**Step 5: Aggregate.** Multiply mean WTP by the relevant population, having first removed protest bids (respondents rejecting the scenario rather than expressing a zero value), and discount the resulting stream where the benefit is durable.\n\n## The safeguards\n\nCVM is vulnerable to hypothetical bias, starting-point bias, vehicle bias, information bias, warm glow, and — most damagingly — **embedding**, the insensitivity of stated values to the scope of the good. The 1993 NOAA panel under Arrow and Solow set out the standards for a defensible study: probability sampling, personal interviews, the referendum format, WTP rather than WTA, conservative design, explicit reminders of substitutes and of the budget constraint, a \"no answer\" option, checks of comprehension, and full reporting of method and non-response. A CV study that follows these can be defended; one that does not, cannot.",
-      "answerBn": ""
+      "answerBn": "",
+      "source": "Contingent Valuation lecture sheet (98th); NOAA panel (1993)"
     },
     {
       "id": "q-2021-f-7",
@@ -1319,7 +1330,8 @@
       "text": "(A) What is environmental quality? With the help of production possibility curves (PPC) for current and future generations (PPC now and PPC 60 years from now, market goods on the vertical axis and environmental quality on the horizontal axis), show that environmental quality is important for the society. (6.5) (B) What is a pollutant? Briefly discuss types of pollutants. (6)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2020-f-1",
@@ -1348,7 +1360,8 @@
         "Distinguish MSY from the economic optimum and note remedies — 1 mark"
       ],
       "answer": "## The setting\n\nA fishery is a **rival but non-excludable** resource: a fish caught by one boat is unavailable to another, yet nobody can be kept out. Fisher's Dilemma is the application of prisoner's-dilemma logic to this structure, and it explains why open-access fisheries are overexploited even when every participant understands perfectly well that they are.\n\n## The model\n\nIn the Gordon–Schaefer framework, sustainable yield depends on fishing effort `E` through the stock. Total revenue `TR(E)` rises, peaks at maximum sustainable yield, then falls as the stock is depleted. Total cost `TC(E)` is linear and increasing.\n\n**The sole owner** — a single agent controlling the whole fishery — chooses effort to maximise rent `TR − TC`, setting\n\n```\nMR(E) = MC(E)\n```\n\nyielding effort `E_efficient` and a **positive resource rent**, the surplus the fishery generates for society.\n\n**Under open access**, no such agent exists. Each boat enters if it expects positive profit. Entry continues as long as average revenue exceeds average cost, and stops only when\n\n```\nTR(E) = TC(E)\n```\n\nThis is the **bionomic equilibrium**. At it, `E_open access > E_efficient`, the standing stock is smaller, and — the crucial result — **the entire resource rent has been dissipated to zero**.\n\n## Why individually rational behaviour produces it\n\nEach fisher faces the following calculus. A fish left in the water today grows and reproduces, but the return on that restraint is captured by whoever catches it next — and under open access that will not reliably be the one who showed restraint. The private return to conservation is therefore close to zero while the private return to catching is the full market value.\n\nAs a two-player game, with \"restrain\" and \"overfish\" as strategies:\n\n| | B restrains | B overfishes |\n|---|---|---|\n| **A restrains** | (4, 4) | (1, 5) |\n| **A overfishes** | (5, 1) | (2, 2) |\n\nFor A, overfishing pays whatever B does (5 > 4 and 2 > 1); the same holds for B. **Overfishing is a strictly dominant strategy**, so the unique Nash equilibrium is `(overfish, overfish)` with payoffs (2, 2). But `(restrain, restrain)` gives (4, 4) — the equilibrium is **Pareto dominated**.\n\nThis is the exact structure of the prisoner's dilemma, and it generalises to `n` players: with many boats, each one's restraint has a negligible effect on the stock while costing them the full forgone catch, so defection becomes even more compelling.\n\n## Why the outcome is sub-optimal\n\nThree distinct losses:\n\n1. **Rent dissipation.** The surplus a well-managed fishery would generate is competed away entirely. Society captures nothing; the resource yields no more net value than the next-best use of the labour and capital employed in it.\n2. **Excess effort.** Too many boats chase too few fish. The capital and labour are genuinely wasted — the same catch could be taken with far fewer resources.\n3. **Stock depletion**, potentially past the point of biological collapse if `E_open access` lies beyond MSY.\n\n> **A point that distinguishes a strong answer:** maximum sustainable yield is a *biological* maximum, not an economic optimum. Because effort is costly, the economically efficient effort is generally **below** `E_MSY`, leaving a larger standing stock. Treating MSY as the management target already over-invests in effort.\n\n## Remedies\n\nThe problem is non-excludability, so the solutions all work by restoring exclusion: **individual transferable quotas** or territorial use rights, which recreate the sole owner's incentive and restore the rent; **taxes** on effort or landings that reproduce the efficient effort level and return the rent to the state; **effort controls** such as closed seasons and licence limits, which are less efficient because fishers substitute into unregulated inputs; and **Ostrom-style community management**, with defined boundaries, locally-devised rules and graduated sanctions, which has succeeded in small, stable fishing communities where formal regulation failed.",
-      "answerBn": ""
+      "answerBn": "",
+      "source": "Course material — Prisoner's Dilemma"
     },
     {
       "id": "q-2020-f-2",
@@ -1372,7 +1385,8 @@
       "text": "(i) Describe the sources of market failure. (5) (ii) How can bargaining result in an optimal level of externality according to the Coase theorem? (5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2020-f-3",
@@ -1403,7 +1417,8 @@
         "Note hypothetical bias, warm glow, and the NOAA remedies — 2 marks"
       ],
       "answer": "Contingent valuation asks people to price something in a hypothetical market. Every bias it suffers flows from that one fact. They can be grouped by mechanism.\n\n## 1. Strategic bias\n\nThe respondent misrepresents deliberately to influence the outcome. If the good will be provided regardless of what they pay, they overstate; if their actual payment will depend on their stated bid, they understate — the classic free-rider incentive.\n\nThis was economists' first and loudest objection to CVM. In practice it has proved *less* serious than feared. The **referendum format** — a single take-it-or-leave-it bid — is incentive compatible, because a respondent cannot improve the outcome by answering anything other than truthfully.\n\n## 2. Instrument design biases\n\n**Starting point bias (anchoring).** In a bidding game or payment card, the first figure shown signals a \"normal\" value and subsequent responses are drawn toward it. The effect is stronger the less familiar the respondent is with the good. *Remedy:* vary starting points across sub-samples and test for their influence, or use open-ended or referendum formats.\n\n**Vehicle bias.** The payment mechanism itself contaminates the answer. A respondent hostile to taxation states a low WTP for a tax-financed programme regardless of how they value the good. *Remedy:* test several vehicles and choose one perceived as fair and realistic.\n\n**Information bias.** Stated values reflect the information supplied in the scenario, so the analyst partly determines the answer. *Remedy:* standardise and pretest the information set; report the exact wording.\n\n## 3. Embedding and scope insensitivity\n\nRespondents value a comprehensive good and a small subset of it at almost the same amount. Kahneman and Knetsch's celebrated result: WTP to clean up all the lakes in Ontario was barely distinguishable from WTP to clean up the lakes in one region.\n\n**This is the most damaging criticism, and the question expects you to say so.** If stated values do not respond to the *quantity* of the good, they cannot be economic values at all — a demand curve that is flat in quantity is not a demand curve. Kahneman and Knetsch argued respondents are purchasing **moral satisfaction**, a warm glow from the act of contributing, whose size naturally does not scale with the environmental improvement.\n\nThere is a partial defence: embedding can arise legitimately from strong substitutability, or from a mental budget allocated to environmental causes as a whole. But the burden of proof lies with the analyst, and **scope tests** — showing that WTP rises with the size of the good — are now the standard validity requirement.\n\n## 4. Hypothetical bias and warm glow\n\n**Hypothetical bias.** Imaginary money is not real money. Comparisons of hypothetical and actual payment consistently find stated WTP exceeding real WTP, often by a factor of two or three. *Remedy:* \"cheap talk\" scripts that warn respondents about the tendency; conservative design; calibration factors.\n\n**Warm glow.** The respondent values the act of giving rather than the good. *Remedy:* cross-check against attitudinal questions and test for scope sensitivity.\n\n## 5. WTP–WTA divergence\n\nWTA responses routinely exceed WTP for the same good by a factor of two to ten. Explanations include the endowment effect and loss aversion, Hanemann's substitution-elasticity argument, the fact that WTP is bounded by income while WTA is not, and outright moral refusal to name a price for accepting environmental loss. The NOAA panel's response was to recommend the WTP format as conservative.\n\n## Assessment\n\nThe biases are real but not uniformly fatal. Strategic bias is manageable through format design; anchoring, vehicle and information biases are manageable through careful instrument construction and pretesting. **Embedding is the serious one**, because it challenges whether the responses are economic values at all, and it must be addressed head-on with scope tests rather than assumed away.\n\nThe honest conclusion: CVM is indispensable — it is the only route to non-use value — but its estimates should be treated as bounded approximations produced under a disclosed protocol, and studies that ignore the NOAA guidelines should not be relied upon.",
-      "answerBn": ""
+      "answerBn": "",
+      "source": "Contingent Valuation lecture sheet (98th); NOAA panel (1993)"
     },
     {
       "id": "q-2020-f-4",
@@ -1424,7 +1439,8 @@
       "text": "Briefly describe the Benefit Transfer Approach of valuing the environment. (5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2020-f-5",
@@ -1448,7 +1464,8 @@
       "text": "What is Equivalent Variation? Explain graphically. (5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2020-f-6",
@@ -1467,7 +1484,8 @@
       "text": "Briefly compare Environmental Economics with Ecological Economics. (5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2020-f-7",
@@ -1495,7 +1513,8 @@
         "Explain why a tax or permit market delivers it automatically, and why uniform standards do not — 1.5 marks"
       ],
       "answer": "## The condition\n\nSuppose the regulator has fixed an aggregate emission target `E` and there are `n` sources. Total abatement cost is minimised when **every source abates to the point at which marginal abatement costs are equal**:\n\n```\nMAC₁(e₁) = MAC₂(e₂) = … = MACₙ(eₙ)     subject to     Σ eᵢ = E\n```\n\nThis is the **least-cost** (or equimarginal) **theorem** of pollution control.\n\n## Proof\n\nBy contradiction. Suppose marginal abatement costs are unequal at the proposed allocation — say `MAC₁ = 50` and `MAC₂ = 20`.\n\nLet firm 1 abate one unit **less**, saving 50. Let firm 2 abate one unit **more**, costing 20. Total emissions are unchanged, so the environmental target is still met — but total abatement cost has fallen by 30.\n\nSuch a welfare-improving reallocation exists whenever any two marginal costs differ. Therefore at the cost-minimising allocation no two can differ, and all marginal abatement costs must be equal. ∎\n\nFormally, minimising `Σ Cᵢ(eᵢ)` subject to `Σ eᵢ = E` gives first-order conditions `C′ᵢ(eᵢ) = λ` for all `i`, where the multiplier `λ` is the common marginal cost of meeting the constraint.\n\n## How the sharing is achieved in practice\n\nThe theorem states the condition but not how a regulator, who does not observe firms' cost curves, could impose it. Two instruments deliver it automatically.\n\n**A uniform emission tax `t`.** Each firm abates while `MACᵢ < t` and stops where `MACᵢ = t`. Since every firm faces the same `t`, all marginal costs are equalised without the regulator knowing any of them. Low-cost abaters do most of the abating, high-cost abaters pay the tax instead — exactly the efficient division. The regulator adjusts `t` until aggregate emissions reach `E`.\n\n**Marketable permits.** Issue exactly `E` permits and allow trade. A firm whose `MAC` exceeds the permit price buys permits; a firm whose `MAC` is below it sells and abates instead. In equilibrium `MACᵢ = P_permit` for every firm, and the target is met exactly because the permit supply is fixed.\n\n**Why uniform standards fail.** Command-and-control regulation typically requires each source to cut by the same percentage. Firms differ in abatement technology and therefore in `MAC`, so equal cuts produce *unequal* marginal costs — a violation of the condition by construction. Empirical studies of actual programmes find uniform standards costing between two and twenty-two times the least-cost allocation for the same environmental outcome.\n\n**The decisive advantage** of the economic instruments is informational: the regulator needs to know only the aggregate target, while the firms' own cost-minimising behaviour supplies the information needed to allocate the cuts efficiently.",
-      "answerBn": ""
+      "answerBn": "",
+      "source": "Perman et al., Ch. 7 (to p. 205)"
     },
     {
       "id": "q-2020-f-8",
@@ -1523,7 +1542,8 @@
         "Draw the policy implication — 1 mark"
       ],
       "answer": "The statement rejects the traditional picture in which the economy is a self-contained circular flow between firms and households, with the environment somewhere outside it.\n\n**The economy is a subsystem of the environment.** Kenneth Boulding's image is *spaceship earth*: materially the planet is a **closed system** — nothing enters or leaves except a negligible trickle of meteoric dust — while energetically it is open, receiving solar radiation and re-radiating waste heat. Everything the economy uses must therefore come from within the system, and everything it discards must remain within it.\n\n**The materials balance principle follows from the first law.** Since matter is conserved, the mass of residuals returned to the environment must, in the long run, equal the mass of resources extracted from it. Production does not consume matter; it changes its form and location. The apparently circular flow of income is, in physical terms, a **one-way throughput** from resource extraction to waste discharge.\n\n**Three consequences.**\n\n1. **Pollution is an inevitable counterpart of production**, not a correctable defect. Any positive output implies residuals of equal mass, so policy concerns the efficient level of waste, never its elimination.\n2. **The resource and sink functions are linked.** Extraction today commits the environment to absorption tomorrow, so the two cannot be regulated independently.\n3. **The second law adds irreversibility.** Materials return in a degraded, dispersed, higher-entropy state, so complete recycling is thermodynamically impossible. The throughput cannot be made to loop perfectly.\n\n**Policy implication.** Because the economy is embedded in a finite closed system, there is a maximum sustainable **scale** of throughput — a question logically distinct from efficient allocation and just distribution. Efficient prices can coexist with a throughput too large for the biosphere to sustain. This is the foundation of Daly's steady-state argument and of the ecological-economics claim that the standard framework, which treats the environment as an externality to an otherwise self-contained economy, has the containment relation exactly backwards.",
-      "answerBn": ""
+      "answerBn": "",
+      "source": "Perman et al., Ch. 1–2"
     },
     {
       "id": "q-2019-f-1",
@@ -1555,7 +1575,8 @@
         "Set out the assumptions and explain the failure with many victims — 2.5 marks"
       ],
       "answer": "## Part 1 — The principal sources of market failure\n\nMarket failure is any situation in which the competitive equilibrium is not Pareto efficient. Five sources matter for environmental economics:\n\n1. **Externalities.** An unpriced effect of one agent's action on another. The polluter equates price to *private* marginal cost while efficiency requires social marginal cost, so output exceeds `Q*` and a deadweight loss results.\n2. **Public goods.** Clean air is non-rival and non-excludable, so each beneficiary free rides and provision falls below the efficient level.\n3. **Open access and absent property rights.** Where nobody can be excluded, the resource is used until rent is dissipated — the tragedy of the commons.\n4. **Market power.** Price above marginal cost restricts output below the efficient level.\n5. **Imperfect and asymmetric information.** Buyers cannot observe environmental damage; regulators cannot observe abatement costs.\n\nEnvironmental problems typically combine the first three: pollution is a negative externality *and* a public bad *and* a consequence of unassigned rights over the receiving medium.\n\n## Part 2 — Can bargaining reach the optimum? The Coase theorem\n\n**Statement.** If property rights are well defined and bargaining is costless, the parties will negotiate to the efficient allocation regardless of who holds the right.\n\nThere are two claims here, and they must be separated:\n\n- the **efficiency claim** — bargaining reaches `MAC = MD`;\n- the **invariance claim** — that quantity is the same under either assignment; only the distribution of income differs.\n\n**Demonstration.** Take a polluter and a single victim.\n\n*If the polluter holds the right to emit*, the victim offers payment to secure abatement. The victim will pay up to the marginal damage avoided; the polluter will accept anything above marginal abatement cost. A mutually profitable bargain exists whenever `MD > MAC`, and trading continues until `MD = MAC`.\n\n*If the victim holds the right to a clean environment*, the polluter buys permission to emit. It will pay up to the abatement cost saved; the victim will accept anything above the damage suffered. Bargains exist whenever `MAC > MD`, and again trading stops at `MD = MAC`.\n\nThe same `e*` emerges from both. What changes is who is richer.\n\n## Part 3 — Why it usually cannot work\n\nThe theorem rests on: well-defined and transferable rights; zero transaction costs; full information; negligible income effects; and few parties.\n\nFor most environmental problems the assumptions fail, and they fail for a structural reason. Pollution damage is a **public bad**: abatement benefits everyone in the affected area simultaneously. Therefore:\n\n- **Free riding.** Each victim hopes the others will fund the payment, since none can be excluded from the resulting cleaner air. The collective offer falls short of true aggregate marginal damage, and pollution remains above `e*`.\n- **Holdout.** Where unanimity is needed, a single victim can block agreement to extract the whole surplus.\n- **Coordination and enforcement costs.** Organising a city's population to negotiate with a power station costs more than the agreement is worth.\n- **Strategic misrepresentation.** Neither side has an incentive to reveal its true `MAC` or `MD`.\n\n**Conclusion.** Bargaining can reach the optimum in the small-numbers case Coase himself described — a factory and a neighbouring laundry, a rancher and a farmer. For large-scale environmental problems with diffuse victims it cannot, and the case for Pigovian taxation or direct regulation rests precisely on that failure. Coase's enduring contribution is not that bargaining always works but that **the efficient level of pollution is positive, and which instrument to use is an empirical question about transaction costs.**",
-      "answerBn": ""
+      "answerBn": "",
+      "source": "Perman et al., Ch. 5"
     },
     {
       "id": "q-2019-f-2",
@@ -1576,7 +1597,8 @@
       "text": "(a) Following the normative theory of environmental policy, show that the polluting firm should extend its waste discharge to the point at which the marginal product of emission is equal to the sum of the marginal damage imposed on the consumer and the marginal damage imposed on the producer. (6.5) (b) What are the possible implications of Pareto optimal pricing in the case of depletable and non-depletable externality? Explain in brief. (6)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2019-f-3",
@@ -1601,7 +1623,8 @@
       "text": "(a) Briefly describe the theoretical basis of the travel cost method of environmental valuation. (6) (b) How do we apply this model for empirical estimation? Explain using the concept of the Zonal Travel Cost model. (6.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2019-f-4",
@@ -1623,7 +1646,8 @@
       "text": "(a) How will the overall target of emission be shared among many potential polluters according to the Least-Cost theorem of Pollution Control? (6.5) (b) Discuss how Limits to Growth will be reached in this world if the growth trend of world population, industrialization, pollution, food production and resource depletion continues to remain unchanged? (6)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2019-f-5",
@@ -1646,7 +1670,8 @@
       "text": "(a) Discuss the advantages of marketable pollution permits. (10) (b) Derive the IPAT identity and discuss its three components in short. (2.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2019-f-6",
@@ -1669,7 +1694,8 @@
       "text": "(a) Why are predictions of the Prisoner's Dilemma so important to natural resource management? (2.5) (b) Describe the Fisher's Dilemma model and explain how open access fishery will give rise to a sub-optimal outcome in a non-cooperative scenario. (10)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2019-f-7",
@@ -1690,7 +1716,8 @@
       "text": "Write short notes on the following: (a) Weak and strong sustainability; (b) Choice of discount rate for social project appraisal; (c) Environmental cost-benefit analysis. (12.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2019-m-1",
@@ -1712,7 +1739,8 @@
       "text": "(a) Discuss how Limits to Growth will be reached in this world if the growth trend of world population, industrialization, pollution, food production and resource depletion continues to remain unchanged? (5) (b) In 1972 the amount of iron reserved in this world was 575 million metric tons, from which 1.2 million metric tons were mined annually. The rate of iron consumption was growing at a rate of 3 percent annually. According to the limits to growth theorem, how long would iron last in this world? (5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2019-m-2",
@@ -1734,7 +1762,8 @@
       "text": "(a) Discuss the relationship between income and environmental degradation using the Environmental Kuznets Curve hypothesis. (5) (b) Why does the EKC take an inverted U shape? Do you think this hypothesis is valid for all types of pollutants? Give your reasoning. (5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2019-m-3",
@@ -1757,7 +1786,8 @@
       "text": "(a) What are the criteria for selecting pollution control instruments? Should the weights for all types of criteria be the same? Give your arguments. (5) (b) How will the overall target of emission be shared among so many potential polluters? Discuss using the Least-Cost theorem of Pollution Control. (5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2019-m-4",
@@ -1780,7 +1810,8 @@
       "text": "Write short notes on the following topics (any two): (a) Social Limits to Growth; (b) Laws of Thermodynamics; (c) Economy and the environment as a closed system. (5+5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2018-f-1",
@@ -1805,7 +1836,8 @@
       "text": "(a) What are the economic implications of environmental resources? Why do environmental resources need special attention? (3.5) (b) State the laws of thermodynamics. 'The entire nature of the economic system is entropic' — explain. (3) (c) What are the key pillars of sustainability? Explain in brief. (3) (d) Discuss Daly's principles of sustainability. (3)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2018-f-2",
@@ -1837,7 +1869,8 @@
         "Work the Karim–Rahim case through both consumer and producer sides — 4 marks"
       ],
       "answer": "## (a) Why the direction of payment does not affect efficiency\n\nThe statement is the **invariance claim** of the Coase theorem, and it is justified as follows.\n\nLet `MAC(e)` be the polluter's marginal abatement cost, falling in emissions, and `MD(e)` the victim's marginal damage, rising in emissions. Efficiency requires `MAC(e*) = MD(e*)`.\n\n**Case 1 — the polluter must compensate the victim.** The polluter now bears the damage it causes as a private cost. It will emit an extra unit only if the abatement cost saved exceeds the compensation owed, i.e. while `MAC > MD`. It stops at `MAC = MD`.\n\n**Case 2 — the victim must pay the polluter not to pollute.** The victim will pay for an extra unit of abatement only if the damage avoided exceeds the payment demanded, and the polluter accepts only above `MAC`. Trade occurs while `MD > MAC`, and stops at `MAC = MD`.\n\nBoth arrive at the same `e*`. **In terms of efficiency the two are identical**, because in each case the decision maker confronts the full social cost of the marginal unit — in Case 1 as a payment made, in Case 2 as a payment forgone. What Coase saw is that an externality is **reciprocal**: the harm requires both the emitter and the sufferer to be present, and the question is not who is at fault but which allocation is cheaper.\n\nThe two cases differ only in **distribution** — Case 1 leaves the victim better off, Case 2 the polluter. Note also the qualification: if the wealth transfer is large enough to shift the victim's demand for environmental quality, `MD` itself moves and invariance fails, though efficiency survives.\n\n## (b) The Pigovian fee under market power\n\nThe **Pigovian fee** is a per-unit tax on emissions set equal to marginal external damage at the efficient level, `t* = MD(e*)`. In a competitive market it internalises the externality exactly: the firm's private marginal cost becomes `MPC + t = MSC`, and profit maximisation delivers `Q*`.\n\n**Under monopoly this breaks down.** A monopolist sets `MR = MC`, and since `MR < P`, it already produces **below** the competitive level. There are now **two distortions pulling in the same direction**:\n\n- market power, which restricts output below the efficient level;\n- the externality, which — considered alone — calls for output to be restricted.\n\nImposing the full Pigovian fee `t* = MD` addresses the second while aggravating the first. Output falls further below `Q*`, and welfare may be **lower** than with no tax at all. Draw demand, `MR`, `MPC` and `MSC`: the monopoly output `Q_m` may already lie below the social optimum `Q*`, in which case any positive emission tax moves it further away.\n\n**The second-best solution** is a fee strictly **less** than marginal damage, chosen to balance the two distortions:\n\n```\nt_second-best = MD − (P − MR)\n```\n\nwhich can even be negative — a subsidy — if the monopoly distortion dominates. Buchanan's (1969) conclusion: **applying the textbook Pigovian rule to a monopolist can reduce welfare**, and the correct fee depends on the strength of market power as well as on the damage. This is the general lesson of second-best theory: correcting one distortion in isolation is not guaranteed to improve welfare when another remains.\n\n## (c) Karim and Rahim: reconciling Coase and Pigou\n\nKarim generates garbage and throws it over the fence into Rahim's yard. Assume they can talk costlessly and reach a binding agreement.\n\n**The Coasian outcome.** Let `MB(g)` be Karim's marginal benefit from disposing of the `g`-th unit over the fence (equivalently, his marginal cost of disposing of it properly), and `MD(g)` Rahim's marginal damage.\n\n- If Karim has the right to throw, Rahim pays him to stop while `MD > MB`; they settle at `MB = MD`.\n- If Rahim has the right to a clean yard, Karim pays for permission while `MB > MD`; they settle at `MB = MD`.\n\nEither way `g*` satisfies `MB(g*) = MD(g*)`.\n\n**The Pigovian outcome.** A tax on Karim of `t = MD(g*)` per unit makes his private marginal cost of dumping `MB − t`, so he dumps until `MB = MD` — the same `g*`.\n\n**Why there is no conflict once both sides are considered.** The apparent conflict arises when one asks whether Rahim should *also* be taxed or subsidised for his own defensive activity — installing a higher fence, say. Here the depletability of the externality decides.\n\nThis externality is **depletable** between the two of them in the relevant sense: it is a private, two-party nuisance, and any unit of garbage Karim disposes of properly is a unit Rahim does not receive. Under bargaining, both margins are internalised automatically — Rahim's fence-building enters the negotiation because it changes the damage he suffers and hence what he is willing to pay, so the pair jointly choose the least-cost combination of Karim's abatement and Rahim's defensive expenditure.\n\nThe Pigovian solution reaches the same point provided the fee is levied on the **generator only** and set at the marginal damage evaluated at the joint optimum. Taxing Rahim as well would double-count: he already bears his own damage in full, so his private incentive to build the fence is already socially correct.\n\n**Conclusion.** With costless bargaining, well-defined rights and both margins considered, the Coasian and Pigovian solutions select the **same allocation** `g*` and the same efficient split between abatement and avoidance. They differ only in who ends up with the money. The apparent conflict in the literature arises from comparing a Coasian solution that internalises both sides with a Pigovian one that is applied carelessly to the victim as well as the generator.",
-      "answerBn": ""
+      "answerBn": "",
+      "source": "Perman et al., Ch. 5"
     },
     {
       "id": "q-2018-f-3",
@@ -1857,7 +1890,8 @@
       "text": "(a) Briefly discuss various regulatory instruments of pollution control. (8) (b) Define stock pollutant and flow pollutant. Explain the rule for the efficient amount of emission in the case of a stock pollutant. (4.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2018-f-4",
@@ -1880,7 +1914,8 @@
       "text": "(a) Explain the concept of transfer coefficient. Suppose a number of firms generate emissions that lead to ambient concentration of pollution. The ambient pollution level is observable but not the emission level of individuals. Propose a regulatory mechanism that would be efficient in this situation. (7.5) (b) Consider the problem in which the EPA is uncertain about the pollution control cost of firms. Illustrate a regulatory design that will minimise expected social cost, i.e. expected pollution control cost plus pollution damage. (5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2018-f-5",
@@ -1907,7 +1942,8 @@
       "text": "(a) What do you mean by total economic value of environmental goods? Distinguish between revealed preference and stated preference methods of economic valuation. (4) (b) What is a trip generating function? Give the theoretical justification for using the individual travel cost method (ITCM). (4.5) (c) Briefly explain the concept of the contingent valuation method (CVM). Discuss the bias issues in CVM. (4)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2018-f-6",
@@ -1928,7 +1964,8 @@
       "text": "Write short notes on: (i) Measures of sustainability; (ii) SDG; (iii) Choice experiment. (3+4.5+5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2017-f-1",
@@ -1953,7 +1990,8 @@
       "text": "(A) Explain the linkage between environment and economy in brief. (3) (B) Explain the relationship between economic production and the laws of thermodynamics. (2.5) (C) What is sustainable development? Critically examine the Hartwick model of sustainability. (3) (D) How can we measure sustainability? Discuss in brief. (4)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2017-f-2",
@@ -1976,7 +2014,8 @@
       "text": "(A) List out reasons and possible solutions to market failure. Suppose a steel mill and a laundry are neighbours. The steel mill produces steel and pollution and the laundry produces clean clothes with clean air. Without any property right the market output is inefficient. Derive the efficiency condition and comment on the result in the following situations: (i) the steel mill owns the laundry; (ii) only the steel mill has the right to pollute; (iii) the laundry has the right to clean air. (9.5) (B) What are the problems of the Coasian solution to a public bad when there are large numbers of victims? Explain in brief with an example. (3)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2017-f-3",
@@ -1999,7 +2038,8 @@
       "text": "(A) Explain that the Pigovian fee makes the situation worse when there is market power. Consider the case of a monopolist in the bad's production. (5) (B) Assume an economy of two firms who are polluters and two consumers. The marginal savings and marginal damage functions are: MS₁(e₁) = 5 − e₁ where e₁ is emission from firm 1; MS₂(e₂) = 5 − e₂ where e₂ is emission from firm 2; MD₁(e) = MD₂(e) = e, where e is the total amount of emission the consumer is exposed to. (i) Graph the firm-level, aggregate marginal savings and aggregate marginal damage functions. (ii) What is the optimal level of pollution, the appropriate Pigovian fee and emission from each firm? (7.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2017-f-4",
@@ -2022,7 +2062,8 @@
       "text": "(A) Explain the concept of transfer coefficient and marketable ambient permits. Consider a river with two factories f₁ and f₂ with transfer coefficients a₁ and a₂ discharging organic waste into it. Derive the condition for the efficient amount of pollution and emission. How should the emission fee be structured to yield efficiency? (6) (B) Which regulatory system, price or quantity, would you prefer when there is uncertainty about the firm's marginal savings? Justify your answer. (6.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2017-f-5",
@@ -2048,7 +2089,8 @@
       "text": "(A) What do you mean by economic value? Discuss the concept of total economic value. (4) (B) What is the importance of economic valuation? Distinguish between revealed preference and stated preference methods of economic valuation. (3) (C) Suppose you want to estimate the recreational value of the Dhaka Zoo. Which method of valuation would you prefer? Briefly discuss each step of this method. What is the strength of this method? (5.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2017-f-6",
@@ -2073,7 +2115,8 @@
       "text": "(A) Discuss the strengths and weaknesses of the Contingent Valuation Method (CVM) as a valuation method. (4) (B) List out the general guidelines of the Blue Ribbon NOAA Panel (1993) for a CV study. What are the commonly used value-eliciting formats in a CV study? Discuss. (4) (C) Consider the following estimated model: WTP = 0.8103 − 0.00643·Bid, where WTP is a dichotomous 'yes/no' response to the offered bid amount and Bid is the amount offered to the respondent. Find the mean willingness to pay (MWTP). Also find the aggregate WTP if the number of respondents is 328,973, of which 13.2% is protest bid. (4.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2016-f-1",
@@ -2104,7 +2147,8 @@
         "Offer a critical assessment — 2 marks"
       ],
       "answer": "## (a) Definition and why it matters for policy\n\nThe Brundtland Commission (1987) defines sustainable development as development that **meets the needs of the present without compromising the ability of future generations to meet their own needs**.\n\nThe definition is deliberately broad, and it conceals the question on which everything turns: *what must be kept intact?* Two answers divide the field.\n\n- **Weak sustainability** requires the **total capital stock** — natural plus manufactured plus human — to be non-declining, treating the components as substitutes.\n- **Strong sustainability** requires **natural capital itself** to be non-declining, on the ground that some of it is *critical* — no substitute exists and its loss is irreversible.\n\nThe disagreement is empirical, about the elasticity of substitution between natural and produced capital, not philosophical.\n\n**Its importance relative to environmental policy** rests on three features that ordinary efficiency analysis handles badly:\n\n1. **Intergenerational equity.** Conventional cost–benefit analysis discounts, and at any positive discount rate damages a century away are almost weightless. Sustainability imposes a constraint that operates *alongside* efficiency rather than inside it — the efficient path is chosen from among sustainable ones.\n2. **Irreversibility.** Species extinction and climate destabilisation cannot be undone. Where an option can be lost permanently, the standard marginal calculus understates the cost of acting, and quasi-option value argues for delay and precaution.\n3. **Uncertainty and thresholds.** Ecological systems have tipping points whose location is unknown. A safe minimum standard — protect the asset unless the cost of doing so is unacceptably large — is a more defensible rule than expected-value maximisation.\n\nOperationally, sustainability turns these into a **constraint on policy** rather than one more item in the benefit–cost ledger, which is precisely why it changed how environmental policy is framed.\n\n## (b) The mainstream strategies\n\nMainstream interpretations propose broadly six strategies. Give the mechanism in each case, not just the label.\n\n**1. Maintain the capital stock — the Hartwick rule.** Invest the entire scarcity rent from exhaustible resources into reproducible capital, and constant consumption can be sustained indefinitely. This is the operational content of weak sustainability, and the World Bank's **genuine savings** indicator is its practical test: persistently negative adjusted net saving signals a country consuming its capital.\n\n**2. Internalise externalities so prices tell the truth.** Pigovian taxes, tradable permits and full-cost pricing bring private cost into line with social cost. The mainstream position is that most environmental degradation reflects prices that omit environmental cost, so correcting prices does most of the work — and does it at least cost, since economic instruments equalise marginal abatement costs across sources.\n\n**3. Define property rights.** Much degradation stems from open access. Assigning enforceable rights — land titling, transferable fishing quotas, community forest rights — restores the incentive to conserve, because the owner now captures the future return on restraint.\n\n**4. Decouple growth from throughput.** Raise resource productivity through cleaner technology, energy efficiency, and a structural shift toward services, so that GDP can rise while material and energy throughput falls. The Environmental Kuznets Curve is sometimes invoked here, though the evidence supports it only for some local pollutants and not for CO₂.\n\n**5. Apply Daly's operational rules** where substitution is doubtful: harvest renewables no faster than they regenerate; deplete non-renewables no faster than renewable substitutes are developed; emit no faster than the environment assimilates.\n\n**6. Reform the measurement of progress.** GDP counts defensive expenditure as output and ignores depreciation of natural capital. Green national accounting, the SEEA framework, the Genuine Progress Indicator and the ecological footprint are attempts to measure what sustainability requires us to hold constant.\n\nTo these the policy literature adds the **precautionary principle** where damage may be irreversible, and **poverty reduction** on the argument that poverty itself drives degradation when the poor have no alternative to depleting the resources around them.\n\n## Critical assessment\n\nThe mainstream package leans heavily on substitutability and on technological progress, both of which are assumed rather than demonstrated. It says little about *scale* — the total throughput the biosphere can support — which is Daly's central objection: an economy can have efficient prices, well-defined property rights and rising resource productivity while still being too large for its ecological base. And it treats distribution as separable from efficiency, though in practice the burden of environmental degradation and the benefits of resource use fall on quite different people. A complete answer to sustainability requires all three — **efficient allocation, just distribution, and sustainable scale** — and mainstream strategy addresses mainly the first.",
-      "answerBn": ""
+      "answerBn": "",
+      "source": "Perman et al., Ch. 4"
     },
     {
       "id": "q-2016-f-2",
@@ -2127,7 +2171,8 @@
       "text": "(a) What is meant by Utilitarianism? What is the distributional implication of a utilitarian social welfare function? (4) (b) What is the Rawlsian max-min criterion? Is it an appropriate criterion for intergenerational decisions in the field of environmental and resource economics? (4.5) (c) What should be the role of policy makers in resolving a conflict between pure time preference and the irreversibility issue in determining a discount rate? (4)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2016-f-3",
@@ -2162,7 +2207,8 @@
         "Extend to a quantity/quality change and note the ranking EV ≥ CS ≥ CV — 3 marks"
       ],
       "answer": "## (a) WTP versus WTA\n\n**Willingness to pay** is the maximum sum an individual would give up to secure an improvement (or to avoid a deterioration). **Willingness to accept** is the minimum sum they would take to forgo an improvement (or to tolerate a deterioration).\n\nThey correspond to the two exact welfare measures:\n\n| | Improvement | Deterioration |\n|---|---|---|\n| **Compensating variation** (holds `u₀` fixed) | WTP for the gain | WTA to tolerate the loss |\n| **Equivalent variation** (holds `u₁` fixed) | WTA to forgo the gain | WTP to prevent the loss |\n\n### Considerations in choosing between them\n\n**The decisive criterion is the assignment of property rights.** If the individual holds a legal or moral right to the environmental good, removing it requires compensation and **WTA** is the theoretically correct measure. If they hold no such right, an improvement must be purchased and **WTP** is correct. The choice is institutional, not technical.\n\nAgainst that, three practical considerations push toward WTP:\n\n1. **WTP is bounded by income; WTA is not.** WTA questions routinely generate protest responses and refusals to name any finite figure.\n2. **Empirically WTA exceeds WTP by two to ten times** — far more than income effects can explain. Hanemann showed the wedge widens as substitutes become scarcer, which is precisely the situation for unique environmental assets; prospect theory adds loss aversion and the endowment effect.\n3. **The NOAA panel therefore recommends WTP** as the conservative format for defensible studies.\n\nSo the theoretically correct measure and the practically usable one often differ, and the honest analyst states which is being used and why.\n\n## (b) Deriving equivalent and compensating variation\n\nLet `e(p, u)` be the expenditure function — the minimum outlay needed to reach utility `u` at prices `p` — and let prices change from `p⁰` to `p¹`, with income `m` and `u⁰ = v(p⁰, m)`, `u¹ = v(p¹, m)`.\n\n**Compensating variation** is defined by\n\n```\nv(p¹, m − CV) = v(p⁰, m) = u⁰\n```\n\nso that\n\n```\nCV = e(p¹, u⁰) − e(p⁰, u⁰) = e(p¹, u⁰) − m\n```\n\nIt is the income adjustment, *at the new prices*, that restores the original welfare level.\n\n**Equivalent variation** is defined by\n\n```\nv(p⁰, m + EV) = v(p¹, m) = u¹\n```\n\nso that\n\n```\nEV = e(p¹, u¹) − e(p⁰, u¹) = m − e(p⁰, u¹)\n```\n\nIt is the income change, *at the original prices*, that would deliver the new welfare level without the price change.\n\n**Geometry.** By Shephard's lemma `h_i(p, u) = ∂e/∂p_i`, so integrating Hicksian demand over the price change gives each measure as an area to the left of a compensated demand curve:\n\n```\nCV = ∫ h_i(p, u⁰) dp_i        EV = ∫ h_i(p, u¹) dp_i\n```\n\nover `[p¹, p⁰]`. Draw both Hicksian curves and the Marshallian curve through the initial point. For a **price fall** on a normal good,\n\n```\nEV  ≥  Marshallian consumer surplus  ≥  CV\n```\n\nThe two gaps are pure income effects. Under quasi-linear preferences the income effect vanishes, the three curves coincide, and ordinary consumer surplus becomes exact — the only case in which it is.\n\n**Quantity or quality change.** For a rationed environmental good `q` fixed by nature or policy rather than chosen, the same definitions apply with `e(p, q, u)`:\n\n```\nCV = e(p, q⁰, u⁰) − e(p, q¹, u⁰)      EV = e(p, q⁰, u¹) − e(p, q¹, u¹)\n```\n\nThese are areas under the **inverse compensated demand** (marginal willingness-to-pay) curve for `q`. The ranking is unchanged, and here the CV–EV gap depends on the substitution elasticity — Hanemann's result, and the theoretical explanation of the large WTA–WTP divergence observed in environmental valuation.",
-      "answerBn": ""
+      "answerBn": "",
+      "source": "Perman et al., Ch. 5 (to §5.3)"
     },
     {
       "id": "q-2016-f-4",
@@ -2186,7 +2232,8 @@
       "text": "(a) Explain why it is not necessary to tax or subsidise victims of pollution to induce them to undertake the optimal level of preventative activity when externalities are depletable and undepletable in nature. (4.5) (b) Considering both short-run and long-run views, compare and contrast the outcome of taxes and subsidies as instruments for pollution control for firms and industry. (8)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2016-f-5",
@@ -2210,7 +2257,8 @@
       "text": "(a) Distinguish between revealed preference and stated preference techniques for environmental valuation. (3.5) (b) Explain how one of the techniques could be used to value a decline in water quality. What are the advantages and disadvantages of the technique in this context? (9)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2016-f-6",
@@ -2232,7 +2280,8 @@
       "text": "Why is it possible to look at wages and housing prices to draw a conclusion about the value of environmental quality? (12.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2016-f-7",
@@ -2257,7 +2306,8 @@
       "text": "Write short notes on: (a) Marketable Pollution Permits; (b) Total Economic Value; (c) Conjoint Analysis. (4.5+4.5+3.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2015-f-1",
@@ -2281,7 +2331,8 @@
       "text": "(a) What are some of the main strategies suggested by mainstream interpretations of 'sustainable development' for addressing environmental problems? (8) (b) Discuss the relevance of the first and second laws of thermodynamics in relation to the services provided by the environment. (4.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2015-f-2",
@@ -2308,7 +2359,8 @@
         "Present the substantive criticisms and give a balanced verdict — 3 marks"
       ],
       "answer": "## (a) What the EKC is\n\nThe **Environmental Kuznets Curve** hypothesis holds that the relationship between per-capita income and environmental degradation is an **inverted U**: degradation rises in the early stages of development, reaches a turning point, and falls thereafter. The name comes by analogy with Simon Kuznets's proposed inverted-U between income and inequality.\n\nThe standard specification is a reduced-form regression of a pollution indicator on income and its square:\n\n```\nln(E_it) = α_i + β₁·ln(Y_it) + β₂·(ln Y_it)² + γ·Z_it + ε_it\n```\n\nAn EKC requires `β₁ > 0` and `β₂ < 0`, with the turning point at `Y* = exp(−β₁ / 2β₂)`.\n\nIts policy attraction is obvious and is the reason the hypothesis became prominent after the 1991 Grossman–Krueger NAFTA study: if true, **growth is eventually its own environmental remedy**, and developing countries need not choose between income and environment.\n\n## (b) Why an inverted U might arise\n\nFour mechanisms are proposed:\n\n1. **Scale, composition and technique effects.** Growth raises output (scale, worsening), but also shifts the economy from agriculture to industry and then to services (composition), and brings cleaner technology (technique). Early on the scale effect dominates; later the composition and technique effects outweigh it.\n2. **Environmental quality as a superior good.** Above subsistence, the income elasticity of demand for environmental quality exceeds one, so citizens demand and can afford stricter regulation.\n3. **Institutional capacity.** Richer states have the administrative and fiscal capacity to monitor and enforce, which poor states lack whatever their preferences.\n4. **Increasing returns to abatement.** Abatement has large fixed costs; only above a threshold scale does it become affordable per unit.\n\n## (c) Critical assessment\n\n### Econometric problems\n\n- **The quadratic imposes the result.** A quadratic in income *must* produce a turning point somewhere. Flexible and semi-parametric specifications often find monotonic relationships instead. The functional form assumes what it purports to test.\n- **Turning points are estimated imprecisely and lie outside the data.** For many pollutants the estimated `Y*` exceeds the highest observed income, so the downturn is an extrapolation, not an observation.\n- **Omitted variables and heterogeneity.** Trade openness, governance quality and energy prices correlate with income; omitting them attributes their effect to income. Pooling heterogeneous countries in a single regression imposes a common relationship that panel tests reject.\n- **Non-stationarity.** Income and emissions are typically integrated series, so a level-on-level regression risks spurious correlation unless cointegration is established.\n\n### Substantive problems\n\n- **It holds only for a narrow class of pollutants.** The evidence is reasonable for local, short-lived pollutants with concentrated sources and visible local damage — SO₂, particulates, waterborne pathogens. It **fails for CO₂**, municipal waste and biodiversity loss, which rise monotonically with income. These are precisely the global, long-lived, diffuse problems that matter most. The pattern is not \"growth cleans up\" but \"growth cleans up what voters can see and states can regulate cheaply.\"\n- **The pollution haven objection.** Part of the apparent improvement in rich countries reflects **relocation** of dirty production to poorer ones. Consumption-based emission accounting substantially flattens or reverses the downturn. If the curve is partly an artefact of trade, it cannot generalise — every country cannot outsource to somewhere poorer.\n- **Correlation is not a mechanism.** Where the downturn is real, it was produced by *policy* — clean air acts, effluent standards, fuel regulation — which was in turn produced by political demand. Income is a proxy for the capacity and willingness to regulate, not an automatic cause. Read as licence for inaction, the EKC removes the very mechanism that generates it.\n- **Irreversibility.** Even a genuine inverted U offers no comfort where the damage sustained on the upswing cannot be undone — extinctions, aquifer depletion, accumulated stock pollutants.\n\n## Verdict\n\nAs a **description** the EKC is a partial regularity: some local pollutants do decline at high income. As an **instrument for examining the growth–environment relationship** it is weak, because the finding is fragile to specification, confined to a subset of pollutants, contaminated by trade-induced relocation, and silent on mechanism. As a **guide to policy** it is actively misleading: it invites the inference that growth will solve the problem, when the historical downturns were produced by deliberate regulation. The defensible conclusion is that growth *permits* environmental improvement by supplying resources and political demand, but does not *deliver* it — and for global stock pollutants there is no evidence it delivers it at all.",
-      "answerBn": ""
+      "answerBn": "",
+      "source": "Perman et al., Ch. 2 and 13"
     },
     {
       "id": "q-2015-f-3",
@@ -2333,7 +2385,8 @@
       "text": "(a) Graphically analyse compensating variation and equivalent variation as welfare measures for evaluating any environmental change. (8) (b) Does economic theory help us to understand why willingness to pay and accept often differ substantially in empirical studies relating to environmental resources? (4.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2015-f-4",
@@ -2355,7 +2408,8 @@
       "text": "(a) Why do we discount the future? (7) (b) How might the alleged environmental implications of discounting be ameliorated? (5.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2015-f-5",
@@ -2380,7 +2434,8 @@
       "text": "(a) Consider a perfectly competitive economy and the presence of an undepletable externality. What type of tax structure can sustain a competitive equilibrium that is Pareto-optimal? (8) (b) Discuss the problems of applying the same remedial measure under imperfect competition. (4.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2015-f-6",
@@ -2401,7 +2456,8 @@
       "text": "(a) Explain why mainstream economists have been somewhat reluctant to embrace contingent valuation methods as a technique for determining the social benefits from environmental improvements. (9) (b) Why, therefore, do environmental economists rely on these techniques in some cases? Explain. (3.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2015-f-7",
@@ -2427,7 +2483,8 @@
       "text": "Write short notes on any two: (a) Relationship between Utilitarianism and Environmental Justice; (b) Marketable Pollution Permits; (c) Deposit Refund System; (d) Hedonic Wage Method. (6.25+6.25)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2014-f-1",
@@ -2449,7 +2506,8 @@
       "text": "(a) Why is sustainable development so often associated with protecting the environment? (5) (b) Provide a specific example of how the weak and strong definitions of sustainability might be applied in a discussion of economic development alternatives. (7.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2014-f-2",
@@ -2473,7 +2531,8 @@
       "text": "(a) How would the issue relating to unjust holding be dealt with under libertarian ethics? (4) (b) Discuss the implications of Rawls's Difference Principle for a morally just distribution of resources within and between countries. (4) (c) What is the relationship between the utility discount rate and the consumption discount rate? (4.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2014-f-3",
@@ -2497,7 +2556,8 @@
       "text": "(a) Asymmetric information typically involves the regulator having less relevant information than the regulated parties. Find out what is meant by 'adverse selection' and show why it can lead to asymmetric information. (3.5) (b) Why does adverse selection make it difficult to regulate pollution efficiently? (3.5) (c) Demonstrate, highlighting any important assumptions made, that subsidies which reward reduced emissions by the firm tend to increase pollution by the industry. (5.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2014-f-4",
@@ -2527,7 +2587,8 @@
         "Argue a ranked judgement on which is most serious, with environmental examples — 4 marks"
       ],
       "answer": "## (a) The assumptions required\n\n1. **Well-defined, secure and transferable property rights** over the environmental medium.\n2. **Zero (or negligible) transaction costs** — identifying parties, negotiating, monitoring and enforcing must all be costless.\n3. **Full and symmetric information** — each party knows the other's marginal abatement cost and marginal damage schedule.\n4. **No income (wealth) effects** on the demand for environmental quality.\n5. **Small numbers of clearly identified parties.**\n6. **Competitive markets** in the associated goods, and no strategic behaviour.\n\n## (b) How and why the theorem breaks down\n\n**Absent property rights.** The atmosphere, the high seas and migratory stocks have no owner. With nothing to trade, there is no bargain to strike. This is logically prior to everything else: Coase presupposes a right exists and asks only who holds it.\n\n**Positive transaction costs.** If the cost of reaching agreement exceeds the surplus available, no bargain occurs even though gains from trade exist. The efficient outcome is then not merely unreached but genuinely unattainable — which is Coase's own deeper point, that institutions should be chosen to minimise total transaction costs.\n\n**Asymmetric information.** Each side has an incentive to misrepresent: the polluter overstates abatement cost, the victim overstates damage. With private information, bargaining generates delay and breakdown even between two rational parties.\n\n**Income effects.** If the assignment of rights materially changes wealth, it shifts the demand for environmental quality and therefore the marginal damage schedule. Bargaining still reaches *an* efficient point, but a different one under each assignment. The efficiency claim survives; **invariance fails**.\n\n**Large numbers.** With many victims, clean air is a public good among them. Free riding depresses the collective offer below true aggregate damage; holdout works in the opposite direction where unanimity is needed. Both are worse the larger the group.\n\n## (c) Which limitation is most serious?\n\nRanked for environmental application:\n\n**First, transaction costs arising from large numbers.** This is decisive because the defining feature of the important environmental problems — urban air quality, climate change, river pollution — is that damage is spread thinly across millions of people. Every one of them would have to be identified, organised, and bound to an agreement. The free-rider problem is not a friction to be reduced but a structural barrier: the very non-excludability that makes pollution a policy problem is what makes the Coasian remedy impossible. Climate change is the limiting case, with the entire world population as victims and no supranational authority to define or enforce rights.\n\n**Second, the absence of property rights**, since it is a precondition for the rest. In principle it is remediable — this is exactly what a tradable permit scheme does, manufacturing rights where none existed — which is why it ranks below transaction costs rather than above.\n\n**Third, asymmetric information.** Serious even in small-number cases, and the reason bargaining fails between two firms that could in principle settle.\n\nIncome effects are theoretically important but empirically minor except where the environmental change is large relative to income.\n\n**Conclusion.** Coase's insight remains valuable as an analytical benchmark and as an argument that assigning rights can substitute for regulation. But its practical domain is small-numbers, well-defined disputes. For the large-scale, diffuse problems that dominate environmental policy, transaction costs from large numbers make the Coasian solution unavailable, and public intervention becomes necessary rather than merely convenient.",
-      "answerBn": ""
+      "answerBn": "",
+      "source": "Perman et al., Ch. 5"
     },
     {
       "id": "q-2014-f-5",
@@ -2548,7 +2609,8 @@
       "text": "Why is it possible to look at wages and housing prices to draw a conclusion about the value of environmental quality? (12.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2014-f-6",
@@ -2574,7 +2636,8 @@
       "text": "(a) Distinguish between revealed preference and stated preference techniques for environmental valuation. (2) (b) Provide a description of the use of the Travel Cost method for valuing environmental quality. (6) (c) Discuss the relevance of the following issues to this valuation procedure: (i) Time and (ii) Specification and Estimation problems. (4.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2014-f-7",
@@ -2598,7 +2661,8 @@
       "text": "Write short notes on: (a) Inefficiency of Standard-Setting; (b) Total Economic Value; (c) Benefit Transfer Approach. (4+4.5+4)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2013-f-1",
@@ -2622,7 +2686,8 @@
       "text": "(a) What are some of the main strategies suggested by mainstream interpretations of 'sustainable development' for addressing environmental problems? (6) (b) What practical relevance does the concept of 'sustainable development' have for developing countries with regard to environmental policy making? (6.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2013-f-2",
@@ -2645,7 +2710,8 @@
       "text": "(a) Why do environmentalists refer to the 'tyranny of discounting'? (5) (b) How might the alleged environmental implications of discounting be ameliorated? (7.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2013-f-3",
@@ -2671,7 +2737,8 @@
       "text": "(a) What is a market failure? Give an example of an environmental market failure. (4) (b) Would you like to address the issue using conventional command and control regulation or economic instruments or both? (8.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2013-f-4",
@@ -2692,7 +2759,8 @@
       "text": "(a) Justify the statement: 'Pollution is a public bad and the proper corrective device for it is a Pigouvian tax equal to marginal social damage on the source of emission and no supplementary incentive for the victim'. (8) (b) When should the victim be subject to taxation to reach the optimal social outcome? (4.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2013-f-5",
@@ -2715,7 +2783,8 @@
       "text": "(a) What are the theoretical underpinnings of measures of welfare referred to as 'willingness to pay' and 'willingness to accept'? (7) (b) How adequate are these theoretical foundations for measuring changes in welfare arising from environmental impacts? (5.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2013-f-6",
@@ -2739,7 +2808,8 @@
       "text": "(a) In the use of contingent valuation a number of biases have been identified. What are these biases, how serious a problem do they pose and how can they be corrected? (8.5) (b) Give empirical examples of the points you make wherever possible. (4)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2013-f-7",
@@ -2760,7 +2830,8 @@
       "text": "(a) What are the primary advantages and disadvantages of revealed-preference valuation methods over other methods? (3) (b) Discuss the use of the defensive expenditure approach to deal with the problems associated with external noises. (9.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2012-f-1",
@@ -2782,7 +2853,8 @@
       "text": "(a) Why is sustainable development so often associated with protecting the environment? (5) (b) Provide a specific example of how the weak and strong definitions of sustainability might be applied in a discussion of economic development alternatives. (7.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2012-f-2",
@@ -2804,7 +2876,8 @@
       "text": "(a) What is the 'Environmental Kuznets curve (EKC)'? (3) (b) Critically examine the validity of the EKC hypothesis as an instrument for examining the relationship between economic growth and environmental changes. (9.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2012-f-3",
@@ -2828,7 +2901,8 @@
       "text": "(a) Show how the concepts of equivalent and compensating variations can be derived for price and quantity/quality changes. (8) (b) Does economic theory help us to understand why willingness to pay and accept often differ substantially in empirical studies relating to environmental resources? (4.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2012-f-4",
@@ -2851,7 +2925,8 @@
       "text": "(a) Considering both short-run and long-run views, compare and contrast the outcome of taxes and subsidies as instruments for pollution control. (9) (b) Why does adverse selection make it difficult to regulate pollution efficiently? (3.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2012-f-5",
@@ -2875,7 +2950,8 @@
       "text": "(a) Consider a perfectly competitive economy and the presence of an undepletable externality. What type of tax structure can sustain a competitive equilibrium that is Pareto-optimal? (8) (b) Discuss the problems of applying the same remedial measure under imperfect competition. (4.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2012-f-6",
@@ -2894,7 +2970,8 @@
       "text": "Suppose you work for an environmental group that puts out a monthly newsletter. You have been assigned to write an article on 'The Clean Environment: A Global Challenge'. Describe the types of information you would include in your article. (12.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2011-f-1",
@@ -2917,7 +2994,8 @@
       "text": "What are some of the main strategies suggested by mainstream interpretations of 'sustainable development' for addressing environmental problems? (12.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2011-f-2",
@@ -2939,7 +3017,8 @@
       "text": "How is the utility discount rate related to the consumption discount rate? Demonstrate that an unequal distribution of goods at a welfare maximum may occur when the weights attached to individual utilities are not equal, and/or when individuals have different utility functions. (12.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2011-f-3",
@@ -2961,7 +3040,8 @@
       "text": "Consider some given change in environmental quantity. What is the distinction between 'willingness to pay' and 'willingness to accept' in relation to the change? What are the considerations in choosing between the two measures? (12.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2011-f-4",
@@ -2984,7 +3064,8 @@
       "text": "Assess the relative strengths and weaknesses of (i) conventional command and control regulation and (ii) economic instruments such as emissions taxes and emissions trading in the regulation of industrial pollution. (12.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2011-f-5",
@@ -3006,7 +3087,8 @@
       "text": "Consider an air pollution externality arising from the operation of a coal-fired foundry located next door to a laundry. The smoke from the foundry adversely affects the operation of the laundry by increasing its unit costs per item of clothing cleaned. The increase in laundry costs could be reduced by restricting the number of hours the foundry operates, from the current level of 24 hours per day. (i) Draw and explain a diagram to show the efficient resolution of the conflict between the foundry and the laundry. (ii) Using your diagram, explain the range of possible efficient bargains that could be reached if the legal context is one in which the generator of the externality faces no legal restriction on emissions. (iii) If instead the law gives the laundry the right to an unpolluted environment, what is the range of possible bargains that the foundry could offer the laundry? (iv) In each case, identify the precise quantitative limits (in terms of areas on your graph) on the range of possible bargains. (12.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2011-f-6",
@@ -3027,7 +3109,8 @@
       "text": "What is a deposit-refund system? What types of environmental problems are best handled with deposit-refund systems? Discuss. (12.5)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2010-f-1",
@@ -3047,7 +3130,8 @@
       "text": "'All natural resource endowment as well as environmental services must be interpreted as scarce resources.' Do you support this argument? Why / why not? (6)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2010-f-2",
@@ -3077,7 +3161,8 @@
         "Connect both to the environment's four service functions — 1 mark"
       ],
       "answer": "## The two laws\n\n**First law (conservation).** Matter and energy can be neither created nor destroyed, only transformed from one form to another.\n\n**Second law (entropy).** Every transformation of energy increases entropy: usable, concentrated energy degrades irreversibly into unusable, dispersed forms. No process is perfectly efficient and none is fully reversible.\n\nBoth are physical laws, not economic assumptions, and neither can be relaxed by technology or by price.\n\n## The environment's four service functions\n\nTo see their relevance, set out what the environment does for the economy:\n\n1. **Resource base** — the source of raw materials and energy.\n2. **Waste sink** — the receptacle for residuals.\n3. **Amenity services** — landscape, recreation, spiritual value.\n4. **Life support** — climate regulation, the ozone layer, nutrient and hydrological cycles.\n\nThe laws of thermodynamics govern the relationship between the first two, and thereby constrain all four, because expanding use of the resource base and the sink function degrades amenity and life support.\n\n## Relevance of the first law: the materials balance principle\n\nSince matter is conserved, whatever enters the economy must eventually leave it. Ayres and Kneese formalised this as the **materials balance principle**: in the long run, the mass of residuals discharged into the environment equals the mass of resources extracted from it. Production and consumption do not consume matter — they relocate and rearrange it.\n\nThree consequences follow, and they are the substance of the answer:\n\n- **Pollution is inevitable, not aberrational.** Any positive level of economic activity necessarily generates residuals of equal mass. Policy cannot aim to eliminate pollution, only to choose its efficient level, form and location.\n- **The resource and sink functions are inseparable.** Every act of extraction commits the environment to absorbing an equal mass later. Treating resource policy and pollution policy as separate problems is therefore a mistake.\n- **Treatment relocates waste rather than removing it.** Scrubbing a chimney produces sludge; treating sewage produces solids. This *cross-media transfer* means an abatement policy targeting one medium can worsen another unless residuals are managed as a whole.\n\n## Relevance of the second law: entropy\n\nThe first law says the mass balances; the second says the **quality** does not. Energy and materials enter the economy in low-entropy, concentrated, ordered form and leave in high-entropy, dispersed, disordered form. Georgescu-Roegen's conclusion is that **the economic process is inherently entropic** — it is not a circular flow but a one-way passage from low to high entropy.\n\nThe implications:\n\n- **Perfect recycling is impossible.** Recycling is itself a transformation requiring energy, and that energy degrades. Each cycle loses some material to dispersal. A fully closed-loop economy would require a process with no entropy increase, which the second law forbids. Recycling can extend the life of materials; it cannot make them permanent.\n- **Efficiency has a theoretical ceiling.** No amount of innovation can carry an engine or a process beyond its thermodynamic limit.\n- **Only solar energy is a genuine flow.** Fossil fuels are a stock of stored low entropy accumulated over geological time; burning them draws down a bank balance that does not refill on any human timescale.\n\n## Conclusion\n\nTaken together the two laws establish that the environment is not an unlimited source and sink standing outside the economy, but a finite system within which the economy is embedded. The first law makes pollution unavoidable; the second makes it irreversible and sets absolute limits on how far recycling and efficiency can postpone the problem. This is the physical foundation of the limits-to-growth argument, and the reason environmental economics begins with physics rather than with prices.",
-      "answerBn": ""
+      "answerBn": "",
+      "source": "Perman et al., Ch. 1–2"
     },
     {
       "id": "q-2010-f-3",
@@ -3097,7 +3182,8 @@
       "text": "What are the elements of the debate between optimists and pessimists over the sustainability issue? (6)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2010-f-4",
@@ -3120,7 +3206,8 @@
       "text": "'The Coase solution to externalities works if and only if the number of people involved is small.' Discuss. (6)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2010-f-5",
@@ -3142,7 +3229,8 @@
       "text": "Demonstrate, highlighting any important assumptions made, that subsidies which reward reduced emissions by the firm tend to increase pollution by the industry. (6)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2010-f-6",
@@ -3165,7 +3253,8 @@
       "text": "Why do we discount the future? What considerations are relevant to setting a discount rate to deal with developments that affect environment and intergenerational welfare? (16)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2010-f-7",
@@ -3188,7 +3277,8 @@
       "text": "What are the theoretical underpinnings of measures of welfare referred to as 'willingness to pay' and 'willingness to accept'? Does economic theory help us to understand why willingness to pay and willingness to accept often differ substantially in empirical studies relating to environmental resources? (16)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-2010-f-8",
@@ -3212,7 +3302,8 @@
       "text": "Consider a perfectly competitive economy and the presence of an undepletable externality. What type of tax structure can sustain a competitive equilibrium that is Pareto-optimal? Discuss the problems of applying the similar regulatory instrument/s under imperfect competition for a Pareto efficient outcome. (16)",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-acct-01",
@@ -3231,7 +3322,8 @@
       "text": "What is the difference between water statistics and water accounting?",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-acct-02",
@@ -3250,7 +3342,8 @@
       "text": "What are the sources of water supply?",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-acct-03",
@@ -3269,7 +3362,8 @@
       "text": "What is a physical supply and use table?",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-acct-04",
@@ -3288,7 +3382,8 @@
       "text": "What are the main components of a system of environmental accounts?",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-acct-05",
@@ -3307,7 +3402,8 @@
       "text": "What are the sources of atmospheric water resources?",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-acct-06",
@@ -3326,7 +3422,8 @@
       "text": "What is the objective of SEEA water accounting?",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-acct-07",
@@ -3345,7 +3442,8 @@
       "text": "What is an asset account and a flow account?",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-acct-08",
@@ -3364,7 +3462,8 @@
       "text": "What are the components of a supply and use table?",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-acct-09",
@@ -3383,7 +3482,8 @@
       "text": "What is a water satellite account?",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-acct-10",
@@ -3402,7 +3502,8 @@
       "text": "Describe the necessity of SEEA accounting. Why is SNA not enough?",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-acct-11",
@@ -3421,7 +3522,8 @@
       "text": "How is water accounting related to environment and economy?",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-acct-12",
@@ -3440,7 +3542,8 @@
       "text": "Compile a physical supply and use table for oil resources.",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-acct-13",
@@ -3459,7 +3562,8 @@
       "text": "What is the difference between soil water and ground water?",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-acct-14",
@@ -3478,7 +3582,8 @@
       "text": "Why should we do energy accounts?",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-acct-15",
@@ -3497,7 +3602,8 @@
       "text": "What is the objective of an energy account?",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-acct-16",
@@ -3516,7 +3622,8 @@
       "text": "How did the concept of sustainability emerge?",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     },
     {
       "id": "q-acct-17",
@@ -3535,7 +3642,8 @@
       "text": "Explain: energy as a product, energy as residual.",
       "answerPoints": [],
       "answer": "",
-      "answerBn": ""
+      "answerBn": "",
+      "source": ""
     }
   ],
   "exercises": [],
