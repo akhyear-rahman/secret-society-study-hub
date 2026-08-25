@@ -333,7 +333,8 @@ a.card:active{transform:translateY(-1px)}
   border-radius:10px;padding:6px 10px;font-size:12.5px;transition:border-color var(--fast)}
 .sel:focus-within{border-color:var(--accent)}
 .sel label{color:var(--fg-3);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
-.sel select,.sel input{border:none;background:none;font-size:13px;outline:none;max-width:190px}
+.sel select,.sel input{border:none;background:none;font-size:13px;outline:none;
+  max-width:190px;min-width:0}
 .sel select{cursor:pointer}
 .chipbar{display:flex;gap:7px;flex-wrap:wrap}
 .chip{border:1px solid var(--line);background:var(--bg-2);border-radius:999px;padding:5px 13px;
@@ -585,7 +586,8 @@ mark{background:rgba(240,183,63,.34);color:inherit;border-radius:3px;padding:0 2
 .qline{position:absolute;inset:0;pointer-events:none;opacity:.55}
 
 .qnode{position:absolute;transform:translate(-50%,-50%) scale(.86);opacity:0;
-  display:flex;flex-direction:column;align-items:center;gap:5px;width:150px;text-align:center;
+  display:flex;flex-direction:column;align-items:center;gap:5px;
+  width:var(--qlabel,150px);text-align:center;
   transition:transform .34s var(--ease-out),opacity .34s var(--ease-out)}
 .qnode.in{opacity:1;transform:translate(-50%,-50%) scale(1);transition-delay:var(--d,0ms)}
 .qnode:hover{z-index:5}
@@ -634,8 +636,10 @@ mark{background:rgba(240,183,63,.34);color:inherit;border-radius:3px;padding:0 2
   0 0 34px -6px var(--accent), var(--sh-2)}
 
 @media (max-width:520px){
-  .qtrack{transform:scale(.82);transform-origin:top center}
-  .qtrack-wrap{padding-bottom:0}
+  /* No transform here on purpose — scaling shrank the pixels but not the
+     layout box, leaving a large void under the track. The geometry is
+     computed from the viewport in path.js instead. */
+  .qtrack-wrap{padding-bottom:24px}
 }
 
 /* ------------------------------------------------- 5a home page ---- */
@@ -954,5 +958,9 @@ body[data-reading="1"] .read-exit{display:inline-flex;animation:pop .3s var(--ea
 /* Nothing authored into content should be able to widen the page. */
 .prose code{overflow-wrap:anywhere}
 .prose a{overflow-wrap:anywhere}
+/* A tag is an inline-flex box inside a flex row, so its min-width defaults to
+   auto and it refuses to shrink below its text — a long theory title used as a
+   card's source label then pushes the page sideways. */
+.tag{max-width:100%;min-width:0;overflow-wrap:anywhere}
 .empty code,.card code{overflow-wrap:anywhere}
 .qtext,.plan-why,.nu-title{overflow-wrap:anywhere}

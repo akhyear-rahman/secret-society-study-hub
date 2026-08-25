@@ -251,10 +251,11 @@ effect, serve on a **fresh port** rather than trusting a reload.
 
 ## 7. Known cosmetic issues
 
-- **The Path on narrow phones** scales down with a CSS `transform`, which does
-  not shrink the layout height, so there is dead space below the track. It
-  scrolls and reads fine. A proper fix means recomputing the geometry in JS
-  from the viewport width rather than scaling a fixed 360px track.
+- *(Fixed 25 Aug)* The Path used a CSS `transform: scale()` on narrow screens,
+  which shrank the pixels but not the layout box — 629px of dead space below
+  the track on a 412px phone — and its 122px vertical step was shorter than a
+  node is tall, so five nodes overlapped. Geometry is now computed from the
+  viewport in `path.js` and redrawn on rotation.
 - **Commit author email** is `yousha128@gmail.com`, the identity configured in
   the repo, but the GitHub account is `akhyear-rahman`. If the commits do not
   show against the profile, add that address under **Settings → Emails** and

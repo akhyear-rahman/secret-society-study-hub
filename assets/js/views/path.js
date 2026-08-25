@@ -16,12 +16,27 @@ import { esc, clamp, sum } from '../util.js';
 import { pageHead, empty } from '../ui.js';
 import { state, isRead, cardMastery, cardDue } from '../store.js';
 import { realQuestions } from '../priority.js';
-import { setQuery } from '../router.js';
+import { setQuery, resolve } from '../router.js';
 import { observeIn } from '../motion.js';
 
-const STEP = 122;      // vertical distance between node centres
-const AMP  = 104;      // how far the track swings either side
-const TRACK = 360;     // fixed track width, so the SVG maths stays honest
+// Geometry is computed from the viewport at render time rather than fixed.
+// The earlier approach used a fixed 360px track shrunk with a CSS transform
+// on small screens, which scales the pixels but not the layout box — leaving
+// hundreds of pixels of dead space below the track — and left the vertical
+// step shorter than a node is tall, so nodes overlapped.
+const STEP = 152;          // > the ~140px a node actually occupies
+const MAX_TRACK = 460;
+const MIN_TRACK = 280;
+const MAX_AMP = 112;
+
+function geometry(width) {
+  const track = Math.max(MIN_TRACK, Math.min(width - 32, MAX_TRACK));
+  // Labels must not hang off either edge, so the swing is whatever is left
+  // once a label's width is accounted for.
+  const label = Math.min(150, Math.max(112, width * 0.42));
+  const amp = Math.max(52, Math.min(MAX_AMP, (track - label) / 2));
+  return { track, amp, label };
+}
 
 const TIERS = {
   incourse: { label: 'In-course',   sub: 'Small mission',    marks: 15, mins: 60,  count: 2, size: 78,  em: '🗝️' },
@@ -143,12 +158,14 @@ export default async function path({ params, query }) {
       `Add a <code>chapters</code> array to <code>${esc(course.id)}.json</code>.`);
   }
 
-  /* ---- geometry: fixed-width track so the connector maths is exact ---- */
+  /* ---- geometry, sized to the viewport ---- */
+  const { track: TRACK, amp: AMP, label: LABEL } = geometry(
+    (typeof window !== 'undefined' && window.innerWidth) || 1024);
   const pt = (i) => ({
     x: TRACK / 2 + Math.sin(i * 0.85) * AMP,
-    y: 70 + i * STEP,
+    y: 76 + i * STEP,
   });
-  const height = 70 + (nodes.length - 1) * STEP + 130;
+  const height = 76 + (nodes.length - 1) * STEP + 96;
 
   let d = '';
   nodes.forEach((n, i) => {
@@ -229,7 +246,7 @@ export default async function path({ params, query }) {
     </div>
     ${legend}
     <div class="qtrack-wrap">
-      <div class="qtrack" style="height:${height}px;width:${TRACK}px">
+      <div class="qtrack" style="height:${height}px;width:${TRACK}px;--qlabel:${LABEL}px">
         <svg class="qline" width="${TRACK}" height="${height}" viewBox="0 0 ${TRACK} ${height}" aria-hidden="true">
           <path d="${d}" fill="none" stroke="var(--line-2)" stroke-width="10" stroke-linecap="round"
                 stroke-dasharray="2 20"/>
@@ -253,7 +270,20 @@ export default async function path({ params, query }) {
       const here = root.querySelector('.qnode.active');
       if (here) setTimeout(() => here.scrollIntoView({ block: 'center', behavior: 'smooth' }), 420);
 
-      return stop;
+      // Rotating the phone changes the geometry, so redraw — but only when the
+      // width really moved, since Android fires resize as the URL bar hides.
+      let lastW = window.innerWidth, t;
+      const onResize = () => {
+        clearTimeout(t);
+        t = setTimeout(() => {
+          if (Math.abs(window.innerWidth - lastW) < 40) return;
+          lastW = window.innerWidth;
+          resolve();
+        }, 220);
+      };
+      addEventListener('resize', onResize);
+
+      return () => { stop(); clearTimeout(t); removeEventListener('resize', onResize); };
     },
   };
 }
