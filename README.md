@@ -49,7 +49,8 @@ and `.nojekyll` stops Pages from touching the asset folders.
 
 | Section | What it does |
 |---|---|
-| **Dashboard** | Every course, progress per course, what is due today |
+| **Home** | Deliberately bare — the greeting, your streak/XP/due counters, the single highest-priority chapter as a *Next up* card, and the courses. Nothing else. |
+| **How this works** (`#/about`) | The method, a walkthrough of one study session, an honest coverage table generated from the files, the shortcut reference, and where your data lives |
 | **The Path** | A quest map. Every chapter is a step on a winding track; missions punctuate it — **in-course** as the small mission, **midterm** as the medium one, and the **final** as the flagship. Chapter steps earn up to three crowns as you read and retain them; missions clear when you sit that paper and score half. Nothing is locked shut. |
 | **Study Plan** | Ranks every chapter by *expected exam marks still on the table* — archive yield weighted for recurrence and recency, minus how ready you already are — and gives each one a single next action. Plus a frequency ranking of the questions most likely to reappear, and an exam countdown |
 | **Course** | Theories filtered by chapter, difficulty, or free text |
@@ -60,6 +61,8 @@ and `.nojekyll` stops Pages from touching the asset folders.
 | **Notes** | Lecture notes cross-linked to the theories they explain |
 | **Textbooks** | Prescribed and reference books, with their exercises indexed against theories |
 | **Progress** | XP, streak, 12-week activity map, per-course mastery, weakest chapters, badges, exam history, and JSON export/import |
+
+Navigation lives in a slide-out drawer at every width — the hamburger, top left — so the reading column stays centred and uncluttered.
 
 Everything you do is stored in your browser's `localStorage`. Nothing is sent
 anywhere. Export a backup from **Progress → Your data** before switching
@@ -76,6 +79,7 @@ devices or clearing site data.
 | `+` / `-` | Reading type size |
 | `esc` | Leave reading mode or close search |
 | `g` then `h p m q r e n b s` | Go to home, plan, map, questions, recall, exam, notes, books, progress |
+| `a` | How this works |
 | `space` | Reveal a recall card |
 | `1`–`4` | Grade a revealed card |
 

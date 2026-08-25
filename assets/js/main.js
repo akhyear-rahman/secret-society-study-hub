@@ -59,12 +59,19 @@ addEventListener('scroll', updateProgress, { passive: true });
 
 /* -------------------------------------------------------- sidebar ---- */
 
-const closeNav = () => { document.body.classList.remove('nav-open'); $('#scrim').hidden = true; };
-$('#navToggle').addEventListener('click', () => {
-  const open = document.body.classList.toggle('nav-open');
+function setNav(open) {
+  document.body.classList.toggle('nav-open', open);
   $('#scrim').hidden = !open;
   $('#navToggle').setAttribute('aria-expanded', String(open));
-});
+  $('#sidebar').setAttribute('aria-hidden', String(!open));
+  if (open) $('#sidebar').querySelector('.side-link')?.focus({ preventScroll: true });
+  else $('#navToggle').focus({ preventScroll: true });
+}
+const closeNav = () => setNav(false);
+const isNavOpen = () => document.body.classList.contains('nav-open');
+
+$('#navToggle').addEventListener('click', () => setNav(!isNavOpen()));
+$('#navClose').addEventListener('click', closeNav);
 $('#scrim').addEventListener('click', closeNav);
 
 async function buildCourseNav() {
@@ -160,6 +167,7 @@ const Notes     = page(() => import('./views/notes.js'));
 const Textbooks = page(() => import('./views/textbooks.js'));
 const Progress  = page(() => import('./views/progress.js'));
 const Help      = page(() => import('./views/help.js'));
+const About     = page(() => import('./views/about.js'));
 
 route('/', Home);
 route('/plan', Plan);
@@ -167,6 +175,7 @@ route('/path', QuestPath);
 route('/c/:cid/path', QuestPath);
 route('/progress', Progress);
 route('/help', Help);
+route('/about', About);
 route('/questions', Questions);
 route('/recall', Recall);
 route('/exam', Exam);
@@ -273,6 +282,7 @@ addEventListener('keydown', (e) => {
   }
   if (e.key === 'Escape') {
     if (!palette.hidden) { closePalette(); return; }
+    if (isNavOpen()) { closeNav(); return; }
     if (isReading()) { setReading(false); resolve(); return; }
   }
   if (typing || e.ctrlKey || e.metaKey || e.altKey) return;

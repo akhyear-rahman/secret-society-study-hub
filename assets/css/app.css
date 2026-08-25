@@ -179,7 +179,7 @@ h3{font-family:var(--display);font-size:16.5px;margin:20px 0 8px;font-weight:620
   transition:background var(--fast),color var(--fast),transform var(--fast)}
 .icon-btn:hover{background:var(--bg-3);color:var(--fg)}
 .icon-btn:active{transform:scale(.93)}
-.nav-toggle{display:none}
+.nav-toggle{display:grid}
 
 .omni{flex:1;max-width:520px;margin:0 auto;position:relative;display:flex;align-items:center}
 .omni-ico{position:absolute;left:12px;width:16px;height:16px;color:var(--fg-3);pointer-events:none}
@@ -208,13 +208,24 @@ body[data-lang="en"] #langToggle .lang-b{background:var(--accent);color:var(--ac
 .streak .flame{filter:saturate(1.2)}
 .streak .xp{color:var(--fg-3);font-weight:600;font-size:11px;padding-left:7px;border-left:1px solid var(--line-2)}
 
-.shell{display:flex;align-items:flex-start}
+.shell{display:block}
+/* The nav is a drawer at every width, not just on phones. It keeps the
+   reading column centred and the page quiet until you ask for the menu. */
 .sidebar{
-  position:sticky;top:var(--top-h);width:var(--side-w);flex:none;
-  height:calc(100vh - var(--top-h));display:flex;flex-direction:column;
+  position:fixed;top:var(--top-h);left:0;bottom:0;z-index:30;
+  width:var(--side-w);display:flex;flex-direction:column;
   border-right:1px solid var(--line);background:var(--bg-2);
+  transform:translateX(-100%);
+  transition:transform .3s var(--ease-out),box-shadow .3s;
+  box-shadow:none;
 }
-.side-scroll{flex:1;overflow-y:auto;padding:16px 11px}
+body.nav-open .sidebar{transform:none;box-shadow:var(--sh-3)}
+body.nav-open{overflow:hidden}
+.side-head{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:12px 13px 4px}
+.side-head b{font-family:var(--display);font-size:10px;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--fg-3)}
+.side-scroll{flex:1;overflow-y:auto;padding:6px 11px 16px}
 .side-foot{padding:9px 11px;border-top:1px solid var(--line)}
 .side-group{margin-bottom:18px}
 .side-label{font-family:var(--display);font-size:9.5px;font-weight:640;letter-spacing:.22em;
@@ -236,8 +247,8 @@ body[data-lang="en"] #langToggle .lang-b{background:var(--accent);color:var(--ac
 .course-nav .cdot{width:9px;height:9px;border-radius:3px;flex:none;box-shadow:0 0 0 3px var(--bg-3)}
 .course-nav .ccode{font-family:var(--mono);font-size:10px;color:var(--fg-3);margin-left:auto}
 
-.main{flex:1;min-width:0;padding:28px 32px 100px}
-.view{max-width:1180px;margin:0 auto}
+.main{min-width:0;padding:34px 32px 110px}
+.view{max-width:1060px;margin:0 auto}
 .scrim{position:fixed;inset:var(--top-h) 0 0;background:rgba(0,0,0,.5);z-index:29;animation:fade var(--fast) both}
 
 /* --------------------------------------------- 5 components ---- */
@@ -622,22 +633,50 @@ mark{background:rgba(240,183,63,.34);color:inherit;border-radius:3px;padding:0 2
 }
 
 /* ------------------------------------------------- 5a home page ---- */
+/* Deliberately sparse: an opening statement, one next action, the courses. */
 
 .eyebrow{font-family:var(--display);font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;
   color:var(--accent);margin:0;opacity:.9}
-.home-hero h1{font-size:clamp(26px,3.2vw,38px)}
 
-/* navigation tiles */
-.navgrid{grid-template-columns:repeat(auto-fill,minmax(238px,1fr))}
-.navtile{display:flex;flex-direction:column;gap:5px;padding:18px 18px 16px;position:relative;overflow:hidden}
-.navtile .nt-ico{font-size:22px;line-height:1;margin-bottom:5px}
-.navtile b{font-family:var(--display);font-size:15.5px;letter-spacing:.01em;font-weight:620}
-.navtile small{color:var(--fg-2);font-size:12.5px;line-height:1.5}
-.navtile .nt-n{margin-top:auto;padding-top:10px;font-size:11px;color:var(--fg-3);
-  font-variant-numeric:tabular-nums;letter-spacing:.02em}
-.navtile::after{content:"→";position:absolute;right:16px;top:15px;color:var(--accent);
-  opacity:0;transform:translateX(-5px);transition:opacity var(--med),transform var(--med) var(--ease-out)}
-.navtile:hover::after{opacity:1;transform:none}
+.home-open{padding:44px 0 18px;max-width:60ch}
+.home-open h1{font-size:clamp(30px,4.4vw,46px);line-height:1.1;margin:12px 0 14px}
+.home-open .lede{font-size:16.5px;line-height:1.62}
+.hero-acts{margin-top:26px}
+
+.tickers{display:flex;gap:26px;flex-wrap:wrap;margin-top:30px;
+  padding-top:20px;border-top:1px solid var(--line);
+  font-size:12px;color:var(--fg-3);letter-spacing:.03em}
+.tickers b{display:block;font-family:var(--display);font-size:23px;font-weight:620;color:var(--fg);
+  letter-spacing:-.01em;font-variant-numeric:tabular-nums;margin-bottom:1px}
+
+.nextup{display:flex;align-items:center;gap:14px;margin-top:30px;padding:16px 20px;
+  border:1px solid color-mix(in srgb,var(--accent) 30%,var(--line));border-radius:var(--r);
+  background:var(--bg-2);box-shadow:var(--sh-1);max-width:600px;
+  transition:transform var(--med) var(--ease-out),border-color var(--med),box-shadow var(--med)}
+.nextup:hover{transform:translateX(4px);border-color:var(--accent);box-shadow:var(--sh-2)}
+.nu-tag{font-family:var(--display);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent);flex:none;align-self:flex-start;padding-top:3px}
+.nu-title{font-family:var(--display);font-size:15.5px;font-weight:620;flex:1;min-width:0;line-height:1.3}
+.nu-sub{display:block;font-family:var(--sans);font-size:11.5px;font-weight:400;
+  color:var(--fg-3);letter-spacing:0;margin-top:3px;text-transform:none}
+.nu-go{color:var(--accent);font-size:19px;flex:none}
+
+.home-foot{margin-top:52px;padding-top:20px;border-top:1px solid var(--line);
+  font-size:13px;color:var(--fg-3);display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.home-foot a{color:var(--fg-2)}
+.home-foot a:hover{color:var(--accent)}
+.home-foot .sep{opacity:.4}
+
+@media (max-width:640px){
+  .home-open{padding:26px 0 10px}
+  .tickers{gap:18px}
+}
+
+
+
+.eyebrow{font-family:var(--display);font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--accent);margin:0;opacity:.9}
+
 
 /* method cards */
 .method{position:relative;padding-left:56px}
@@ -786,11 +825,8 @@ body[data-reading="1"] .read-exit{display:inline-flex;animation:pop .3s var(--ea
   .rail>*{flex:1 1 300px}
 }
 @media (max-width:860px){
-  .nav-toggle{display:grid}
-  .sidebar{position:fixed;top:var(--top-h);left:0;bottom:0;z-index:30;transform:translateX(-100%);
-    transition:transform var(--med) var(--ease);box-shadow:var(--sh-3)}
-  body.nav-open .sidebar{transform:none}
-  .main{padding:18px 16px 90px}
+  .sidebar{width:min(86vw,var(--side-w))}
+  .main{padding:20px 16px 90px}
   .omni{display:none}
   .brand-text small{display:none}
   .streak .xp{display:none}

@@ -58,7 +58,7 @@
 </svg>
 
 <header class="topbar">
-  <button class="icon-btn nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+  <button class="icon-btn nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="sidebar">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
   </button>
   <a class="brand" href="#/">
@@ -103,13 +103,20 @@
 </header>
 
 <div class="shell">
-  <nav class="sidebar" id="sidebar" aria-label="Main">
+  <nav class="sidebar" id="sidebar" aria-label="Main" aria-hidden="true">
+    <div class="side-head">
+      <b>Menu</b>
+      <button class="icon-btn" id="navClose" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
     <div class="side-scroll">
       <div class="side-group">
         <div class="side-label">The Order</div>
         <a class="side-link" href="#/" data-match="^/$"><i>🏠</i>Dashboard</a>
         <a class="side-link" href="#/plan" data-match="^/plan"><i>🎓</i>Study Plan</a>
         <a class="side-link" href="#/progress" data-match="^/progress"><i>📈</i>Progress</a>
+        <a class="side-link" href="#/about" data-match="^/about"><i>📜</i>How this works</a>
       </div>
       <div class="side-group">
         <div class="side-label">Disciplines</div>

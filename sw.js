@@ -6,7 +6,7 @@
 //   Content     network-first — a JSON edit shows up on the very next reload
 //               when online, and still works from cache when offline.
 
-const CACHE = 'sem7hub-v3';
+const CACHE = 'sem7hub-v4';
 
 const SHELL = [
   './',
@@ -36,6 +36,7 @@ const SHELL = [
   'assets/js/views/textbooks.js',
   'assets/js/views/progress.js',
   'assets/js/views/help.js',
+  'assets/js/views/about.js',
 ];
 
 self.addEventListener('install', (e) => {
