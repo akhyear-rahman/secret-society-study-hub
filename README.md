@@ -29,21 +29,52 @@ That opens <http://localhost:8000>. Any static server works —
 
 ## Publishing to GitHub Pages
 
+Create an empty repo at <https://github.com/new> named **`secret-society-study-hub`**,
+public, with **no** README, .gitignore or licence (this repo already has its
+own history). Then:
+
 ```bash
-git init
-git add .
-git commit -m "Semester 7 study hub"
-git branch -M main
-git remote add origin https://github.com/<you>/<repo>.git
+git remote add origin https://github.com/<your-username>/secret-society-study-hub.git
 git push -u origin main
 ```
 
 Then in the repository: **Settings → Pages → Source → GitHub Actions**. The
-workflow in `.github/workflows/pages.yml` publishes on every push to `main`,
-validating the content first so a broken JSON file never goes live.
+workflow in `.github/workflows/pages.yml` runs `tools/validate.py` first and
+only deploys if the content passes, so a typo in a JSON file can never take
+the live site down. First deploy takes a minute or two; after that every push
+to `main` republishes.
 
-The site works from any sub-path (`/<repo>/`) because routing is hash-based,
-and `.nojekyll` stops Pages from touching the asset folders.
+The site lands at:
+
+```
+https://<your-username>.github.io/secret-society-study-hub/
+```
+
+Everything is relative-path and hash-routed, so it works from that sub-path
+with no configuration, and `.nojekyll` stops Pages from touching the asset
+folders. Verified by serving the app from a sub-directory before publishing.
+
+**Pages needs a public repo on a free plan.** If you would rather keep it
+private, the app still runs perfectly with `python tools/serve.py` — you just
+do not get a shareable URL.
+
+## Credits and sources
+
+This repository contains material that is not mine, reproduced here for
+private study and credited in place:
+
+- **ECON 403 class notes** — handwritten notes by *Musa Ahmed Aqib* (EconDu
+  101), transcribed from the shared course Drive. Each note records the source.
+- **ECON 409 past papers** — 15 University of Dhaka examination papers,
+  2010–2022, transcribed from scans in a shared student Drive.
+- **ECON 409 lecture sheets** — linked, not reproduced; they remain in the
+  original Drive folder.
+- **Syllabus** — *7th Semester (FINAL SYLLABUS)*, prepared with the assistance
+  of Siratul Mustaquim.
+
+Textbook references point at the books; no textbook content is reproduced.
+If you are one of the authors above and would rather this were not published,
+open an issue and I will take it down.
 
 ## What is in it
 
