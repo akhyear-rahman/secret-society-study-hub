@@ -37,6 +37,17 @@
       "current": true
     },
     {
+      "id": "adv-econometrics",
+      "code": "ECON 405",
+      "short": "Advanced Econometrics",
+      "title": "Advanced Econometrics-I",
+      "titleBn": "উচ্চতর অর্থমিতি-১",
+      "color": "#fb923c",
+      "credits": 4,
+      "semester": 7,
+      "current": true
+    },
+    {
       "id": "research-methods",
       "code": "ECON 412",
       "short": "Research Methodology",
@@ -49,7 +60,7 @@
     },
     {
       "id": "env-econ",
-      "code": "TBD",
+      "code": "ECON 409",
       "short": "Environmental Econ",
       "title": "Environmental Economics",
       "titleBn": "পরিবেশ অর্থনীতি",

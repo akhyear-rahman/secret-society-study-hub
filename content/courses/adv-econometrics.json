@@ -1,0 +1,79 @@
+{
+  "id": "adv-econometrics",
+  "code": "ECON 405",
+  "title": "Advanced Econometrics-I",
+  "titleBn": "উচ্চতর অর্থমিতি-১",
+  "color": "#fb923c",
+  "credits": 4,
+  "semester": 7,
+  "description": "Topic list taken from **7th Semester (FINAL SYLLABUS)**. Seven blocks, each with a Wooldridge chapter reference and a slide deck.\n\nThe through-line of the whole course is **identification**: every block is another answer to the question *what has to be true before this regression coefficient means what I want it to mean?* IV answers it with an exclusion restriction, panel methods with a within-transformation, Heckman with a selection equation, PSM with unconfoundedness, DiD with parallel trends. Learn the assumption behind each, and the exam takes care of itself.\n\n> Two different Wooldridge books are cited. **CH 5, 6, 15, 16 (Cross Section)** means *Econometric Analysis of Cross Section and Panel Data*; **CH 14, 16 (Introductory)** means *Introductory Econometrics: A Modern Approach*. Do not mix up the chapter numbers between them.",
+
+  "examPattern": {
+    "durationMin": 180,
+    "notes": "**Placeholder — replace once you have a past paper.** Econometrics papers at this level usually mix a derivation (\"derive the IV estimator and show it is consistent\"), an interpretation question (\"a colleague reports the following output — what is wrong with it?\") and a design question (\"which estimator would you use and why?\"). Record the real structure here so mock papers match it.",
+    "sections": [
+      { "name": "Section A — Short answer", "answer": 5, "outOf": 5, "marks": 4 },
+      { "name": "Section B — Derivation / applied", "answer": 4, "outOf": 6, "marks": 12 }
+    ]
+  },
+
+  "chapters": [
+    {
+      "id": "iv", "no": 1, "title": "Instrumental Variables and 2SLS", "titleBn": "যন্ত্রক চলক ও 2SLS",
+      "ref": "Wooldridge, Cross Section, Ch. 5–6 · Slide: Instrumental Variable and 2SLS",
+      "summary": "Instrumental variable · IV derivation · IV estimator · two-stage least squares · testing endogeneity · identification · overidentifying restrictions · weak instruments · partial F statistic."
+    },
+    {
+      "id": "nonlinear", "no": 2, "title": "Nonlinear Models", "titleBn": "অরৈখিক মডেল",
+      "ref": "Wooldridge, Cross Section, Ch. 15–16 · Slide: Nonlinear Models",
+      "summary": "Linear probability model · logit and probit · maximum likelihood estimation · goodness of fit · multinomial logit (MNL) · ordered probit/logit · Tobit."
+    },
+    {
+      "id": "panel", "no": 3, "title": "Introduction to Panel Data", "titleBn": "প্যানেল উপাত্তের সূচনা",
+      "ref": "Wooldridge, Introductory, Ch. 14 · Slide: The Data",
+      "summary": "Panel data model · fixed effects · dummy variable regression · first differencing · random effects · FD vs FE · FE vs RE."
+    },
+    {
+      "id": "heckman", "no": 4, "title": "Heckman Selection Correction Model", "titleBn": "হেকম্যান নির্বাচন সংশোধন মডেল",
+      "ref": "Slide: Heckman's Sample Selection",
+      "summary": "Sample selection as an omitted-variable problem; the inverse Mills ratio; the two-step estimator."
+    },
+    {
+      "id": "psm", "no": 5, "title": "Treatment Selection: Propensity Score Matching", "titleBn": "প্রপেনসিটি স্কোর ম্যাচিং",
+      "ref": "Slide: PSM",
+      "summary": "The treatment selection problem; matching on the propensity score; common support and balance."
+    },
+    {
+      "id": "did", "no": 6, "title": "Difference in Differences", "titleBn": "ডিফারেন্স-ইন-ডিফারেন্সেস",
+      "ref": "Slide: DID",
+      "summary": "The 2×2 design, the parallel-trends assumption, and the interaction-term regression that implements it."
+    },
+    {
+      "id": "simeq", "no": 7, "title": "Simultaneous Equations", "titleBn": "যুগপৎ সমীকরণ",
+      "ref": "Wooldridge, Introductory, Ch. 16 · Slide: Simultaneous Equation",
+      "summary": "Simultaneity bias · identification (order and rank conditions) · systems of equations."
+    }
+  ],
+
+  "textbooks": [
+    {
+      "id": "tb-wool-cs", "title": "Econometric Analysis of Cross Section and Panel Data",
+      "author": "Jeffrey M. Wooldridge", "edition": "2nd", "year": 2010, "prescribed": true,
+      "chaptersCovered": "Ch. 5–6 (IV and 2SLS), Ch. 15–16 (binary, multinomial and censored response)",
+      "notes": "The syllabus's *\"(Cross Section)\"* citations point here. This is the graduate text — matrix notation throughout, and it proves what the introductory book asserts. Use it when a question says *derive* or *show that*.",
+      "file": "", "url": ""
+    },
+    {
+      "id": "tb-wool-intro", "title": "Introductory Econometrics: A Modern Approach",
+      "author": "Jeffrey M. Wooldridge", "edition": "7th", "year": 2019, "prescribed": true,
+      "chaptersCovered": "Ch. 14 (panel data), Ch. 16 (simultaneous equations)",
+      "notes": "The syllabus's *\"(Introductory)\"* citations. Far gentler, and its worked examples are the ones most likely to be recycled into exam questions. Confirm the edition — chapter numbers are stable across recent editions but section numbers move.",
+      "file": "", "url": ""
+    }
+  ],
+
+  "theories": [],
+  "questions": [],
+  "exercises": [],
+  "notes": []
+}
