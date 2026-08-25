@@ -3,6 +3,7 @@ import { esc } from '../util.js';
 import { md, mdWithToc, plain } from '../markdown.js';
 import { pageHead, empty, selectEl } from '../ui.js';
 import { setQuery } from '../router.js';
+import { readerControls, bindReaderControls, spyHeadings } from '../reading.js';
 
 export default async function notes({ params, query }) {
   const scoped = params.cid ? await getCourse(params.cid) : null;
@@ -27,14 +28,21 @@ export default async function notes({ params, query }) {
         <a class="btn sm wide" href="${esc(n.file)}" target="_blank" rel="noopener">📎 Open original file</a></div></div>` : '',
     ].filter(Boolean).join('');
 
-    return pageHead({
-      crumbs: [{ label: 'Courses', href: '#/' }, { label: c.code, href: `#/c/${c.id}` },
-               { label: 'Notes', href: `#/c/${c.id}/notes` }, { label: n.title }],
-      title: n.title,
-      sub: [n.date, n.source, ch?.title].filter(Boolean).join(' · '),
-    }) + `<div class="reader${rail ? '' : ' solo'}">
-      <article class="prose">${body || '<p class="muted">This note is empty.</p>'}</article>
-      ${rail ? `<aside class="rail">${rail}</aside>` : ''}</div>`;
+    return {
+      html: pageHead({
+        crumbs: [{ label: 'Courses', href: '#/' }, { label: c.code, href: `#/c/${c.id}` },
+                 { label: 'Notes', href: `#/c/${c.id}/notes` }, { label: n.title }],
+        title: n.title,
+        sub: [n.date, n.source, ch?.title].filter(Boolean).join(' · '),
+        actions: readerControls(),
+      }) + `<div class="reader${rail ? '' : ' solo'}">
+        <article class="prose">${body || '<p class="muted">This note is empty.</p>'}</article>
+        ${rail ? `<aside class="rail">${rail}</aside>` : ''}</div>`,
+      mount(root) {
+        bindReaderControls(root, () => setQuery({}));
+        return spyHeadings(root);
+      },
+    };
   }
 
   /* ---- note list ---- */

@@ -27,10 +27,10 @@ export default async function home() {
       <div>
         <h1 style="margin-bottom:4px">${esc(site.greeting || 'Ready when you are.')}</h1>
         <p class="sub">${esc(site.subtitle || 'Semester 7 — theories, past papers, model answers and practice in one place.')}</p>
-        <div class="row" style="margin-top:16px">
-          <a class="btn primary" href="#/recall">🧠 Review ${due.length} due card${due.length === 1 ? '' : 's'}</a>
-          <a class="btn" href="#/exam">🎯 Start a mock exam</a>
-          <a class="btn ghost" href="#/questions">🗂️ Question bank</a>
+        <div class="row" style="margin-top:18px">
+          <a class="btn primary" href="#/plan">🎓 What should I study now?</a>
+          <a class="btn" href="#/recall">🧠 Review ${due.length} due card${due.length === 1 ? '' : 's'}</a>
+          <a class="btn ghost" href="#/exam">🎯 Mock exam</a>
         </div>
       </div>
       <div class="grid g4" style="min-width:290px">

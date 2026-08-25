@@ -1,27 +1,62 @@
-// App bootstrap: theme, sidebar, router table, command palette, shortcuts.
+// App bootstrap: theme, reading mode, sidebar, router table, command
+// palette, keyboard shortcuts.
 
 import { $, $$, esc, debounce, highlight } from './util.js';
-import { route, start, resolve, go, parseHash, setNotFound, onNavigate } from './router.js';
-import { siteIndex, buildSearchIndex, searchDocsFor } from './content.js';
-import { state, setSetting, onChange, liveStreak } from './store.js';
+import { route, start, resolve, go, setNotFound, onNavigate } from './router.js';
+import { siteIndex, buildSearchIndex, searchDocsFor, allCourses } from './content.js';
+import { state, setSetting, onChange, liveStreak, effectiveTheme, cardDue } from './store.js';
+import { applyReading, setReading, toggleReading, nudgeScale, updateProgress, isReading } from './reading.js';
 import { empty } from './ui.js';
 
-/* ------------------------------------------------------------ chrome ---- */
+/* ------------------------------------------------------------ theme ---- */
 
-function applySettings() {
-  document.documentElement.dataset.theme = state.settings.theme;
+const THEME_ICON = {
+  dark:   '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>',
+  light:  '<circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+  system: '<rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/>',
+};
+const THEME_ORDER = ['dark', 'light', 'system'];
+
+function applyTheme() {
+  const pref = state.settings.theme;
+  document.documentElement.dataset.theme = effectiveTheme();
+  $('#themeIcon').innerHTML = THEME_ICON[pref] || THEME_ICON.dark;
+  $('#themeToggle').title = `Theme: ${pref} — click to cycle (T)`;
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.content = effectiveTheme() === 'dark' ? '#0a0c11' : '#f7f6f3';
+}
+
+$('#themeToggle').addEventListener('click', () => {
+  const i = THEME_ORDER.indexOf(state.settings.theme);
+  setSetting('theme', THEME_ORDER[(i + 1) % THEME_ORDER.length]);
+});
+// Follow the OS while the preference is "system".
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+  if (state.settings.theme === 'system') applyTheme();
+});
+
+$('#langToggle').addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-lang]');
+  if (!btn) return;
+  setSetting('lang', btn.dataset.lang);
+  resolve();
+});
+
+function applyChrome() {
+  applyTheme();
   document.body.dataset.lang = state.settings.lang;
   $('#streakNum').textContent = liveStreak();
   $('#xpNum').textContent = `${state.xp} XP`;
+  applyReading();
 }
+onChange(applyChrome);
 
-$('#themeToggle').addEventListener('click', () =>
-  setSetting('theme', state.settings.theme === 'dark' ? 'light' : 'dark'));
-$('#langToggle').addEventListener('click', () => {
-  setSetting('lang', state.settings.lang === 'bn' ? 'en' : 'bn');
-  resolve();
-});
-onChange(applySettings);
+/* ---------------------------------------------------- reading mode ---- */
+
+$('#readExit').addEventListener('click', () => { setReading(false); resolve(); });
+addEventListener('scroll', updateProgress, { passive: true });
+
+/* -------------------------------------------------------- sidebar ---- */
 
 const closeNav = () => { document.body.classList.remove('nav-open'); $('#scrim').hidden = true; };
 $('#navToggle').addEventListener('click', () => {
@@ -31,13 +66,11 @@ $('#navToggle').addEventListener('click', () => {
 });
 $('#scrim').addEventListener('click', closeNav);
 
-/* -------------------------------------------------------- course nav ---- */
-
 async function buildCourseNav() {
   const idx = await siteIndex();
   const site = idx.site || {};
   if (site.title) { $('#brandTitle').textContent = site.title; document.title = site.title; }
-  if (site.subtitle) $('#brandSub').textContent = site.shortSubtitle || 'Study Hub';
+  if (site.shortSubtitle) $('#brandSub').textContent = site.shortSubtitle;
 
   $('#courseNav').innerHTML = (idx.courses || []).map((c) => `
     <a class="side-link" href="#/c/${esc(c.id)}" data-match="^/c/${esc(c.id)}">
@@ -47,51 +80,84 @@ async function buildCourseNav() {
     </a>`).join('') || '<div class="side-link tiny">No courses in content/index.json</div>';
 }
 
+/** Show the number of cards due beside Active Recall, once content loads. */
+async function refreshDueBadge() {
+  try {
+    const courses = await allCourses();
+    const due = courses.flatMap((c) => c.cards).filter((c) => cardDue(c.id)).length;
+    const el = $('#dueBadge');
+    el.textContent = due;
+    el.hidden = !due;
+  } catch { /* content not available; leave the badge hidden */ }
+}
+
 function markActive(path) {
-  $$('.side-link[data-match]').forEach((a) => {
-    a.classList.toggle('active', new RegExp(a.dataset.match).test(path));
-  });
+  $$('.side-link[data-match]').forEach((a) =>
+    a.classList.toggle('active', new RegExp(a.dataset.match).test(path)));
 }
 
 /* ------------------------------------------------------------ router ---- */
 
 const view = $('#view');
+const routebar = $('#routebar');
 let cleanup = null;
+let navToken = 0;
+
+function barStart() { routebar.classList.add('on'); routebar.style.width = '55%'; }
+function barDone() {
+  routebar.style.width = '100%';
+  setTimeout(() => { routebar.classList.remove('on'); routebar.style.width = '0'; }, 220);
+}
 
 function page(loader) {
   return async (ctx) => {
-    view.innerHTML = '<div class="loading">Loading…</div>';
+    const token = ++navToken;
+    barStart();
+    // Only show the spinner if loading actually takes a moment — otherwise
+    // it flashes on every cached navigation.
+    const spinner = setTimeout(() => {
+      if (token === navToken) view.innerHTML = '<div class="loading">Loading…</div>';
+    }, 140);
     try {
       const mod = await loader();
       const result = await mod.default(ctx);
+      if (token !== navToken) return;            // a later navigation won
+      clearTimeout(spinner);
       const { html, mount } = typeof result === 'string' ? { html: result } : result;
       if (cleanup) { cleanup(); cleanup = null; }
       view.innerHTML = html;
       if (mount) cleanup = mount(view) || null;
-      // Restore the in-page anchor after a render, or go to the top.
-      const hashTarget = location.hash.split('#')[2];
-      if (hashTarget) document.getElementById(hashTarget)?.scrollIntoView();
+      const anchor = location.hash.split('#')[2];
+      if (anchor) document.getElementById(anchor)?.scrollIntoView();
       else if (!ctx.query.keepScroll) scrollTo({ top: 0 });
       $('#main').focus({ preventScroll: true });
+      updateProgress();
+      refreshDueBadge();
     } catch (err) {
+      clearTimeout(spinner);
+      if (token !== navToken) return;
       console.error(err);
       view.innerHTML = empty('Something went wrong', `<code>${esc(err.message)}</code>`);
+    } finally {
+      if (token === navToken) barDone();
     }
   };
 }
 
-const Home       = page(() => import('./views/home.js'));
-const Course     = page(() => import('./views/course.js'));
-const Theory     = page(() => import('./views/theory.js'));
-const Questions  = page(() => import('./views/questions.js'));
-const Recall     = page(() => import('./views/recall.js'));
-const Exam       = page(() => import('./views/exam.js'));
-const Notes      = page(() => import('./views/notes.js'));
-const Textbooks  = page(() => import('./views/textbooks.js'));
-const Progress   = page(() => import('./views/progress.js'));
-const Help       = page(() => import('./views/help.js'));
+const Home      = page(() => import('./views/home.js'));
+const Plan      = page(() => import('./views/plan.js'));
+const Course    = page(() => import('./views/course.js'));
+const Theory    = page(() => import('./views/theory.js'));
+const Questions = page(() => import('./views/questions.js'));
+const Recall    = page(() => import('./views/recall.js'));
+const Exam      = page(() => import('./views/exam.js'));
+const Notes     = page(() => import('./views/notes.js'));
+const Textbooks = page(() => import('./views/textbooks.js'));
+const Progress  = page(() => import('./views/progress.js'));
+const Help      = page(() => import('./views/help.js'));
 
 route('/', Home);
+route('/plan', Plan);
 route('/progress', Progress);
 route('/help', Help);
 route('/questions', Questions);
@@ -108,11 +174,18 @@ route('/c/:cid/notes', Notes);
 route('/c/:cid/notes/:nid', Notes);
 route('/c/:cid/textbooks', Textbooks);
 
-setNotFound(({ path }) =>
+setNotFound(({ path }) => {
   view.innerHTML = empty('Page not found', `Nothing is routed at <code>${esc(path)}</code>.
-    <p style="margin-top:14px"><a class="btn" href="#/">Back to dashboard</a></p>`));
+    <p style="margin-top:14px"><a class="btn" href="#/">Back to dashboard</a></p>`);
+});
 
-onNavigate((r) => { markActive(r.path); closeNav(); });
+// Reading mode only makes sense on long-form pages; leaving one exits it.
+const LONGFORM = /^\/c\/[^/]+\/(theory|notes)\/|^\/help/;
+onNavigate((r) => {
+  markActive(r.path);
+  closeNav();
+  if (isReading() && !LONGFORM.test(r.path)) setReading(false);
+});
 
 /* --------------------------------------------------- command palette ---- */
 
@@ -127,7 +200,8 @@ async function openPalette(initial = '') {
   paletteInput.focus();
   paletteInput.select();
   if (!docs) {
-    paletteResults.innerHTML = '<div class="pres"><span class="k">⏳</span><div class="t"><b>Indexing content…</b></div></div>';
+    paletteResults.innerHTML = `<div class="pres"><span class="k">⏳</span>
+      <div class="t"><b>Indexing content…</b></div></div>`;
     docs = await buildSearchIndex();
   }
   runSearch();
@@ -140,7 +214,7 @@ function runSearch() {
   sel = 0;
   if (!q) {
     paletteResults.innerHTML = `<div class="pres"><span class="k">💡</span><div class="t">
-      <b>Type to search every theory, question, note and book</b>
+      <b>Search every theory, question, note and book</b>
       <small>Try a chapter name, a year like 2019, or an English term</small></div></div>`;
     return;
   }
@@ -164,8 +238,9 @@ function pick(i) {
 function move(d) {
   if (!results.length) return;
   sel = (sel + d + results.length) % results.length;
-  paletteResults.querySelectorAll('.pres').forEach((el, i) => el.classList.toggle('sel', i === sel));
-  paletteResults.querySelectorAll('.pres')[sel]?.scrollIntoView({ block: 'nearest' });
+  const els = paletteResults.querySelectorAll('.pres');
+  els.forEach((el, i) => el.classList.toggle('sel', i === sel));
+  els[sel]?.scrollIntoView({ block: 'nearest' });
 }
 
 paletteInput.addEventListener('input', debounce(runSearch, 120));
@@ -180,30 +255,42 @@ palette.addEventListener('click', (e) => { if (e.target === palette) closePalett
 $('#omniForm').addEventListener('submit', (e) => e.preventDefault());
 $('#omni').addEventListener('focus', () => { openPalette($('#omni').value); $('#omni').blur(); });
 
-/* -------------------------------------------------------- shortcuts ---- */
+/* ---------------------------------------------------------- shortcuts ---- */
 
+let gPending = false;
 addEventListener('keydown', (e) => {
   const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName) || e.target.isContentEditable;
+
   if ((e.key === '/' || (e.key === 'k' && (e.ctrlKey || e.metaKey))) && !typing) {
-    e.preventDefault(); openPalette();
-  } else if (e.key === 'Escape' && !palette.hidden) {
-    closePalette();
-  } else if (!typing && !e.ctrlKey && !e.metaKey && !e.altKey) {
-    if (e.key === 't') $('#themeToggle').click();
-    else if (e.key === 'l') $('#langToggle').click();
-    else if (e.key === 'g') { window.__g = true; setTimeout(() => { window.__g = false; }, 900); }
-    else if (window.__g) {
-      const map = { h: '#/', q: '#/questions', r: '#/recall', e: '#/exam', n: '#/notes', b: '#/textbooks', p: '#/progress' };
-      if (map[e.key]) { go(map[e.key]); window.__g = false; }
-    }
+    e.preventDefault(); openPalette(); return;
   }
+  if (e.key === 'Escape') {
+    if (!palette.hidden) { closePalette(); return; }
+    if (isReading()) { setReading(false); resolve(); return; }
+  }
+  if (typing || e.ctrlKey || e.metaKey || e.altKey) return;
+
+  if (gPending) {
+    const map = { h: '#/', p: '#/plan', q: '#/questions', r: '#/recall',
+                  e: '#/exam', n: '#/notes', b: '#/textbooks', s: '#/progress' };
+    gPending = false;
+    if (map[e.key]) { e.preventDefault(); go(map[e.key]); }
+    return;
+  }
+  if (e.key === 'g') { gPending = true; setTimeout(() => { gPending = false; }, 900); }
+  else if (e.key === 't') $('#themeToggle').click();
+  else if (e.key === 'l') setSetting('lang', state.settings.lang === 'bn' ? 'en' : 'bn') || resolve();
+  else if (e.key === 'f') { toggleReading(); resolve(); }
+  else if (e.key === '+' || e.key === '=') nudgeScale(1);
+  else if (e.key === '-') nudgeScale(-1);
 });
 
-/* ------------------------------------------------------------- boot ---- */
+/* --------------------------------------------------------------- boot ---- */
 
-applySettings();
+applyChrome();
 await buildCourseNav();
 await start();
+refreshDueBadge();
 
 if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
   addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));

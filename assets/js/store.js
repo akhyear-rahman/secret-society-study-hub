@@ -9,11 +9,13 @@ const KEY = 'sem7hub:v1';
 const DEFAULTS = {
   settings: {
     lang: 'bn',            // 'bn' | 'en'  — which explanation to show
-    theme: 'dark',         // 'dark' | 'light'
+    theme: 'dark',         // 'dark' | 'light' | 'system'
     showQuestions: true,   // theory page: show the related-PYQ rail
     showAnswers: false,    // question bank: expand model answers by default
-    fontScale: 1,
+    reading: false,        // distraction-free reading mode
+    readScale: 1,          // reader type size, 0.85 … 1.4
   },
+  examDates: {},           // courseId -> yyyy-mm-dd, drives the study plan
   // theoryId -> { read: bool, ts, confidence 0..3 }
   theory: {},
   // questionId -> { seen, attempted, selfScore (0..1), ts }
@@ -57,6 +59,25 @@ export const onChange = (fn) => { listeners.add(fn); return () => listeners.dele
 function emit() { listeners.forEach((f) => f(state)); }
 
 export function setSetting(k, v) { state.settings[k] = v; save(); emit(); }
+
+/** Resolve the 'system' theme choice against the OS preference. */
+export function effectiveTheme() {
+  const pref = state.settings.theme;
+  if (pref === 'light' || pref === 'dark') return pref;
+  return matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+export function setExamDate(courseId, date) {
+  if (date) state.examDates[courseId] = date;
+  else delete state.examDates[courseId];
+  save(); emit();
+}
+/** Whole days from today to the exam, or null if none is set. */
+export function daysToExam(courseId) {
+  const d = state.examDates[courseId];
+  if (!d) return null;
+  return Math.ceil((new Date(d + 'T00:00:00') - new Date(todayKey() + 'T00:00:00')) / 86400000);
+}
 
 /* ---------------------------------------------------------------- XP ---- */
 

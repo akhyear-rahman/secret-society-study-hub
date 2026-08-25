@@ -4,6 +4,7 @@ import { mdWithToc, md, plain } from '../markdown.js';
 import { pageHead, empty, diffTag, marksTag, questionCard, bindAnswerLangToggles } from '../ui.js';
 import { state, setSetting, markTheoryRead, isRead, toggleBookmark, isBookmarked } from '../store.js';
 import { setQuery, go } from '../router.js';
+import { readerControls, bindReaderControls, spyHeadings } from '../reading.js';
 
 export default async function theory({ params, query }) {
   const c = await getCourse(params.cid);
@@ -39,7 +40,7 @@ export default async function theory({ params, query }) {
       `${t.questions.length} past-year question${t.questions.length === 1 ? '' : 's'}`,
       t.exerciseList.length ? `${t.exerciseList.length} textbook exercise${t.exerciseList.length === 1 ? '' : 's'}` : '',
     ].filter(Boolean).join(' · '),
-    actions: `
+    actions: readerControls() + `
       <div class="pill" role="group" aria-label="Explanation language">
         <button class="lang-a${lang === 'bn' ? ' on' : ''}" data-lang="bn" style="${lang === 'bn' ? 'background:var(--accent);color:var(--accent-fg)' : ''}">বাংলা</button>
         <button class="lang-b${lang === 'en' ? ' on' : ''}" data-lang="en" style="${lang === 'en' ? 'background:var(--accent);color:var(--accent-fg)' : ''}">English</button>
@@ -184,10 +185,12 @@ export default async function theory({ params, query }) {
         b.style.borderColor = 'var(--accent)'; b.style.color = 'var(--accent)';
       }));
       bindAnswerLangToggles(root);
+      bindReaderControls(root, () => setQuery({}));
+      const unspy = spyHeadings(root);
 
       // Reading a theory for ~20s counts as read.
       const timer = setTimeout(() => { if (!isRead(t.id)) markTheoryRead(t.id); }, 20000);
-      return () => clearTimeout(timer);
+      return () => { clearTimeout(timer); unspy(); };
     },
   };
 }

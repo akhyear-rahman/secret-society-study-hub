@@ -45,8 +45,9 @@ and `.nojekyll` stops Pages from touching the asset folders.
 | Section | What it does |
 |---|---|
 | **Dashboard** | Every course, progress per course, what is due today |
+| **Study Plan** | Ranks every chapter by *expected exam marks still on the table* — archive yield weighted for recurrence and recency, minus how ready you already are — and gives each one a single next action. Plus a frequency ranking of the questions most likely to reappear, and an exam countdown |
 | **Course** | Theories filtered by chapter, difficulty, or free text |
-| **Theory reader** | Bangla ⇄ English toggle, key-terminology panel, formula sheet, and the related past-year questions with model answers in a side rail — or hidden, for theory-only reading |
+| **Theory reader** | Bangla ⇄ English toggle, key-terminology panel, formula sheet, and the related past-year questions with model answers in a side rail — or hidden, for theory-only reading. **Reading mode** (`F`) strips the app down to a single serif column on a warm page, with adjustable type and a progress bar |
 | **Question bank** | Every past question, grouped topic-wise, chapter-wise, exam-type-wise, batch-wise, year-wise or by difficulty; sortable by recency, marks, difficulty, or how often it has repeated |
 | **Active recall** | Spaced repetition over recall cards and past questions, with four-way self-grading (SM-2 style scheduling) |
 | **Mock exam** | Generates a fresh paper following the course's real section structure, weighted toward questions that recur; timed, with a question navigator, then self-marking against the model answers and marking schemes |
@@ -63,9 +64,12 @@ devices or clearing site data.
 | Key | Action |
 |---|---|
 | `/` or `Ctrl/Cmd K` | Search everything |
-| `t` | Toggle dark / light |
+| `t` | Cycle theme: dark → light → follow system |
 | `l` | Toggle Bangla / English |
-| `g` then `h q r e n b p` | Go to home, questions, recall, exam, notes, books, progress |
+| `f` | Reading mode on/off |
+| `+` / `-` | Reading type size |
+| `esc` | Leave reading mode or close search |
+| `g` then `h p q r e n b s` | Go to home, plan, questions, recall, exam, notes, books, progress |
 | `space` | Reveal a recall card |
 | `1`–`4` | Grade a revealed card |
 
@@ -90,7 +94,8 @@ The short version:
 |---|---|---|---|---|
 | **ECON 401** Advanced Micro | 5 chapters (Varian 7, 8, 1, 2, 4) | 4 — **seeded examples, not real papers** | 1 | 2 |
 | **ECON 403** Advanced Macro | 8 chapters (Mankiw 9e + Romer 5e) | — | 5 imported class notes, lectures 1–13 | — |
-| **ECON 409** Environmental | 21 chapters | **108**, from 15 papers 2010–2022 | 1 (97th syllabus) | — |
+| **ECON 405** Advanced Econometrics | 7 blocks (Wooldridge) | — | — | — |
+| **ECON 409** Environmental | 21 chapters | **108**, from 15 papers 2010–2022; **14 with model answers** | 1 (97th syllabus) | **10**, bilingual, 43 recall cards |
 | **ECON 412** Research Methodology | 13 topics | — | — | — |
 | Improvement ×2 | — | — | — | — |
 
@@ -98,8 +103,8 @@ Advanced Micro is flagged `"sampleContent": true`, which shows a warning banner
 in the app — its chapter structure is real but the questions on it are written
 examples with invented years. Delete the flag once real papers replace them.
 
-Environmental Economics has the full past-paper archive but **no model answers
-yet**; that is the next job. Its 17 environmental-accounting items are tagged
+Environmental Economics has the full past-paper archive and model answers for
+the fourteen highest-frequency questions; the remaining 94 are still to write. Its 17 environmental-accounting items are tagged
 `practice` rather than given a year, because they come from a compiled "likely
 questions" list rather than a sat paper.
 
@@ -115,6 +120,8 @@ assets/js/
   store.js               localStorage: settings, SRS, XP, badges, exams
   content.js             content loading, indexing, search, filtering
   markdown.js            markdown renderer + the {{English Term}} extension
+  priority.js            exam-yield engine behind the Study Plan
+  reading.js             distraction-free reading mode
   ui.js                  shared render helpers
   views/                 one module per screen, lazily imported
 content/                 all your material
@@ -124,7 +131,7 @@ tools/                   serve.py, validate.py, new_course.py
 
 ## Why no framework
 
-No `npm install`, so nothing rots. The app is nine small ES modules the browser
+No `npm install`, so nothing rots. The app is a dozen small ES modules the browser
 loads directly; views are code-split by dynamic `import()`, so a page costs
 only what it uses. It will still run in five years, and it runs on a phone with
 no signal.

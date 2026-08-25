@@ -6,7 +6,7 @@
 //   Content     network-first — a JSON edit shows up on the very next reload
 //               when online, and still works from cache when offline.
 
-const CACHE = 'sem7hub-v1';
+const CACHE = 'sem7hub-v2';
 
 const SHELL = [
   './',
@@ -20,8 +20,11 @@ const SHELL = [
   'assets/js/content.js',
   'assets/js/markdown.js',
   'assets/js/util.js',
+  'assets/js/priority.js',
+  'assets/js/reading.js',
   'assets/js/ui.js',
   'assets/js/views/home.js',
+  'assets/js/views/plan.js',
   'assets/js/views/course.js',
   'assets/js/views/theory.js',
   'assets/js/views/questions.js',
@@ -49,7 +52,13 @@ self.addEventListener('activate', (e) => {
   );
 });
 
+// While developing against a local server, stay out of the way entirely —
+// otherwise an edited JS or CSS file is served from cache on the reload right
+// after you save it, which looks exactly like a bug in your own code.
+const DEV = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+
 self.addEventListener('fetch', (e) => {
+  if (DEV) return;
   const { request } = e;
   if (request.method !== 'GET') return;
   const url = new URL(request.url);

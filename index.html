@@ -5,14 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Semester 7 — Study Hub</title>
 <meta name="description" content="Theories, past-year questions, model answers, notes and gamified practice for Semester 7 — all in one offline-capable app.">
-<meta name="theme-color" content="#0b0f14">
+<meta name="theme-color" content="#0a0c11">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/css/app.css">
+<script>
+  // Apply the stored theme before first paint so there is no flash.
+  try {
+    const s = JSON.parse(localStorage.getItem('sem7hub:v1') || '{}').settings || {};
+    const pref = s.theme || 'dark';
+    const dark = pref === 'dark' || (pref === 'system' &&
+      matchMedia('(prefers-color-scheme: dark)').matches);
+    document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    if (s.lang) document.documentElement.dataset.lang = s.lang;
+  } catch {}
+</script>
 </head>
 <body>
 
 <a class="skip" href="#main">Skip to content</a>
+
+<div id="routebar" aria-hidden="true"></div>
+<div id="readProgress" aria-hidden="true"></div>
+
+<!-- gradient used by the progress rings -->
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <defs><linearGradient id="ringgrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="var(--accent)"/><stop offset="1" stop-color="var(--accent-2)"/>
+  </linearGradient></defs>
+</svg>
 
 <header class="topbar">
   <button class="icon-btn nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
@@ -33,11 +54,12 @@
   </form>
 
   <div class="topbar-right">
-    <button class="pill lang-toggle" id="langToggle" title="Toggle explanation language (L)">
-      <span class="lang-a">বাংলা</span><span class="lang-b">EN</span>
-    </button>
-    <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme (T)">
-      <svg viewBox="0 0 24 24" aria-hidden="true" class="ico-moon"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    <div class="pill" id="langToggle" role="group" aria-label="Explanation language">
+      <button class="lang-a" data-lang="bn" title="Bangla explanations (L)">বাংলা</button>
+      <button class="lang-b" data-lang="en" title="English explanations (L)">EN</button>
+    </div>
+    <button class="icon-btn" id="themeToggle" aria-label="Theme" title="Theme: click to cycle dark / light / system (T)">
+      <svg viewBox="0 0 24 24" aria-hidden="true" id="themeIcon"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
     </button>
     <a class="streak" href="#/progress" id="streakChip" title="Study streak &amp; XP">
       <span class="flame">🔥</span><span id="streakNum">0</span>
@@ -52,6 +74,7 @@
       <div class="side-group">
         <div class="side-label">Overview</div>
         <a class="side-link" href="#/" data-match="^/$"><i>🏠</i>Dashboard</a>
+        <a class="side-link" href="#/plan" data-match="^/plan"><i>🎓</i>Study Plan</a>
         <a class="side-link" href="#/progress" data-match="^/progress"><i>📈</i>Progress</a>
       </div>
       <div class="side-group">
@@ -61,7 +84,7 @@
       <div class="side-group">
         <div class="side-label">Practice</div>
         <a class="side-link" href="#/questions" data-match="^/questions"><i>🗂️</i>Question Bank</a>
-        <a class="side-link" href="#/recall" data-match="^/recall"><i>🧠</i>Active Recall</a>
+        <a class="side-link" href="#/recall" data-match="^/recall"><i>🧠</i>Active Recall<span class="badge-n" id="dueBadge" hidden>0</span></a>
         <a class="side-link" href="#/exam" data-match="^/exam"><i>🎯</i>Mock Exam</a>
       </div>
       <div class="side-group">
@@ -81,6 +104,8 @@
     <div id="view" class="view"><div class="loading">Loading…</div></div>
   </main>
 </div>
+
+<button class="btn read-exit" id="readExit" title="Leave reading mode (Esc)">✕ Exit reading</button>
 
 <div class="palette" id="palette" hidden>
   <div class="palette-box" role="dialog" aria-label="Search results">
