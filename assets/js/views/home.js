@@ -74,6 +74,9 @@ export default async function home() {
   const nav = `<section>
     <h2>Go anywhere</h2>
     <div class="grid g3 navgrid">
+      ${tile('#/path', '🗺️', 'The Path',
+        'The quest map. Chapters as steps, with in-course, midterm and final missions along the way.',
+        `${totals.chapters} steps`)}
       ${tile('#/plan', '🎓', 'Study Plan',
         'Every chapter ranked by the marks still on the table, with one next action each.',
         rows.length ? `${rows.length} chapters ranked` : 'needs questions')}
@@ -124,7 +127,7 @@ export default async function home() {
     </a>`;
   }).join('');
 
-  const courseSection = `<section>
+  const courseSection = `<section class="reveal">
     <div class="spread"><h2>Your courses</h2></div>
     ${courses.length ? `<div class="grid g2">${courseCards}</div>`
       : empty('No courses registered', 'Add them to <code>content/index.json</code>.')}
@@ -132,7 +135,7 @@ export default async function home() {
 
   /* ------------------------------------------------------ the method --- */
 
-  const method = `<section>
+  const method = `<section class="reveal">
     <h2>How this works</h2>
     <p class="sub" style="margin-bottom:16px">Four ideas, each of which changes what you do rather than
       just what you look at.</p>
@@ -174,7 +177,7 @@ export default async function home() {
 
   /* --------------------------------------------------- a study hour --- */
 
-  const session = `<section>
+  const session = `<section class="reveal">
     <h2>A session, end to end</h2>
     <div class="card">
       <ol class="steps">
@@ -213,7 +216,7 @@ export default async function home() {
     </tr>`;
   }).join('');
 
-  const status = `<section>
+  const status = `<section class="reveal">
     <h2>Where the content stands</h2>
     <p class="sub" style="margin-bottom:14px">Built from the files themselves, so it is never
       out of date. Gaps here are the honest to-do list.</p>
@@ -243,7 +246,7 @@ export default async function home() {
     ['G then P', 'Study Plan'], ['G then Q', 'Question Bank'], ['G then R', 'Active Recall'],
     ['Space', 'Reveal a card'], ['1–4', 'Grade a card'], ['G then H', 'Back here'],
   ];
-  const shortcuts = `<section>
+  const shortcuts = `<section class="reveal">
     <h2>Shortcuts</h2>
     <div class="card"><div class="keygrid">
       ${KEYS.map(([k, v]) => `<div class="keyrow"><kbd>${esc(k)}</kbd><span>${esc(v)}</span></div>`).join('')}
@@ -252,7 +255,7 @@ export default async function home() {
 
   /* ----------------------------------------------------------- setup --- */
 
-  const setup = empties.length ? `<section>
+  const setup = empties.length ? `<section class="reveal">
     <h2>Waiting for content</h2>
     <p class="sub" style="margin-bottom:12px">${empties.length} course${empties.length === 1 ? ' has' : 's have'}
       nothing in them yet — the app is ready for them.</p>

@@ -114,7 +114,13 @@ export function selectEl(label, name, options, value) {
 }
 
 export function statCard(value, label, hint = '') {
-  return `<div class="stat"><b>${esc(value)}</b><small>${esc(label)}</small>
+  // Plain integers animate up on mount; anything else (ratios, dashes,
+  // year spans) is printed as given.
+  const n = Number(value);
+  const countable = Number.isInteger(n) && String(value).trim() === String(n);
+  // The real figure is rendered up front and the animation counts up to it.
+  // If frames never arrive, the correct number is already on screen.
+  return `<div class="stat"><b${countable ? ` data-count="${n}"` : ''}>${esc(value)}</b><small>${esc(label)}</small>
     ${hint ? `<div class="muted" style="font-size:11.5px;margin-top:4px">${esc(hint)}</div>` : ''}</div>`;
 }
 

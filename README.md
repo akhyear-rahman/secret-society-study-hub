@@ -12,6 +12,9 @@ Bilingual by design — every theory can be read as fluent Bangla prose with the
 economic and theoretical terminology kept in English, or as straight English,
 switched with one key.
 
+Opening it shows the seal while the content loads; click or press any key to
+skip straight through.
+
 ## Running it
 
 There is no build step and no dependencies. You need a static server only
@@ -47,6 +50,7 @@ and `.nojekyll` stops Pages from touching the asset folders.
 | Section | What it does |
 |---|---|
 | **Dashboard** | Every course, progress per course, what is due today |
+| **The Path** | A quest map. Every chapter is a step on a winding track; missions punctuate it — **in-course** as the small mission, **midterm** as the medium one, and the **final** as the flagship. Chapter steps earn up to three crowns as you read and retain them; missions clear when you sit that paper and score half. Nothing is locked shut. |
 | **Study Plan** | Ranks every chapter by *expected exam marks still on the table* — archive yield weighted for recurrence and recency, minus how ready you already are — and gives each one a single next action. Plus a frequency ranking of the questions most likely to reappear, and an exam countdown |
 | **Course** | Theories filtered by chapter, difficulty, or free text |
 | **Theory reader** | Bangla ⇄ English toggle, key-terminology panel, formula sheet, and the related past-year questions with model answers in a side rail — or hidden, for theory-only reading. **Reading mode** (`F`) strips the app down to a single serif column on a warm page, with adjustable type and a progress bar |
@@ -71,7 +75,7 @@ devices or clearing site data.
 | `f` | Reading mode on/off |
 | `+` / `-` | Reading type size |
 | `esc` | Leave reading mode or close search |
-| `g` then `h p q r e n b s` | Go to home, plan, questions, recall, exam, notes, books, progress |
+| `g` then `h p m q r e n b s` | Go to home, plan, map, questions, recall, exam, notes, books, progress |
 | `space` | Reveal a recall card |
 | `1`–`4` | Grade a revealed card |
 
@@ -124,6 +128,7 @@ assets/js/
   markdown.js            markdown renderer + the {{English Term}} extension
   priority.js            exam-yield engine behind the Study Plan
   reading.js             distraction-free reading mode
+  motion.js              splash, count-ups, scroll reveals, view transitions
   ui.js                  shared render helpers
   views/                 one module per screen, lazily imported
 content/                 all your material

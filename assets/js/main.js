@@ -7,6 +7,7 @@ import { siteIndex, buildSearchIndex, searchDocsFor, allCourses } from './conten
 import { state, setSetting, onChange, liveStreak, effectiveTheme, cardDue } from './store.js';
 import { applyReading, setReading, toggleReading, nudgeScale, updateProgress, isReading } from './reading.js';
 import { empty } from './ui.js';
+import { runSplash, enhance, viewOut, viewIn } from './motion.js';
 
 /* ------------------------------------------------------------ theme ---- */
 
@@ -120,14 +121,16 @@ function page(loader) {
       if (token === navToken) view.innerHTML = '<div class="loading">Loading…</div>';
     }, 140);
     try {
-      const mod = await loader();
+      const [mod] = await Promise.all([loader(), viewOut(view)]);
       const result = await mod.default(ctx);
       if (token !== navToken) return;            // a later navigation won
       clearTimeout(spinner);
       const { html, mount } = typeof result === 'string' ? { html: result } : result;
       if (cleanup) { cleanup(); cleanup = null; }
       view.innerHTML = html;
+      viewIn(view);
       if (mount) cleanup = mount(view) || null;
+      enhance(view);
       const anchor = location.hash.split('#')[2];
       if (anchor) document.getElementById(anchor)?.scrollIntoView();
       else if (!ctx.query.keepScroll) scrollTo({ top: 0 });
@@ -147,6 +150,7 @@ function page(loader) {
 
 const Home      = page(() => import('./views/home.js'));
 const Plan      = page(() => import('./views/plan.js'));
+const QuestPath = page(() => import('./views/path.js'));
 const Course    = page(() => import('./views/course.js'));
 const Theory    = page(() => import('./views/theory.js'));
 const Questions = page(() => import('./views/questions.js'));
@@ -159,6 +163,8 @@ const Help      = page(() => import('./views/help.js'));
 
 route('/', Home);
 route('/plan', Plan);
+route('/path', QuestPath);
+route('/c/:cid/path', QuestPath);
 route('/progress', Progress);
 route('/help', Help);
 route('/questions', Questions);
@@ -272,7 +278,7 @@ addEventListener('keydown', (e) => {
   if (typing || e.ctrlKey || e.metaKey || e.altKey) return;
 
   if (gPending) {
-    const map = { h: '#/', p: '#/plan', q: '#/questions', r: '#/recall',
+    const map = { h: '#/', p: '#/plan', m: '#/path', q: '#/questions', r: '#/recall',
                   e: '#/exam', n: '#/notes', b: '#/textbooks', s: '#/progress' };
     gPending = false;
     if (map[e.key]) { e.preventDefault(); go(map[e.key]); }
@@ -289,8 +295,11 @@ addEventListener('keydown', (e) => {
 /* --------------------------------------------------------------- boot ---- */
 
 applyChrome();
+// The seal shows while the content index and first view load behind it.
+const splash = runSplash();
 await buildCourseNav();
 await start();
+await splash;
 refreshDueBadge();
 
 if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {

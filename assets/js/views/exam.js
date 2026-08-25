@@ -278,7 +278,7 @@ function runner(course, query, head) {
         if (!auto && blank && !confirm(`${blank} question${blank === 1 ? ' is' : 's are'} still blank. Submit anyway?`)) return;
         finished = true;
         clearInterval(tick);
-        renderMarking(root, course, paper, answers, minutes * 60 - left, seed);
+        renderMarking(root, course, paper, answers, minutes * 60 - left, seed, query.tier || '');
       }
 
       renderQ();
@@ -300,7 +300,7 @@ function loadDraft(seed, n) {
 
 /* ----------------------------------------------------------- marking ---- */
 
-function renderMarking(root, course, paper, answers, seconds, seed) {
+function renderMarking(root, course, paper, answers, seconds, seed, tier) {
   const awarded = new Array(paper.length).fill(0);
   const total = sum(paper.map((q) => q.marks || 0));
 
@@ -364,7 +364,8 @@ function renderMarking(root, course, paper, answers, seconds, seed) {
   root.querySelector('#finishBtn').addEventListener('click', () => {
     const score = sum(awarded);
     recordExam({
-      id: `${course.id}-${seed}`, courseId: course.id, title: `${course.code} mock #${seed}`,
+      id: `${course.id}-${seed}`, courseId: course.id, tier: tier || undefined,
+      title: `${course.code} mock #${seed}`,
       score, total, seconds, questions: paper.map((q, i) => ({ id: q.id, awarded: awarded[i], max: q.marks || 10 })),
     });
     localStorage.removeItem(DRAFT_KEY);
