@@ -35,12 +35,12 @@ cannot rot. Python 3.13 is used only for the local server and the tooling.
 | **ECON 401** Advanced Microeconomics-I | 5 | 2 | 4 *(seeded, not real)* | 4 | 1 | 8 |
 | **ECON 403** Advanced Macroeconomics-I | 8 | 0 | 0 | 0 | 5 | 0 |
 | **ECON 405** Advanced Econometrics-I | 7 | 0 | 0 | 0 | 0 | 0 |
-| **ECON 409** Environmental Economics | 21 | 10 | **108** | 14 | 16 | 43 |
+| **ECON 409** Environmental Economics | 21 | 10 | **108** | 19 | 16 | 43 |
 | **ECON 412** Research Methodology | 13 | 0 | 0 | 0 | 0 | 0 |
 | Improvement ×2 | — | — | — | — | — | — |
-| **Total** | **54** | **12** | **112** | **18** | **22** | **51** |
+| **Total** | **54** | **12** | **112** | **23** | **22** | **51** |
 
-All 18 answers carry a `source` naming the book and chapter they follow.
+All 23 answers carry a `source` naming the book and chapter they follow.
 
 **ECON 401's four questions are invented examples, not real past papers.** The
 years and batches are fabricated. The course carries `"sampleContent": true`,
@@ -54,7 +54,7 @@ paper. They filter out cleanly when you want real past questions only.
 
 ## 3. What is left to do, in priority order
 
-1. **Model answers for ECON 409.** 94 of 108 have none. **Follow
+1. **Model answers for ECON 409.** 89 of 108 have none. **Follow
    `docs/ANSWER-SPEC.md`** — it fixes the textbook per course, the answer
    structure, the length calibration, the JSON shape, and the prompt to paste.
 2. **Normalise the topic vocabulary first.** 116 distinct labels across 91 real
@@ -72,6 +72,10 @@ paper. They filter out cleanly when you want real past questions only.
 6. **The two improvement courses** are registered placeholders.
 7. **Exam dates** are not set. `#/plan` shows a countdown once they are;
    `setExamDate(courseId, iso)` in `store.js` backs it.
+
+**Coase theorem is done** — all 8 are answered as of `7ada69b`. The next
+band down is untouched: market failure, sustainable development and WTP vs
+WTA are the highest-yield topics with answers still missing.
 
 ### Highest-yield ECON 409 topics (from the 91 real past-paper questions)
 
