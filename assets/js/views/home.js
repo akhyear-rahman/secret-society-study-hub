@@ -41,9 +41,11 @@ export default async function home() {
     </div>
 
     ${top ? `<a class="nextup" href="#/c/${esc(top.course.id)}?ch=${esc(top.chapter.id)}">
-      <span class="nu-tag">Next up</span>
-      <span class="nu-title">${esc(top.chapter.title)}</span>
-      <span class="nu-sub">${esc(top.course.code)} · highest marks still uncovered</span>
+      <span class="nu-body">
+        <span class="nu-tag">Next up</span>
+        <span class="nu-title">${esc(top.chapter.title)}</span>
+        <span class="nu-sub">${esc(top.course.code)} · highest marks still uncovered</span>
+      </span>
       <span class="nu-go">→</span>
     </a>` : ''}
   </section>`;

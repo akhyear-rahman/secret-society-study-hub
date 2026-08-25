@@ -530,7 +530,7 @@ mark{background:rgba(240,183,63,.34);color:inherit;border-radius:3px;padding:0 2
 #splash.out{opacity:0;transform:scale(1.05);pointer-events:none}
 .splash-inner{text-align:center;transform:translateY(-12px)}
 
-.splash-sigil{width:132px;height:132px;stroke:none;
+.splash-sigil{width:clamp(96px,26vw,132px);height:clamp(96px,26vw,132px);stroke:none;
   animation:sealIn .8s var(--ease-out) both, glowPulse 2.6s ease-in-out .8s infinite}
 .splash-sigil .s-ring {stroke-dasharray:170;stroke-dashoffset:170;animation:draw 1.1s var(--ease-out) .15s both}
 .splash-sigil .s-ring2{stroke-dasharray:145;stroke-dashoffset:145;animation:draw 1.1s var(--ease-out) .25s both}
@@ -538,8 +538,12 @@ mark{background:rgba(240,183,63,.34);color:inherit;border-radius:3px;padding:0 2
 .splash-sigil .s-eye  {stroke-dasharray:70; stroke-dashoffset:70; animation:draw .7s var(--ease-out) .85s both}
 .splash-sigil .s-pupil{opacity:0;animation:fade .5s ease 1.15s both}
 
-.splash-name{margin-top:22px;font-family:var(--display);font-size:26px;letter-spacing:.34em;
-  text-transform:uppercase;color:#ece2cb;text-indent:.34em}
+/* 14 characters at .34em tracking overruns a phone and breaks mid-word, so
+   both the size and the tracking scale with the viewport. */
+.splash-name{margin-top:22px;font-family:var(--display);
+  font-size:clamp(17px,5vw,26px);letter-spacing:clamp(.16em,1.1vw,.34em);
+  text-transform:uppercase;color:#ece2cb;text-indent:.16em;
+  white-space:nowrap}
 .splash-name span{display:inline-block;animation:letterIn .5s var(--ease-out) both}
 .splash-name span:nth-child(1){animation-delay:.60s} .splash-name span:nth-child(2){animation-delay:.64s}
 .splash-name span:nth-child(3){animation-delay:.68s} .splash-name span:nth-child(4){animation-delay:.72s}
@@ -549,9 +553,9 @@ mark{background:rgba(240,183,63,.34);color:inherit;border-radius:3px;padding:0 2
 .splash-name span:nth-child(11){animation-delay:1.00s} .splash-name span:nth-child(12){animation-delay:1.04s}
 .splash-name span:nth-child(13){animation-delay:1.08s} .splash-name span:nth-child(14){animation-delay:1.12s}
 
-.splash-sub{font-family:var(--display);font-size:11px;letter-spacing:.5em;text-transform:uppercase;
+.splash-sub{font-family:var(--display);font-size:clamp(9px,2.6vw,11px);letter-spacing:.36em;text-transform:uppercase;
   color:#d4af37;margin-top:8px;text-indent:.5em;animation:fade .6s ease 1.15s both}
-.splash-rule{width:180px;height:1px;margin:18px auto 0;transform-origin:center;
+.splash-rule{width:min(180px,58vw);height:1px;margin:18px auto 0;transform-origin:center;
   background:linear-gradient(90deg,transparent,#d4af37,transparent);
   animation:ruleOut .7s var(--ease-out) 1.2s both}
 .splash-motto{font-family:var(--display);font-size:10px;letter-spacing:.42em;text-transform:uppercase;
@@ -664,11 +668,15 @@ mark{background:rgba(240,183,63,.34);color:inherit;border-radius:3px;padding:0 2
   background:var(--bg-2);box-shadow:var(--sh-1);max-width:600px;
   transition:transform var(--med) var(--ease-out),border-color var(--med),box-shadow var(--med)}
 .nextup:hover{transform:translateX(4px);border-color:var(--accent);box-shadow:var(--sh-2)}
+/* One column for the text, so the label and the subtitle cannot compete with
+   the title for width — as loose flex siblings the subtitle held its content
+   width and squeezed the title to nothing. */
+.nu-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
 .nu-tag{font-family:var(--display);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--accent);flex:none;align-self:flex-start;padding-top:3px}
-.nu-title{font-family:var(--display);font-size:15.5px;font-weight:620;flex:1;min-width:0;line-height:1.3}
-.nu-sub{display:block;font-family:var(--sans);font-size:11.5px;font-weight:400;
-  color:var(--fg-3);letter-spacing:0;margin-top:3px;text-transform:none}
+  color:var(--accent)}
+.nu-title{font-family:var(--display);font-size:15.5px;font-weight:620;line-height:1.3}
+.nu-sub{font-family:var(--sans);font-size:11.5px;font-weight:400;
+  color:var(--fg-3);letter-spacing:0;text-transform:none}
 .nu-go{color:var(--accent);font-size:19px;flex:none}
 
 .home-foot{margin-top:52px;padding-top:20px;border-top:1px solid var(--line);
@@ -963,4 +971,6 @@ body[data-reading="1"] .read-exit{display:inline-flex;animation:pop .3s var(--ea
    card's source label then pushes the page sideways. */
 .tag{max-width:100%;min-width:0;overflow-wrap:anywhere}
 .empty code,.card code{overflow-wrap:anywhere}
-.qtext,.plan-why,.nu-title{overflow-wrap:anywhere}
+/* Deliberately not .nu-title — anywhere-breaking a heading that is short
+   on width produces one letter per line. */
+.qtext,.plan-why{overflow-wrap:break-word}
