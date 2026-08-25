@@ -160,8 +160,9 @@ export default async function plan({ query }) {
   return {
     html: head + hero + filters +
       `<h2 style="margin-top:0">Do these next</h2>
-       <p class="sub" style="margin-bottom:14px">Priority = expected marks × how much of it you have not covered.
-       Work down the list; re-check after each session.</p>` + ranking +
+       <p class="sub" style="margin-bottom:14px">Priority = expected marks × how much of it you have not
+       covered. Work down the list; re-check after each session.${rows.length > 15
+         ? ` Showing the top 15 of ${rows.length} ranked chapters.` : ''}</p>` + ranking +
       (likelyBlocks ? `<h2>Most likely to come up</h2>
         <p class="sub" style="margin-bottom:14px">Ranked by how often each question has recurred and how recently.
         This is a frequency count of the archive, not a prediction.</p>${likelyBlocks}` : '') +

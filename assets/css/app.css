@@ -496,6 +496,55 @@ mark{background:rgba(240,183,63,.34);color:inherit;border-radius:3px;padding:0 2
   background:var(--fg);color:var(--bg);padding:11px 20px;border-radius:99px;font-size:13.5px;font-weight:620;
   box-shadow:var(--sh-3);animation:pop .25s var(--ease-out) both}
 
+/* ------------------------------------------------- 5a home page ---- */
+
+.eyebrow{font-family:var(--display);font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--accent);margin:0;opacity:.9}
+.home-hero h1{font-size:clamp(26px,3.2vw,38px)}
+
+/* navigation tiles */
+.navgrid{grid-template-columns:repeat(auto-fill,minmax(238px,1fr))}
+.navtile{display:flex;flex-direction:column;gap:5px;padding:18px 18px 16px;position:relative;overflow:hidden}
+.navtile .nt-ico{font-size:22px;line-height:1;margin-bottom:5px}
+.navtile b{font-family:var(--display);font-size:15.5px;letter-spacing:.01em;font-weight:620}
+.navtile small{color:var(--fg-2);font-size:12.5px;line-height:1.5}
+.navtile .nt-n{margin-top:auto;padding-top:10px;font-size:11px;color:var(--fg-3);
+  font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.navtile::after{content:"→";position:absolute;right:16px;top:15px;color:var(--accent);
+  opacity:0;transform:translateX(-5px);transition:opacity var(--med),transform var(--med) var(--ease-out)}
+.navtile:hover::after{opacity:1;transform:none}
+
+/* method cards */
+.method{position:relative;padding-left:56px}
+.method .m-num{position:absolute;left:18px;top:16px;font-family:var(--display);font-size:19px;
+  font-weight:620;color:var(--accent);opacity:.55;letter-spacing:-.02em}
+.method b{font-family:var(--display);font-size:16px;letter-spacing:.01em;display:block;margin-bottom:6px}
+.method p{margin:0;font-size:13.8px;line-height:1.65;color:var(--fg-2)}
+.method p b{display:inline;font-family:inherit;font-size:inherit;color:var(--fg)}
+
+/* numbered walkthrough */
+.steps{margin:0;padding-left:0;list-style:none;counter-reset:step}
+.steps li{counter-increment:step;position:relative;padding-left:42px;margin-bottom:15px;
+  font-size:14px;line-height:1.62;color:var(--fg-2)}
+.steps li:last-child{margin-bottom:0}
+.steps li::before{content:counter(step);position:absolute;left:0;top:-1px;
+  width:27px;height:27px;border-radius:50%;display:grid;place-items:center;
+  font-family:var(--display);font-size:12.5px;font-weight:620;
+  color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);
+  background:var(--bg-3)}
+.steps li b{color:var(--fg)}
+.steps a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+
+/* shortcut reference */
+.keygrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:9px 20px}
+.keyrow{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--fg-2)}
+.keyrow kbd{flex:none;min-width:62px;text-align:center}
+
+@media (max-width:520px){
+  .method{padding-left:18px}
+  .method .m-num{position:static;display:block;margin-bottom:2px}
+}
+
 /* --------------------------------------------- 5b ornament ---- */
 /* The society dressing: foil rules, a diamond before each section, a
    pressed-seal motto in the sidebar foot. All decorative — every rule here
