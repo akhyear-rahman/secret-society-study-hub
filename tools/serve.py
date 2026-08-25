@@ -13,7 +13,6 @@ Caching is disabled so edits to a JSON file show on refresh.
 from __future__ import annotations
 
 import http.server
-import socketserver
 import sys
 import webbrowser
 from functools import partial
@@ -47,9 +46,14 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 def main() -> int:
     port = int(sys.argv[1]) if len(sys.argv) > 1 else 8000
     handler = partial(Handler, directory=str(ROOT))
-    socketserver.TCPServer.allow_reuse_address = True
+    # Threaded, not the single-threaded TCPServer: the app pulls a dozen ES
+    # modules plus JSON in parallel, and one stalled connection on a
+    # single-threaded server wedges every other request — the page then hangs
+    # with nothing on it and no error to show for it.
+    http.server.ThreadingHTTPServer.allow_reuse_address = True
+    http.server.ThreadingHTTPServer.daemon_threads = True
     try:
-        with socketserver.TCPServer(("127.0.0.1", port), handler) as httpd:
+        with http.server.ThreadingHTTPServer(("127.0.0.1", port), handler) as httpd:
             url = f"http://localhost:{port}/"
             print(f"Serving {ROOT}\n  {url}\nCtrl-C to stop.")
             try:

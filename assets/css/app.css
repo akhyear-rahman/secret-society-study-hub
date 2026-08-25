@@ -517,9 +517,16 @@ mark{background:rgba(240,183,63,.34);color:inherit;border-radius:3px;padding:0 2
 @keyframes glowPulse{0%,100%{filter:drop-shadow(0 0 6px rgba(212,175,55,.25))}
                      50%{filter:drop-shadow(0 0 22px rgba(212,175,55,.55))}}
 
+/* The splash is removed by JS a beat after it draws. This animation is the
+   backstop: if the scripts never run — a bad module, a wedged server — the
+   overlay still clears itself instead of leaving a blank page you cannot
+   click through. */
+@keyframes splashFailsafe{0%,88%{opacity:1;visibility:visible}
+                          100%{opacity:0;visibility:hidden;pointer-events:none}}
 #splash{position:fixed;inset:0;z-index:200;display:grid;place-items:center;
   background:radial-gradient(120% 100% at 50% 40%, #16130e 0%, #070605 70%);
-  cursor:pointer;transition:opacity .55s var(--ease), transform .55s var(--ease)}
+  cursor:pointer;transition:opacity .55s var(--ease), transform .55s var(--ease);
+  animation:splashFailsafe 6s linear forwards}
 #splash.out{opacity:0;transform:scale(1.05);pointer-events:none}
 .splash-inner{text-align:center;transform:translateY(-12px)}
 
