@@ -95,7 +95,7 @@ The short version:
 | **ECON 401** Advanced Micro | 5 chapters (Varian 7, 8, 1, 2, 4) | 4 — **seeded examples, not real papers** | 1 | 2 |
 | **ECON 403** Advanced Macro | 8 chapters (Mankiw 9e + Romer 5e) | — | 5 imported class notes, lectures 1–13 | — |
 | **ECON 405** Advanced Econometrics | 7 blocks (Wooldridge) | — | — | — |
-| **ECON 409** Environmental | 21 chapters | **108**, from 15 papers 2010–2022; **14 with model answers** | 1 (97th syllabus) | **10**, bilingual, 43 recall cards |
+| **ECON 409** Environmental | 21 chapters | **108**, from 15 papers 2010–2022; **14 with model answers** | 16 — syllabus, 12 lecture sheets, 2 class-note sets, all linked to Drive | **10**, bilingual, 43 recall cards |
 | **ECON 412** Research Methodology | 13 topics | — | — | — |
 | Improvement ×2 | — | — | — | — |
 
