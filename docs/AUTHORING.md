@@ -41,7 +41,6 @@ six now and fill them in one at a time.
   "code": "ECON 401",
   "short": "Advanced Micro",
   "title": "Advanced Microeconomics",
-  "titleBn": "উচ্চতর ব্যষ্টিক অর্থনীতি",
   "color": "#7c8cff",
   "credits": 4,
   "semester": 7
@@ -68,6 +67,10 @@ python tools/new_course.py env-econ "ECON 407" "Environmental Economics"
   "summary": "Excluded: 8.5 The integrability problem. Assignment-1."
 }
 ```
+
+Courses are titled in English only. Chapters and theories keep an optional
+`titleBn`, because those sit next to the Bangla explanations and help you find
+a topic by the name you actually think of it by.
 
 Chapters drive the chapter-wise filters everywhere — theory list, question
 bank, recall decks, mock exam scope. Every theory and question should carry a

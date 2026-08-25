@@ -23,7 +23,6 @@ export default async function course({ params, query }) {
   const head = pageHead({
     crumbs: [{ label: 'Courses', href: '#/' }, { label: c.code }],
     title: c.title,
-    titleBn: c.titleBn,
     sub: [c.code, c.credits ? `${c.credits} credits` : '', c.semester ? `Semester ${c.semester}` : '']
       .filter(Boolean).join(' · '),
     actions: `

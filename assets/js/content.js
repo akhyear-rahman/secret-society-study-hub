@@ -35,7 +35,6 @@ function hydrate(raw, meta) {
     id: raw.id || meta.id,
     code: raw.code || meta.code || '',
     title: raw.title || meta.title || meta.id,
-    titleBn: raw.titleBn || meta.titleBn || '',
     color: raw.color || meta.color || '#7c8cff',
     credits: raw.credits ?? meta.credits ?? null,
     semester: raw.semester ?? meta.semester ?? null,
@@ -147,7 +146,8 @@ export async function buildSearchIndex() {
   const docs = [];
   for (const c of courses) {
     docs.push({ kind: 'course', icon: '📘', id: c.id, courseId: c.id,
-      title: `${c.code} — ${c.title}`, sub: c.titleBn || 'Course',
+      title: `${c.code} — ${c.title}`,
+      sub: `${c.stats.chapters} chapters · ${c.stats.questions} questions`,
       href: `#/c/${c.id}`, text: plain(c.description, 0) });
 
     for (const t of c.theories) {

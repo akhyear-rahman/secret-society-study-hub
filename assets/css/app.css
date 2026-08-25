@@ -325,7 +325,6 @@ a.card:active{transform:translateY(-1px)}
 .course-card:hover .stripe{width:7px}
 .course-card .ccode{font-family:var(--mono);font-size:11px;color:var(--fg-3);letter-spacing:.04em}
 .course-card h3{margin:5px 0 4px;font-size:17px;letter-spacing:-.015em}
-.course-card .bn{font-family:var(--bangla);color:var(--fg-2);font-size:13.5px;margin:0 0 11px}
 .mini{display:flex;gap:13px;font-size:11.5px;color:var(--fg-3);margin-top:11px;flex-wrap:wrap}
 .mini b{color:var(--fg-2);font-variant-numeric:tabular-nums}
 

@@ -21,7 +21,6 @@ def main() -> int:
         print(__doc__)
         return 2
     cid, code, title = sys.argv[1], sys.argv[2], sys.argv[3]
-    title_bn = sys.argv[4] if len(sys.argv) > 4 else ""
 
     dest = ROOT / "content" / "courses" / f"{cid}.json"
     if dest.exists():
@@ -33,13 +32,13 @@ def main() -> int:
     index = json.loads(index_path.read_text(encoding="utf-8"))
     color = PALETTE[len(index.get("courses", [])) % len(PALETTE)]
 
-    template.update({"id": cid, "code": code, "title": title, "titleBn": title_bn, "color": color})
+    template.update({"id": cid, "code": code, "title": title, "color": color})
     dest.write_text(json.dumps(template, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
     if not any(c.get("id") == cid for c in index.get("courses", [])):
         index.setdefault("courses", []).append({
             "id": cid, "code": code, "short": title[:18], "title": title,
-            "titleBn": title_bn, "color": color, "credits": 4, "semester": 7, "current": True,
+            "color": color, "credits": 4, "semester": 7, "current": True,
         })
         index_path.write_text(json.dumps(index, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         print(f"Registered {cid} in content/index.json")

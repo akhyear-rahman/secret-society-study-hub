@@ -63,7 +63,6 @@ export default async function home() {
       <div style="padding-left:8px">
         <span class="ccode">${esc(c.code)}</span>
         <h3>${esc(c.title)}</h3>
-        ${c.titleBn ? `<p class="bn">${esc(c.titleBn)}</p>` : ''}
         <div class="bar"><span style="width:${pct}%"></span></div>
         <div class="mini"><span>${esc(bits)}</span></div>
       </div>

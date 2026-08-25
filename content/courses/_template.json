@@ -2,35 +2,51 @@
   "id": "my-course",
   "code": "ECON 402",
   "title": "Full course title",
-  "titleBn": "কোর্সের বাংলা নাম",
   "color": "#3ddc97",
   "credits": 4,
   "semester": 7,
   "description": "One paragraph of Markdown describing the course.",
-
   "examPattern": {
     "durationMin": 180,
     "notes": "Markdown. Describe marks split, compulsory sections, choice rules.",
     "sections": [
-      { "name": "Section A — Short answer", "answer": 5, "outOf": 5, "marks": 4 },
-      { "name": "Section B — Long answer", "answer": 4, "outOf": 6, "marks": 12 }
+      {
+        "name": "Section A — Short answer",
+        "answer": 5,
+        "outOf": 5,
+        "marks": 4
+      },
+      {
+        "name": "Section B — Long answer",
+        "answer": 4,
+        "outOf": 6,
+        "marks": 12
+      }
     ]
   },
-
   "chapters": [
-    { "id": "ch1", "no": 1, "title": "Chapter title", "titleBn": "", "summary": "" }
+    {
+      "id": "ch1",
+      "no": 1,
+      "title": "Chapter title",
+      "titleBn": "",
+      "summary": ""
+    }
   ],
-
   "textbooks": [
     {
-      "id": "tb-1", "title": "Book title", "author": "Author", "edition": "1st",
-      "year": 2020, "prescribed": true, "chaptersCovered": "Ch. 1–5",
+      "id": "tb-1",
+      "title": "Book title",
+      "author": "Author",
+      "edition": "1st",
+      "year": 2020,
+      "prescribed": true,
+      "chaptersCovered": "Ch. 1–5",
       "notes": "Markdown. Why this book, which parts matter.",
       "file": "content/textbooks/book.pdf",
       "url": ""
     }
   ],
-
   "theories": [
     {
       "id": "th-1",
@@ -39,21 +55,37 @@
       "titleBn": "বাংলায় শিরোনাম",
       "difficulty": "intermediate",
       "importance": 4,
-      "tags": ["tag-a", "tag-b"],
-      "questionIds": ["q-2019-f-1a"],
-      "exerciseIds": ["ex-1"],
-      "keyTerms": [
-        { "en": "English term", "bn": "বাংলা পরিভাষা", "def": "One-line definition." }
+      "tags": [
+        "tag-a",
+        "tag-b"
       ],
-      "formulas": ["y = f(x)"],
+      "questionIds": [
+        "q-2019-f-1a"
+      ],
+      "exerciseIds": [
+        "ex-1"
+      ],
+      "keyTerms": [
+        {
+          "en": "English term",
+          "bn": "বাংলা পরিভাষা",
+          "def": "One-line definition."
+        }
+      ],
+      "formulas": [
+        "y = f(x)"
+      ],
       "bn": "## বাংলা ব্যাখ্যা\n\nসাবলীল বাংলায় লিখুন, কিন্তু পারিভাষিক শব্দ ইংরেজিতেই রাখুন — {{Marginal Rate of Substitution}} এভাবে লিখলে সেটি আলাদা রঙে দেখাবে।\n\nMarkdown পুরোপুরি কাজ করে: শিরোনাম, তালিকা, টেবিল, উদ্ধৃতি, কোড ব্লক।",
       "en": "## English explanation\n\nThe same content in English. Either field may be left empty — the reader falls back to whichever exists and shows a note.",
       "recall": [
-        { "q": "An active-recall prompt.", "a": "The answer, in Markdown.", "difficulty": "beginner" }
+        {
+          "q": "An active-recall prompt.",
+          "a": "The answer, in Markdown.",
+          "difficulty": "beginner"
+        }
       ]
     }
   ],
-
   "questions": [
     {
       "id": "q-2019-f-1a",
@@ -64,9 +96,16 @@
       "qNo": "1(a)",
       "marks": 12,
       "difficulty": "advanced",
-      "topics": ["Topic name"],
-      "repeats": [2015, 2012],
-      "theoryIds": ["th-1"],
+      "topics": [
+        "Topic name"
+      ],
+      "repeats": [
+        2015,
+        2012
+      ],
+      "theoryIds": [
+        "th-1"
+      ],
       "text": "The question exactly as it appeared in the paper.",
       "answerPoints": [
         "What the first 3 marks are for",
@@ -76,21 +115,28 @@
       "answerBn": ""
     }
   ],
-
   "exercises": [
     {
-      "id": "ex-1", "textbookId": "tb-1", "chapterId": "ch1",
-      "ref": "Book, Ch. 3, Q7", "difficulty": "intermediate",
+      "id": "ex-1",
+      "textbookId": "tb-1",
+      "chapterId": "ch1",
+      "ref": "Book, Ch. 3, Q7",
+      "difficulty": "intermediate",
       "text": "The exercise as printed.",
       "solution": "Worked solution in Markdown."
     }
   ],
-
   "notes": [
     {
-      "id": "n-1", "chapterId": "ch1", "title": "Lecture 1 — title",
-      "date": "2026-09-01", "source": "Lecture",
-      "theoryIds": ["th-1"], "tags": [],
+      "id": "n-1",
+      "chapterId": "ch1",
+      "title": "Lecture 1 — title",
+      "date": "2026-09-01",
+      "source": "Lecture",
+      "theoryIds": [
+        "th-1"
+      ],
+      "tags": [],
       "file": "",
       "body": "## Markdown note body\n\nWhatever you want to keep."
     }
