@@ -88,6 +88,9 @@
   </form>
 
   <div class="topbar-right">
+    <button class="icon-btn search-btn" id="searchBtn" aria-label="Search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    </button>
     <div class="pill" id="langToggle" role="group" aria-label="Explanation language">
       <button class="lang-a" data-lang="bn" title="Bangla explanations (L)">বাংলা</button>
       <button class="lang-b" data-lang="en" title="English explanations (L)">EN</button>
@@ -136,6 +139,13 @@
       </div>
     </div>
     <div class="side-foot">
+      <div class="side-lang">
+        <span>Explanations</span>
+        <div class="pill" id="langToggleDrawer" role="group" aria-label="Explanation language">
+          <button class="lang-a" data-lang="bn">বাংলা</button>
+          <button class="lang-b" data-lang="en">EN</button>
+        </div>
+      </div>
       <a class="side-link tiny" href="#/help"><i>❓</i>How to add content</a>
       <span class="motto">Sub&nbsp;Rosa · <b>MMXXVI</b></span>
     </div>

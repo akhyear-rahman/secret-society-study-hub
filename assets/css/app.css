@@ -855,3 +855,104 @@ body[data-reading="1"] .read-exit{display:inline-flex;animation:pop .3s var(--ea
   *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
   html{scroll-behavior:auto}
 }
+
+/* ------------------------------------------- 7b phones and tablets ---- */
+/* Written after measuring the real thing at 375 and 768. Four faults it
+   fixes: the topbar cluster overran the viewport by ~20px, search was
+   unreachable without a keyboard, every form control was under 16px so iOS
+   zoomed the page on each tap, and touch targets were 25–36px. */
+
+/* --- notch and rounded-corner safety --- */
+.topbar{
+  padding-left:max(14px, env(safe-area-inset-left));
+  padding-right:max(14px, env(safe-area-inset-right));
+}
+/* One gutter variable so the safe-area floor cannot fight the breakpoints —
+   a plain longhand here would override the narrow-screen padding set above. */
+:root{--gutter:32px}
+@media (max-width:860px){:root{--gutter:16px}}
+.main{
+  padding-left:max(var(--gutter), env(safe-area-inset-left));
+  padding-right:max(var(--gutter), env(safe-area-inset-right));
+  padding-bottom:calc(96px + env(safe-area-inset-bottom));
+}
+.sidebar{padding-bottom:env(safe-area-inset-bottom)}
+
+/* --- the search affordance for touch --- */
+.search-btn{display:none}
+
+/* --- language control inside the drawer --- */
+.side-lang{display:none;align-items:center;justify-content:space-between;gap:10px;
+  padding:4px 2px 10px;margin-bottom:6px;
+  border-bottom:1px solid color-mix(in srgb,var(--accent) 15%,transparent)}
+.side-lang > span{font-size:11px;color:var(--fg-3);letter-spacing:.04em}
+
+/* ---------------------------------------------------------- tablets --- */
+@media (max-width:1024px){
+  .main{padding-top:26px}
+  .g2{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+}
+
+/* ------------------------------------------- below the sidebar break --- */
+@media (max-width:860px){
+  /* .omni is hidden here, so the button takes over */
+  .search-btn{display:grid}
+  .side-lang{display:flex}
+}
+
+/* ------------------------------------------------------------ phones --- */
+@media (max-width:600px){
+  .topbar{gap:4px}
+  /* The sigil alone identifies the app; the wordmark is what overflowed. */
+  .brand-text{display:none}
+  /* Duplicated in the drawer, where there is room for it. */
+  #langToggle{display:none}
+  .streak{padding:6px 9px;gap:4px}
+
+  h1{font-size:clamp(21px,6.2vw,26px)}
+  .home-open{padding:20px 0 6px}
+  .home-open h1{font-size:clamp(25px,7.6vw,32px)}
+  .home-open .lede{font-size:15px}
+  .tickers{gap:14px 20px;margin-top:22px;padding-top:16px}
+  .tickers b{font-size:19px}
+  .nextup{padding:13px 15px;gap:10px}
+  .nu-title{font-size:14px}
+
+  .page-head .row{width:100%}
+  .filters{gap:6px}
+  .sel{padding:4px 8px}
+  .sel select,.sel input{max-width:150px}
+
+  /* Long ids and formulae must not push the page sideways. */
+  .prose{font-size:15.5px}
+  .prose.bn{font-size:16.5px}
+  .empty{padding:24px 14px}
+}
+
+/* --------------------------------------------------- touch ergonomics --- */
+/* Keyed to the input device, not the width — a small laptop keeps the
+   tighter desktop sizing, a large tablet still gets proper targets. */
+@media (pointer:coarse){
+  .icon-btn{width:44px;height:44px}
+  .pill button{padding:7px 12px}
+  .streak{min-height:40px}
+  .side-link{padding:11px 12px}
+  .chip{padding:8px 14px}
+  .btn{padding:10px 16px}
+  .btn.sm{padding:8px 13px}
+  .qnav button{width:38px;height:38px}
+  .grade button{padding:15px 8px}
+  .qcard > summary{padding:15px 16px}
+
+  /* Anything under 16px makes iOS zoom the whole page on focus, and it does
+     not zoom back out. This is the single biggest mobile annoyance. */
+  input,select,textarea,.omni input,.sel select,.sel input,
+  .palette-box > input,.exam-q textarea{font-size:16px}
+}
+
+/* ------------------------------------------------ overflow guarantees --- */
+/* Nothing authored into content should be able to widen the page. */
+.prose code{overflow-wrap:anywhere}
+.prose a{overflow-wrap:anywhere}
+.empty code,.card code{overflow-wrap:anywhere}
+.qtext,.plan-why,.nu-title{overflow-wrap:anywhere}

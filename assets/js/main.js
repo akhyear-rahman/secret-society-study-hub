@@ -36,12 +36,16 @@ matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
   if (state.settings.theme === 'system') applyTheme();
 });
 
-$('#langToggle').addEventListener('click', (e) => {
+// Two language pills — one in the topbar for wide screens, one in the drawer
+// because the topbar hides it on narrow ones. Both drive the same setting.
+function onLangClick(e) {
   const btn = e.target.closest('[data-lang]');
   if (!btn) return;
   setSetting('lang', btn.dataset.lang);
   resolve();
-});
+}
+$('#langToggle').addEventListener('click', onLangClick);
+$('#langToggleDrawer').addEventListener('click', onLangClick);
 
 function applyChrome() {
   applyTheme();
@@ -270,6 +274,9 @@ palette.addEventListener('click', (e) => { if (e.target === palette) closePalett
 
 $('#omniForm').addEventListener('submit', (e) => e.preventDefault());
 $('#omni').addEventListener('focus', () => { openPalette($('#omni').value); $('#omni').blur(); });
+// The topbar search field is hidden on narrow screens, and "/" needs a
+// keyboard — so touch users get a button instead.
+$('#searchBtn').addEventListener('click', () => openPalette());
 
 /* ---------------------------------------------------------- shortcuts ---- */
 

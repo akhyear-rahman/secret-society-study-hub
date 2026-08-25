@@ -93,6 +93,11 @@ open an issue and I will take it down.
 | **Textbooks** | Prescribed and reference books, with their exercises indexed against theories |
 | **Progress** | XP, streak, 12-week activity map, per-course mastery, weakest chapters, badges, exam history, and JSON export/import |
 
+Works on phones and tablets: the layout is fluid, touch targets are sized for
+fingers, form controls are 16px so iOS does not zoom on focus, and a search
+button replaces the `/` shortcut where there is no keyboard. Verified at 375,
+768 and 1280 with no horizontal overflow on any screen.
+
 Navigation lives in a slide-out drawer at every width — the hamburger, top left — so the reading column stays centred and uncluttered.
 
 Everything you do is stored in your browser's `localStorage`. Nothing is sent
