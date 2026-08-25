@@ -15,6 +15,10 @@ switched with one key.
 Opening it shows the seal while the content loads; click or press any key to
 skip straight through.
 
+> **Picking this up fresh?** Read **[HANDOFF.md](HANDOFF.md)** — full project
+> state, what is done, what is left, the sources every course came from, and
+> the bugs already fixed so they are not reintroduced.
+
 ## Running it
 
 There is no build step and no dependencies. You need a static server only
