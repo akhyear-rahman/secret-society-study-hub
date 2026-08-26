@@ -32,15 +32,15 @@ cannot rot. Python 3.13 is used only for the local server and the tooling.
 
 | Course | Chapters | Theories | Questions | Answered | Notes | Recall cards |
 |---|---|---|---|---|---|---|
-| **ECON 401** Advanced Microeconomics-I | 5 | 6 | 26 | 26 | 1 | 28 |
+| **ECON 401** Advanced Microeconomics-I | 5 | 6 | 37 | 37 | 1 | 28 |
 | **ECON 403** Advanced Macroeconomics-I | 8 | 0 | 0 | 0 | 5 | 0 |
 | **ECON 405** Advanced Econometrics-I | 7 | 0 | 0 | 0 | 0 | 0 |
 | **ECON 409** Environmental Economics | 21 | 10 | **108** | 19 | 16 | 43 |
 | **ECON 412** Research Methodology | 13 | 0 | 0 | 0 | 0 | 0 |
 | Improvement ×2 | — | — | — | — | — | — |
-| **Total** | **54** | **16** | **134** | **45** | **22** | **71** |
+| **Total** | **54** | **16** | **145** | **56** | **22** | **71** |
 
-All 45 answers carry a `source` naming the book and chapter they follow.
+All 56 answers carry a `source` naming the book and chapter they follow.
 
 **ECON 401 is now built from 31 real papers, 2010–2025** — 15 finals, 10
 in-course tests and 6 midterms. The `sampleContent` flag is gone. The four
@@ -71,13 +71,18 @@ paper. They filter out cleanly when you want real past questions only.
    order you work in is the right one.
 3. **Confirm Perman is actually the ECON 409 textbook** before writing answers
    in its notation. It was inferred, not stated — see §4.
-4. **ECON 401: 26 of ~56 canonical question groups are answered**, covering
-   every group appearing on 4 or more of the 31 papers. All six theories now
-   have bilingual bodies and recall cards (28 authored, plus one per answered
-   question = a 54-card deck). What is left is the long tail appearing once or
-   twice: the `f(x)=20x-x^2` problem, the firm's substitution matrix,
-   Hotelling as a standalone, conditional factor demands, SAC/LAC via the
-   envelope theorem, integrability, offer curves, and the two numeric
+4. **ECON 401: 37 of ~56 canonical question groups are answered** — every
+   group appearing on **3 or more** of the 31 papers is now done. All six
+   theories have bilingual bodies and recall cards (28 authored, plus one per
+   answered question = a 65-card deck).
+
+   What is left is the tail at one or two appearances: `f(x)=20x-x^2`, no
+   profit-max plan under CRS/IRS, the cost function's homogeneity and
+   concavity, SAC/LAC via the envelope theorem, direct utility from
+   `v = -a ln p1 - b ln p2`, GARP, the numeric revealed-preference pair,
+   offer curves, output elasticity, Hotelling standalone, the firm's
+   substitution matrix, the downward-sloping factor demand curve, conditional
+   factor demand cross-effects, the continuity assumption, and the two numeric
    indirect-utility questions. Run `python tools/build/frequency_micro.py` to
    regenerate the ranking.
 5. **ECON 403, 405, 412 have a syllabus but no theories or questions.** No past

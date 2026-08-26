@@ -124,6 +124,7 @@
       ],
       "questionIds": [
         "q-2011-f-1b",
+        "q-2019-f-5c",
         "q-2021-f-2",
         "q-2024-f-3a",
         "q-2025-f-1cd",
@@ -210,11 +211,15 @@
         "giffen"
       ],
       "questionIds": [
+        "q-2014-f-2b",
         "q-2016-f-6a",
+        "q-2016-f-6b",
+        "q-2023-f-3b",
         "q-2023-f-3c",
         "q-2024-f-2b",
         "q-2024-f-3a",
-        "q-2025-f-2b"
+        "q-2025-f-2b",
+        "q-mid16-4"
       ],
       "exerciseIds": [
         "ex-varian-8-2"
@@ -286,6 +291,7 @@
         "CES"
       ],
       "questionIds": [
+        "q-2013-f-2b",
         "q-2016-f-1b",
         "q-2018-f-1a",
         "q-2018-f-2",
@@ -379,8 +385,11 @@
         "Hotelling"
       ],
       "questionIds": [
+        "q-2011-f-7b",
         "q-2014-f-5a",
+        "q-2014-f-6a",
         "q-2021-f-6a",
+        "q-2022-f-5ab",
         "q-2024-f-6b",
         "q-2025-f-5a"
       ],
@@ -551,6 +560,9 @@
         "local nonsatiation"
       ],
       "questionIds": [
+        "q-2013-f-7ab",
+        "q-2019-f-5c",
+        "q-2021-f-1a",
         "q-2024-f-1b",
         "q-2025-f-1ab"
       ],
@@ -928,6 +940,39 @@
       "source": "Varian, *Microeconomic Analysis*, 3rd ed., §1.2 (specification of technology)"
     },
     {
+      "id": "q-2013-f-2b",
+      "chapterId": "ch1",
+      "examType": "final",
+      "year": 2013,
+      "batch": "4th",
+      "qNo": "2(B)",
+      "marks": 6.5,
+      "difficulty": "advanced",
+      "topics": [
+        "Elasticity of substitution",
+        "TRS",
+        "Cobb-Douglas",
+        "Elasticity"
+      ],
+      "repeats": [
+        2017,
+        2022
+      ],
+      "theoryIds": [
+        "th-technology"
+      ],
+      "text": "(i) Derive the result that the \"elasticity of substitution\" $\\sigma$ can be expressed as $\\sigma = d\\ln(x_2/x_1)\\,/\\,d\\ln|TRS|$. (ii) Find the value of the elasticity of substitution for the Cobb-Douglas technology $f(x_1,x_2)=x_1^{a}x_2^{1-a}$. (6.5)",
+      "answerPoints": [
+        "Say why a unit-free measure is needed at all — 1 mark",
+        "Build $\\sigma$ from the percentage-change definition — 2 marks",
+        "Convert to the log-derivative form — 1.5 marks",
+        "Apply it to Cobb-Douglas and get $\\sigma=1$ — 2 marks"
+      ],
+      "answer": "## (i) Deriving the formula\n\n**Why a new measure is needed.** The TRS already describes substitutability — it is the isoquant's slope — but it carries **units**. Measure labour in hours rather than days and the number changes, though the technology has not. A comparison across firms or inputs needs something unit-free.\n\n**Step 1 — Start from the natural definition.** Substitutability is how much the **input ratio** responds when the **relative price of the inputs** (which at the optimum equals the TRS) changes. Comparing percentage changes strips the units:\n\n$$\\sigma=\\frac{\\text{percentage change in }x_2/x_1}{\\text{percentage change in }|TRS|} =\\frac{\\Delta(x_2/x_1)\\,/\\,(x_2/x_1)}{\\Delta|TRS|\\,/\\,|TRS|}$$\n\n**Step 2 — Take the limit.** Letting the changes go to zero turns the ratio into derivatives:\n\n$$\\sigma=\\frac{d(x_2/x_1)}{d|TRS|}\\cdot\\frac{|TRS|}{x_2/x_1}$$\n\n**Step 3 — Rewrite in logs.** Use $d\\ln z=dz/z$ for any positive $z$. Applying it to numerator and denominator separately:\n\n$$d\\ln\\!\\left(\\frac{x_2}{x_1}\\right)=\\frac{d(x_2/x_1)}{x_2/x_1},\\qquad\\qquad d\\ln|TRS|=\\frac{d|TRS|}{|TRS|}$$\n\nDividing one by the other reproduces Step 2 exactly, so\n\n$$\\boxed{\\;\\sigma=\\frac{d\\ln(x_2/x_1)}{d\\ln|TRS|}\\;}\\qquad\\blacksquare$$\n\n**Why the log form is the useful one.** A log derivative *is* an elasticity, so this says $\\sigma$ is the elasticity of the input ratio with respect to the TRS. It is also far easier to compute: take logs first, then differentiate, and no quotient rule is needed. The same trick gives the own-price elasticity of demand as $e_d=d\\ln Q/d\\ln P$.\n\n## (ii) Cobb-Douglas\n\n**Step 1 — Find the TRS.**\n\n$$MP_1=\\frac{\\partial f}{\\partial x_1}=a\\,x_1^{a-1}x_2^{1-a},\\qquad MP_2=\\frac{\\partial f}{\\partial x_2}=(1-a)\\,x_1^{a}x_2^{-a}$$\n\n$$|TRS|=\\frac{MP_1}{MP_2}=\\frac{a\\,x_1^{a-1}x_2^{1-a}}{(1-a)\\,x_1^{a}x_2^{-a}} =\\frac{a}{1-a}\\cdot\\frac{x_2}{x_1}$$\n\n**Step 2 — Take logs.** Write $k=x_2/x_1$ and $L=\\ln k$. Then\n\n$$\\ln|TRS|=\\ln\\!\\left(\\frac{a}{1-a}\\right)+\\ln k=\\underbrace{\\ln\\!\\left(\\frac{a}{1-a}\\right)}_{\\text{a constant}}+L$$\n\n**Step 3 — Differentiate.** The constant vanishes, leaving\n\n$$\\frac{d\\ln|TRS|}{dL}=1 \\qquad\\Longrightarrow\\qquad \\sigma=\\frac{dL}{d\\ln|TRS|}=\\boxed{\\,1\\,}$$\n\n## Reading the answer\n\n$\\sigma=1$ means a **1% rise in the input-price ratio produces exactly a 1% change in the input ratio** — and the two effects cancel, which is why Cobb-Douglas keeps **factor shares constant** regardless of prices. That is the property that made it attractive for empirical work in the first place.\n\n**Placing it in the family.** Cobb-Douglas is the $\\rho\\to0$ member of the CES family $y=[a_1x_1^{\\rho}+a_2x_2^{\\rho}]^{1/\\rho}$, where\n\n$$\\sigma=\\frac{1}{1-\\rho}$$\n\nSetting $\\rho=0$ returns $\\sigma=1$, confirming the result. Note also that $\\sigma$ is **constant** here — it does not vary along the isoquant, which is exactly what \"constant elasticity of substitution\" names.",
+      "answerBn": "",
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §1.3 (technical rate of substitution, elasticity of substitution)"
+    },
+    {
       "id": "q-2025-f-5a",
       "chapterId": "ch2",
       "examType": "final",
@@ -1009,6 +1054,39 @@
       "source": "Varian, *Microeconomic Analysis*, 3rd ed., profit-function chapter (WAPM and recoverability).\n\n⚠ Not in the supplied *Selected Chapters* PDF, which holds only ch. 1, 2, 7 and 8 — you will need the full text for this one."
     },
     {
+      "id": "q-2022-f-5ab",
+      "chapterId": "ch2",
+      "examType": "final",
+      "year": 2022,
+      "batch": "13th",
+      "qNo": "5(A)(B)",
+      "marks": 6,
+      "difficulty": "beginner",
+      "topics": [
+        "Economic profit",
+        "Opportunity cost",
+        "Profit maximization",
+        "Technology"
+      ],
+      "repeats": [
+        2014,
+        2013
+      ],
+      "theoryIds": [
+        "th-profit"
+      ],
+      "text": "(A) Why is that the economic profit is different than the accounting profit? Explain. (3) (B) What are the constraints that a firm faces with regards to profit maximization, explain. (3)",
+      "answerPoints": [
+        "Define both profit measures and locate the difference in opportunity cost — 1.5 marks",
+        "Give a worked example showing positive accounting, zero economic profit — 1.5 marks",
+        "Name and explain the technological constraint — 1.5 marks",
+        "Name and explain the market constraint — 1.5 marks"
+      ],
+      "answer": "## (A) Economic profit is not accounting profit\n\nBoth subtract cost from revenue. They disagree about **what counts as a cost**.\n\n**Accounting profit** subtracts only *explicit* costs — money actually paid out: wages, materials, rent, interest.\n\n**Economic profit** subtracts explicit costs **and** *implicit* costs: the value of resources the firm owns and uses, measured at their **opportunity cost** — what they would have earned in their best alternative use.\n\n$$\\text{Economic profit}=\\text{Revenue}-\\text{Explicit costs}-\\text{Implicit costs}$$\n\n**The items accountants leave out** are the owner's own labour, the capital they have tied up, and premises they own rather than rent. None involves a payment, so none appears in the accounts — but each has a foregone alternative.\n\n**A worked example.** Someone leaves a job paying 8 lakh a year and invests 20 lakh of savings, which would have earned 2 lakh in interest. The business takes 30 lakh in revenue and pays 20 lakh in explicit costs.\n\n$$\\text{Accounting profit}=30-20=10\\ \\text{lakh}$$\n$$\\text{Economic profit}=30-20-\\underbrace{8}_{\\text{forgone salary}}-\\underbrace{2}_{\\text{forgone interest}}=0$$\n\nThe accounts show a healthy business; economically the owner is **exactly indifferent** between running it and taking the job back. That is why economics uses this measure — **zero economic profit means resources are earning what they could earn elsewhere**, and is the long-run competitive equilibrium condition. Zero accounting profit would mean the firm is failing.\n\n## (B) The two constraints\n\nA firm maximising $\\pi=p\\,f(x)-w\\cdot x$ is not free to choose whatever it likes. Two things bind.\n\n**1. The technological constraint.** The firm can only choose production plans that are actually **feasible** — plans lying in the production set $Y$, equivalently satisfying $y\\le f(x)$.\n\nThis is the constraint that makes the problem interesting. Without it the firm would produce infinite output from no inputs. It is why diminishing marginal product matters, and why the second-order condition $f''\\le0$ is needed for a maximum to exist at all — under increasing returns no profit-maximising plan exists.\n\n**2. The market constraint.** The firm must take the **prices it faces** as given.\n\nFor a **competitive** firm this is the strong version: it is a price taker in both output and input markets, so $p$ and $w$ are constants and it can sell any quantity at $p$. This is what licenses treating prices as fixed when differentiating, and it is the assumption behind the first-order condition $p\\,f'(x^{*})=w$.\n\nA firm with market power faces a downward-sloping demand curve $p(y)$ instead, and its condition becomes $MR=MC$ with $MR<p$ — a different and more restrictive market constraint.\n\n> **The distinction to state:** the technological constraint says what is **possible**; the market constraint says what is **available on what terms**. Profit maximisation is the best point in the intersection of the two.",
+      "answerBn": "",
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §2.1 (profit and its constraints)"
+    },
+    {
       "id": "q-2021-f-6a",
       "chapterId": "ch2",
       "examType": "final",
@@ -1077,6 +1155,71 @@
       "answer": "## Statement\n\nThe profit function\n\n$$\\pi(p)=\\max_{y\\in Y}\\;p\\cdot y$$\n\nis **convex** in prices: for any $p'$, $p''$ and $t\\in[0,1]$,\n\n$$\\pi\\big(tp'+(1-t)p''\\big)\\;\\le\\;t\\,\\pi(p')+(1-t)\\,\\pi(p'')$$\n\n## Proof\n\n![At $p^{*}$ the fixed plan is optimal and the two curves touch. Elsewhere the firm re-optimises and does strictly better, so $\\pi$ bends upward.](content/figures/profit-convex.svg)\n\n**Step 1 — Set up.** Let $p^{t}=t\\,p'+(1-t)\\,p''$, and let $y^{t}$ be a profit-maximising plan at those prices, so that $\\pi(p^{t})=p^{t}\\cdot y^{t}$.\n\n**Step 2 — Split the profit of $y^{t}$.** Using linearity of the inner product:\n\n$$\\pi(p^{t})=p^{t}\\cdot y^{t}=t\\,(p'\\cdot y^{t})+(1-t)\\,(p''\\cdot y^{t})$$\n\n**Step 3 — Feasible but not necessarily optimal.** The plan $y^{t}$ belongs to $Y$, and $Y$ does not change with prices. So $y^{t}$ was *available* at $p'$ and at $p''$ — but the firm need not have chosen it there. Hence its profit cannot exceed the maximum:\n\n$$p'\\cdot y^{t}\\le\\pi(p'),\\qquad p''\\cdot y^{t}\\le\\pi(p'')$$\n\n**Step 4 — Combine.**\n\n$$\\pi(p^{t})\\;\\le\\;t\\,\\pi(p')+(1-t)\\,\\pi(p'')$$\n\nwhich is convexity. $\\blacksquare$\n\n## Reading the proof\n\nNotice the shape of the argument: **hold the plan fixed and profit is a straight line in prices**; let the firm re-optimise and it does at least as well, and usually better. The profit function is therefore the upper envelope of a family of straight lines, and an upper envelope of linear functions is always convex.\n\nThis is the same argument that makes the expenditure function **concave** — there the fixed bundle gives an upper straight line and re-optimising lowers cost. One idea, two theorems, opposite curvature because one is a maximum and the other a minimum.\n\n## Two consequences worth stating\n\n**Fluctuating prices are good for a competitive firm.** Convexity gives, by Jensen's inequality,\n\n$$\\mathbb{E}\\big[\\pi(p)\\big]\\;\\ge\\;\\pi\\big(\\mathbb{E}[p]\\big)$$\n\nAverage profit under a fluctuating price is at least as large as profit at the stabilised average price. The firm gains from variability because it can *adapt* — produce more when the price is high, less when it is low. This is exactly the result other papers ask for separately, and it is a one-line corollary of convexity.\n\n**Hotelling's lemma.** Where $\\pi$ is differentiable, the slope of the tangent at $p^{*}$ is the optimal plan itself:\n\n$$\\frac{\\partial\\pi(p)}{\\partial p_i}=y_i(p)$$\n\nSupply and factor demand are recovered by differentiating the profit function — the firm-side twin of Shephard's lemma.",
       "answerBn": "",
       "source": "Varian, *Microeconomic Analysis*, 3rd ed., profit-function chapter.\n\n⚠ The supplied *Selected Chapters* PDF holds only ch. 1, 2, 7 and 8; this material sits in ch. 3–6 and needs the full text."
+    },
+    {
+      "id": "q-2014-f-6a",
+      "chapterId": "ch2",
+      "examType": "final",
+      "year": 2014,
+      "batch": "5th",
+      "qNo": "6(A)",
+      "marks": 4,
+      "difficulty": "advanced",
+      "topics": [
+        "Profit function",
+        "Convexity",
+        "Fluctuating prices",
+        "Jensen's inequality"
+      ],
+      "repeats": [
+        2010,
+        2013
+      ],
+      "theoryIds": [
+        "th-profit"
+      ],
+      "text": "Why is that, a competitive firm would prefer to face a fluctuating price rather than a stabilized price? Explain. (4)",
+      "answerPoints": [
+        "State the claim precisely, with the equal-mean condition — 1 mark",
+        "Invoke convexity of the profit function — 1 mark",
+        "Apply Jensen's inequality to get the result — 1.5 marks",
+        "Explain the intuition and name when it fails — 0.5 marks"
+      ],
+      "answer": "## The claim, stated precisely\n\nLet the output price be random with mean $\\bar p=\\mathbb{E}[p]$. Compare two regimes with the **same average price**:\n\n- **fluctuating** — the firm faces the random $p$ and re-optimises each period;\n- **stabilised** — the government fixes the price at $\\bar p$ every period.\n\n**Claim.** Average profit under fluctuation is at least as large:\n\n$$\\mathbb{E}\\big[\\pi(p)\\big]\\;\\ge\\;\\pi\\big(\\mathbb{E}[p]\\big)$$\n\nThe equal-mean condition matters: without it the comparison is about the *level* of prices, not their variability.\n\n## The argument\n\n**Step 1 — The profit function is convex in prices.** Hold the production plan fixed and profit is a *straight line* in $p$. Let the firm re-optimise and it does at least as well at every price. So $\\pi(p)$ is the **upper envelope of a family of straight lines**, and an upper envelope of linear functions is convex.\n\n![Profit is the upper envelope of the fixed-plan lines, so it bends upward.](content/figures/profit-convex.svg)\n\n**Step 2 — Apply Jensen's inequality.** For any convex function $\\varphi$ and random variable $p$,\n\n$$\\mathbb{E}\\big[\\varphi(p)\\big]\\;\\ge\\;\\varphi\\big(\\mathbb{E}[p]\\big)$$\n\nSetting $\\varphi=\\pi$ gives the claim directly. $\\blacksquare$\n\n**Seeing it on the diagram.** Take two equally likely prices $p_1$ and $p_2$ averaging $\\bar p$. Expected profit is the **midpoint of the chord** joining $\\pi(p_1)$ and $\\pi(p_2)$; stabilised profit is the value of the curve at $\\bar p$. Because the curve is convex it lies **below its chords**, so the chord midpoint sits above the curve.\n\n## The intuition\n\nThe gain comes entirely from the **freedom to adapt**. When the price is high the firm expands; when it is low it contracts, or shuts down and loses nothing beyond fixed costs. Profit therefore rises *more* in a good period than it falls in an equally bad one — the payoff is asymmetric in the firm's favour.\n\nStabilising the price removes that option value. The firm produces the same quantity every period and never exploits the good ones.\n\n**A neat corollary:** the gap $\\mathbb{E}[\\pi(p)]-\\pi(\\bar p)$ is precisely the **value of flexibility**. The more curved $\\pi$ is — the more responsive the technology — the more the firm gains from variability.\n\n## The qualification worth adding\n\nThe result is about the **firm's profit**, not welfare, and it assumes:\n\n- **risk neutrality.** The firm maximises expected profit. A risk-averse owner may still prefer the certain price, since the argument ranks expected profits, not expected utility.\n- **genuine flexibility.** With output committed in advance — a crop planted before the price is known — the firm cannot re-optimise, profit is linear in price, and Jensen holds with **equality**. The gain from fluctuation vanishes.\n\nThat second point explains why real price-stabilisation schemes are so often defended anyway: producers who cannot adjust quickly get none of this benefit and bear all of the risk.",
+      "answerBn": "",
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., profit-function chapter.\n\n⚠ The supplied *Selected Chapters* PDF holds only ch. 1, 2, 7 and 8; this material sits in ch. 3–6 and needs the full text."
+    },
+    {
+      "id": "q-2011-f-7b",
+      "chapterId": "ch2",
+      "examType": "final",
+      "year": 2011,
+      "batch": "2nd",
+      "qNo": "7(B)",
+      "marks": 4,
+      "difficulty": "advanced",
+      "topics": [
+        "Envelope theorem",
+        "Value function",
+        "Hotelling's lemma",
+        "Shephard's lemma"
+      ],
+      "repeats": [
+        2012,
+        2013
+      ],
+      "theoryIds": [
+        "th-profit"
+      ],
+      "text": "Explain the envelope theorem. (4)",
+      "answerPoints": [
+        "State the theorem for a value function — 1.5 marks",
+        "Explain why the indirect terms vanish — 1.5 marks",
+        "Name two results in the course that are corollaries — 1 mark"
+      ],
+      "answer": "## Statement\n\nConsider a maximisation whose solution depends on a parameter $\\alpha$:\n\n$$M(\\alpha)=\\max_{x}\\;f(x,\\alpha),\\qquad\\text{with maximiser }x^{*}(\\alpha)$$\n\n$M(\\alpha)$ is the **value function**. The envelope theorem says that to differentiate it with respect to the parameter, you may **hold the choice variable fixed**:\n\n$$\\boxed{\\;\\frac{dM(\\alpha)}{d\\alpha}=\\frac{\\partial f(x,\\alpha)}{\\partial\\alpha}\\bigg|_{x=x^{*}(\\alpha)}\\;}$$\n\nWith a constraint the same holds with $f$ replaced by the Lagrangian.\n\n## Why the indirect terms vanish\n\nThis is the part worth explaining, since the statement looks too good to be true. Differentiating $M(\\alpha)=f\\big(x^{*}(\\alpha),\\alpha\\big)$ by the chain rule gives **two** terms:\n\n$$\\frac{dM}{d\\alpha}=\\underbrace{\\frac{\\partial f}{\\partial x}\\cdot\\frac{dx^{*}}{d\\alpha}}_{\\text{indirect}}+\\underbrace{\\frac{\\partial f}{\\partial\\alpha}}_{\\text{direct}}$$\n\nBut $x^{*}$ is a maximiser, so the first-order condition says $\\partial f/\\partial x=0$ **at that point**. The whole indirect term is multiplied by zero and disappears:\n\n$$\\frac{dM}{d\\alpha}=\\frac{\\partial f}{\\partial\\alpha}$$\n\n**The economic reading.** At an optimum the agent is already doing the best they can, so a *marginal* re-optimisation in response to a small parameter change is worth nothing to first order. Only the direct effect of the parameter matters. The adjustment is second-order small.\n\n![The value function is the upper envelope of the fixed-choice curves, and is tangent to one of them at each parameter value.](content/figures/envelope-theorem.svg)\n\n**Where the name comes from.** Each fixed choice of $x$ traces its own curve of $f(x,\\alpha)$ against $\\alpha$. $M(\\alpha)$ is the **upper envelope** of that whole family, touching each member at the parameter value where that choice happens to be optimal. At the point of contact the two are **tangent** — which is exactly the theorem.\n\n## Why it matters in this course\n\nThree central results are one-line corollaries, and saying so is what earns the last mark.\n\n**Hotelling's lemma.** Apply it to $\\pi(p,w)=\\max_y[p\\,y-w\\cdot x]$:\n\n$$\\frac{\\partial\\pi}{\\partial p}=y(p,w),\\qquad -\\frac{\\partial\\pi}{\\partial w_i}=x_i(p,w)$$\n\n**Shephard's lemma.** Apply it to $c(w,y)=\\min_x w\\cdot x$:\n\n$$\\frac{\\partial c}{\\partial w_i}=x_i(w,y)$$\n\n**Roy's identity.** Apply it to $v(p,m)$ with Lagrangian $\\mathcal{L}=u(x)+\\lambda(m-p\\cdot x)$:\n\n$$\\frac{\\partial v}{\\partial p_i}=-\\lambda x_i,\\quad\\frac{\\partial v}{\\partial m}=\\lambda \\qquad\\Longrightarrow\\qquad x_i=-\\frac{\\partial v/\\partial p_i}{\\partial v/\\partial m}$$\n\nEach recovers an optimal *quantity* by differentiating a *value*, and each is the envelope theorem applied to a different problem. Seeing that turns three separate memorised results into one.",
+      "answerBn": "",
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §2.4 (the envelope theorem)\n\n⚠ The supplied *Selected Chapters* PDF holds only ch. 1, 2, 7 and 8; this material sits in ch. 3–6 and needs the full text."
     },
     {
       "id": "q-2025-f-6a",
@@ -1335,6 +1478,42 @@
       "source": "Varian, *Microeconomic Analysis*, 3rd ed., §7.4 (some important identities)"
     },
     {
+      "id": "q-2021-f-1a",
+      "chapterId": "ch7",
+      "examType": "final",
+      "year": 2021,
+      "batch": "12th",
+      "qNo": "1(A)",
+      "marks": 6.5,
+      "difficulty": "beginner",
+      "topics": [
+        "Preferences",
+        "Completeness",
+        "Transitivity",
+        "Continuity",
+        "Utility function"
+      ],
+      "repeats": [
+        2023,
+        2024,
+        2025
+      ],
+      "theoryIds": [
+        "th-preferences"
+      ],
+      "text": "Define and explain the four basic assumptions of consumer preferences, such as, completeness, reflexivity, transitivity and continuity. (6.5)",
+      "answerPoints": [
+        "Define the preference relation before the assumptions — 1 mark",
+        "Completeness and reflexivity, each with what it rules out — 2 marks",
+        "Transitivity, with the cycle that breaks maximisation — 1.5 marks",
+        "Continuity, with lexicographic preferences as the counterexample — 1.5 marks",
+        "State the representation theorem they add up to — 0.5 marks"
+      ],
+      "answer": "## What is being assumed *about*\n\nConsumer theory does not start with a utility function. It starts with a **preference relation** $\\succsim$, read \"is at least as good as\", defined over consumption bundles. The four assumptions are the conditions this relation must satisfy before we are entitled to replace it with a number.\n\n## The four assumptions\n\n**1. Completeness.** For any two bundles $x$ and $y$, either $x\\succsim y$ or $y\\succsim x$ (possibly both).\n\n*What it does:* guarantees the consumer can always compare. Without it some pairs are simply incomparable — the consumer cannot say which is better *or* that they are indifferent — and choice is undefined for those pairs.\n\n**2. Reflexivity.** $x\\succsim x$ for every bundle.\n\n*What it does:* every bundle is at least as good as itself. Trivial, and deliberately so; it is a technical requirement for $\\succsim$ to be an ordering, not an economic claim.\n\n**3. Transitivity.** If $x\\succsim y$ and $y\\succsim z$, then $x\\succsim z$.\n\n*What it does:* this is the one carrying real weight. Without it, preferences can **cycle**:\n\n$$x\\succ y,\\qquad y\\succ z,\\qquad z\\succ x$$\n\nand then the set $\\{x,y,z\\}$ has **no best element** — whichever you name, something in the set beats it. Maximisation becomes meaningless. Transitivity is what makes \"choose the best available bundle\" a coherent instruction.\n\n**4. Continuity.** For any $y$, the sets $\\{x:x\\succsim y\\}$ and $\\{x:x\\precsim y\\}$ are **closed**.\n\n*What it does:* rules out sudden jumps in preference — a bundle cannot be strictly preferred while bundles arbitrarily close to it are strictly worse.\n\n*The counterexample worth naming:* **lexicographic preferences**, where the consumer ranks first by $x_1$ and turns to $x_2$ only to break ties. These are complete, reflexive and transitive but **not continuous**, and the consequence is severe — they admit **no utility representation at all**, not even a badly behaved one.\n\n## What the four together buy\n\n**Representation theorem.** A preference ordering that is complete, reflexive, transitive and continuous can be represented by a **continuous utility function** $u$, meaning\n\n$$u(x)\\ge u(y)\\quad\\Longleftrightarrow\\quad x\\succsim y$$\n\nTwo remarks earn the last marks. Utility is **ordinal**: any increasing transformation $f(u(x))$ represents the *same* preferences, so the numbers themselves carry no meaning, only the ranking.\n\nAnd note what is *not* on this list — **monotonicity** and **convexity** are assumed separately, when we want downward-sloping indifference curves and a unique optimum. They are not needed for a utility function to exist.",
+      "answerBn": "",
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §7.1 (consumer preferences)"
+    },
+    {
       "id": "q-2021-f-2",
       "chapterId": "ch7",
       "examType": "final",
@@ -1377,6 +1556,73 @@
       "answer": "> **The whole answer in one box.** Everything below is these six lines. Derive them in this order and each one falls out of the last.\n>\n> $$x_1=\\frac{am}{p_1},\\qquad x_2=\\frac{(1-a)m}{p_2}$$\n> $$v(p,m)=m\\,\\frac{a^{a}(1-a)^{1-a}}{p_1^{a}p_2^{1-a}},\\qquad e(p,u)=u\\left(\\frac{p_1}{a}\\right)^{a}\\left(\\frac{p_2}{1-a}\\right)^{1-a}$$\n> $$h_1=u\\left(\\frac{a\\,p_2}{(1-a)p_1}\\right)^{1-a},\\qquad h_2=u\\left(\\frac{(1-a)p_1}{a\\,p_2}\\right)^{a}$$\n\n![The four objects of consumer theory. Solve the left column, then walk an arrow — you never solve the same problem twice.](content/figures/duality-map.svg)\n\n## Step 1 — Set up the problem\n\nMaximise utility subject to the budget:\n\n$$\\max_{x_1,x_2}\\; x_1^{a}x_2^{1-a}\\quad\\text{s.t.}\\quad p_1x_1+p_2x_2=m$$\n\nThe budget binds with equality because Cobb-Douglas is strictly increasing in both goods — **local nonsatiation**, so no money is left unspent.\n\nForm the Lagrangian:\n\n$$\\mathcal{L}=x_1^{a}x_2^{1-a}-\\lambda\\,(p_1x_1+p_2x_2-m)$$\n\n## Step 2 — First-order conditions\n\n$$\\frac{\\partial\\mathcal{L}}{\\partial x_1}=a\\,x_1^{a-1}x_2^{1-a}-\\lambda p_1=0$$\n$$\\frac{\\partial\\mathcal{L}}{\\partial x_2}=(1-a)\\,x_1^{a}x_2^{-a}-\\lambda p_2=0$$\n\nDivide the first by the second. The $\\lambda$ cancels, and so does most of the algebra:\n\n$$\\underbrace{\\frac{a}{1-a}\\cdot\\frac{x_2}{x_1}}_{MRS}=\\frac{p_1}{p_2}$$\n\n**This is the tangency condition** — the indifference curve's slope equals the budget line's slope. Say so explicitly; examiners award the interpretation, not just the algebra.\n\nRearranged, it gives the expenditure split:\n\n$$p_1x_1=\\frac{a}{1-a}\\,p_2x_2$$\n\n## Step 3 — Marshallian demands\n\nSubstitute into the budget constraint $p_1x_1+p_2x_2=m$:\n\n$$\\frac{a}{1-a}p_2x_2+p_2x_2=m\\;\\Longrightarrow\\;p_2x_2\\left(\\frac{a+1-a}{1-a}\\right)=m$$\n\n$$\\boxed{\\;x_1(p,m)=\\frac{am}{p_1},\\qquad x_2(p,m)=\\frac{(1-a)m}{p_2}\\;}$$\n\n**Read what this says.** The consumer spends the constant share $a$ of income on good 1 and $1-a$ on good 2, whatever the prices. That constant-budget-share property is the signature of Cobb-Douglas — it is worth one sentence in the answer.\n\nNote also: demand for good 1 does not depend on $p_2$ at all. Cross-price effects are zero here.\n\n## Step 4 — Indirect utility\n\n$v(p,m)$ is the *maximum utility attainable* at prices $p$ and income $m$. Get it by putting the optimal bundle back into $u$:\n\n$$v(p,m)=\\left(\\frac{am}{p_1}\\right)^{a}\\left(\\frac{(1-a)m}{p_2}\\right)^{1-a}$$\n\nCollect the $m$ terms — the exponents sum to $a+(1-a)=1$, so they give exactly one power of $m$:\n\n$$\\boxed{\\;v(p,m)=m\\,\\frac{a^{a}(1-a)^{1-a}}{p_1^{a}\\,p_2^{1-a}}\\;}$$\n\n**Check it against the properties you are asked for elsewhere.** It is decreasing in each price, increasing in $m$, and homogeneous of degree zero: double $p$ and $m$ together and $v$ is unchanged, because the numerator and denominator each pick up one factor of the scalar.\n\n## Step 5 — Expenditure function\n\n$e(p,u)$ is the *minimum income needed* to reach utility $u$. It is the same relationship read the other way round, so set $v(p,m)=u$ and solve for $m$:\n\n$$u=m\\,\\frac{a^{a}(1-a)^{1-a}}{p_1^{a}p_2^{1-a}}$$\n\n$$\\boxed{\\;e(p,u)=u\\left(\\frac{p_1}{a}\\right)^{a}\\left(\\frac{p_2}{1-a}\\right)^{1-a}\\;}$$\n\n**Why the inversion is legitimate** — worth a line. $v$ is strictly increasing in $m$, so it is one-to-one in $m$ and can be inverted. Hence $e(p,v(p,m))=m$ and $v(p,e(p,u))=u$: the two functions are inverses in their last argument. That is the *duality* the question is really testing.\n\n$e$ is homogeneous of degree **one** in prices: double all prices and you need exactly double the money.\n\n## Step 6 — Hicksian demands, by Shephard's lemma\n\nShephard's lemma says the compensated demand is the price-derivative of the expenditure function:\n\n$$h_i(p,u)=\\frac{\\partial e(p,u)}{\\partial p_i}$$\n\nDifferentiating $e$ with respect to $p_1$ (the $p_2$ factor is a constant here):\n\n$$\\boxed{\\;h_1(p,u)=u\\left(\\frac{a\\,p_2}{(1-a)p_1}\\right)^{1-a},\\qquad h_2(p,u)=u\\left(\\frac{(1-a)p_1}{a\\,p_2}\\right)^{a}\\;}$$\n\n**The consistency check that earns the mark.** Substituting $m=e(p,u)$ into the Marshallian demand must reproduce the Hicksian one:\n\n$$x_1\\big(p,e(p,u)\\big)=\\frac{a\\,e(p,u)}{p_1}=u\\left(\\frac{a p_2}{(1-a)p_1}\\right)^{1-a}=h_1(p,u)\\;\\checkmark$$\n\n## Step 7 — The two money metric functions\n\nThese are the parts most candidates drop, and they are quick.\n\n**Money metric direct utility function** $m(p,x)$ — *how much money would this consumer need, at prices $p$, to be exactly as well off as the bundle $x$ makes them?*\n\n$$m(p,x)=e\\big(p,u(x)\\big)=x_1^{a}x_2^{1-a}\\left(\\frac{p_1}{a}\\right)^{a}\\left(\\frac{p_2}{1-a}\\right)^{1-a}$$\n\n**Money metric indirect utility function** $\\mu(p;q,m)$ — *how much money at prices $p$ makes them as well off as income $m$ did at prices $q$?*\n\n$$\\mu(p;q,m)=e\\big(p,v(q,m)\\big)=m\\,\\frac{a^{a}(1-a)^{1-a}}{q_1^{a}q_2^{1-a}}\\left(\\frac{p_1}{a}\\right)^{a}\\left(\\frac{p_2}{1-a}\\right)^{1-a}$$\n\nBoth are just $e$ with its utility argument supplied by $u$ or by $v$. Both are **increasing monotonic transformations** of the underlying utility, which is what makes them legitimate utility representations measured in money.\n\n## The one-line conclusion\n\nAll six objects come from one optimisation. Solve the utility-maximisation problem once, substitute back for $v$, invert for $e$, differentiate for $h$ — the duality diagram above is the whole answer in picture form, and stating it that way tells the examiner you understand the structure rather than having memorised four formulas.",
       "answerBn": "",
       "source": "Varian, *Microeconomic Analysis*, 3rd ed., §7.2–7.5 (behaviour, indirect utility, the identities, money metric)"
+    },
+    {
+      "id": "q-2019-f-5c",
+      "chapterId": "ch7",
+      "examType": "final",
+      "year": 2019,
+      "batch": "10th",
+      "qNo": "5(C)",
+      "marks": 4,
+      "difficulty": "advanced",
+      "topics": [
+        "Duality",
+        "Utility maximization",
+        "Expenditure minimization",
+        "Local nonsatiation"
+      ],
+      "repeats": [
+        2016,
+        2025
+      ],
+      "theoryIds": [
+        "th-duality",
+        "th-preferences"
+      ],
+      "text": "Prove that, utility maximization implies expenditure minimization. (4)",
+      "answerPoints": [
+        "State the proposition and its three assumptions precisely — 1 mark",
+        "Set up the proof by contradiction — 1 mark",
+        "Use local nonsatiation to reach the contradiction — 1.5 marks",
+        "Say where local nonsatiation is indispensable — 0.5 marks"
+      ],
+      "answer": "## The proposition\n\nConsider the two problems\n\n$$\\text{(UMP)}\\quad\\max_x u(x)\\ \\ \\text{s.t.}\\ \\ p\\cdot x\\le m \\qquad\\qquad \\text{(EMP)}\\quad\\min_x p\\cdot x\\ \\ \\text{s.t.}\\ \\ u(x)\\ge u$$\n\n**Claim.** If $x^{*}$ solves the UMP at $(p,m)$, and $u^{*}=u(x^{*})$, then $x^{*}$ solves the EMP at $(p,u^{*})$ — and the minimised expenditure is exactly $m$.\n\n**Assumed:** $u$ continuous, preferences locally non-satiated, and both problems have solutions.\n\n## Proof by contradiction\n\n**Step 1 — Suppose not.** Let $x^{*}$ solve the UMP but *fail* to solve the EMP. Then some bundle $x'$ reaches the same utility more cheaply:\n\n$$u(x')\\ge u^{*}\\qquad\\text{and}\\qquad p\\cdot x'<p\\cdot x^{*}\\le m$$\n\n**Step 2 — Note the strict inequality.** Because $p\\cdot x'<m$ *strictly*, the bundle $x'$ lies in the **interior** of the budget set. There is room to spend a little more and still be affordable.\n\n**Step 3 — Apply local nonsatiation.** This is the step the whole proof turns on. Local nonsatiation says that in *every* neighbourhood of $x'$ there is a bundle $x''$ with\n\n$$x''\\succ x'\\qquad\\text{that is}\\qquad u(x'')>u(x')$$\n\nChoose the neighbourhood small enough that $x''$ is still affordable — possible precisely because Step 2 left slack.\n\n**Step 4 — The contradiction.** We now have a bundle $x''$ that is **affordable**, $p\\cdot x''\\le m$, and satisfies\n\n$$u(x'')>u(x')\\ge u^{*}=u(x^{*})$$\n\nSo $x''$ is affordable and strictly better than $x^{*}$. But $x^{*}$ was assumed to *maximise* utility over the budget set. Contradiction.\n\nHence no such $x'$ exists, and $x^{*}$ does solve the EMP. $\\blacksquare$\n\n**The corollary.** Local nonsatiation also forces the budget to bind at the UMP optimum, so $p\\cdot x^{*}=m$ and therefore\n\n$$e(p,u^{*})=m,\\qquad\\text{equivalently}\\qquad e\\big(p,v(p,m)\\big)=m$$\n\n## Where the assumption is indispensable\n\nDrop local nonsatiation and the theorem is **false**. Imagine a consumer fully satiated at $x^{*}$ while $p\\cdot x^{*}<m$ — extra income buys nothing they want. Then $x^{*}$ still maximises utility, but it does not minimise the cost of reaching $u^{*}$: some cheaper bundle reaches the same satiated level. Step 3 fails because there is no better bundle nearby to move to.\n\nThis is the reason the assumption is stated as *local* nonsatiation rather than monotonicity. It is the weakest condition that closes the argument, and duality — Roy's identity, Shephard's lemma, the Slutsky equation — all rest on the two problems having the same solution.",
+      "answerBn": "",
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §7.4 (duality)"
+    },
+    {
+      "id": "q-2013-f-7ab",
+      "chapterId": "ch7",
+      "examType": "final",
+      "year": 2013,
+      "batch": "4th",
+      "qNo": "7(A)(B)",
+      "marks": 7,
+      "difficulty": "intermediate",
+      "topics": [
+        "MRS",
+        "Marginal utility",
+        "Ordinal utility",
+        "Monotonic transformation"
+      ],
+      "repeats": [
+        2015,
+        2022
+      ],
+      "theoryIds": [
+        "th-preferences"
+      ],
+      "text": "(A) What is the marginal rate of substitution (MRS)? (3) (B) Prove that MRS of a function and that of monotonic transformation of that function are identical. (4)",
+      "answerPoints": [
+        "Define the MRS and say which direction the trade runs — 1 mark",
+        "Derive $MRS=-MU_1/MU_2$ from the total differential — 2 marks",
+        "Set up the transformed function and differentiate with the chain rule — 2 marks",
+        "Show the $f'$ terms cancel, and say why that matters — 2 marks"
+      ],
+      "answer": "## (A) What the MRS is\n\nThe **marginal rate of substitution** is the rate at which a consumer is *willing* to give up good 2 to obtain one more unit of good 1, **holding utility constant**. Geometrically it is the slope of the indifference curve.\n\n**Derivation.** Take the total differential of $u(x_1,x_2)$ and set it to zero, since moving along an indifference curve leaves utility unchanged:\n\n$$du=\\frac{\\partial u}{\\partial x_1}dx_1+\\frac{\\partial u}{\\partial x_2}dx_2=0$$\n\nRearranging:\n\n$$\\boxed{\\;MRS=\\frac{dx_2}{dx_1}\\bigg|_{u}=-\\frac{\\partial u/\\partial x_1}{\\partial u/\\partial x_2}=-\\frac{MU_1}{MU_2}\\;}$$\n\n**Reading it.** The MRS is the **negative ratio of marginal utilities**. It is negative because the curve slopes downward: taking more of good 1 requires giving up some of good 2 to stay equally well off. Textbooks often quote $|MRS|$ and leave the sign implicit.\n\nAt an interior optimum the consumer sets $|MRS|=p_1/p_2$ — what they are *willing* to trade equals what the market *lets* them trade.\n\n## (B) The MRS is unchanged by a monotonic transformation\n\n**What must be shown.** Let $v(x_1,x_2)=f\\big(u(x_1,x_2)\\big)$ where $f$ is a strictly increasing function, so $f'>0$. Show that $v$ and $u$ have the same MRS everywhere.\n\n**Step 1 — Differentiate the transformed function.** By the chain rule:\n\n$$\\frac{\\partial v}{\\partial x_1}=f'\\big(u\\big)\\cdot\\frac{\\partial u}{\\partial x_1},\\qquad\\qquad \\frac{\\partial v}{\\partial x_2}=f'\\big(u\\big)\\cdot\\frac{\\partial u}{\\partial x_2}$$\n\n**Step 2 — Form the MRS for $v$.**\n\n$$MRS_v=-\\frac{\\partial v/\\partial x_1}{\\partial v/\\partial x_2}=-\\frac{f'(u)\\cdot\\partial u/\\partial x_1}{f'(u)\\cdot\\partial u/\\partial x_2}$$\n\n**Step 3 — Cancel.** Since $f'(u)>0$ it is non-zero, and it appears identically in numerator and denominator:\n\n$$MRS_v=-\\frac{\\partial u/\\partial x_1}{\\partial u/\\partial x_2}=MRS_u\\qquad\\blacksquare$$\n\n**Worked check.** Take $u=x_1^{a}x_2^{1-a}$, for which $MRS=-\\dfrac{a\\,x_2}{(1-a)\\,x_1}$. Now take $v=\\ln u=a\\ln x_1+(1-a)\\ln x_2$:\n\n$$MRS_v=-\\frac{a/x_1}{(1-a)/x_2}=-\\frac{a\\,x_2}{(1-a)\\,x_1}$$\n\nIdentical, despite $v$ being a completely different function of the bundle.\n\n## Why this result matters\n\nIt is the formal content of **ordinal utility**. The marginal utilities $MU_1$ and $MU_2$ each change when you transform $u$ — they are *not* meaningful magnitudes. Their **ratio** does not.\n\nSince the entire theory of consumer choice is built on that ratio — the tangency condition, the demand functions, the Slutsky equation — none of it depends on which particular utility representation was chosen. **Observable behaviour is invariant to the transformation, and so it should be**: nothing the consumer does could ever reveal whether their utility is $u$ or $\\ln u$.",
+      "answerBn": "",
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §7.1–7.2"
     },
     {
       "id": "q-2011-f-1b",
@@ -1451,6 +1697,40 @@
       "answer": "> **The equation.** The total effect of a price change splits into a substitution effect and an income effect:\n> $$\\underbrace{\\frac{\\partial x_i(p,m)}{\\partial p_j}}_{\\text{total}}=\\underbrace{\\frac{\\partial h_i(p,u)}{\\partial p_j}}_{\\text{substitution}}-\\underbrace{x_j(p,m)\\,\\frac{\\partial x_i(p,m)}{\\partial m}}_{\\text{income}}$$\n\n![A fall in $p_1$: A to B is the substitution effect along the original indifference curve; B to C is the income effect.](content/figures/slutsky-decomposition.svg)\n\n## What each term means\n\n- **Total effect** — how observed demand actually moves when $p_j$ changes and income is held fixed. This is what we see in data.\n- **Substitution effect** — the move *along the original indifference curve*. Relative prices have changed, so the consumer re-optimises even though real income is held constant by compensation.\n- **Income effect** — the price change alters purchasing power. The size of that change is $x_j$, because losing $\\Delta p_j$ on each of $x_j$ units costs $x_j\\Delta p_j$ of real income.\n\n## The proof\n\n**Step 1 — Start from the duality identity.** At the utility level $u$ actually achieved, the compensated and uncompensated demands coincide:\n\n$$h_i(p,u)=x_i\\big(p,\\,e(p,u)\\big)$$\n\nThis holds *identically* in $p$ — it is true at every price vector, not just one. That is what licenses differentiating it.\n\n**Step 2 — Differentiate both sides with respect to $p_j$.** The right-hand side has $p_j$ in two places: directly, and through $e(p,u)$. The chain rule gives\n\n$$\\frac{\\partial h_i(p,u)}{\\partial p_j}=\\frac{\\partial x_i(p,m)}{\\partial p_j}+\\frac{\\partial x_i(p,m)}{\\partial m}\\cdot\\frac{\\partial e(p,u)}{\\partial p_j}$$\n\n**Step 3 — Apply Shephard's lemma.** The last derivative is just the compensated demand:\n\n$$\\frac{\\partial e(p,u)}{\\partial p_j}=h_j(p,u)=x_j(p,m)$$\n\nthe second equality holding because we evaluate at $m=e(p,u)$, where the two demands agree.\n\n**Step 4 — Substitute and rearrange.**\n\n$$\\frac{\\partial h_i}{\\partial p_j}=\\frac{\\partial x_i}{\\partial p_j}+x_j\\frac{\\partial x_i}{\\partial m}\\;\\Longrightarrow\\;\\boxed{\\;\\frac{\\partial x_i}{\\partial p_j}=\\frac{\\partial h_i}{\\partial p_j}-x_j\\frac{\\partial x_i}{\\partial m}\\;}$$\n\n## Matrix form, two goods\n\nCollecting all four cross-effects, with $D_px$ the matrix of price derivatives:\n\n$$\\begin{pmatrix}\\dfrac{\\partial x_1}{\\partial p_1} & \\dfrac{\\partial x_1}{\\partial p_2}\\\\[10pt] \\dfrac{\\partial x_2}{\\partial p_1} & \\dfrac{\\partial x_2}{\\partial p_2}\\end{pmatrix}=\\begin{pmatrix}\\dfrac{\\partial h_1}{\\partial p_1} & \\dfrac{\\partial h_1}{\\partial p_2}\\\\[10pt] \\dfrac{\\partial h_2}{\\partial p_1} & \\dfrac{\\partial h_2}{\\partial p_2}\\end{pmatrix}-\\begin{pmatrix}\\dfrac{\\partial x_1}{\\partial m}\\\\[10pt] \\dfrac{\\partial x_2}{\\partial m}\\end{pmatrix}\\begin{pmatrix}x_1 & x_2\\end{pmatrix}$$\n\ncompactly, $D_px = D_ph - (D_mx)\\,x^{\\mathsf T}$.\n\n**The properties the matrix delivers** — this is the payoff, and where the marks are:\n\n1. **The substitution matrix is symmetric**: $\\partial h_i/\\partial p_j=\\partial h_j/\\partial p_i$, because both equal $\\partial^2 e/\\partial p_i\\partial p_j$ and the order of differentiation does not matter.\n2. **It is negative semidefinite**, since $e$ is concave in prices. On the diagonal this gives $\\partial h_i/\\partial p_i\\le 0$ — the **compensated own-price effect is never positive**. This is the only unambiguous sign in demand theory.\n3. **The uncompensated effect has no guaranteed sign.** If good $i$ is inferior, $\\partial x_i/\\partial m<0$, so the income term is positive and can outweigh the substitution term. That is precisely the **Giffen** case, and the Slutsky equation shows it is the *only* way an upward-sloping demand curve can arise.\n\n## Worked check on Cobb-Douglas\n\nFor $u=x_1^ax_2^{1-a}$ we have $x_1=am/p_1$, so $\\partial x_1/\\partial p_1=-am/p_1^2$. The decomposition splits it in the ratio $(1-a):a$ —\n\n$$\\underbrace{-\\frac{(1-a)am}{p_1^{2}}}_{\\text{substitution}}\\;+\\;\\underbrace{\\left(-\\frac{a^{2}m}{p_1^{2}}\\right)}_{\\text{income}}=-\\frac{am}{p_1^{2}}\\;\\checkmark$$\n\nBoth are negative, which is why Cobb-Douglas demand is always downward-sloping and a Cobb-Douglas good can never be Giffen.",
       "answerBn": "",
       "source": "Varian, *Microeconomic Analysis*, 3rd ed., §8.1 (comparative statics)"
+    },
+    {
+      "id": "q-mid16-4",
+      "chapterId": "ch8",
+      "examType": "midterm",
+      "year": 2025,
+      "batch": "16th",
+      "qNo": "4",
+      "marks": 7.5,
+      "difficulty": "intermediate",
+      "topics": [
+        "Slutsky equation",
+        "Substitution effect",
+        "Income effect",
+        "Giffen good"
+      ],
+      "repeats": [
+        2010,
+        2013
+      ],
+      "theoryIds": [
+        "th-slutsky"
+      ],
+      "text": "Explain, what happens to the quantity demanded of good x if price of good x increases (holding other things constant). In this way, explain that we have $TE = SE + IE$ (total effect = substitution effect + income effect). Explain that we have a downward-sloping demand curve for good x if good x is a normal good, and an upward-sloping demand curve if good x is a Giffen good. (7.5)",
+      "answerPoints": [
+        "Decompose the price rise into the two effects on a diagram — 2 marks",
+        "Sign the substitution effect and say why the sign is guaranteed — 1.5 marks",
+        "Sign the income effect for normal and inferior goods — 1.5 marks",
+        "Combine for the normal case: unambiguously downward-sloping — 1.5 marks",
+        "Combine for the Giffen case, with the budget-share condition — 1 mark"
+      ],
+      "answer": "## What a price rise does\n\nWhen $p_x$ rises, two distinct things happen at once, and the whole point of the decomposition is to separate them.\n\n1. Good $x$ becomes **relatively more expensive** than other goods — the budget line gets steeper.\n2. The consumer's **real income falls** — the same money now buys less.\n\n![The compensated budget line separates the move along the original curve from the shift to a new one.](content/figures/slutsky-decomposition.svg)\n\n## The decomposition\n\n**Substitution effect (SE).** Draw a hypothetical budget line with the **new slope** but adjusted so the consumer stays on the **original indifference curve**. The move from the old optimum to this hypothetical one is the SE: pure relative-price response, real income held constant.\n\n**Income effect (IE).** Now remove the compensation. The budget line shifts inward, parallel, to its true position. The move from the hypothetical optimum to the final one is the IE: pure purchasing-power response, relative prices held constant.\n\n$$\\underbrace{\\frac{\\partial x}{\\partial p_x}}_{TE}=\\underbrace{\\frac{\\partial h_x}{\\partial p_x}}_{SE}-\\;x\\underbrace{\\frac{\\partial x}{\\partial m}}_{IE}$$\n\nwhich is the **Slutsky equation** — the algebraic form of $TE=SE+IE$.\n\n## Signing the two effects\n\n**The substitution effect is always non-positive.** Since $h_x=\\partial e/\\partial p_x$, the compensated derivative is a diagonal element of the Hessian of $e(p,u)$. The expenditure function is **concave in prices**, so that Hessian is negative semidefinite and\n\n$$\\frac{\\partial h_x}{\\partial p_x}\\le0$$\n\nThis is a **theorem, not an assumption**: a price rise never increases compensated demand. Anything unusual must come from the income term.\n\n**The income effect depends on the good.**\n\n- **Normal good** ($\\partial x/\\partial m>0$): real income falls, so demand falls. The term $-x\\,\\partial x/\\partial m$ is **negative**.\n- **Inferior good** ($\\partial x/\\partial m<0$): real income falls, so demand *rises*. The term is **positive**.\n\n## Putting them together\n\n**Normal good — unambiguous.**\n\n$$\\frac{\\partial x}{\\partial p_x}=\\underbrace{(\\le0)}_{SE}+\\underbrace{(<0)}_{IE}\\;<\\;0$$\n\nBoth effects push the same way, so demand falls when price rises. The demand curve **slopes downward**, and no further condition is needed.\n\n**Giffen good — the reversal.** For $\\partial x/\\partial p_x>0$ we need the positive income term to **outweigh** the non-positive substitution term:\n\n$$-\\,x\\frac{\\partial x}{\\partial m}\\;>\\;\\left|\\frac{\\partial h_x}{\\partial p_x}\\right|$$\n\nTwo things must hold at once. The good must be **strongly inferior**, and — because the income term is scaled by $x$ — it must absorb a **large budget share**. In elasticity form:\n\n$$\\varepsilon_{xx}=\\varepsilon^{h}_{xx}-s_x\\,\\eta_x$$\n\nso $s_x\\eta_x$ must be large in absolute value. The demand curve then **slopes upward**.\n\n**Conclusion.** Every Giffen good is inferior, but few inferior goods are Giffen — inferiority is necessary, not sufficient. That conjunction of strong inferiority and a large budget share is why the case is empirically rare, and it is why the law of demand is a theorem only for *compensated* demand.",
+      "answerBn": "",
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §8.5 (the Slutsky equation)"
     },
     {
       "id": "q-2024-f-2b",
@@ -1528,6 +1808,39 @@
       "source": "Varian, *Microeconomic Analysis*, 3rd ed., §8.1, §8.3"
     },
     {
+      "id": "q-2023-f-3b",
+      "chapterId": "ch8",
+      "examType": "final",
+      "year": 2023,
+      "batch": "14th",
+      "qNo": "3(B)",
+      "marks": 4,
+      "difficulty": "intermediate",
+      "topics": [
+        "Excise tax",
+        "Income tax",
+        "Welfare",
+        "Deadweight loss"
+      ],
+      "repeats": [
+        2022,
+        2024
+      ],
+      "theoryIds": [
+        "th-slutsky"
+      ],
+      "text": "Why is that an excise tax hurts a consumer more as compared to an income tax (generating the same amount of revenue for the government)? Explain. (4)",
+      "answerPoints": [
+        "Set up both taxes and show how each moves the budget line — 1 mark",
+        "Impose the equal-revenue condition explicitly — 1 mark",
+        "Give the revealed-preference argument that the income tax is better — 1.5 marks",
+        "Name the source of the difference: the distorted price ratio — 0.5 marks"
+      ],
+      "answer": "## The two taxes\n\nLet the consumer have income $m$ and face prices $(p_1,p_2)$.\n\n**Excise tax** of $t$ per unit of good 1. The price becomes $p_1+t$, so the budget line **pivots** inward about the $x_2$ intercept:\n\n$$(p_1+t)\\,x_1+p_2x_2=m$$\n\n**Income tax** of $R$ taka. Prices are untouched and the budget line **shifts inward, parallel**:\n\n$$p_1x_1+p_2x_2=m-R$$\n\n**The equal-revenue condition.** Comparing them is only meaningful if the government collects the same amount. If the consumer buys $x_1'$ under the excise tax, revenue is $t\\,x_1'$, so we set\n\n$$R=t\\,x_1'$$\n\n![Both raise the same revenue, but the income tax leaves the consumer on a higher indifference curve.](content/figures/excise-vs-income-tax.svg)\n\n## The argument\n\n**Step 1 — The excise bundle is still affordable under the income tax.** Let $x'=(x_1',x_2')$ be the bundle chosen under the excise tax. It satisfies the excise budget exactly:\n\n$$(p_1+t)x_1'+p_2x_2'=m$$\n\nExpand the left side and substitute $R=t\\,x_1'$:\n\n$$p_1x_1'+p_2x_2'+\\underbrace{t\\,x_1'}_{=\\,R}=m \\qquad\\Longrightarrow\\qquad p_1x_1'+p_2x_2'=m-R$$\n\nSo $x'$ lies **exactly on** the income-tax budget line. The income-taxed consumer can afford precisely the bundle the excise-taxed consumer ended up with.\n\n**Step 2 — But they will not choose it.** At the untaxed price ratio $p_1/p_2$, the bundle $x'$ is generally **not** optimal — it was optimal at the distorted ratio $(p_1+t)/p_2$. Since $x'$ is affordable and not chosen, whatever *is* chosen must be strictly better.\n\n**Conclusion.** The income-taxed consumer reaches a **strictly higher indifference curve** while the government collects the same revenue. The excise tax is the worse instrument.\n\n**Worked confirmation.** With $u=x_1^{1/2}x_2^{1/2}$, $m=12$, $p_1=p_2=1$, $t=1$: the excise tax gives $x'=(3,6)$ and utility $4.243$, raising $R=3$. An income tax of $3$ gives $(4.5,4.5)$ and utility $4.5$ — higher, on identical revenue.\n\n## Why the difference exists\n\nThe income tax takes **purchasing power** only. The excise tax takes purchasing power *and* **distorts the relative price**, pushing the consumer away from the bundle they would otherwise have chosen at true relative costs.\n\nThat second effect is pure loss — the **deadweight loss** or *excess burden*. Nobody gains from it: it is not transferred to the government, it simply disappears. In Slutsky terms, the income tax generates only an income effect, while the excise tax adds a **substitution effect** on top, and it is that substitution away from the taxed good that destroys the extra welfare.\n\n> **The standard caveat.** This argues for lump-sum taxation on efficiency grounds alone. Real income taxes are not lump-sum — they distort the labour-leisure choice — and an excise tax may be *desirable* where the taxed good carries a negative externality, since the distortion is then the point.",
+      "answerBn": "",
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §8.6 (welfare comparison of taxes)"
+    },
+    {
       "id": "q-2023-f-3c",
       "chapterId": "ch8",
       "examType": "final",
@@ -1597,6 +1910,72 @@
       "answer": "> This is the same question as the 2025 paper's, asked for 7.5 marks rather than 6.5 — so the extra mark goes on the **properties** of the matrix, not on a longer derivation.\n\n## The equation, and its proof in three lines\n\nStart from the duality identity, which holds for every $p$ once income is compensated to $m=e(p,u)$:\n\n$$h_i(p,u)=x_i\\big(p,e(p,u)\\big)$$\n\nDifferentiate with respect to $p_j$, using the chain rule on the right, then substitute Shephard's lemma $\\partial e/\\partial p_j=h_j=x_j$:\n\n$$\\frac{\\partial h_i}{\\partial p_j}=\\frac{\\partial x_i}{\\partial p_j}+\\frac{\\partial x_i}{\\partial m}\\,x_j \\quad\\Longrightarrow\\quad \\boxed{\\;\\frac{\\partial x_i}{\\partial p_j}=\\frac{\\partial h_i}{\\partial p_j}-x_j\\frac{\\partial x_i}{\\partial m}\\;}$$\n\n## Matrix form, two goods\n\n$$\\underbrace{\\begin{pmatrix}\\dfrac{\\partial x_1}{\\partial p_1} & \\dfrac{\\partial x_1}{\\partial p_2}\\\\[10pt] \\dfrac{\\partial x_2}{\\partial p_1} & \\dfrac{\\partial x_2}{\\partial p_2}\\end{pmatrix}}_{\\text{observable}}=\\underbrace{\\begin{pmatrix}s_{11} & s_{12}\\\\[6pt] s_{21} & s_{22}\\end{pmatrix}}_{\\textstyle S}-\\begin{pmatrix}\\dfrac{\\partial x_1}{\\partial m}\\\\[10pt] \\dfrac{\\partial x_2}{\\partial m}\\end{pmatrix}\\begin{pmatrix}x_1 & x_2\\end{pmatrix}$$\n\ncompactly $D_px=S-(D_mx)\\,x^{\\mathsf T}$, where $S$ is the **Slutsky (substitution) matrix** with $s_{ij}=\\partial h_i/\\partial p_j$.\n\n## The key structural fact\n\nBy Shephard's lemma $h_i=\\partial e/\\partial p_i$, so\n\n$$s_{ij}=\\frac{\\partial h_i}{\\partial p_j}=\\frac{\\partial^{2}e(p,u)}{\\partial p_j\\,\\partial p_i}$$\n\n**$S$ is exactly the Hessian of the expenditure function in prices.** Both of its properties then follow from properties of $e$, and saying this once saves proving two separate things.\n\n## Property 1 — Symmetry\n\n$e(p,u)$ is twice continuously differentiable, so by Young's theorem the order of differentiation is irrelevant:\n\n$$\\frac{\\partial^{2}e}{\\partial p_j\\partial p_i}=\\frac{\\partial^{2}e}{\\partial p_i\\partial p_j}\\quad\\Longrightarrow\\quad s_{ij}=s_{ji}$$\n\n**Economic content.** The compensated effect of good $j$'s price on good $i$ equals the compensated effect of good $i$'s price on good $j$. This is a genuinely testable restriction on market data, and its failure is evidence against utility maximisation itself.\n\n## Property 2 — Negative semidefiniteness\n\nFirst, $e$ is **concave in prices**. Take $p^{t}=tp'+(1-t)p''$ and let $x^{t}$ be the bundle that minimises expenditure at $p^{t}$. Then\n\n$$e(p^{t},u)=p^{t}\\!\\cdot x^{t}=t\\,(p'\\!\\cdot x^{t})+(1-t)(p''\\!\\cdot x^{t})\\;\\ge\\;t\\,e(p',u)+(1-t)\\,e(p'',u)$$\n\nbecause $x^{t}$ reaches utility $u$ and so is *feasible* at $p'$ and $p''$, but need not be *optimal* there. A concave twice-differentiable function has a negative semidefinite Hessian, so\n\n$$z^{\\mathsf T}Sz\\le0\\quad\\text{for every }z$$\n\n**Economic content.** Taking $z$ as the $i$-th unit vector gives $s_{ii}\\le0$: the **compensated own-price effect is never positive**. This is the precise sense in which \"demand curves slope downward\" is a theorem — it holds for compensated demand always, and for ordinary demand except when a strong inferior-good income effect intervenes.\n\n## Why the two properties matter together\n\nThey are the **integrability conditions**. If an observed demand system is homogeneous of degree zero, satisfies the budget identity, and has a symmetric negative semidefinite Slutsky matrix, then a well-behaved preference relation generating it can be recovered.\n\nThat closes the logical circle: preferences imply these restrictions on behaviour, and behaviour satisfying these restrictions implies preferences. Demand theory is not merely a story told about choices — it is equivalent to a set of conditions those choices can be checked against.",
       "answerBn": "",
       "source": "Varian, *Microeconomic Analysis*, 3rd ed., §8.1, §8.4 (comparative statics from the first-order conditions)"
+    },
+    {
+      "id": "q-2016-f-6b",
+      "chapterId": "ch8",
+      "examType": "final",
+      "year": 2016,
+      "batch": "7th",
+      "qNo": "6(B)",
+      "marks": 5,
+      "difficulty": "advanced",
+      "topics": [
+        "Revealed preference",
+        "Recoverability",
+        "Indifference curve"
+      ],
+      "repeats": [
+        2011,
+        2022
+      ],
+      "theoryIds": [
+        "th-slutsky"
+      ],
+      "text": "Explain, how we can \"recover\" the indifference curve of a consumer simply with the help of the revealed preference theory. (5)",
+      "answerPoints": [
+        "State the problem: the indifference curve is never observed — 1 mark",
+        "Build the revealed-worse set from budget sets — 1.5 marks",
+        "Build the revealed-better set from monotonicity — 1.5 marks",
+        "Explain that the curve is bracketed, and tightened by more observations — 1 mark"
+      ],
+      "answer": "## The problem\n\nAn indifference curve is never observed. What *is* observed is a sequence of choices — a bundle $x^{t}$ chosen at prices $p^{t}$. Recoverability asks how much of the indifference curve through a bundle $x^{0}$ those choices pin down.\n\nThe answer: revealed preference **brackets** the curve between two sets, without ever assuming a utility function.\n\n![Choices bound the indifference curve from below and above; the curve itself must thread the untested gap.](content/figures/revealed-recovery.svg)\n\n## Step 1 — The set revealed *worse*\n\nWhenever $x^{0}$ was chosen at prices $p$, every bundle that was affordable then was rejected:\n\n$$W=\\{x\\;:\\;p^{t}\\cdot x\\le p^{t}\\cdot x^{0}\\ \\text{ for some observation }t\\}$$\n\nEvery point of $W$ is revealed **worse than** $x^{0}$, so the indifference curve cannot pass below $W$.\n\n**More observations shrink the gap.** Each new price vector at which $x^{0}$ is chosen adds another budget triangle, and $W$ grows to their *union*. Because the budget lines pivot around $x^{0}$, that union hugs the true curve more tightly the more varied the prices are.\n\n## Step 2 — The set revealed *better*\n\nMonotonicity supplies the other side. Any bundle with **more of every good** than $x^{0}$ must be preferred:\n\n$$B=\\{x\\;:\\;x\\ge x^{0}\\}$$\n\n— the quadrant to the north-east. The indifference curve cannot pass through $B$ either.\n\nMore generally, if $x^{0}$ was *not* chosen when it was affordable at some other observation, that chosen bundle is revealed better, and $B$ can be enlarged by taking the same north-east quadrants from those bundles.\n\n## Step 3 — Read off the bracket\n\nThe true indifference curve through $x^{0}$ must:\n\n- lie **on or above** the upper boundary of $W$ — nothing in $W$ is as good as $x^{0}$;\n- lie **on or below** the lower boundary of $B$ — everything in $B$ is better.\n\nSo it is confined to the untested region between them, and it passes through $x^{0}$ itself. Convexity of preferences narrows it further, since the curve must be bowed toward the origin.\n\n## The point worth closing on\n\nThis is **not** an approximation to some \"real\" curve known by other means. It is the *whole* of what the data can say. As observations accumulate at more varied price ratios, the bracket tightens and converges on the true curve — but with finitely many observations there is always a gap, and any curve threading it is equally consistent with the evidence.\n\nThat is the deep content of revealed preference: preferences are not a psychological premise but something **recovered from choices, up to the precision the choices allow.**",
+      "answerBn": "",
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §8.4 (recoverability)"
+    },
+    {
+      "id": "q-2014-f-2b",
+      "chapterId": "ch8",
+      "examType": "final",
+      "year": 2014,
+      "batch": "5th",
+      "qNo": "2(B)",
+      "marks": 6,
+      "difficulty": "intermediate",
+      "topics": [
+        "WARP",
+        "SARP",
+        "Revealed preference",
+        "Transitivity"
+      ],
+      "repeats": [
+        2019,
+        2024
+      ],
+      "theoryIds": [
+        "th-slutsky"
+      ],
+      "text": "Explain the difference between the \"Weak Axiom of Revealed Preference\" (WARP) and the \"Strong Axiom of Revealed Preference\" (SARP). (6)",
+      "answerPoints": [
+        "Define directly revealed preferred — 1 mark",
+        "State WARP and what it forbids — 1.5 marks",
+        "Define the indirect (transitive closure) relation — 1 mark",
+        "State SARP and give a three-observation cycle WARP misses — 2 marks",
+        "Say what each is sufficient for — 0.5 marks"
+      ],
+      "answer": "## The common starting point\n\nIf the bundle $x^{t}$ was chosen when $x^{s}$ was **affordable**, then $x^{t}$ is **directly revealed preferred** to $x^{s}$:\n\n$$p^{t}\\cdot x^{t}\\ge p^{t}\\cdot x^{s}\\qquad\\Longrightarrow\\qquad x^{t}\\;R^{D}\\;x^{s}$$\n\nThe consumer could have had $x^{s}$ and did not take it. No utility function is invoked anywhere — this is an inference from observed choice alone.\n\n## WARP — consistency between *two* observations\n\n**Statement.** If $x^{t}$ is directly revealed preferred to $x^{s}$, then $x^{s}$ must **never** be directly revealed preferred to $x^{t}$:\n\n$$p^{t}\\!\\cdot x^{t}\\ge p^{t}\\!\\cdot x^{s}\\quad\\Longrightarrow\\quad p^{s}\\!\\cdot x^{s}<p^{s}\\!\\cdot x^{t}$$\n\n**In words.** You cannot prefer $x^{t}$ to $x^{s}$ on Monday and $x^{s}$ to $x^{t}$ on Tuesday, when each was affordable on the other day. WARP forbids a **direct two-way reversal**.\n\n## SARP — consistency along *chains*\n\nWARP checks pairs. But inconsistency can hide in a longer loop, so define the **indirect** relation $R$ as the transitive closure of $R^{D}$: $x\\,R\\,y$ if there is a chain\n\n$$x\\;R^{D}\\;z_1\\;R^{D}\\;z_2\\;\\cdots\\;R^{D}\\;y$$\n\n**Statement of SARP.** If $x^{t}\\,R\\,x^{s}$ then not $x^{s}\\,R\\,x^{t}$. No cycles of *any* length.\n\n## The difference, in one example\n\nSuppose across three observations we find\n\n$$x^{1}\\;R^{D}\\;x^{2},\\qquad x^{2}\\;R^{D}\\;x^{3},\\qquad x^{3}\\;R^{D}\\;x^{1}$$\n\nCheck each **pair**: $x^{1}$ vs $x^{2}$ — only one direction, fine. $x^{2}$ vs $x^{3}$ — fine. $x^{3}$ vs $x^{1}$ — fine. **WARP is satisfied at every pair.**\n\nBut by transitivity $x^{1}\\,R\\,x^{3}$, while directly $x^{3}\\,R^{D}\\,x^{1}$. The chain closes into a cycle, so **SARP is violated** — and these choices cannot come from any transitive preference ordering.\n\n> With only **two goods** WARP happens to imply SARP, so the distinction is invisible in the two-good diagrams. From three goods onward it is real.\n\n## What each is sufficient for\n\n| | Rules out | Enough for |\n|---|---|---|\n| **WARP** | direct two-way reversals | a well-behaved *demand function* — homogeneity, budget balance, a negative semidefinite Slutsky matrix |\n| **SARP** | cycles of any length | the existence of a **utility function** generating the choices |\n\n**The conclusion to state.** WARP is the *necessary* condition; SARP is the *sufficient* one. SARP is exactly the observable counterpart of transitivity — which is why it, and not WARP, is what lets you recover preferences from data. GARP weakens SARP slightly to tolerate indifference, and is the version actually used to test real datasets.",
+      "answerBn": "",
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §8.1–8.3 (revealed preference)"
     }
   ],
   "exercises": [

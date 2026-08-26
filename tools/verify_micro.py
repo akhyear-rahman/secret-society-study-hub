@@ -258,10 +258,81 @@ def wacm_table():
           dot(B["w"], B["x"]) <= dot(B["w"], A["x"]))
 
 
+# ----------------------------------------------------------- third band ---
+
+def tax_comparison():
+    """Excise vs income tax raising identical revenue."""
+    print("\nExcise tax vs income tax")
+    al = sp.Rational(1, 2)
+    m, p, tax = 12, 1, 1
+
+    x1e, x2e = al * m / (p + tax), (1 - al) * m          # excise on good 1
+    u_ex = x1e ** al * x2e ** (1 - al)
+    revenue = tax * x1e
+    mi = m - revenue                                      # same revenue, lump sum
+    x1i, x2i = al * mi / p, (1 - al) * mi
+    u_in = x1i ** al * x2i ** (1 - al)
+
+    check("both taxes raise the same revenue", eq(revenue, m - mi))
+    check("income tax leaves higher utility", sp.N(u_in) > sp.N(u_ex))
+    # The sharp argument: the excise bundle is still affordable after the
+    # income tax, so that consumer can copy it and then do strictly better by
+    # re-optimising. No indifference curves needed.
+    check("excise bundle affordable at pre-tax prices on the reduced income",
+          sp.N(p * x1e + x2e) <= sp.N(mi))
+
+
+def mrs_invariance():
+    """MRS survives any monotonic transformation of utility."""
+    print("\nMRS under monotonic transformation")
+    x1, x2, a = sp.symbols("x1 x2 a", positive=True)
+    u = x1 ** a * x2 ** (1 - a)
+    base = sp.diff(u, x1) / sp.diff(u, x2)
+    for g, name in ((sp.log(u), "ln u"), (u ** 3, "u^3"), (2 * u + 5, "2u+5")):
+        check(f"MRS unchanged under {name}",
+              eq(base, sp.diff(g, x1) / sp.diff(g, x2)))
+
+
+def sigma_from_definition():
+    """sigma = d ln(x2/x1) / d ln|TRS|, worked from the definition."""
+    print("\nElasticity of substitution from its definition")
+    L, a, r = sp.symbols("L a r", positive=True)
+    # Write everything in L = ln(x2/x1); differentiating logs is then trivial.
+    check("Cobb-Douglas: ln|TRS| = ln(a/(1-a)) + L gives sigma = 1",
+          eq(1 / sp.diff(sp.log(a / (1 - a)) + L, L), 1))
+    check("CES: ln|TRS| = (1-r)L gives sigma = 1/(1-r)",
+          eq(1 / sp.diff((1 - r) * L, L), 1 / (1 - r)))
+
+
+def hotelling():
+    """Differentiating the profit function returns the optimal plan."""
+    print("\nHotelling's lemma")
+    w, p, a = sp.symbols("w p a", positive=True)
+    x = (a * p / w) ** (1 / (1 - a))
+    y = x ** a
+    pi = p * y - w * x
+    at = {a: sp.Rational(1, 2), p: 3, w: 2}
+    check("d(pi)/dp = y*", abs(sp.N((sp.diff(pi, p) - y).subs(at))) < 1e-9)
+    check("-d(pi)/dw = x*", abs(sp.N((-sp.diff(pi, w) - x).subs(at))) < 1e-9)
+
+
+def ump_emp_consistency():
+    """At the optimum the two problems agree: e(p, v(p,m)) = m."""
+    print("\nUtility maximisation and expenditure minimisation")
+    al = sp.Rational(1, 2)
+    m, p1, p2 = 12, 1, 2
+    x1, x2 = al * m / p1, (1 - al) * m / p2
+    u = x1 ** al * x2 ** (1 - al)
+    e = u * (p1 / al) ** al * (p2 / (1 - al)) ** (1 - al)
+    check("e(p, v(p,m)) = m", eq(e, m))
+
+
 def main() -> int:
     print("Verifying the algebra behind the ECON 401 answers")
     consumer(); technology(); firm()
     value_function_curvature(); leontief_and_returns(); wacm_table()
+    tax_comparison(); mrs_invariance(); sigma_from_definition()
+    hotelling(); ump_emp_consistency()
     print(f"\n{len(PASS)} passed, {len(FAIL)} failed")
     for f in FAIL:
         print(f"  ! {f}")
