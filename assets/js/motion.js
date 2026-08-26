@@ -6,6 +6,8 @@
 //
 // Everything here no-ops under prefers-reduced-motion.
 
+import { wireMath } from './math.js';
+
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* ------------------------------------------------------------ splash ---- */
@@ -116,6 +118,7 @@ function reveal(root) {
 export function enhance(root) {
   root.querySelectorAll('[data-count]').forEach(countUp);
   reveal(root);
+  wireMath(root);
 }
 
 /* --------------------------------------------------- view transition ---- */

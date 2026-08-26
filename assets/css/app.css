@@ -367,6 +367,28 @@ a.card:active{transform:translateY(-1px)}
 .prose a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
 .prose strong{font-weight:720}
 .term{font-family:var(--sans);font-weight:640;color:var(--accent)}
+
+/* ------------------------------------------------- 5c math and figures --- */
+/* KaTeX output inherits colour, so it themes itself. Before hydration the
+   node still holds its TeX source; styling it as code keeps that legible
+   instead of looking like a rendering failure. */
+.math:not([data-rendered]){font-family:var(--mono);font-size:.9em;
+  background:var(--bg-3);padding:1px 5px;border-radius:4px;color:var(--fg-2)}
+.math[data-rendered="failed"]{color:var(--warn,#e0a030)}
+
+/* Display math behaves like a <pre>: it scrolls inside its own box rather
+   than widening the page. Never wrap it — a broken formula is worse than a
+   scrollbar. */
+.math-display{display:block;margin:0 0 16px;overflow-x:auto;overflow-y:hidden;
+  padding:4px 2px;text-align:center}
+.math-display:not([data-rendered]){text-align:left;white-space:pre-wrap}
+.katex-display{margin:.5em 0}
+.katex{font-size:1.04em}
+
+.fig{margin:0 0 20px;text-align:center}
+.fig img{max-width:100%;height:auto;border-radius:var(--r-sm);background:transparent}
+.fig figcaption{margin-top:9px;font-size:13.5px;color:var(--fg-2);line-height:1.55;
+  text-align:center;font-style:italic}
 .prose.bn .term,.prose.bn code{font-family:var(--sans)}
 
 .reader{display:grid;grid-template-columns:minmax(0,1fr) 328px;gap:28px;align-items:start}
@@ -978,3 +1000,6 @@ body[data-reading="1"] .read-exit{display:inline-flex;animation:pop .3s var(--ea
 /* Deliberately not .nu-title — anywhere-breaking a heading that is short
    on width produces one letter per line. */
 .qtext,.plan-why{overflow-wrap:break-word}
+/* Formulas scroll, never break: anywhere-breaking maths splits symbols. */
+.math-display{max-width:100%}
+.prose .math,.prose .katex{overflow-wrap:normal;word-break:normal}

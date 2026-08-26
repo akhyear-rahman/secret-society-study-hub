@@ -3,20 +3,78 @@
 //
 // Supported: headings, bold, italic, inline code, fenced code, links,
 // unordered/ordered lists (1 nesting level), blockquotes, tables, hr,
-// paragraphs, hard line breaks — plus one custom extension:
+// paragraphs, hard line breaks — plus three custom extensions:
 //
 //   {{Marginal Rate of Substitution}}  ->  <span class="term">…</span>
+//   $x^a$  and  $$…$$                  ->  LaTeX, rendered by math.js
+//   ![caption](content/figures/x.svg)  ->  <figure> with a caption
 //
 // The {{…}} extension is how Bangla explanations keep economic /
 // theoretical terminology in English and visually distinct.
+//
+// MATH IS EXTRACTED BEFORE ESCAPING and restored at the very end. It has to
+// be: `\frac{a}{b}` would otherwise be chewed up by the `_` → <em> rule and
+// `\\` by the escaper. Placeholders use private-use code points, which no
+// markdown rule and no escape touches. Math inside fenced code or inline
+// backticks is deliberately left alone.
 
 import { esc, slug } from './util.js';
+
+const M_OPEN = '';
+const M_CLOSE = '';
+
+/** Pull $…$ / $$…$$ out of the source, leaving inert placeholders behind. */
+function stashMath(src, store) {
+  const lines = String(src).split('\n');
+  let inFence = false;
+
+  return lines.map((line) => {
+    if (/^\s*```/.test(line)) { inFence = !inFence; return line; }
+    if (inFence) return line;
+
+    // Display first, so $$…$$ is never mistaken for two inline spans.
+    let out = line.replace(/\$\$([^$]+?)\$\$/g, (m, tex) => {
+      store.push({ tex: tex.trim(), display: true });
+      return `${M_OPEN}${store.length - 1}${M_CLOSE}`;
+    });
+
+    // Inline. The leading `\`[^`]*\`` alternative consumes inline code first,
+    // so a `$` inside backticks can never open a formula. Requires a closing
+    // `$` on the same line, which is why a lone "costs $1" stays untouched.
+    out = out.replace(/`[^`]*`|\$(?!\s)([^$\n]+?)(?<!\s)\$/g, (m, tex) => {
+      if (m[0] === '`') return m;
+      store.push({ tex: tex.trim(), display: false });
+      return `${M_OPEN}${store.length - 1}${M_CLOSE}`;
+    });
+    return out;
+  }).join('\n');
+}
+
+/** Swap placeholders back for math nodes. Runs after all escaping. */
+function restoreMath(htmlStr, store) {
+  if (!store.length) return htmlStr;
+  return htmlStr.replace(
+    new RegExp(`${M_OPEN}(\\d+)${M_CLOSE}`, 'g'),
+    (m, idx) => {
+      const item = store[Number(idx)];
+      if (!item) return '';
+      const cls = item.display ? 'math math-display' : 'math';
+      return `<span class="${cls}" data-tex="${esc(item.tex)}"` +
+             `${item.display ? ' data-display="1"' : ''}>${esc(item.tex)}</span>`;
+    }
+  );
+}
 
 function inline(s) {
   return s
     // custom: English terminology inside Bangla prose
     .replace(/\{\{([^{}]+)\}\}/g, '<span class="term">$1</span>')
-    // images are intentionally unsupported; links only
+    // figures: only from paths we generate ourselves, never remote
+    .replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, (m, alt, src) =>
+      /^(content\/figures\/|assets\/)/.test(src)
+        ? `<figure class="fig"><img src="${src}" alt="${alt}" loading="lazy" decoding="async">` +
+          (alt ? `<figcaption>${alt}</figcaption>` : '') + '</figure>'
+        : alt)
     .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, t, href) =>
       /^(https?:|#|content\/|assets\/)/.test(href)
         ? `<a href="${href}"${href.startsWith('http') ? ' target="_blank" rel="noopener"' : ''}>${t}</a>`
@@ -41,7 +99,12 @@ const cells = (l) => l.trim().replace(/^\||\|$/g, '').split('|').map((c) => c.tr
  */
 export function md(src, collect) {
   if (!src) return '';
-  const lines = esc(String(src).replace(/\r\n?/g, '\n')).split('\n');
+  // Math comes out before escaping and goes back in after rendering. A nested
+  // md() call (blockquotes) finds no `$` left to stash, so its store is empty
+  // and its restore is a no-op — the outer call still owns those placeholders.
+  const mathStore = [];
+  const stashed = stashMath(String(src).replace(/\r\n?/g, '\n'), mathStore);
+  const lines = esc(stashed).split('\n');
   const out = [];
   let i = 0;
 
@@ -148,7 +211,7 @@ export function md(src, collect) {
     i++;
   }
   flushPara(para);
-  return out.join('\n');
+  return restoreMath(out.join('\n'), mathStore);
 }
 
 /** Render markdown and also return the h2/h3 outline for a table of contents. */
@@ -162,6 +225,9 @@ export function mdWithToc(src) {
 export function plain(src, max = 220) {
   const t = String(src || '')
     .replace(/```[\s\S]*?```/g, ' ')
+    .replace(/\$\$[^$]+?\$\$/g, ' ')            // display math is not searchable prose
+    .replace(/\$(?!\s)([^$\n]+?)(?<!\s)\$/g, ' ')
+    .replace(/!\[([^\]]*)\]\([^)]*\)/g, '$1')   // keep the figure caption, drop the path
     .replace(/\{\{([^{}]+)\}\}/g, '$1')
     .replace(/[#>*_`|~-]/g, ' ')
     .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
