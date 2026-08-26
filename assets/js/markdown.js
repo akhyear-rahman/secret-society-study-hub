@@ -214,6 +214,24 @@ export function md(src, collect) {
   return restoreMath(out.join('\n'), mathStore);
 }
 
+/**
+ * Render a short single-line string — emphasis, code, links and maths — with
+ * NO block wrapper.
+ *
+ * Exam questions and card prompts sit inside summaries, table cells and <p>
+ * elements that already carry their own styling. Passing them through md()
+ * would nest a <p> inside a <p>, which the parser then tears apart. But they
+ * still need the maths rendered: an ECON 401 question is largely notation,
+ * and esc() alone leaves the reader looking at raw TeX.
+ */
+export function mdInline(src) {
+  if (!src) return '';
+  const store = [];
+  // One line only — fold any whitespace run, including newlines, to a space.
+  const flat = String(src).replace(/\s+/g, ' ');
+  return restoreMath(inline(esc(stashMath(flat, store))), store);
+}
+
 /** Render markdown and also return the h2/h3 outline for a table of contents. */
 export function mdWithToc(src) {
   const headings = [];

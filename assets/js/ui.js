@@ -1,7 +1,7 @@
 // Shared render helpers used by more than one view.
 
 import { esc, stars, DIFF_LABEL, EXAM_LABEL } from './util.js';
-import { md, plain } from './markdown.js';
+import { md, mdInline, plain } from './markdown.js';
 import { state, isRead, isBookmarked } from './store.js';
 
 export const diffTag = (d) =>
@@ -75,7 +75,7 @@ export function questionCard(q, opts = {}) {
   return `<details class="qcard" id="q-${esc(q.id)}"${open ? ' open' : ''}>
     <summary>
       <svg class="caret" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
-      <div class="qtext">${esc(q.text)}
+      <div class="qtext">${mdInline(q.text)}
         <div class="qmeta">${meta}</div>
       </div>
     </summary>${body}

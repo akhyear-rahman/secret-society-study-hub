@@ -99,6 +99,10 @@ export function wireMath(root = document) {
 
   const closed = (n) => {
     for (let el = n.parentElement; el; el = el.parentElement) {
+      // A <summary> is on screen whether or not its <details> is open, so
+      // maths in a card's header must render now. Without this the question
+      // bank shows every collapsed question's title as raw TeX.
+      if (el.tagName === 'SUMMARY') return null;
       if (el.tagName === 'DETAILS' && !el.open) return el;
     }
     return null;

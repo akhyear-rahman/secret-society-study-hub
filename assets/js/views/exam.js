@@ -4,7 +4,8 @@
 
 import { getCourse, allCourses } from '../content.js';
 import { esc, shuffle, rng, fmtTime, sum, clamp, DIFFS, DIFF_LABEL, EXAM_TYPES, EXAM_LABEL } from '../util.js';
-import { md } from '../markdown.js';
+import { md, mdInline } from '../markdown.js';
+import { hydrateMath } from '../math.js';
 import { pageHead, empty, selectEl, diffTag, marksTag } from '../ui.js';
 import { state, recordExam } from '../store.js';
 import { setQuery, go } from '../router.js';
@@ -114,7 +115,7 @@ function setup(course, courses, scoped, query, head) {
     <h3 style="margin:0 0 8px">${esc(name)}</h3>
     <ol style="padding-left:22px;margin:0">
       ${qs.map((q) => `<li style="margin-bottom:8px">
-        ${esc(q.text)}
+        ${mdInline(q.text)}
         <div class="row" style="gap:6px;margin-top:4px">${marksTag(q.marks)}${diffTag(q.difficulty)}
           ${q.year ? `<span class="tag">seen ${esc(q.year)}</span>` : ''}
           ${q.repeats?.length ? `<span class="tag accent">↻ ×${q.repeats.length + 1}</span>` : ''}</div>
@@ -233,7 +234,7 @@ function runner(course, query, head) {
             ${marksTag(q.marks)}${diffTag(q.difficulty)}
             ${q.year ? `<span class="tag">originally ${esc(q.year)}</span>` : ''}
           </div>
-          <p style="font-size:16.5px;font-weight:620;line-height:1.6;margin:0 0 14px">${esc(q.text)}</p>
+          <p style="font-size:16.5px;font-weight:620;line-height:1.6;margin:0 0 14px">${mdInline(q.text)}</p>
           <textarea id="ans" placeholder="Write your answer — outline first, then expand. Aim for ${q.marks || 10} marks' worth of substance.">${esc(answers[cur] || '')}</textarea>
           <div class="spread" style="margin-top:12px">
             <span class="muted" style="font-size:12.5px" id="wc"></span>
@@ -243,6 +244,10 @@ function runner(course, query, head) {
             </div>
           </div>
         </div>`;
+        // Paging between questions rewrites the body long after the route
+        // rendered, so enhance() has already run. Without this the notation in
+        // a question shows as raw TeX.
+        hydrateMath(body);
         const ta = body.querySelector('#ans');
         const wc = body.querySelector('#wc');
         const count = () => {
@@ -323,14 +328,14 @@ function renderMarking(root, course, paper, answers, seconds, seed, tier) {
       <div class="row" style="margin-bottom:8px">
         <span class="tag accent">Q${i + 1}</span>${marksTag(max)}${diffTag(q.difficulty)}
       </div>
-      <p style="font-weight:640;margin:0 0 12px">${esc(q.text)}</p>
+      <p style="font-weight:640;margin:0 0 12px">${mdInline(q.text)}</p>
 
       <h4 style="margin:0 0 6px;font-size:13px;color:var(--fg-3);text-transform:uppercase;letter-spacing:.05em">Your answer</h4>
       <div class="prose" style="background:var(--bg-3);padding:12px 14px;border-radius:8px;max-width:none;white-space:pre-wrap;font-size:14px">${
         esc(answers[i] || '') || '<span class="muted">— left blank —</span>'}</div>
 
       ${q.answerPoints?.length ? `<div class="scheme" style="margin-top:14px"><b>Marking scheme</b><ul>${
-        q.answerPoints.map((p) => `<li>${esc(p)}</li>`).join('')}</ul></div>` : ''}
+        q.answerPoints.map((p) => `<li>${mdInline(p)}</li>`).join('')}</ul></div>` : ''}
 
       <details style="margin-top:12px">
         <summary style="cursor:pointer;font-weight:650;font-size:13.5px;color:var(--accent)">Show the model answer</summary>
@@ -344,6 +349,7 @@ function renderMarking(root, course, paper, answers, seconds, seed, tier) {
       </div>
     </div>`;
   }).join('');
+  hydrateMath(mb);   // marking scheme and question text both carry notation
 
   const scoreNow = root.querySelector('#scoreNow');
   const pctNow = root.querySelector('#pctNow');
