@@ -32,13 +32,13 @@ cannot rot. Python 3.13 is used only for the local server and the tooling.
 
 | Course | Chapters | Theories | Questions | Answered | Notes | Recall cards |
 |---|---|---|---|---|---|---|
-| **ECON 401** Advanced Microeconomics-I | 5 | 6 | 347 | 96 | 1 | 28 |
+| **ECON 401** Advanced Microeconomics-I | 5 | 6 | 344 | 244 | 1 | 28 |
 | **ECON 403** Advanced Macroeconomics-I | 8 | 0 | 0 | 0 | 5 | 0 |
 | **ECON 405** Advanced Econometrics-I | 7 | 0 | 0 | 0 | 0 | 0 |
 | **ECON 409** Environmental Economics | 21 | 10 | **108** | 19 | 16 | 43 |
 | **ECON 412** Research Methodology | 13 | 0 | 0 | 0 | 0 | 0 |
 | Improvement ×2 | — | — | — | — | — | — |
-| **Total** | **54** | **16** | **455** | **115** | **22** | **71** |
+| **Total** | **54** | **16** | **452** | **263** | **22** | **71** |
 
 All 56 written answers carry a `source`; a further 59 questions share one via `sameAs`.
 
@@ -71,17 +71,12 @@ paper. They filter out cleanly when you want real past questions only.
    order you work in is the right one.
 3. **Confirm Perman is actually the ECON 409 textbook** before writing answers
    in its notation. It was inferred, not stated — see §4.
-4. **ECON 401 now holds every question from the source archive** — all 347
-   parts from 35 sittings, 2010–2025 (there is no 2015 paper in the file).
-   37 carry a written answer, 59 share one through `sameAs`, and
-   **251 still have no answer**. That remainder is the
-   outstanding ECON 401 work, and `python tools/build/frequency_micro.py`
-   ranks it.
-5. **ECON 403, 405, 412 have a syllabus but no theories or questions.** No past
-   papers sourced for any of them. The single biggest gap.
-6. **The two improvement courses** are registered placeholders.
-7. **Exam dates** are not set. `#/plan` shows a countdown once they are;
-   `setExamDate(courseId, iso)` in `store.js` backs it.
+4. **ECON 401 holds every question from the source archive** — 344 parts from
+   35 sittings, 2010–2025 (there is no 2015 paper in the file). 45 carry a
+   written answer, 199 share one through `sameAs`, and **100 are still
+   open**. Those 100 are the outstanding work; they are the thin tail, mostly
+   one-off in-course and midterm parts.
+   `python tools/build/frequency_micro.py` ranks what is left.
 
 **Coase theorem is done** — all 8 are answered as of `7ada69b`. The next
 band down is untouched: market failure, sustainable development and WTP vs

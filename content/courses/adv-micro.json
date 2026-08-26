@@ -646,11 +646,13 @@
       "batch": "16th",
       "qNo": "1",
       "marks": 5.0,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
         "Input requirement set",
         "Isoquant",
-        "Transformation function"
+        "Production function",
+        "Transformation function",
+        "Cobb-Douglas"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -659,11 +661,11 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2018-f-1a"
     },
     {
       "id": "q-2025-i1a-2",
-      "chapterId": "ch1",
+      "chapterId": "ch7",
       "examType": "incourse",
       "year": 2025,
       "batch": "16th",
@@ -671,7 +673,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Expenditure function"
+        "Expenditure function",
+        "Concavity",
+        "Shephard's lemma",
+        "Properties of demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -680,7 +685,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-mid15-3"
     },
     {
       "id": "q-2025-i2b-2",
@@ -690,10 +695,12 @@
       "batch": "16th",
       "qNo": "2",
       "marks": 5.0,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
         "Monotonicity",
-        "Convexity"
+        "Technology",
+        "Free disposal",
+        "Input requirement set"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -702,7 +709,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-5a"
     },
     {
       "id": "q-2025-i2b-3",
@@ -714,7 +721,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Returns to scale"
+        "Returns to scale",
+        "DRS",
+        "CRS",
+        "Fixed factor"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -723,7 +733,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2023-f-4b"
     },
     {
       "id": "q-2025-f-3b",
@@ -796,16 +806,24 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Recoverability"
+        "Recoverability",
+        "WAPM",
+        "Production set",
+        "Convexity"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-profit"
+      ],
       "text": "What is \"recoverability\"? What is being recovered and how, explain. (5)",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Say what recoverability asks and why it is the reverse of the usual problem — 1 mark",
+        "Show how each observation bounds the technology from outside — 2 marks",
+        "State what is recovered — the convex monotonic hull — and why not more — 2 marks"
+      ],
+      "answer": "## What recoverability asks\n\nThe usual direction of theory runs: **technology $\\to$ behaviour.** Given $Y$, derive supply and factor demand.\n\nRecoverability runs the other way. **Behaviour $\\to$ technology.** Given only what the firm was observed to *do* — plans $y^{t}$ chosen at prices $p^{t}$ — what can be said about the production set $Y$, which is never observed directly?\n\nThis matters because $Y$ is not something an economist can look up. If it cannot be inferred from choices, it is not an empirically meaningful object at all.\n\n## How each observation bounds the technology\n\nThe lever is **WAPM**: a profit-maximising firm chose $y^{t}$ at prices $p^{t}$, so no other *available* plan could have done better at those prices:\n\n$$p^{t}\\!\\cdot y^{t}\\;\\ge\\;p^{t}\\!\\cdot y\\qquad\\text{for every }y\\in Y$$\n\nTurn that around. Any plan $y$ with $p^{t}\\!\\cdot y>p^{t}\\!\\cdot y^{t}$ would have been more profitable — and since the firm did not choose it, it must **not have been feasible**. Each observation therefore rules out an open half-space and confirms that $Y$ lies inside the closed one.\n\nIntersecting over all observations gives the tightest outer bound the data support:\n\n$$\\boxed{\\;\\hat Y=\\bigl\\{\\,y\\;:\\;p^{t}\\!\\cdot y\\le p^{t}\\!\\cdot y^{t}\\ \\text{ for all } t\\,\\bigr\\}\\;}$$\n\nEvery observed plan lies in $\\hat Y$, and $Y\\subseteq\\hat Y$. More observations at more varied price ratios add more half-spaces and shrink $\\hat Y$ towards $Y$.\n\n## What is recovered — and the limit\n\n$\\hat Y$ is an intersection of half-spaces, so it is necessarily **convex**, and adding free disposal makes it **monotonic**. What the data recover is therefore the **convex, monotonic hull** of the true production set — never more.\n\n**Why no more is possible.** Suppose $Y$ has a dent — a non-convex region. A price-taking firm maximises a *linear* objective over $Y$, and a linear function is maximised at an extreme point of the set. The firm is therefore **never observed choosing a plan inside a dent**, at any prices whatever. No amount of data can reveal a feature that behaviour never visits.\n\nThe same holds for interior points: the firm always operates on the efficient frontier, so the inefficient interior of $Y$ leaves no trace either.\n\n**The conclusion worth stating.** Recoverability is not a defect of the method but a precise statement of what price-taking behaviour can and cannot tell us. It is the firm-side twin of the consumer result, where revealed preference recovers an indifference curve only up to the region choices actually bracket — and it is why the convexity assumption costs us nothing empirically: a non-convex technology is observationally indistinguishable from its convex hull.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §2.3 (recoverability)"
     },
     {
       "id": "q-2025-i2b-4",
@@ -817,7 +835,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Recoverability"
+        "Recoverability",
+        "WAPM",
+        "Production set",
+        "Convexity"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -826,7 +847,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-i2a-4-2"
     },
     {
       "id": "q-2025-f-4a",
@@ -859,7 +880,10 @@
       "marks": 3.5,
       "difficulty": "intermediate",
       "topics": [
-        "TRS"
+        "Technical rate of substitution",
+        "Elasticity of substitution",
+        "Elasticity of scale",
+        "Cobb-Douglas"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -868,7 +892,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2019-f-2b"
     },
     {
       "id": "q-2025-f-4d",
@@ -878,9 +902,12 @@
       "batch": "16th",
       "qNo": "4(D)",
       "marks": 3.5,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Elasticity of substitution"
+        "Elasticity of substitution",
+        "TRS",
+        "Cobb-Douglas",
+        "Elasticity"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -889,7 +916,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2013-f-2b"
     },
     {
       "id": "q-2025-i2a-5",
@@ -899,10 +926,12 @@
       "batch": "16th",
       "qNo": "5",
       "marks": 5.0,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
         "Monotonicity",
-        "Convexity"
+        "Technology",
+        "Free disposal",
+        "Input requirement set"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -911,7 +940,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-5a"
     },
     {
       "id": "q-2024-i2-0",
@@ -939,7 +968,7 @@
     },
     {
       "id": "q-2024-i1-2",
-      "chapterId": "ch1",
+      "chapterId": "ch7",
       "examType": "incourse",
       "year": 2024,
       "batch": "15th",
@@ -947,7 +976,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Expenditure function"
+        "Expenditure function",
+        "Concavity",
+        "Shephard's lemma",
+        "Properties of demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -956,7 +988,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-mid15-3"
     },
     {
       "id": "q-2024-i2-4",
@@ -1033,10 +1065,12 @@
       "batch": "15th",
       "qNo": "4(C)",
       "marks": 3.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "CES",
-        "Elasticity of substitution"
+        "Elasticity of substitution",
+        "TRS",
+        "Cobb-Douglas",
+        "Elasticity"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1045,7 +1079,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2013-f-2b"
     },
     {
       "id": "q-2024-f-5b",
@@ -1138,11 +1172,13 @@
       "batch": "14th",
       "qNo": "1",
       "marks": 5.0,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
-        "Cobb-Douglas",
         "Input requirement set",
-        "Isoquant"
+        "Isoquant",
+        "Production function",
+        "Transformation function",
+        "Cobb-Douglas"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1151,7 +1187,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2018-f-1a"
     },
     {
       "id": "q-2023-i2-1-2",
@@ -1161,11 +1197,13 @@
       "batch": "14th",
       "qNo": "1",
       "marks": 5.0,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
-        "Cobb-Douglas",
         "Input requirement set",
-        "Isoquant"
+        "Isoquant",
+        "Production function",
+        "Transformation function",
+        "Cobb-Douglas"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1174,7 +1212,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2018-f-1a"
     },
     {
       "id": "q-2023-i2-2a",
@@ -1184,11 +1222,12 @@
       "batch": "14th",
       "qNo": "2(A)",
       "marks": 2.5,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
         "Convexity",
+        "Production set",
         "Input requirement set",
-        "Production set"
+        "Quasi-concavity"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1197,7 +1236,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2019-f-2a"
     },
     {
       "id": "q-2023-i2-2a-2",
@@ -1207,11 +1246,12 @@
       "batch": "14th",
       "qNo": "2(A)",
       "marks": 2.5,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
         "Convexity",
+        "Production set",
         "Input requirement set",
-        "Production set"
+        "Quasi-concavity"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1220,7 +1260,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2019-f-2a"
     },
     {
       "id": "q-2023-i2-2b",
@@ -1233,7 +1273,9 @@
       "difficulty": "intermediate",
       "topics": [
         "Convexity",
-        "Input requirement set"
+        "Input requirement set",
+        "Quasi-concavity",
+        "Production set"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1242,7 +1284,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2013-f-0b"
     },
     {
       "id": "q-2023-i2-2b-2",
@@ -1255,7 +1297,9 @@
       "difficulty": "intermediate",
       "topics": [
         "Convexity",
-        "Input requirement set"
+        "Input requirement set",
+        "Quasi-concavity",
+        "Production set"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1264,7 +1308,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2013-f-0b"
     },
     {
       "id": "q-2023-f-4a",
@@ -1331,10 +1375,12 @@
       "batch": "14th",
       "qNo": "4(C)",
       "marks": 4.17,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "CES",
-        "Elasticity of substitution"
+        "Elasticity of substitution",
+        "TRS",
+        "Cobb-Douglas",
+        "Elasticity"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1343,7 +1389,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2013-f-2b"
     },
     {
       "id": "q-2022-f-3a",
@@ -1353,10 +1399,13 @@
       "batch": "13th",
       "qNo": "3(A)",
       "marks": 6.25,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
         "Input requirement set",
-        "Isoquant"
+        "Isoquant",
+        "Production function",
+        "Transformation function",
+        "Cobb-Douglas"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1365,7 +1414,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2018-f-1a"
     },
     {
       "id": "q-2022-f-3b",
@@ -1401,7 +1450,10 @@
       "marks": 6.0,
       "difficulty": "intermediate",
       "topics": [
-        "TRS"
+        "Technical rate of substitution",
+        "Elasticity of substitution",
+        "Elasticity of scale",
+        "Cobb-Douglas"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1410,7 +1462,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2019-f-2b"
     },
     {
       "id": "q-2022-f-4b",
@@ -1443,9 +1495,10 @@
       "marks": 2.5,
       "difficulty": "intermediate",
       "topics": [
-        "Cobb-Douglas",
+        "Technical rate of substitution",
         "Elasticity of substitution",
-        "TRS"
+        "Elasticity of scale",
+        "Cobb-Douglas"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1454,7 +1507,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2019-f-2b"
     },
     {
       "id": "q-2022-m-5a",
@@ -1464,9 +1517,12 @@
       "batch": "13th",
       "qNo": "5(A)",
       "marks": 2.5,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
-        "Monotonicity"
+        "Monotonicity",
+        "Technology",
+        "Free disposal",
+        "Input requirement set"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1475,7 +1531,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-5a"
     },
     {
       "id": "q-2021-f-4a",
@@ -1533,12 +1589,13 @@
       "batch": "12th",
       "qNo": "5",
       "marks": 5.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
         "CES",
-        "Cobb-Douglas",
         "Elasticity of substitution",
-        "Monotonicity"
+        "Cobb-Douglas",
+        "Leontief",
+        "Perfect substitutes"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1547,7 +1604,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2018-f-2"
     },
     {
       "id": "q-2021-f-5a",
@@ -1557,11 +1614,12 @@
       "batch": "12th",
       "qNo": "5(A)",
       "marks": 6.25,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Cobb-Douglas",
         "Elasticity of substitution",
-        "TRS"
+        "TRS",
+        "Cobb-Douglas",
+        "Elasticity"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1570,7 +1628,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2013-f-2b"
     },
     {
       "id": "q-2021-f-5b",
@@ -1644,7 +1702,7 @@
     },
     {
       "id": "q-2020-fa-2a",
-      "chapterId": "ch1",
+      "chapterId": "ch2",
       "examType": "final",
       "year": 2020,
       "batch": "11th",
@@ -1652,8 +1710,11 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Cobb-Douglas",
-        "Profit function"
+        "Profit maximization",
+        "Factor demand",
+        "Supply function",
+        "Profit function",
+        "Hotelling's lemma"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1662,7 +1723,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-5a"
     },
     {
       "id": "q-2020-fa-4",
@@ -1722,9 +1783,10 @@
       "marks": 4.0,
       "difficulty": "intermediate",
       "topics": [
-        "CES",
+        "Technical rate of substitution",
         "Elasticity of substitution",
-        "TRS"
+        "Elasticity of scale",
+        "Cobb-Douglas"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1733,7 +1795,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2019-f-2b"
     },
     {
       "id": "q-2019-f-1b",
@@ -1887,7 +1949,10 @@
       "marks": 3.33,
       "difficulty": "intermediate",
       "topics": [
-        "Input requirement set"
+        "Convexity",
+        "Production set",
+        "Input requirement set",
+        "Quasi-concavity"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1896,7 +1961,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2019-f-2a"
     },
     {
       "id": "q-2019-m-6c",
@@ -2008,10 +2073,12 @@
       "batch": "9th",
       "qNo": "2(A)",
       "marks": 6.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "CES",
-        "Elasticity of substitution"
+        "Elasticity of substitution",
+        "TRS",
+        "Cobb-Douglas",
+        "Elasticity"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2020,7 +2087,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2013-f-2b"
     },
     {
       "id": "q-2018-f-2b",
@@ -2102,10 +2169,12 @@
       "batch": "8th",
       "qNo": "2(A)",
       "marks": 6.25,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
+        "Elasticity of substitution",
+        "TRS",
         "Cobb-Douglas",
-        "TRS"
+        "Elasticity"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2114,7 +2183,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2013-f-2b"
     },
     {
       "id": "q-2017-f-2b",
@@ -2142,7 +2211,7 @@
     },
     {
       "id": "q-2017-f-3a",
-      "chapterId": "ch1",
+      "chapterId": "ch2",
       "examType": "final",
       "year": 2017,
       "batch": "8th",
@@ -2150,8 +2219,11 @@
       "marks": 6.0,
       "difficulty": "intermediate",
       "topics": [
-        "Cobb-Douglas",
-        "Profit function"
+        "Profit maximization",
+        "Factor demand",
+        "Supply function",
+        "Profit function",
+        "Hotelling's lemma"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2160,7 +2232,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-5a"
     },
     {
       "id": "q-2016-f-1a",
@@ -2231,9 +2303,10 @@
       "marks": 7.5,
       "difficulty": "intermediate",
       "topics": [
-        "Cobb-Douglas",
+        "Technical rate of substitution",
         "Elasticity of substitution",
-        "TRS"
+        "Elasticity of scale",
+        "Cobb-Douglas"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2242,7 +2315,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2019-f-2b"
     },
     {
       "id": "q-2016-f-2b",
@@ -2252,10 +2325,12 @@
       "batch": "7th",
       "qNo": "2(B)",
       "marks": 5.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "CES",
-        "Elasticity of substitution"
+        "Elasticity of substitution",
+        "TRS",
+        "Cobb-Douglas",
+        "Elasticity"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2264,11 +2339,11 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2013-f-2b"
     },
     {
       "id": "q-2016-f-4a",
-      "chapterId": "ch1",
+      "chapterId": "ch4",
       "examType": "final",
       "year": 2016,
       "batch": "7th",
@@ -2276,8 +2351,10 @@
       "marks": 6.25,
       "difficulty": "intermediate",
       "topics": [
+        "Cost minimization",
+        "Cost function",
         "Cobb-Douglas",
-        "Cost function"
+        "Conditional factor demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2286,7 +2363,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2023-f-6a"
     },
     {
       "id": "q-2014-f-3a",
@@ -2346,7 +2423,10 @@
       "marks": 4.0,
       "difficulty": "intermediate",
       "topics": [
-        "Returns to scale"
+        "Returns to scale",
+        "DRS",
+        "CRS",
+        "Fixed factor"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2355,7 +2435,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2023-f-4b"
     },
     {
       "id": "q-2013-f-0a",
@@ -2389,21 +2469,28 @@
       "year": 2013,
       "batch": "4th",
       "qNo": "0(B)",
-      "marks": 4.17,
-      "difficulty": "intermediate",
+      "marks": 6.5,
+      "difficulty": "advanced",
       "topics": [
         "Convexity",
         "Input requirement set",
+        "Quasi-concavity",
         "Production set"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-technology"
+      ],
       "text": "Prove the following statements: (6.5) (i) Convex production set implies convex input requirement set. (ii) Convex input requirement set is equivalent to quasi-concave production function.",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Prove convex $Y$ implies convex $V(y)$, noting the output coordinate is unchanged — 2.5 marks",
+        "Prove convex $V(y)$ implies $f$ quasi-concave — 2 marks",
+        "Prove the converse direction — 1.5 marks",
+        "Note that the chain does not run backwards: convex $V(y)$ does not give convex $Y$ — 0.5 marks"
+      ],
+      "answer": "## (i) A convex production set implies a convex input requirement set\n\n**Take** $x',x''\\in V(y)$. By definition the plans $(y,-x')$ and $(y,-x'')$ lie in $Y$.\n\n**Apply convexity of $Y$:** for $t\\in[0,1]$,\n\n$$t\\,(y,-x')+(1-t)\\,(y,-x'')\\in Y$$\n\n**Read the coordinates.** The output coordinate is $t\\,y+(1-t)\\,y=y$ — *unchanged*, because both plans produce the same $y$ and the weights sum to one. That is the step the proof turns on. The input coordinate is $-[t\\,x'+(1-t)x'']$.\n\nSo $\\big(y,-[tx'+(1-t)x'']\\big)\\in Y$, which says exactly\n\n$$t\\,x'+(1-t)\\,x''\\in V(y)$$\n\nHence $V(y)$ is convex. $\\blacksquare$\n\n## (ii) A convex input requirement set is equivalent to a quasi-concave production function\n\nRecall the definition: $f$ is **quasi-concave** if its upper contour sets are convex, that is if\n\n$$\\{x:f(x)\\ge y\\}\\ \\text{ is convex for every } y$$\n\n**The two objects are the same set.** By definition $V(y)=\\{x:f(x)\\ge y\\}$. So \"$V(y)$ is convex for every $y$\" and \"the upper contour sets of $f$ are convex\" are two ways of writing one statement. The equivalence is immediate — but a full-mark answer works it in both directions rather than asserting it.\n\n**($\\Rightarrow$) Convex $V(y)$ implies $f$ quasi-concave.** Take any $x',x''$ and set $y=\\min\\{f(x'),f(x'')\\}$. Then both lie in $V(y)$, which is convex by hypothesis, so $tx'+(1-t)x''\\in V(y)$, that is\n\n$$f\\big(tx'+(1-t)x''\\big)\\ge y=\\min\\{f(x'),f(x'')\\}$$\n\nwhich is the definition of quasi-concavity.\n\n**($\\Leftarrow$) $f$ quasi-concave implies convex $V(y)$.** Take $x',x''\\in V(y)$, so $f(x')\\ge y$ and $f(x'')\\ge y$. Quasi-concavity gives\n\n$$f\\big(tx'+(1-t)x''\\big)\\ge\\min\\{f(x'),f(x'')\\}\\ge y$$\n\nso the combination is in $V(y)$. $\\blacksquare$\n\n## The remark that earns the last mark\n\n**The chain does not run backwards.** Convex $V(y)$ does **not** imply convex $Y$. Convex $Y$ is equivalent to $f$ being *concave*, which is strictly stronger than quasi-concave.\n\nCobb-Douglas with $a+b>1$ is the standing example: every isoquant is nicely convex, so $V(y)$ is convex and $f$ is quasi-concave — yet the technology has increasing returns and its production set is **not** convex. Convexity of the input requirement set is a statement about **substitution along an isoquant**; convexity of the production set also constrains **returns to scale**.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §1.5 (convex technologies)"
     },
     {
       "id": "q-2013-f-2a",
@@ -2413,10 +2500,12 @@
       "batch": "4th",
       "qNo": "2(A)",
       "marks": 6.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
+        "Elasticity of substitution",
+        "TRS",
         "Cobb-Douglas",
-        "TRS"
+        "Elasticity"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2425,7 +2514,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2013-f-2b"
     },
     {
       "id": "q-2013-f-2b",
@@ -2486,7 +2575,7 @@
     },
     {
       "id": "q-2013-f-3b",
-      "chapterId": "ch1",
+      "chapterId": "ch2",
       "examType": "final",
       "year": 2013,
       "batch": "4th",
@@ -2494,8 +2583,11 @@
       "marks": 6.0,
       "difficulty": "intermediate",
       "topics": [
-        "Cobb-Douglas",
-        "Profit function"
+        "Profit maximization",
+        "Factor demand",
+        "Supply function",
+        "Profit function",
+        "Hotelling's lemma"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2504,7 +2596,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-5a"
     },
     {
       "id": "q-2013-f-5b",
@@ -2558,11 +2650,12 @@
       "batch": "3rd",
       "qNo": "1(B)",
       "marks": 4.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
         "Convexity",
+        "Production set",
         "Input requirement set",
-        "Production set"
+        "Quasi-concavity"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2571,7 +2664,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2019-f-2a"
     },
     {
       "id": "q-2012-f-1c",
@@ -2581,10 +2674,12 @@
       "batch": "3rd",
       "qNo": "1(C)",
       "marks": 4.5,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "CES",
-        "Elasticity of substitution"
+        "Elasticity of substitution",
+        "TRS",
+        "Cobb-Douglas",
+        "Elasticity"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2593,7 +2688,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2013-f-2b"
     },
     {
       "id": "q-2012-f-2a",
@@ -2648,10 +2743,12 @@
       "batch": "3rd",
       "qNo": "2(C)",
       "marks": 4.17,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
+        "Elasticity of substitution",
+        "TRS",
         "Cobb-Douglas",
-        "TRS"
+        "Elasticity"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2660,7 +2757,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2013-f-2b"
     },
     {
       "id": "q-2011-f-3c",
@@ -2693,7 +2790,10 @@
       "marks": 6.5,
       "difficulty": "intermediate",
       "topics": [
-        "Convexity"
+        "Convexity",
+        "Technology",
+        "Input requirement set",
+        "Quasi-concavity"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2702,7 +2802,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-3b"
     },
     {
       "id": "q-2011-f-4b",
@@ -2756,8 +2856,10 @@
       "marks": 3.5,
       "difficulty": "intermediate",
       "topics": [
+        "Technical rate of substitution",
         "Elasticity of substitution",
-        "TRS"
+        "Elasticity of scale",
+        "Cobb-Douglas"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2766,7 +2868,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2019-f-2b"
     },
     {
       "id": "q-2011-f-5b",
@@ -2778,9 +2880,10 @@
       "marks": 4.5,
       "difficulty": "intermediate",
       "topics": [
-        "CES",
-        "Cobb-Douglas",
-        "Leontief"
+        "Technical rate of substitution",
+        "Elasticity of substitution",
+        "Elasticity of scale",
+        "Cobb-Douglas"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2789,7 +2892,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2019-f-2b"
     },
     {
       "id": "q-2011-f-5c",
@@ -2823,18 +2926,26 @@
       "batch": "1st",
       "qNo": "2(B)",
       "marks": 6.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "General"
+        "WARP",
+        "Revealed preference",
+        "Utility maximization"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-slutsky"
+      ],
       "text": "Consider a consumer who is demanding goods 1 and 2. When the price of the goods are (2,4), he demands (1,2). When the prices are (6,3), he demands (2,1). Nothing else of significance changed. Is this consumer maximizing utility?",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "State WARP as the test to be applied — 1 mark",
+        "Cost both bundles at the first price vector and draw the inference — 1.5 marks",
+        "Repeat at the second price vector — 1.5 marks",
+        "Give the verdict, and say what it does and does not prove — 2 marks"
+      ],
+      "answer": "## The test\n\n**Weak Axiom of Revealed Preference.** If bundle $x^{1}$ was chosen when $x^{2}$ was affordable, then $x^{2}$ must **never** be chosen when $x^{1}$ is affordable.\n\nA utility maximiser cannot violate this: if they picked $x^{1}$ over an affordable $x^{2}$, then $x^{1}\\succsim x^{2}$, and that ranking cannot reverse.\n\n## The data\n\n| | prices | chosen bundle |\n|---|---|---|\n| Observation 1 | $p^{1}=(2,4)$ | $x^{1}=(1,2)$ |\n| Observation 2 | $p^{2}=(6,3)$ | $x^{2}=(2,1)$ |\n\n## Step 1 — At the first price vector\n\n$$p^{1}\\!\\cdot x^{1}=2(1)+4(2)=\\mathbf{10} \\qquad\\qquad p^{1}\\!\\cdot x^{2}=2(2)+4(1)=\\mathbf{8}$$\n\nThe consumer spent 10 and chose $x^{1}$. The bundle $x^{2}$ would have cost only 8 — comfortably **affordable**, and they did not take it.\n\n$$\\Longrightarrow\\quad x^{1}\\ \\text{is revealed preferred to}\\ x^{2}$$\n\n## Step 2 — At the second price vector\n\n$$p^{2}\\!\\cdot x^{2}=6(2)+3(1)=\\mathbf{15} \\qquad\\qquad p^{2}\\!\\cdot x^{1}=6(1)+3(2)=\\mathbf{12}$$\n\nNow they spent 15 and chose $x^{2}$, while $x^{1}$ would have cost only 12 — again **affordable**, again rejected.\n\n$$\\Longrightarrow\\quad x^{2}\\ \\text{is revealed preferred to}\\ x^{1}$$\n\n## Verdict\n\n$$x^{1}\\succ x^{2}\\quad\\text{and}\\quad x^{2}\\succ x^{1}$$\n\nBoth directions hold, which is a direct contradiction. **WARP is violated, so this consumer is not maximising a well-behaved utility function.**\n\nNote how little the argument needed: no utility function, no indifference curves, no differentiability — just four multiplications and two comparisons. That is the power of revealed preference as a *test*.\n\n## What the result does and does not establish\n\n**It does** rule out utility maximisation over a stable preference ordering. No such ordering can rank each bundle strictly above the other.\n\n**It does not** prove the consumer is irrational in any everyday sense. The inconsistency is equally well explained by something the model holds fixed having changed — tastes shifting between the observations, a different context, or a good being mismeasured. The question's phrase *\"nothing else of significance changed\"* is doing essential work: it is precisely that assumption which converts an observed inconsistency into a verdict about maximisation.\n\n**The general lesson.** WARP is a **necessary** condition. Passing it does not prove utility maximisation — for three or more observations you also need the chains to be free of cycles, which is SARP — but failing it is decisive, and this consumer fails it.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §8.1 (the weak axiom)"
     },
     {
       "id": "q-2010-f-4a",
@@ -2846,8 +2957,10 @@
       "marks": 6.25,
       "difficulty": "intermediate",
       "topics": [
+        "Technical rate of substitution",
         "Elasticity of substitution",
-        "TRS"
+        "Elasticity of scale",
+        "Cobb-Douglas"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2856,7 +2969,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2019-f-2b"
     },
     {
       "id": "q-2010-f-4b",
@@ -2979,8 +3092,11 @@
       "marks": 6.5,
       "difficulty": "intermediate",
       "topics": [
+        "Profit maximization",
+        "Factor demand",
+        "Supply function",
         "Profit function",
-        "Factor demand"
+        "Hotelling's lemma"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2989,7 +3105,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-5a"
     },
     {
       "id": "q-2024-f-6b",
@@ -3040,16 +3156,25 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Profit function"
+        "Profit function",
+        "Homogeneity",
+        "Cobb-Douglas",
+        "Factor demand"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-profit"
+      ],
       "text": "Calculate the profit function for the technology $y=x^{a}$ (for $0<a<1)$ and verify that it is homogenous in (p, w).",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Solve the FOC for the factor demand — 1.5 marks",
+        "Substitute back for the supply and the profit function — 1.5 marks",
+        "Verify homogeneity of degree one in $(p,w)$ — 1.5 marks",
+        "Say what homogeneity means economically — 0.5 marks"
+      ],
+      "answer": "## Setting up\n\n$$\\max_{x\\ge0}\\;\\pi=p\\,x^{a}-w\\,x,\\qquad 0<a<1$$\n\nThe restriction $a<1$ gives decreasing returns, which is what makes an interior maximum exist at all.\n\n## Step 1 — Factor demand\n\n$$\\frac{d\\pi}{dx}=p\\,a\\,x^{a-1}-w=0 \\qquad\\Longrightarrow\\qquad x^{a-1}=\\frac{w}{ap}$$\n\nRaise both sides to the power $1/(a-1)$, remembering that $a-1<0$ so the inequality direction of the exponent flips the fraction:\n\n$$\\boxed{\\;x(p,w)=\\left(\\frac{a\\,p}{w}\\right)^{\\frac{1}{1-a}}\\;}$$\n\n**Check the second-order condition:** $d^{2}\\pi/dx^{2}=p\\,a(a-1)x^{a-2}<0$ since $a<1$. A maximum, as required.\n\n## Step 2 — Output supply\n\n$$y(p,w)=x^{a}=\\left(\\frac{a\\,p}{w}\\right)^{\\frac{a}{1-a}}$$\n\n## Step 3 — The profit function\n\n$$\\pi=p\\,y-w\\,x =p\\left(\\frac{ap}{w}\\right)^{\\frac{a}{1-a}}-w\\left(\\frac{ap}{w}\\right)^{\\frac{1}{1-a}}$$\n\nFactor out the common term $\\left(\\frac{ap}{w}\\right)^{\\frac{a}{1-a}}$ and simplify:\n\n$$\\boxed{\\;\\pi(p,w)=(1-a)\\;p^{\\frac{1}{1-a}}\\left(\\frac{a}{w}\\right)^{\\frac{a}{1-a}}\\;}$$\n\n## Step 4 — Verifying homogeneity of degree one\n\nReplace $p$ by $tp$ and $w$ by $tw$:\n\n$$\\pi(tp,tw)=(1-a)\\,(tp)^{\\frac{1}{1-a}}\\left(\\frac{a}{tw}\\right)^{\\frac{a}{1-a}} =(1-a)\\,t^{\\frac{1}{1-a}}p^{\\frac{1}{1-a}}\\cdot t^{-\\frac{a}{1-a}}\\left(\\frac{a}{w}\\right)^{\\frac{a}{1-a}}$$\n\nCollect the powers of $t$:\n\n$$t^{\\frac{1}{1-a}-\\frac{a}{1-a}}=t^{\\frac{1-a}{1-a}}=t^{1}$$\n\nHence\n\n$$\\pi(tp,tw)=t\\,\\pi(p,w)\\qquad\\blacksquare$$\n\n**Numerical check.** With $a=\\tfrac12$, $p=3$, $w=2$: $\\pi=1.125$. Scaling both prices by $t=5$ gives $\\pi(15,10)=5.625=5\\times1.125$. ✓\n\n## What homogeneity means\n\nDoubling *every* price — the output price and the input price together — doubles profit but changes **nothing real**. Note that $x(p,w)$ and $y(p,w)$ are homogeneous of degree **zero**: the firm makes exactly the same physical plan.\n\nThis is the firm-side counterpart of the consumer's no-money-illusion property. Only **relative** prices drive behaviour; the absolute price level is a pure unit of account. A general inflation that lifts all prices proportionally leaves the firm's real decision untouched and simply rescales the money value of its profit.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §2.2 (the profit function)"
     },
     {
       "id": "q-2023-i2-3-2",
@@ -3061,7 +3186,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Profit function"
+        "Profit function",
+        "Homogeneity",
+        "Cobb-Douglas",
+        "Factor demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3070,7 +3198,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2023-i2-3"
     },
     {
       "id": "q-2023-i2-4",
@@ -3082,7 +3210,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "WAPM"
+        "WAPM",
+        "Revealed profitability",
+        "Recoverability",
+        "Profit maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3091,7 +3222,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-6b"
     },
     {
       "id": "q-2023-i2-4-2",
@@ -3103,7 +3234,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "WAPM"
+        "WAPM",
+        "Revealed profitability",
+        "Recoverability",
+        "Profit maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3112,7 +3246,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-6b"
     },
     {
       "id": "q-2023-f-5a",
@@ -3124,8 +3258,11 @@
       "marks": 6.5,
       "difficulty": "intermediate",
       "topics": [
+        "Profit maximization",
+        "Factor demand",
+        "Supply function",
         "Profit function",
-        "Factor demand"
+        "Hotelling's lemma"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3134,7 +3271,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-5a"
     },
     {
       "id": "q-2023-f-5b",
@@ -3146,7 +3283,10 @@
       "marks": 6.0,
       "difficulty": "intermediate",
       "topics": [
-        "WAPM"
+        "WAPM",
+        "Revealed profitability",
+        "Recoverability",
+        "Profit maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3155,7 +3295,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-6b"
     },
     {
       "id": "q-2022-i2-1a",
@@ -3165,9 +3305,12 @@
       "batch": "13th",
       "qNo": "1(A)",
       "marks": 2.5,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
-        "Economic profit"
+        "Economic profit",
+        "Opportunity cost",
+        "Profit maximization",
+        "Technology"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3176,7 +3319,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2022-f-5ab"
     },
     {
       "id": "q-2022-i2-1b",
@@ -3209,7 +3352,11 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "First-order condition"
+        "Profit maximization",
+        "First-order condition",
+        "Second-order condition",
+        "Isoprofit",
+        "Marginal revenue product"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3218,7 +3365,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-6a"
     },
     {
       "id": "q-2022-i2-3",
@@ -3250,9 +3397,12 @@
       "batch": "13th",
       "qNo": "5(A)",
       "marks": 3.0,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
-        "Economic profit"
+        "Economic profit",
+        "Opportunity cost",
+        "Profit maximization",
+        "Technology"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3261,7 +3411,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2022-f-5ab"
     },
     {
       "id": "q-2022-f-5ab",
@@ -3304,9 +3454,12 @@
       "batch": "13th",
       "qNo": "5(B)",
       "marks": 3.0,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
-        "General"
+        "Economic profit",
+        "Opportunity cost",
+        "Profit maximization",
+        "Technology"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3315,7 +3468,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2022-f-5ab"
     },
     {
       "id": "q-2022-f-5c",
@@ -3352,9 +3505,11 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Convexity",
+        "Profit maximization",
+        "Factor demand",
+        "Supply function",
         "Profit function",
-        "Factor demand"
+        "Hotelling's lemma"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3363,7 +3518,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-5a"
     },
     {
       "id": "q-2021-f-6a",
@@ -3436,7 +3591,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "WAPM",
+        "Revealed profitability",
+        "Recoverability",
+        "Profit maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3445,7 +3603,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-6b"
     },
     {
       "id": "q-2019-f-3a",
@@ -3478,7 +3636,10 @@
       "marks": 8.5,
       "difficulty": "intermediate",
       "topics": [
-        "WAPM"
+        "WAPM",
+        "Revealed profitability",
+        "Recoverability",
+        "Profit maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3487,7 +3648,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-6b"
     },
     {
       "id": "q-2019-f-4b",
@@ -3499,7 +3660,11 @@
       "marks": 4.0,
       "difficulty": "intermediate",
       "topics": [
-        "Factor demand"
+        "Profit maximization",
+        "Factor demand",
+        "Supply function",
+        "Profit function",
+        "Hotelling's lemma"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3508,7 +3673,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-5a"
     },
     {
       "id": "q-2018-f-1b",
@@ -3520,7 +3685,11 @@
       "marks": 6.5,
       "difficulty": "intermediate",
       "topics": [
-        "First-order condition"
+        "Profit maximization",
+        "First-order condition",
+        "Second-order condition",
+        "Isoprofit",
+        "Marginal revenue product"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3529,7 +3698,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-6a"
     },
     {
       "id": "q-2018-f-3a",
@@ -3541,7 +3710,11 @@
       "marks": 6.5,
       "difficulty": "intermediate",
       "topics": [
-        "Profit function"
+        "Profit maximization",
+        "Factor demand",
+        "Supply function",
+        "Profit function",
+        "Hotelling's lemma"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3550,7 +3723,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-5a"
     },
     {
       "id": "q-2018-f-3b",
@@ -3560,18 +3733,27 @@
       "batch": "9th",
       "qNo": "3(B)",
       "marks": 6.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Returns to scale"
+        "Returns to scale",
+        "Profit maximization",
+        "Existence",
+        "Uniqueness"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-profit"
+      ],
       "text": "Show that a profit-maximizing plan with typically not exist for a technology that exhibits constant returns to scale as long as there is some output that yields a positive profit. Also explain that even if a solution exists, it may not be unique. (6)",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Set up the scaling argument for constant returns — 1.5 marks",
+        "Show profit is unbounded unless maximum profit is exactly zero — 1.5 marks",
+        "Explain the non-uniqueness when profit is zero — 1.5 marks",
+        "Note the same argument is worse under increasing returns, and what firms do about it — 1.5 marks"
+      ],
+      "answer": "## The claim\n\nUnder **constant returns to scale**, if any feasible plan earns strictly positive profit, then no profit-maximising plan exists. And when a maximum does exist, it is generally **not unique**.\n\n## Existence\n\n**Step 1 — Scaling stays feasible.** Under CRS the production set is a cone: if $(y,-x)\\in Y$ then so is $(ty,-tx)$ for every $t>0$. Doubling every input doubles output, and the doubled plan is still technically possible.\n\n**Step 2 — Profit scales with it.** Profit is linear in the plan, so\n\n$$\\pi(t)=p\\,(ty)-w\\cdot(tx)=t\\,\\big[p\\,y-w\\cdot x\\big]=t\\,\\pi(1)$$\n\n**Step 3 — The conclusion.** Suppose some feasible plan has $\\pi(1)>0$. Then\n\n$$\\lim_{t\\to\\infty}\\pi(t)=\\lim_{t\\to\\infty}t\\,\\pi(1)=+\\infty$$\n\nProfit can be made larger without limit simply by operating the same plan at a larger scale. **No plan maximises profit**, because whatever plan you name, doubling it beats it. $\\blacksquare$\n\n**So under CRS only three cases arise:**\n\n| Best available $\\pi$ | What happens |\n|---|---|\n| $\\pi>0$ | no maximum — profit unbounded |\n| $\\pi<0$ | shut down; $y=0$ is optimal |\n| $\\pi=0$ | a maximum exists, at every scale |\n\n**The economic reading.** Long-run competitive equilibrium under CRS therefore *requires* zero profit. If price exceeded minimum average cost, existing firms would expand without limit and entrants would appear. The zero-profit condition is not an assumption bolted on — it is what has to hold for the firm's problem to have an answer at all.\n\n## Uniqueness\n\nTake the surviving case $\\pi=0$. Then by Step 2 **every** scaling of that plan also earns exactly zero:\n\n$$\\pi(t)=t\\cdot0=0\\qquad\\text{for all }t>0$$\n\nEvery point along the ray is a maximiser. The solution is a **whole ray, not a point**, so supply is a **correspondence** rather than a function — the firm is indifferent about its own size, and the individual firm's scale is indeterminate even though the industry's total output is pinned down by demand.\n\n## Increasing returns is worse, and what firms do about it\n\nUnder IRS the argument bites harder: profit grows **faster** than proportionally, $\\pi(t)>t\\,\\pi(1)$, so expansion is attractive even when profit is currently negative, provided it turns positive at some scale. Not even the zero-profit case is safe.\n\nThe upshot is that **competitive price-taking behaviour is inconsistent with increasing returns**. A firm with IRS expands until it is large relative to the market, at which point it can no longer treat price as given, and the competitive model must be replaced by one with market power. That is why natural monopoly arises in industries with large fixed costs and falling average cost.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §2.1 (profit maximization and returns to scale)"
     },
     {
       "id": "q-2017-f-3b",
@@ -3607,7 +3789,10 @@
       "marks": 6.0,
       "difficulty": "intermediate",
       "topics": [
-        "Returns to scale"
+        "Returns to scale",
+        "Profit maximization",
+        "Existence",
+        "Uniqueness"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3616,7 +3801,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2018-f-3b"
     },
     {
       "id": "q-2016-f-3a",
@@ -3670,7 +3855,11 @@
       "marks": 4.5,
       "difficulty": "intermediate",
       "topics": [
-        "Second-order condition"
+        "Profit maximization",
+        "First-order condition",
+        "Second-order condition",
+        "Isoprofit",
+        "Marginal revenue product"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3679,7 +3868,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-6a"
     },
     {
       "id": "q-2014-f-4b",
@@ -3840,18 +4029,27 @@
       "batch": "5th",
       "qNo": "6(C)",
       "marks": 4.5,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Profit function"
+        "Profit function",
+        "Corner solution",
+        "Shutdown",
+        "Logarithmic technology"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-profit"
+      ],
       "text": "Consider the technology described by $y=0$ for $x\\le1$ and $y=lnx$ for $x>1$. Calculate the profit function for this technology. Explain your answer. (4.5)",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Set up the interior problem and solve the FOC — 1.5 marks",
+        "Substitute back to get the interior profit — 1 mark",
+        "Compare with shutting down, and find the threshold price — 1.5 marks",
+        "State the profit function as the maximum of the two branches — 0.5 marks"
+      ],
+      "answer": "## The technology\n\n$$y=\\begin{cases}0 & x\\le1\\\\[2pt] \\ln x & x>1\\end{cases}$$\n\nThe kink matters: the firm produces nothing until it has used one unit of input, so **shutting down is always available** and the answer will have two branches.\n\n## Step 1 — The interior problem\n\nFor $x>1$ the firm solves\n\n$$\\max_{x}\\;\\pi=p\\ln x-wx$$\n\n**First-order condition.**\n\n$$\\frac{d\\pi}{dx}=\\frac{p}{x}-w=0\\qquad\\Longrightarrow\\qquad \\boxed{\\;x^{*}=\\frac{p}{w}\\;}$$\n\n**Second-order condition.** $d^{2}\\pi/dx^{2}=-p/x^{2}<0$, so this is a maximum. The log technology is strictly concave everywhere, which is why the interior solution is well behaved.\n\n**Output supply.** $y^{*}=\\ln x^{*}=\\ln(p/w)$.\n\n## Step 2 — Interior profit\n\nSubstituting $x^{*}=p/w$:\n\n$$\\pi=p\\ln\\!\\left(\\frac{p}{w}\\right)-w\\cdot\\frac{p}{w} =p\\ln\\!\\left(\\frac{p}{w}\\right)-p =p\\left[\\ln\\!\\left(\\frac{p}{w}\\right)-1\\right]$$\n\n## Step 3 — Compare with shutting down\n\nProducing nothing gives $\\pi=0$. So the firm operates only if the interior profit is positive:\n\n$$p\\left[\\ln\\!\\left(\\frac{p}{w}\\right)-1\\right]>0 \\quad\\Longleftrightarrow\\quad \\ln\\!\\left(\\frac{p}{w}\\right)>1 \\quad\\Longleftrightarrow\\quad \\boxed{\\;\\frac{p}{w}>e\\;}$$\n\n**This is the answer's real content.** The firm shuts down unless the price is more than $e\\approx2.718$ times the input price. A positive marginal product at $x^{*}$ is *not* enough — the firm must also cover the input it had to sink before producing anything at all.\n\n## The profit function\n\n$$\\pi(p,w)=\\begin{cases} p\\left[\\ln\\!\\left(\\dfrac{p}{w}\\right)-1\\right] & \\text{if } p>e\\,w\\\\[10pt] 0 & \\text{if } p\\le e\\,w \\end{cases}$$\n\n**Worked check.** With $w=1$: at $p=2$ the interior expression gives $-0.61$, so the firm shuts down and $\\pi=0$. At $p=3$ it gives $+0.30>0$, so it operates. At $p=10$, $\\pi=13.03$. The switch happens between $p=2$ and $p=3$, exactly where $p/w$ crosses $e$.\n\n**Two properties worth noting.** $\\pi$ is **continuous** at the threshold — both branches equal zero there, so there is no jump. And it is **convex** in $p$, as every profit function must be: the flat zero branch and the rising curved branch meet without the function ever bending the wrong way.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §2.2 (the profit function)\n\n⚠ The supplied *Selected Chapters* PDF holds only ch. 1, 2, 7 and 8; this material sits in ch. 3–6 and needs the full text."
     },
     {
       "id": "q-2013-f-4a",
@@ -3885,9 +4083,12 @@
       "batch": "4th",
       "qNo": "4(B)",
       "marks": 4.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Fluctuating prices"
+        "Profit function",
+        "Convexity",
+        "Fluctuating prices",
+        "Jensen's inequality"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3896,7 +4097,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2014-f-6a"
     },
     {
       "id": "q-2013-f-4c",
@@ -3908,7 +4109,10 @@
       "marks": 4.5,
       "difficulty": "intermediate",
       "topics": [
-        "Profit function"
+        "Profit function",
+        "Corner solution",
+        "Shutdown",
+        "Logarithmic technology"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3917,7 +4121,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2014-f-6c"
     },
     {
       "id": "q-2012-f-3a",
@@ -4168,7 +4372,10 @@
       "marks": 4.17,
       "difficulty": "intermediate",
       "topics": [
-        "Profit function"
+        "Profit function",
+        "Corner solution",
+        "Shutdown",
+        "Logarithmic technology"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4177,7 +4384,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2014-f-6c"
     },
     {
       "id": "q-2010-f-5a",
@@ -4211,7 +4418,10 @@
       "marks": 3.0,
       "difficulty": "intermediate",
       "topics": [
-        "WAPM"
+        "WAPM",
+        "Revealed profitability",
+        "Recoverability",
+        "Profit maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4220,7 +4430,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-6b"
     },
     {
       "id": "q-2010-f-6a",
@@ -4232,7 +4442,11 @@
       "marks": 6.25,
       "difficulty": "intermediate",
       "topics": [
-        "Profit function"
+        "Profit maximization",
+        "Factor demand",
+        "Supply function",
+        "Profit function",
+        "Hotelling's lemma"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4241,7 +4455,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-5a"
     },
     {
       "id": "q-2010-f-6b",
@@ -4272,10 +4486,12 @@
       "batch": "16th",
       "qNo": "6(B)",
       "marks": 6.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
+        "Cost minimization",
+        "Cost function",
         "Cobb-Douglas",
-        "Cost function"
+        "Conditional factor demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4284,7 +4500,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2023-f-6a"
     },
     {
       "id": "q-2025-f-6a",
@@ -4429,10 +4645,12 @@
       "batch": "13th",
       "qNo": "6(A)",
       "marks": 6.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
+        "Cost minimization",
+        "Cost function",
         "Cobb-Douglas",
-        "Cost function"
+        "Conditional factor demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4441,7 +4659,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2023-f-6a"
     },
     {
       "id": "q-2022-f-6b",
@@ -4498,7 +4716,9 @@
       "difficulty": "intermediate",
       "topics": [
         "WACM",
-        "Factor demand"
+        "Cost minimization",
+        "Revealed preference",
+        "Recoverability"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4507,7 +4727,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2023-f-6b"
     },
     {
       "id": "q-2021-f-7",
@@ -4517,9 +4737,12 @@
       "batch": "12th",
       "qNo": "7",
       "marks": 12.5,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Second-order condition"
+        "Cost minimization",
+        "Second-order condition",
+        "Isoquant",
+        "TRS"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4528,7 +4751,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-6a"
     },
     {
       "id": "q-2020-fa-6",
@@ -4540,7 +4763,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "WACM"
+        "WACM",
+        "Cost minimization",
+        "Revealed preference",
+        "Recoverability"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4549,7 +4775,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2023-f-6b"
     },
     {
       "id": "q-2019-f-4a",
@@ -4626,9 +4852,12 @@
       "batch": "9th",
       "qNo": "4(B)",
       "marks": 6.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Second-order condition"
+        "Cost minimization",
+        "Second-order condition",
+        "Isoquant",
+        "TRS"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4637,7 +4866,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-6a"
     },
     {
       "id": "q-2017-f-4a",
@@ -4649,7 +4878,10 @@
       "marks": 6.5,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "Cost minimization",
+        "Second-order condition",
+        "Isoquant",
+        "TRS"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4658,7 +4890,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-6a"
     },
     {
       "id": "q-2016-f-4b",
@@ -4668,10 +4900,12 @@
       "batch": "7th",
       "qNo": "4(B)",
       "marks": 6.25,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
         "WACM",
-        "Factor demand"
+        "Cost minimization",
+        "Revealed preference",
+        "Recoverability"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4680,7 +4914,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2023-f-6b"
     },
     {
       "id": "q-2014-f-7a",
@@ -4714,9 +4948,12 @@
       "batch": "5th",
       "qNo": "7(B)",
       "marks": 6.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Second-order condition"
+        "Cost minimization",
+        "Second-order condition",
+        "Isoquant",
+        "TRS"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4725,7 +4962,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-6a"
     },
     {
       "id": "q-2013-f-5a",
@@ -4759,22 +4996,31 @@
       "batch": "4th",
       "qNo": "6(A)",
       "marks": 6.5,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Envelope theorem"
+        "Envelope theorem",
+        "Short-run cost",
+        "Long-run cost",
+        "Cost function"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-cost"
+      ],
       "text": "Explain the relationship between the short-run cost curves and the long-run cost curves (with the help of the envelope theorem). (6.5)",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Define short-run and long-run cost, and state the inequality between them — 1.5 marks",
+        "Show the tangency at the plant size that is optimal for that output — 2 marks",
+        "Apply the envelope theorem to get the LAC as the lower envelope — 2 marks",
+        "State the consequence for the minimum points of the SAC curves — 1 mark"
+      ],
+      "answer": "## The two cost concepts\n\n**Short run.** Some input is fixed — call it plant size $k$. The firm minimises cost over the variable inputs only:\n\n$$c_{s}(w,y,k)=\\min_{x}\\;\\{w\\cdot x\\;:\\;f(x,k)=y\\}$$\n\n**Long run.** Everything varies, including $k$:\n\n$$c(w,y)=\\min_{k}\\;c_{s}(w,y,k)$$\n\n**The inequality is immediate.** The long run minimises over a strictly larger set of choices, so\n\n$$c(w,y)\\le c_{s}(w,y,k)\\qquad\\text{for every }k$$\n\nwith **equality** at the $k$ that is optimal for that particular $y$. Write that optimal plant size $k^{*}(y)$.\n\n## The tangency\n\nAt $y_0$, choose the plant $k^{*}(y_0)$. Then $c(w,y_0)=c_{s}(w,y_0,k^{*}(y_0))$ — the two curves **touch**. Away from $y_0$ the same fixed plant is no longer the right size, so the short-run curve rises above the long-run one. Touching at one point and lying above elsewhere is exactly **tangency**.\n\nDividing by $y$ carries the relationship to the average curves: $LAC(y)\\le SAC(y,k)$, with equality at $y_0$.\n\n**So the LAC is the lower envelope of the family of SAC curves** — one SAC for each plant size, and the LAC tracing the bottom of them all. It is often called the *planning curve*: it tells you the cheapest way to produce each output once you are free to choose the plant.\n\n## Where the envelope theorem enters\n\nDifferentiate the long-run cost with respect to output. Since $k^{*}(y)$ is itself chosen optimally,\n\n$$\\frac{dc(w,y)}{dy}=\\frac{\\partial c_{s}(w,y,k)}{\\partial y}\\bigg|_{k=k^{*}(y)}+\\underbrace{\\frac{\\partial c_{s}}{\\partial k}\\cdot\\frac{dk^{*}}{dy}}_{=\\,0}$$\n\nThe second term vanishes because $k^{*}$ minimises $c_s$ over $k$, so $\\partial c_{s}/\\partial k=0$ there. Hence\n\n$$\\boxed{\\;LMC(y)=SMC\\big(y,k^{*}(y)\\big)\\;}$$\n\n**Long-run marginal cost equals short-run marginal cost at the optimal plant.** This is the envelope theorem in its purest form: adjusting the plant is worth nothing *to first order*, because the plant was already the right size.\n\n## The consequence students most often get wrong\n\nThe LAC is tangent to each SAC — but **not at the SAC's own minimum**, except at one point.\n\n- On the **falling** stretch of the LAC, tangency occurs to the **left** of the SAC minimum.\n- On the **rising** stretch, tangency occurs to the **right** of it.\n- Only at the **minimum of the LAC** do the two minima coincide, and that plant is the *optimal scale*.\n\nThe reason is geometric: tangency requires the slopes to match, and where the LAC slopes downward the SAC must be sloping downward too — which cannot be at its own lowest point.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., cost-curves chapter.\n\n⚠ The supplied *Selected Chapters* PDF holds only ch. 1, 2, 7 and 8; this material sits in ch. 3–6 and needs the full text."
     },
     {
       "id": "q-2012-f-5a",
-      "chapterId": "ch4",
+      "chapterId": "ch1",
       "examType": "final",
       "year": 2012,
       "batch": "3rd",
@@ -4783,7 +5029,10 @@
       "difficulty": "intermediate",
       "topics": [
         "Leontief",
-        "Cost function"
+        "Input requirement set",
+        "Isoquant",
+        "Transformation function",
+        "Production possibilities set"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4792,7 +5041,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2016-f-1b"
     },
     {
       "id": "q-2012-f-5b",
@@ -4804,7 +5053,10 @@
       "marks": 4.5,
       "difficulty": "intermediate",
       "topics": [
-        "Second-order condition"
+        "Cost minimization",
+        "Second-order condition",
+        "Isoquant",
+        "TRS"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4813,7 +5065,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-6a"
     },
     {
       "id": "q-2012-f-5c",
@@ -4846,7 +5098,10 @@
       "marks": 6.0,
       "difficulty": "intermediate",
       "topics": [
-        "Envelope theorem"
+        "Envelope theorem",
+        "Short-run cost",
+        "Long-run cost",
+        "Cost function"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4855,7 +5110,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2013-f-6a"
     },
     {
       "id": "q-2011-f-8a",
@@ -4865,10 +5120,12 @@
       "batch": "2nd",
       "qNo": "8(A)",
       "marks": 6.5,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
+        "Cost minimization",
+        "Cost function",
         "Cobb-Douglas",
-        "Cost function"
+        "Conditional factor demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4877,7 +5134,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2023-f-6a"
     },
     {
       "id": "q-2011-f-8b",
@@ -4889,7 +5146,10 @@
       "marks": 6.0,
       "difficulty": "intermediate",
       "topics": [
-        "WACM"
+        "WACM",
+        "Cost minimization",
+        "Revealed preference",
+        "Recoverability"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4898,7 +5158,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2023-f-6b"
     },
     {
       "id": "q-2010-f-7a",
@@ -4929,9 +5189,12 @@
       "batch": "1st",
       "qNo": "7(B)",
       "marks": 6.25,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Cost function"
+        "Cost minimization",
+        "Cost function",
+        "Cobb-Douglas",
+        "Conditional factor demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4940,7 +5203,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2023-f-6a"
     },
     {
       "id": "q-2010-f-8a",
@@ -5036,8 +5299,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Local nonsatiation",
-        "Preferences"
+        "Duality",
+        "Utility maximization",
+        "Expenditure minimization",
+        "Local nonsatiation"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5046,7 +5311,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2019-f-5c"
     },
     {
       "id": "q-2025-i1b-1",
@@ -5058,8 +5323,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Local nonsatiation",
-        "Preferences"
+        "Duality",
+        "Utility maximization",
+        "Expenditure minimization",
+        "Local nonsatiation"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5068,7 +5335,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2019-f-5c"
     },
     {
       "id": "q-2025-m-1",
@@ -5081,9 +5348,12 @@
       "difficulty": "intermediate",
       "topics": [
         "Cobb-Douglas",
+        "Duality",
+        "Marshallian demand",
+        "Hicksian demand",
         "Indirect utility",
         "Expenditure function",
-        "Marshallian demand"
+        "Money metric utility"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5092,7 +5362,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-2"
     },
     {
       "id": "q-2025-f-1a",
@@ -5102,9 +5372,11 @@
       "batch": "16th",
       "qNo": "1(A)",
       "marks": 2.0,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
-        "Local nonsatiation"
+        "Local nonsatiation",
+        "Preferences",
+        "Indifference curves"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5113,7 +5385,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-1ab"
     },
     {
       "id": "q-2025-f-1b",
@@ -5148,7 +5420,9 @@
       "marks": 2.5,
       "difficulty": "intermediate",
       "topics": [
-        "Indirect utility"
+        "Indirect utility",
+        "Quasiconvexity",
+        "Properties of demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5157,7 +5431,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-1cd"
     },
     {
       "id": "q-2025-f-1d",
@@ -5332,7 +5606,10 @@
       "marks": 3.75,
       "difficulty": "intermediate",
       "topics": [
-        "Roy's identity"
+        "Roy's identity",
+        "Indirect utility",
+        "Envelope theorem",
+        "Marshallian demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5341,7 +5618,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2011-f-1b"
     },
     {
       "id": "q-2025-m-3b",
@@ -5375,9 +5652,12 @@
       "difficulty": "intermediate",
       "topics": [
         "Cobb-Douglas",
+        "Duality",
+        "Marshallian demand",
+        "Hicksian demand",
         "Indirect utility",
         "Expenditure function",
-        "Marshallian demand"
+        "Money metric utility"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5386,7 +5666,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-2"
     },
     {
       "id": "q-2025-i1b-4",
@@ -5440,9 +5720,12 @@
       "batch": "16th",
       "qNo": "6(A)",
       "marks": 3.75,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Expenditure function"
+        "Expenditure function",
+        "Concavity",
+        "Shephard's lemma",
+        "Properties of demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5451,7 +5734,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-mid15-3"
     },
     {
       "id": "q-2024-f-0a",
@@ -5461,10 +5744,13 @@
       "batch": "15th",
       "qNo": "0(A)",
       "marks": 6.0,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
         "Preferences",
-        "Continuity"
+        "Completeness",
+        "Transitivity",
+        "Continuity",
+        "Utility function"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5473,7 +5759,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-1a"
     },
     {
       "id": "q-2024-f-0b",
@@ -5533,7 +5819,9 @@
       "marks": 3.75,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "Indirect utility",
+        "Quasiconvexity",
+        "Properties of demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5542,7 +5830,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-1cd"
     },
     {
       "id": "q-2024-m-1b",
@@ -5552,12 +5840,11 @@
       "batch": "15th",
       "qNo": "1(B)",
       "marks": 3.75,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "MRS",
-        "Convexity",
         "Indirect utility",
-        "Quasiconvexity"
+        "Quasiconvexity",
+        "Properties of demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5566,7 +5853,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-1cd"
     },
     {
       "id": "q-2024-f-1b",
@@ -5615,9 +5902,12 @@
       "difficulty": "intermediate",
       "topics": [
         "Cobb-Douglas",
+        "Duality",
+        "Marshallian demand",
+        "Hicksian demand",
         "Indirect utility",
         "Expenditure function",
-        "Marshallian demand"
+        "Money metric utility"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5626,7 +5916,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-2"
     },
     {
       "id": "q-mid15-3",
@@ -5720,9 +6010,12 @@
       "difficulty": "intermediate",
       "topics": [
         "Cobb-Douglas",
+        "Duality",
+        "Marshallian demand",
+        "Hicksian demand",
         "Indirect utility",
         "Expenditure function",
-        "Marshallian demand"
+        "Money metric utility"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5731,7 +6024,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-2"
     },
     {
       "id": "q-2023-f-0",
@@ -5741,10 +6034,13 @@
       "batch": "14th",
       "qNo": "0",
       "marks": 6.25,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
         "Preferences",
-        "Continuity"
+        "Completeness",
+        "Transitivity",
+        "Continuity",
+        "Utility function"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5753,7 +6049,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-1a"
     },
     {
       "id": "q-2023-f-0b",
@@ -5833,8 +6129,8 @@
       "difficulty": "intermediate",
       "topics": [
         "Local nonsatiation",
-        "Marshallian demand",
-        "Hicksian demand"
+        "Preferences",
+        "Indifference curves"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5843,7 +6139,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-1ab"
     },
     {
       "id": "q-2023-i1-2",
@@ -5879,9 +6175,12 @@
       "difficulty": "intermediate",
       "topics": [
         "Cobb-Douglas",
+        "Duality",
+        "Marshallian demand",
+        "Hicksian demand",
         "Indirect utility",
         "Expenditure function",
-        "Marshallian demand"
+        "Money metric utility"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5890,7 +6189,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-2"
     },
     {
       "id": "q-2023-i1-3",
@@ -5902,8 +6201,9 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Marshallian demand",
-        "Hicksian demand"
+        "Local nonsatiation",
+        "Preferences",
+        "Indifference curves"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5912,7 +6212,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-1ab"
     },
     {
       "id": "q-2023-m-3",
@@ -5946,10 +6246,12 @@
       "batch": "14th",
       "qNo": "4",
       "marks": 5.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Convexity",
-        "Indirect utility"
+        "Expenditure function",
+        "Concavity",
+        "Shephard's lemma",
+        "Properties of demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5958,7 +6260,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-mid15-3"
     },
     {
       "id": "q-2022-f-0",
@@ -5970,9 +6272,13 @@
       "marks": 12.5,
       "difficulty": "intermediate",
       "topics": [
+        "Cobb-Douglas",
+        "Duality",
+        "Marshallian demand",
+        "Hicksian demand",
         "Indirect utility",
         "Expenditure function",
-        "Hicksian demand"
+        "Money metric utility"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5981,7 +6287,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-2"
     },
     {
       "id": "q-2022-i1-0",
@@ -5991,9 +6297,11 @@
       "batch": "13th",
       "qNo": "0",
       "marks": 5.0,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
-        "Local nonsatiation"
+        "Local nonsatiation",
+        "Preferences",
+        "Indifference curves"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6002,7 +6310,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-1ab"
     },
     {
       "id": "q-2022-m-0a",
@@ -6014,7 +6322,9 @@
       "marks": 2.5,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "Indirect utility",
+        "Quasiconvexity",
+        "Properties of demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6023,7 +6333,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-1cd"
     },
     {
       "id": "q-2022-m-0b",
@@ -6035,7 +6345,10 @@
       "marks": 2.5,
       "difficulty": "intermediate",
       "topics": [
-        "MRS"
+        "MRS",
+        "Marginal utility",
+        "Ordinal utility",
+        "Monotonic transformation"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6044,7 +6357,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2013-f-7ab"
     },
     {
       "id": "q-2022-m-0c",
@@ -6056,6 +6369,12 @@
       "marks": 2.5,
       "difficulty": "intermediate",
       "topics": [
+        "Cobb-Douglas",
+        "Duality",
+        "Marshallian demand",
+        "Hicksian demand",
+        "Indirect utility",
+        "Expenditure function",
         "Money metric utility"
       ],
       "repeats": [],
@@ -6065,7 +6384,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-2"
     },
     {
       "id": "q-2022-i1-2",
@@ -6077,7 +6396,11 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "Consumer equilibrium",
+        "MRS",
+        "First-order condition",
+        "Second-order condition",
+        "Utility maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6086,7 +6409,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-1b"
     },
     {
       "id": "q-2022-m-2",
@@ -6099,9 +6422,12 @@
       "difficulty": "intermediate",
       "topics": [
         "Cobb-Douglas",
+        "Duality",
+        "Marshallian demand",
+        "Hicksian demand",
         "Indirect utility",
         "Expenditure function",
-        "Marshallian demand"
+        "Money metric utility"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6110,7 +6436,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-2"
     },
     {
       "id": "q-2022-f-2a",
@@ -6143,9 +6469,9 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Convexity",
         "Indirect utility",
-        "Quasiconvexity"
+        "Quasiconvexity",
+        "Properties of demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6154,7 +6480,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-1cd"
     },
     {
       "id": "q-2022-i1-4",
@@ -6206,9 +6532,11 @@
       "batch": "12th",
       "qNo": "1",
       "marks": 5.0,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
-        "Local nonsatiation"
+        "Local nonsatiation",
+        "Preferences",
+        "Indifference curves"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6217,7 +6545,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-1ab"
     },
     {
       "id": "q-2021-m-1",
@@ -6438,7 +6766,11 @@
       "marks": 10.0,
       "difficulty": "intermediate",
       "topics": [
-        "First-order condition"
+        "Consumer equilibrium",
+        "MRS",
+        "First-order condition",
+        "Second-order condition",
+        "Utility maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6447,7 +6779,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-1b"
     },
     {
       "id": "q-2020-fa-7",
@@ -6471,27 +6803,6 @@
       "sameAs": ""
     },
     {
-      "id": "q-2019-f-0",
-      "chapterId": "ch7",
-      "examType": "final",
-      "year": 2019,
-      "batch": "10th",
-      "qNo": "0",
-      "marks": 12.5,
-      "difficulty": "intermediate",
-      "topics": [
-        "General"
-      ],
-      "repeats": [],
-      "theoryIds": [],
-      "text": "[Fotal Marks: 50; Answer any 4 out of the following 7 questions; Each question carries equal marks; $4\\times12.5=50$; Total time: 3 Hours]",
-      "answerPoints": [],
-      "answer": "",
-      "answerBn": "",
-      "source": "",
-      "sameAs": ""
-    },
-    {
       "id": "q-2019-m-1",
       "chapterId": "ch7",
       "examType": "midterm",
@@ -6499,9 +6810,13 @@
       "batch": "10th",
       "qNo": "1",
       "marks": 10.0,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
-        "Preferences"
+        "Preferences",
+        "Completeness",
+        "Transitivity",
+        "Continuity",
+        "Utility function"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6510,7 +6825,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-1a"
     },
     {
       "id": "q-2019-m-3a",
@@ -6564,10 +6879,11 @@
       "batch": "10th",
       "qNo": "5(A)",
       "marks": 4.5,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Convexity",
-        "Indirect utility"
+        "Indirect utility",
+        "Quasiconvexity",
+        "Properties of demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6576,7 +6892,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-1cd"
     },
     {
       "id": "q-2019-f-5b",
@@ -6586,9 +6902,12 @@
       "batch": "10th",
       "qNo": "5(B)",
       "marks": 4.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Expenditure function"
+        "Expenditure function",
+        "Concavity",
+        "Shephard's lemma",
+        "Properties of demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6597,7 +6916,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-mid15-3"
     },
     {
       "id": "q-2019-m-5b",
@@ -6609,7 +6928,9 @@
       "marks": 1.25,
       "difficulty": "intermediate",
       "topics": [
-        "Convexity"
+        "Indirect utility",
+        "Quasiconvexity",
+        "Properties of demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6618,7 +6939,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-1cd"
     },
     {
       "id": "q-2019-f-5c",
@@ -6677,7 +6998,7 @@
     },
     {
       "id": "q-2019-f-6c",
-      "chapterId": "ch7",
+      "chapterId": "ch1",
       "examType": "final",
       "year": 2019,
       "batch": "10th",
@@ -6685,7 +7006,9 @@
       "marks": 4.17,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "WARP",
+        "Revealed preference",
+        "Utility maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6694,7 +7017,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2010-f-2b"
     },
     {
       "id": "q-2019-f-7b",
@@ -6770,7 +7093,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Roy's identity"
+        "Roy's identity",
+        "Indirect utility",
+        "Envelope theorem",
+        "Marshallian demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6779,7 +7105,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2011-f-1b"
     },
     {
       "id": "q-2018-i1-3",
@@ -6813,9 +7139,12 @@
       "difficulty": "intermediate",
       "topics": [
         "Cobb-Douglas",
+        "Duality",
+        "Marshallian demand",
+        "Hicksian demand",
         "Indirect utility",
         "Expenditure function",
-        "Marshallian demand"
+        "Money metric utility"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6824,7 +7153,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-2"
     },
     {
       "id": "q-2018-f-5b",
@@ -6880,10 +7209,11 @@
       "batch": "8th",
       "qNo": "5(A)",
       "marks": 6.5,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
         "Local nonsatiation",
-        "Slutsky equation"
+        "Preferences",
+        "Indifference curves"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6892,7 +7222,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-1ab"
     },
     {
       "id": "q-2017-f-6b",
@@ -6947,9 +7277,12 @@
       "difficulty": "intermediate",
       "topics": [
         "Cobb-Douglas",
+        "Duality",
+        "Marshallian demand",
+        "Hicksian demand",
         "Indirect utility",
         "Expenditure function",
-        "Marshallian demand"
+        "Money metric utility"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6958,7 +7291,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-2"
     },
     {
       "id": "q-2016-f-5b",
@@ -6982,27 +7315,6 @@
       "sameAs": ""
     },
     {
-      "id": "q-2014-f-0",
-      "chapterId": "ch7",
-      "examType": "final",
-      "year": 2014,
-      "batch": "5th",
-      "qNo": "0",
-      "marks": 12.5,
-      "difficulty": "intermediate",
-      "topics": [
-        "General"
-      ],
-      "repeats": [],
-      "theoryIds": [],
-      "text": "diversty of hak [Total Marks: 50; Answer any 4 out of the following 7 questions; Each question carries equal marks; 4 12.5-50; Total time: 3 Hours]",
-      "answerPoints": [],
-      "answer": "",
-      "answerBn": "",
-      "source": "",
-      "sameAs": ""
-    },
-    {
       "id": "q-2014-f-1a",
       "chapterId": "ch7",
       "examType": "final",
@@ -7013,9 +7325,12 @@
       "difficulty": "intermediate",
       "topics": [
         "Cobb-Douglas",
+        "Duality",
+        "Marshallian demand",
+        "Hicksian demand",
         "Indirect utility",
         "Expenditure function",
-        "Hicksian demand"
+        "Money metric utility"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7024,7 +7339,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-2"
     },
     {
       "id": "q-2014-f-1b",
@@ -7043,27 +7358,6 @@
       "repeats": [],
       "theoryIds": [],
       "text": "Explain that, the \"expenditure function\" is simply the dual problem of the \"indirect utility function\". How are they connected with each other? Explain.",
-      "answerPoints": [],
-      "answer": "",
-      "answerBn": "",
-      "source": "",
-      "sameAs": ""
-    },
-    {
-      "id": "q-2013-f-0",
-      "chapterId": "ch7",
-      "examType": "final",
-      "year": 2013,
-      "batch": "4th",
-      "qNo": "0",
-      "marks": 4.17,
-      "difficulty": "intermediate",
-      "topics": [
-        "General"
-      ],
-      "repeats": [],
-      "theoryIds": [],
-      "text": "of Chaka Totalks: 50: Answer any 4 4 out of the following 7 questions; Each question carries equal marks; 4 12.5-50; Total time: 3 Hours]",
       "answerPoints": [],
       "answer": "",
       "answerBn": "",
@@ -7103,7 +7397,10 @@
       "marks": 3.0,
       "difficulty": "intermediate",
       "topics": [
-        "MRS"
+        "MRS",
+        "Marginal utility",
+        "Ordinal utility",
+        "Monotonic transformation"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7112,7 +7409,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2013-f-7ab"
     },
     {
       "id": "q-2013-f-7ab",
@@ -7435,10 +7732,13 @@
       "marks": 6.25,
       "difficulty": "intermediate",
       "topics": [
+        "Cobb-Douglas",
+        "Duality",
+        "Marshallian demand",
+        "Hicksian demand",
         "Indirect utility",
         "Expenditure function",
-        "Marshallian demand",
-        "Hicksian demand"
+        "Money metric utility"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7447,7 +7747,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-2"
     },
     {
       "id": "q-2010-f-1b",
@@ -7501,9 +7801,13 @@
       "batch": "16th",
       "qNo": "2(A)",
       "marks": 6.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Giffen good"
+        "Giffen good",
+        "Slutsky equation",
+        "Inferior good",
+        "Law of demand",
+        "Market equilibrium"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7512,7 +7816,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-3a"
     },
     {
       "id": "q-2025-f-2b",
@@ -7609,16 +7913,27 @@
       "marks": 6.5,
       "difficulty": "intermediate",
       "topics": [
-        "Properties of demand"
+        "Properties of demand",
+        "Homogeneity",
+        "Budget balance",
+        "Slutsky equation"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-slutsky",
+        "th-duality"
+      ],
       "text": "State the properties of the demand function, and explain these properties.",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Homogeneity of degree zero, with what it rules out — 1.5 marks",
+        "Budget balance / adding-up from local nonsatiation — 1.5 marks",
+        "Symmetry of the Slutsky matrix — 1.5 marks",
+        "Negative semidefiniteness, and the law of demand it contains — 1.5 marks",
+        "Say why the four together matter: they are the testable content — 0.5 marks"
+      ],
+      "answer": "Demand theory does not merely say the consumer \"chooses well\". It says demand must satisfy **four properties**, and these are the whole observable content of the theory — anything satisfying them is consistent with utility maximisation, and anything violating them is not.\n\n## 1. Homogeneous of degree zero in $(p,m)$\n\n$$x_i(tp,\\,tm)=x_i(p,m)\\qquad\\text{for all }t>0$$\n\n**Why.** Scaling all prices and income by the same factor leaves the budget set $\\{x:tp\\cdot x\\le tm\\}$ literally unchanged, since $t$ cancels. The feasible set is the same, so the best point in it is the same.\n\n**What it rules out — money illusion.** A consumer whose demand changed when every price and their income doubled would be responding to the *numbers* rather than to what they can actually buy. Only **relative** prices and **real** income matter.\n\n## 2. Budget balance (adding-up)\n\n$$\\sum_i p_i\\,x_i(p,m)=m$$\n\n**Why.** Local nonsatiation. If any income were left unspent, there would be a strictly better bundle within reach, contradicting optimality. This is what licenses writing the constraint as an equality throughout.\n\nDifferentiating it gives two restrictions used constantly in applied work:\n\n$$\\sum_i p_i\\frac{\\partial x_i}{\\partial m}=1,\\qquad\\qquad \\sum_i p_i\\frac{\\partial x_i}{\\partial p_j}+x_j=0$$\n\n— the **Engel aggregation** and **Cournot aggregation** conditions.\n\n## 3. The Slutsky matrix is symmetric\n\nWith $s_{ij}=\\partial h_i/\\partial p_j$ the compensated price effects,\n\n$$s_{ij}=s_{ji}$$\n\n**Why.** By Shephard's lemma $h_i=\\partial e/\\partial p_i$, so $s_{ij}=\\partial^{2}e/\\partial p_j\\partial p_i$ — the Hessian of the expenditure function. Young's theorem makes the order of differentiation irrelevant.\n\n**What it says.** The compensated effect of good $j$'s price on good $i$ equals the effect of good $i$'s price on good $j$. It is a genuinely testable restriction, and it is not obvious — nothing in casual intuition requires it.\n\n## 4. The Slutsky matrix is negative semidefinite\n\n$$z^{\\mathsf T}S\\,z\\le0\\qquad\\text{for every }z$$\n\n**Why.** $e(p,u)$ is **concave in prices**, and a concave function has a negative semidefinite Hessian.\n\n**What it contains.** Take $z$ as the $i$-th unit vector: $s_{ii}\\le0$, so the **compensated own-price effect is never positive**. This is the law of demand in its only exact form — it holds for Hicksian demand always, and for Marshallian demand except when a strong inferior-good income effect intervenes, which is the Giffen case.\n\n## Why the four together are the point\n\nThey are the **integrability conditions**. A demand system that is homogeneous of degree zero, satisfies the budget identity, and has a symmetric negative semidefinite Slutsky matrix can be *generated* by some well-behaved preference ordering — and that ordering can be recovered.\n\nSo the four properties are not a checklist bolted onto the theory. They are exactly what utility maximisation implies about behaviour, and exactly what behaviour must show for utility maximisation to be a possible explanation of it. That is why an econometrician imposes them, and why finding one violated is evidence against the model rather than against the data.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §8.2 (properties of demand functions)"
     },
     {
       "id": "q-mid16-4",
@@ -7688,7 +8003,10 @@
       "marks": 7.5,
       "difficulty": "intermediate",
       "topics": [
-        "Slutsky equation"
+        "Slutsky equation",
+        "Substitution effect",
+        "Income effect",
+        "Duality"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7697,7 +8015,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-2b"
     },
     {
       "id": "q-2025-m-6b",
@@ -7770,7 +8088,10 @@
       "marks": 6.0,
       "difficulty": "intermediate",
       "topics": [
-        "Properties of demand"
+        "Properties of demand",
+        "Homogeneity",
+        "Budget balance",
+        "Slutsky equation"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7779,7 +8100,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-3a"
     },
     {
       "id": "q-2024-f-3a",
@@ -7869,9 +8190,12 @@
       "batch": "15th",
       "qNo": "6",
       "marks": 7.5,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Slutsky equation"
+        "Slutsky equation",
+        "Substitution effect",
+        "Income effect",
+        "Duality"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7880,7 +8204,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-2b"
     },
     {
       "id": "q-2023-f-2b",
@@ -7914,9 +8238,13 @@
       "batch": "14th",
       "qNo": "3(A)",
       "marks": 4.17,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Giffen good"
+        "Giffen good",
+        "Slutsky equation",
+        "Inferior good",
+        "Law of demand",
+        "Market equilibrium"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7925,7 +8253,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-3a"
     },
     {
       "id": "q-2023-f-3b",
@@ -8049,7 +8377,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Properties of demand"
+        "Properties of demand",
+        "Homogeneity",
+        "Budget balance",
+        "Slutsky equation"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8058,7 +8389,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-3a"
     },
     {
       "id": "q-2023-m-5b",
@@ -8071,7 +8402,9 @@
       "difficulty": "intermediate",
       "topics": [
         "WARP",
-        "Preferences"
+        "SARP",
+        "Revealed preference",
+        "Transitivity"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8080,7 +8413,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2014-f-2b"
     },
     {
       "id": "q-2022-f-2b",
@@ -8178,10 +8511,11 @@
       "batch": "13th",
       "qNo": "5",
       "marks": 5.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Preferences",
-        "Recoverability"
+        "Revealed preference",
+        "Recoverability",
+        "Indifference curve"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8190,7 +8524,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2016-f-6b"
     },
     {
       "id": "q-2021-i1-3",
@@ -8202,7 +8536,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Properties of demand"
+        "Properties of demand",
+        "Homogeneity",
+        "Budget balance",
+        "Slutsky equation"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8211,7 +8548,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-3a"
     },
     {
       "id": "q-2021-f-3a",
@@ -8223,7 +8560,10 @@
       "marks": 12.5,
       "difficulty": "intermediate",
       "topics": [
-        "Slutsky equation"
+        "Slutsky equation",
+        "Substitution effect",
+        "Income effect",
+        "Duality"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8232,7 +8572,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-2b"
     },
     {
       "id": "q-2021-i1-4",
@@ -8267,7 +8607,10 @@
       "marks": 10.0,
       "difficulty": "intermediate",
       "topics": [
-        "Properties of demand"
+        "Properties of demand",
+        "Homogeneity",
+        "Budget balance",
+        "Slutsky equation"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8276,7 +8619,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-3a"
     },
     {
       "id": "q-2020-fa-8",
@@ -8404,7 +8747,9 @@
       "difficulty": "intermediate",
       "topics": [
         "WARP",
-        "Preferences"
+        "SARP",
+        "Revealed preference",
+        "Transitivity"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8413,7 +8758,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2014-f-2b"
     },
     {
       "id": "q-2019-f-7a",
@@ -8425,7 +8770,10 @@
       "marks": 6.5,
       "difficulty": "intermediate",
       "topics": [
-        "Properties of demand"
+        "Properties of demand",
+        "Homogeneity",
+        "Budget balance",
+        "Slutsky equation"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8434,7 +8782,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-3a"
     },
     {
       "id": "q-2018-i1-4",
@@ -8494,7 +8842,10 @@
       "marks": 6.5,
       "difficulty": "intermediate",
       "topics": [
-        "Properties of demand"
+        "Properties of demand",
+        "Homogeneity",
+        "Budget balance",
+        "Slutsky equation"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8503,7 +8854,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-3a"
     },
     {
       "id": "q-2018-f-7b",
@@ -8539,7 +8890,10 @@
       "marks": 6.0,
       "difficulty": "intermediate",
       "topics": [
-        "Slutsky equation"
+        "Slutsky equation",
+        "Substitution effect",
+        "Income effect",
+        "Duality"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8548,7 +8902,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-2b"
     },
     {
       "id": "q-2017-f-6a",
@@ -8560,7 +8914,10 @@
       "marks": 4.0,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "Properties of demand",
+        "Homogeneity",
+        "Budget balance",
+        "Slutsky equation"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8569,7 +8926,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-3a"
     },
     {
       "id": "q-2016-f-6a",
@@ -8651,7 +9008,10 @@
       "marks": 6.0,
       "difficulty": "intermediate",
       "topics": [
-        "Slutsky equation"
+        "Slutsky equation",
+        "Substitution effect",
+        "Income effect",
+        "Duality"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8660,7 +9020,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-2b"
     },
     {
       "id": "q-2014-f-2b",
@@ -8748,7 +9108,10 @@
       "marks": 6.5,
       "difficulty": "intermediate",
       "topics": [
-        "Slutsky equation"
+        "Slutsky equation",
+        "Substitution effect",
+        "Income effect",
+        "Duality"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8757,7 +9120,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-2b"
     },
     {
       "id": "q-2011-f-2b",
@@ -8769,8 +9132,9 @@
       "marks": 6.0,
       "difficulty": "intermediate",
       "topics": [
-        "Preferences",
-        "Recoverability"
+        "Revealed preference",
+        "Recoverability",
+        "Indifference curve"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8779,7 +9143,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2016-f-6b"
     },
     {
       "id": "q-2010-f-2a",
@@ -8791,7 +9155,10 @@
       "marks": 6.5,
       "difficulty": "intermediate",
       "topics": [
-        "Properties of demand"
+        "Properties of demand",
+        "Homogeneity",
+        "Budget balance",
+        "Slutsky equation"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8800,7 +9167,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-3a"
     },
     {
       "id": "q-2010-f-3a",
