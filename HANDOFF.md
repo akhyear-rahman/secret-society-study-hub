@@ -32,19 +32,24 @@ cannot rot. Python 3.13 is used only for the local server and the tooling.
 
 | Course | Chapters | Theories | Questions | Answered | Notes | Recall cards |
 |---|---|---|---|---|---|---|
-| **ECON 401** Advanced Microeconomics-I | 5 | 2 | 4 *(seeded, not real)* | 4 | 1 | 8 |
+| **ECON 401** Advanced Microeconomics-I | 5 | 6 | 15 | 15 | 1 | 8 |
 | **ECON 403** Advanced Macroeconomics-I | 8 | 0 | 0 | 0 | 5 | 0 |
 | **ECON 405** Advanced Econometrics-I | 7 | 0 | 0 | 0 | 0 | 0 |
 | **ECON 409** Environmental Economics | 21 | 10 | **108** | 19 | 16 | 43 |
 | **ECON 412** Research Methodology | 13 | 0 | 0 | 0 | 0 | 0 |
 | Improvement ×2 | — | — | — | — | — | — |
-| **Total** | **54** | **12** | **112** | **23** | **22** | **51** |
+| **Total** | **54** | **16** | **123** | **34** | **22** | **51** |
 
-All 23 answers carry a `source` naming the book and chapter they follow.
+All 34 answers carry a `source` naming the book and chapter they follow.
 
-**ECON 401's four questions are invented examples, not real past papers.** The
-years and batches are fabricated. The course carries `"sampleContent": true`,
-which shows a warning banner. Delete the flag once real papers replace them.
+**ECON 401 is now built from 31 real papers, 2010–2025** — 15 finals, 10
+in-course tests and 6 midterms. The `sampleContent` flag is gone. The four
+originally-seeded questions had real topics but invented years, so they were
+re-anchored to the sittings they actually come from rather than discarded.
+
+**ECON 401 answers use LaTeX and generated figures.** See §5a. Every algebraic
+result they assert is machine-checked — `python tools/verify_micro.py`, 29
+checks, currently all passing.
 
 **ECON 409's 17 environmental-accounting items** are `examType: "practice"`
 with no year or marks — from a compiled "likely questions" list, not a sat
@@ -66,9 +71,16 @@ paper. They filter out cleanly when you want real past questions only.
    order you work in is the right one.
 3. **Confirm Perman is actually the ECON 409 textbook** before writing answers
    in its notation. It was inferred, not stated — see §4.
-4. **ECON 403, 405, 412 have a syllabus but no theories or questions.** No past
+4. **ECON 401: 11 of ~56 canonical question groups are answered.** The highest
+   frequency ones are done; the next band is Roy's identity (5 papers),
+   properties of the indirect utility and expenditure functions (7 each),
+   Giffen (7), Hicks vs Slutsky compensation (7), DRS as restricted CRS (6),
+   Leontief cost function, WACM (6). Run the frequency counter in
+   `tools/build/` to regenerate the ranking. Four re-anchored answers are still
+   in the old plain-text style and want LaTeX; the four new theories have empty
+   bodies and no recall cards.
+5. **ECON 403, 405, 412 have a syllabus but no theories or questions.** No past
    papers sourced for any of them. The single biggest gap.
-5. **ECON 401 needs real past papers** to replace the seeded four.
 6. **The two improvement courses** are registered placeholders.
 7. **Exam dates** are not set. `#/plan` shows a countdown once they are;
    `setExamDate(courseId, iso)` in `store.js` backs it.
@@ -135,6 +147,12 @@ instead. Expect the same and use the browser.
 
 ### Inferred, not stated — verify before relying on them
 
+- **Varian for ECON 401 is CONFIRMED, no longer inferred.** Read from the
+  student's Drive: *Varian Microeconomic Analysis(Selected Chapters).pdf*
+  (folder `1CEY77vMwnl7qeVl9BZ1GNQZxUdAEGfq4`). **That PDF holds only ch. 1, 2,
+  7 and 8.** Cost minimisation, the cost function, Shephard, Hotelling and WAPM
+  are examined but are in ch. 3–6 and are *not* in the file — three answers say
+  so on their face. Sections present: 1.1–1.9, 2.1–2.2, 7.1–7.5, 8.1, 8.3–8.9.
 - **Perman, Ma, McGilvray & Common** as the ECON 409 textbook, matched from the
   syllabus's own *"Chapter 5: Welfare Economics and environment"* and
   *"Pollution Control: Targets (up to 6.11)"*. **All 14 ECON 409 answers cite
@@ -195,6 +213,30 @@ tools/
 - **Everything is local.** No account, no server, no analytics. Progress lives
   in `localStorage`; export a backup from `#/progress`.
 - **Quest-map geometry is computed from the viewport**, not fixed and scaled.
+
+### 5a. Maths, figures and machine-checked answers  (added for ECON 401)
+
+- **`vendor/katex/`** — KaTeX 0.16.11 vendored, fonts included, ~600 KB. Not a
+  CDN: the app must render formulas offline. Listed in `sw.js` as `MATH`.
+- **`assets/js/math.js`** — lazy-loads KaTeX and hydrates `.math` nodes *after*
+  render, so `md()` stays synchronous. `wireMath()` renders what is visible and
+  defers the inside of a collapsed `<details>` until it opens — a question bank
+  holds every answer in the DOM at once, which is thousands of formulas.
+- **`markdown.js`** — `$…$` and `$$…$$`, plus `![caption](content/figures/x.svg)`.
+  **Math is extracted before HTML-escaping and restored after**; leave that
+  ordering alone or `rac{a}{b}` gets eaten by the `_` → `<em>` rule. Math
+  inside fenced code and backticks is deliberately untouched.
+- **`tools/build/figstyle.py` + `figures_micro.py`** — matplotlib/networkx to
+  SVG. Structural colour is drawn in a sentinel and swapped for `currentColor`,
+  so figures inherit the page's text colour and read in both themes. Intrinsic
+  `pt` sizes are stripped so they scale from `viewBox` + CSS.
+- **`tools/verify_micro.py`** — symbolic checks of the algebra. Symbolic first,
+  then sampling at 40 random points, because `powsimp` stalls on nested
+  fractional powers and reports "not equal" when it means "cannot decide". Six
+  true results are only provable the second way.
+- **Reading comfort** — `focus` (spotlight one block, key **D**), `readFont`,
+  `readSpacing`. The dim rule is *"dim the siblings of the marked block"*,
+  guarded by `:has(.focus-on)`, so nothing is hidden when script does not run.
 
 ### Schema fields that carry more weight than they look
 
