@@ -1,6 +1,7 @@
 import { getCourse, allCourses } from '../content.js';
 import { esc, shuffle, DIFFS, DIFF_LABEL, clamp } from '../util.js';
 import { md } from '../markdown.js';
+import { hydrateMath } from '../math.js';
 import { pageHead, empty, selectEl, diffTag } from '../ui.js';
 import { state, reviewCard, cardDue, cardMastery, award } from '../store.js';
 import { setQuery } from '../router.js';
@@ -105,13 +106,17 @@ export default async function recall({ params, query }) {
             <span class="tag">${esc(c.source || '')}</span>
             <span class="tag">${mast}% mastered</span>
           </div>
-          <div class="q">${esc(c.q)}</div>
+          <div class="q prose">${md(c.q)}</div>
           ${revealed ? `<div class="a prose">${md(c.a)}</div>` : ''}`;
         controls.innerHTML = revealed
           ? `<div class="grade">${GRADES.map((g) =>
               `<button class="${g.cls}" data-g="${g.g}">${g.label}<br><small class="muted">${g.hint}</small></button>`).join('')}</div>`
           : `<button class="btn primary wide" id="reveal" style="margin-top:16px">Show answer</button>
              <button class="btn ghost wide" id="skip" style="margin-top:8px">Skip</button>`;
+        // The card is rewritten on every reveal and every advance, long after
+        // the route rendered — so enhance() has already run and will not run
+        // again. Hydrate here or a maths card shows its raw TeX source.
+        hydrateMath(flash);
         wire();
       }
 

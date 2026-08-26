@@ -470,6 +470,11 @@ a.card:active{transform:translateY(-1px)}
   padding:38px 32px;min-height:270px;display:flex;flex-direction:column;justify-content:center;
   box-shadow:var(--sh-2);animation:pop .3s var(--ease-out) both}
 .flash .q{font-size:19.5px;font-weight:640;line-height:1.55;text-align:center;letter-spacing:-.01em}
+/* The prompt is rendered as markdown so a maths card can carry notation.
+   Strip the paragraph margins md() introduces, or the card sits off-centre. */
+.flash .q.prose>p{margin:0}
+.flash .q.prose>p+p{margin-top:.5em}
+.flash .q .math-display{margin:.4em 0}
 .flash .a{margin-top:22px;padding-top:22px;border-top:1px dashed var(--line-2);text-align:left;
   animation:rise .3s var(--ease-out) both}
 .grade{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:17px}

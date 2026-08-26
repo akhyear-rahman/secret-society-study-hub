@@ -276,9 +276,15 @@
       "id": "th-technology",
       "chapterId": "ch1",
       "title": "Describing Technology: Sets, Isoquants and Returns to Scale",
-      "summary": "",
-      "body": "",
-      "bodyBn": "",
+      "titleBn": "প্রযুক্তির বর্ণনা: সেট, সমোৎপাদন রেখা ও মাত্রাগত ফলন",
+      "difficulty": "intermediate",
+      "importance": 5,
+      "tags": [
+        "technology",
+        "production",
+        "firm",
+        "CES"
+      ],
       "questionIds": [
         "q-2016-f-1b",
         "q-2018-f-1a",
@@ -289,49 +295,334 @@
         "q-2024-f-5a",
         "q-2025-f-3b"
       ],
-      "source": ""
+      "exerciseIds": [],
+      "keyTerms": [
+        {
+          "en": "Production set",
+          "bn": "উৎপাদন সেট",
+          "def": "Y — every technically feasible plan (y, −x), outputs positive and inputs negative."
+        },
+        {
+          "en": "Input requirement set",
+          "bn": "উপকরণ প্রয়োজনীয়তা সেট",
+          "def": "V(y) = {x : f(x) ≥ y} — every bundle that can produce at least y. Includes wasteful bundles."
+        },
+        {
+          "en": "Isoquant",
+          "bn": "সমোৎপাদন রেখা",
+          "def": "Q(y) — the boundary of V(y): bundles producing exactly y."
+        },
+        {
+          "en": "Technical rate of substitution",
+          "bn": "কারিগরি প্রতিস্থাপন হার",
+          "def": "TRS — the isoquant's slope, equal to minus the ratio of marginal products."
+        },
+        {
+          "en": "Elasticity of substitution",
+          "bn": "প্রতিস্থাপন স্থিতিস্থাপকতা",
+          "def": "σ — the percentage change in the input ratio per one percent change in the TRS. Unit-free."
+        },
+        {
+          "en": "Returns to scale",
+          "bn": "মাত্রাগত ফলন",
+          "def": "How output responds when every input is scaled by the same factor t."
+        }
+      ],
+      "formulas": [
+        "V(y) = { x : f(x) ≥ y }          Q(y) = boundary of V(y)",
+        "f(x) = max { y : x ∈ V(y) }      T(y, x) = 0  on the frontier",
+        "TRS = − MP₁ / MP₂ = (dx₂/dx₁) along an isoquant",
+        "σ = d ln(x₂/x₁) / d ln |TRS|      e(x) = Σ (∂f/∂xᵢ)(xᵢ/f)",
+        "CES:  y = [a₁x₁^ρ + a₂x₂^ρ]^(1/ρ)      σ = 1/(1−ρ)"
+      ],
+      "bn": "## মূল ধারণা\n\nএকটি ফার্ম মুনাফা সর্বোচ্চ করার বা ব্যয় সর্বনিম্ন করার আগে আমাদের জানা দরকার — **সে আসলে কী কী করতে সক্ষম**। অধ্যায় ১ সেই ভাষাটাই তৈরি করে দেয়, এবং ECON 401-এর প্রায় প্রতিটি প্রশ্নপত্র এখান থেকেই শুরু হয়।\n\nশুরুটা একটি *সেট* দিয়ে, ফাংশন দিয়ে নয়। {{Production Set}} `Y` ধারণ করে কারিগরিভাবে সম্ভব প্রতিটি পরিকল্পনা `(y, −x)` — উৎপাদন ধনাত্মক, উপকরণ ঋণাত্মক। এই চিহ্নের নিয়মের কারণেই একটিমাত্র গুণফল `p·y` দিয়ে আয় বিয়োগ ব্যয় প্রকাশ করা যায়। বাকি সব ধারণা আসলে এই একই সেটকে ভিন্ন কোণ থেকে দেখা।\n\n## একই প্রযুক্তির চারটি বর্ণনা\n\n- **{{Input Requirement Set}}** — `V(y) = {x : f(x) ≥ y}`, অর্তাৎ যেসব উপকরণ-গুচ্ছ দিয়ে *অন্তত* `y` উৎপাদন সম্ভব।\n- **{{Isoquant}}** — `V(y)`-এর সীমানা: ঠিক `y` উৎপাদনকারী গুচ্ছগুলো।\n- **{{Production Function}}** — `f(x) = max {y : x ∈ V(y)}`।\n- **{{Transformation Function}}** — সীমানায় `T(y, x) = 0`।\n\nদুটি সূক্ষ্ম বিষয়ে নম্বর থাকে। প্রথমত, `V(y)`-এ **`≥`** চিহ্ন আছে, তাই এতে *অপচয়কারী* গুচ্ছও অন্তর্ভুক্ত — এটি সমোৎপাদন রেখার উপরের পুরো অঞ্চল। দ্বিতীয়ত, `f`-এর সংজ্ঞায় **max** আছে, অর্থাৎ উৎপাদন ফাংশন ধরেই নেয় ফার্ম উপকরণ নষ্ট করছে না; এটি কেবল দক্ষ সীমানার বর্ণনা।\n\n{{Transformation Function}}-কে অপ্রয়োজনীয় মনে হতে পারে, যতক্ষণ না ফার্ম **একাধিক পণ্য** উৎপাদন করে। তখন একটিমাত্র `y`-এর জন্য সমাধান করা যায় না, \"উৎপাদন ফাংশন\" বলে কিছু আর থাকে না, আর `T(y, x) = 0` ই একমাত্র বর্ণনা হিসেবে টিকে থাকে।\n\n## দুটি অনুমান, এবং তাদের পার্থক্য\n\n**{{Monotonicity}} বা {{Free Disposal}}** — `x ∈ V(y)` এবং `x′ ≥ x` হলে `x′ ∈ V(y)`। বাড়তি উপকরণ কখনো *ক্ষতি* করে না, কারণ ফার্ম সেটি অব্যবহৃত রেখে দিতে পারে। যেখানে বর্জ্য অপসারণ ব্যয়বহুল, সেখানে এই অনুমান ভেঙে পড়ে।\n\n**{{Convexity}}** — `x` ও `x′` উভয়ে `V(y)`-তে থাকলে তাদের ভারিত গড়ও `V(y)`-তে থাকবে। এর স্বাভাবিক যুক্তি হলো {{Time-sharing}}: সময়ের `t` অংশে এক কৌশল আর `1−t` অংশে আরেক কৌশল চালালে উপকরণ হয় ভারিত গড়, অথচ উৎপাদন থাকে `y`-ই।\n\n> **দুটোকে গুলিয়ে ফেলবেন না।** {{Monotonicity}} বলে `V(y)` কোন *দিকে* বিস্তৃত; {{Convexity}} বলে তার *আকৃতি* কেমন। আর কোনোটিই {{Returns to Scale}} সম্পর্কে কিছু বলে না — `a+b>1` সহ কব-ডগলাস প্রযুক্তির সমোৎপাদন রেখা পুরোপুরি অবতল, অথচ তাতে {{Increasing Returns}} আছে।\n\n## প্রতিস্থাপন মাপা, আর মাত্রা মাপা\n\nএকই সমোৎপাদন রেখার উপরে `dy = 0` বসিয়ে পাই {{TRS}} `= −MP₁/MP₂`। কিন্তু {{TRS}}-এর *একক* আছে — শ্রম ঘণ্টায় না দিনে মাপছেন তার উপর মান বদলায়। তাই দরকার হয় {{Elasticity of Substitution}}:\n\n$$\\sigma=\\frac{d\\ln(x_2/x_1)}{d\\ln|TRS|}$$\n\nযা শতকরা পরিবর্তনের অনুপাত, ফলে এককমুক্ত।\n\nসমোৎপাদন রেখাগুলোর *মধ্যে* চলাচল মাপে {{Returns to Scale}}। মনে রাখবেন, `σ` আর মাত্রাগত ফলন দুটো আলাদা প্রশ্নের উত্তর দেয়: `σ` উপকরণের **মিশ্রণ** নিয়ে, আর মাত্রাগত ফলন কার্যক্রমের **আকার** নিয়ে।\n\n## {{CES}} পরিবার সবকিছু একসূত্রে বাঁধে\n\n$$y=\\big[a_1x_1^{\\rho}+a_2x_2^{\\rho}\\big]^{1/\\rho},\\qquad \\sigma=\\frac{1}{1-\\rho}$$\n\nকব-ডগলাস আর লিওনতিয়েফ আলাদা কোনো তত্ত্ব নয়। তারা এই একই প্রযুক্তি, কেবল `ρ→0` আর `ρ→−∞` অবস্থায়; আর `ρ=1` দিলে পাওয়া যায় {{Perfect Substitutes}}। একটিমাত্র প্যারামিটার, তিনটি চেনা আকৃতি — আর `σ` হলো সেই একক সংখ্যা যা বলে দেয় আপনি কোনটির দিকে তাকিয়ে আছেন।",
+      "en": "## The core idea\n\nBefore a firm can maximise profit or minimise cost, we need a language for **what it is able to do**. Chapter 1 supplies that language, and almost every ECON 401 paper opens with a question drawn from it.\n\nThe starting point is a *set*, not a function. The **production set** $Y$ collects every technically feasible plan $(y,-x)$ — outputs positive, inputs negative, so that a single inner product $p\\cdot y$ is revenue minus cost. Everything else in the chapter is a different way of looking at that one set.\n\n## Four descriptions of one technology\n\n| Term | Object | Definition |\n|---|---|---|\n| Input requirement set | a set | $V(y)=\\{x:f(x)\\ge y\\}$ |\n| Isoquant | its boundary | $f(x)=y$ |\n| Production function | a function | $f(x)=\\max\\{y:x\\in V(y)\\}$ |\n| Transformation function | an equation | $T(y,x)=0$ on the frontier |\n\nTwo details carry marks. $V(y)$ uses **$\\ge$**, so it contains *wasteful* bundles that produce more than $y$ — it is the whole region on and above the isoquant. And $f$ is defined with a **max**, so the production function already assumes the firm is not throwing inputs away; it describes only the efficient frontier.\n\nThe transformation function looks redundant until a firm produces **several outputs**. Then you cannot solve for a single $y$, \"the\" production function stops existing, and $T(y,x)=0$ is the only description left.\n\n## The two assumptions, and the difference between them\n\n**Monotonicity — free disposal.** If $x\\in V(y)$ and $x'\\ge x$, then $x'\\in V(y)$. Extra inputs never *hurt*, because the firm can leave them idle. It fails where disposal is costly.\n\n**Convexity.** If $x,x'\\in V(y)$, then $tx+(1-t)x'\\in V(y)$: mixtures of feasible plans are feasible. The usual justification is **time-sharing** — run one technique for a fraction $t$ of the period and the other for $1-t$, and the input bundle is the weighted average while output is still $y$.\n\n> **Keep them apart.** Monotonicity is about the *direction* $V(y)$ extends; convexity is about its *shape*. And neither says anything about returns to scale: Cobb-Douglas with $a+b>1$ has perfectly convex input requirement sets *and* increasing returns.\n\n## Measuring substitution, and measuring scale\n\n**Along one isoquant — the TRS.** Set $dy=0$ in the total differential:\n\n$$TRS=\\frac{dx_2}{dx_1}\\bigg|_{y}=-\\frac{MP_1}{MP_2}$$\n\nThe TRS has *units*, so it is a poor measure of how substitutable two inputs really are. That is why we also need:\n\n$$\\sigma=\\frac{d\\ln(x_2/x_1)}{d\\ln|TRS|}$$\n\nwhich compares percentage changes and is therefore unit-free.\n\n**Between isoquants — returns to scale.** Scale every input by $t$ and ask what happens to output. $\\sigma$ and the elasticity of scale answer genuinely different questions: $\\sigma$ is about the input **mix**, returns to scale about the **level** of operation.\n\n## The CES family ties it together\n\n$$y=\\big[a_1x_1^{\\rho}+a_2x_2^{\\rho}\\big]^{1/\\rho},\\qquad \\sigma=\\frac{1}{1-\\rho}$$\n\nCobb-Douglas and Leontief are not separate theories. They are this one technology at $\\rho\\to0$ and $\\rho\\to-\\infty$, with $\\rho=1$ giving perfect substitutes. One parameter, three familiar shapes — and $\\sigma$ is the single number that says which one you are looking at.",
+      "recall": [
+        {
+          "q": "What is the difference between $V(y)$ and the isoquant $Q(y)$?",
+          "a": "$V(y)=\\{x:f(x)\\ge y\\}$ is a **set** — every bundle producing *at least* $y$, including wasteful ones. $Q(y)$ is its **boundary**: bundles producing *exactly* $y$. The inequality is what makes $V(y)$ the whole region above the isoquant.",
+          "difficulty": "beginner"
+        },
+        {
+          "q": "Monotonicity and convexity of technology — what does each one actually say?",
+          "a": "**Monotonicity (free disposal):** more of any input never reduces output, because the firm can leave the surplus idle. **Convexity:** mixtures of feasible plans are feasible, justified by time-sharing between two techniques. Monotonicity is about the *direction* $V(y)$ extends; convexity is about its *shape*.",
+          "difficulty": "beginner"
+        },
+        {
+          "q": "Why do we need the elasticity of substitution when we already have the TRS?",
+          "a": "The TRS has **units** — it changes if you measure labour in hours rather than days — so it cannot say how substitutable two inputs *really* are. $\\sigma=d\\ln(x_2/x_1)/d\\ln|TRS|$ compares percentage changes and is unit-free.",
+          "difficulty": "intermediate"
+        },
+        {
+          "q": "Does convexity of $V(y)$ rule out increasing returns to scale?",
+          "a": "**No** — and this is the distinction most answers blur. Convexity concerns substitution *along one isoquant* (the input mix); returns to scale concerns movement *between* isoquants (the scale). Cobb-Douglas with $a+b>1$ has convex input requirement sets and increasing returns simultaneously.",
+          "difficulty": "advanced"
+        },
+        {
+          "q": "Give the CES function and the three technologies it collapses to.",
+          "a": "$y=[a_1x_1^{\\rho}+a_2x_2^{\\rho}]^{1/\\rho}$ with $\\sigma=1/(1-\\rho)$. At $\\rho=1$: perfect substitutes ($\\sigma=\\infty$, linear). At $\\rho\\to0$: Cobb-Douglas ($\\sigma=1$). At $\\rho\\to-\\infty$: Leontief ($\\sigma=0$, right angle).",
+          "difficulty": "intermediate"
+        }
+      ]
     },
     {
       "id": "th-profit",
       "chapterId": "ch2",
       "title": "Profit Maximization, the Profit Function and WAPM",
-      "summary": "",
-      "body": "",
-      "bodyBn": "",
+      "titleBn": "মুনাফা সর্বাধিকীকরণ, মুনাফা ফাংশন ও WAPM",
+      "difficulty": "intermediate",
+      "importance": 5,
+      "tags": [
+        "profit",
+        "firm",
+        "WAPM",
+        "Hotelling"
+      ],
       "questionIds": [
         "q-2014-f-5a",
         "q-2021-f-6a",
         "q-2024-f-6b",
         "q-2025-f-5a"
       ],
-      "source": ""
+      "exerciseIds": [],
+      "keyTerms": [
+        {
+          "en": "Isoprofit line",
+          "bn": "সম-মুনাফা রেখা",
+          "def": "The set of plans yielding a given profit: y = π/p + (w/p)x, slope w/p."
+        },
+        {
+          "en": "Marginal revenue product",
+          "bn": "প্রান্তিক আয় উৎপাদ",
+          "def": "p·MP — the value of the output one more unit of input produces."
+        },
+        {
+          "en": "Profit function",
+          "bn": "মুনাফা ফাংশন",
+          "def": "π(p, w) — maximised profit as a function of prices. Convex and homogeneous of degree one."
+        },
+        {
+          "en": "Hotelling's lemma",
+          "bn": "হোটেলিং-এর উপপাদ্য",
+          "def": "∂π/∂p = y(p, w) and −∂π/∂w = x(p, w): differentiate the profit function to recover supply and factor demand."
+        },
+        {
+          "en": "WAPM",
+          "bn": "মুনাফা সর্বাধিকীকরণের দুর্বল স্বতঃসিদ্ধ",
+          "def": "Each observed plan must have been at least as profitable as any other available one, at the prices then ruling."
+        },
+        {
+          "en": "Recoverability",
+          "bn": "পুনরুদ্ধারযোগ্যতা",
+          "def": "Bounding the unobserved production set from observed choices — only up to its convex, monotonic hull."
+        }
+      ],
+      "formulas": [
+        "max π = p f(x) − w·x        FOC:  p f′(x*) = w      SOC:  f″(x*) ≤ 0",
+        "vector form:   p Df(x*) = w        hᵀ D²f(x*) h ≤ 0  for all h",
+        "π(p, w) is convex in prices and homogeneous of degree 1",
+        "Hotelling:  ∂π/∂p = y(p, w)        −∂π/∂wᵢ = xᵢ(p, w)",
+        "WAPM:  pᵗyᵗ ≥ pᵗyˢ  and  pˢyˢ ≥ pˢyᵗ    ⟹    Δp Δy ≥ 0"
+      ],
+      "bn": "## মূল ধারণা\n\nএকটি প্রতিযোগিতামূলক ফার্ম দামকে দেওয়া ধরে নিয়ে সেই পরিকল্পনা বেছে নেয় যা সবচেয়ে বেশি অর্থ আনে:\n\n$$\\max_{x\\ge0}\\;\\pi=p\\,f(x)-w\\cdot x$$\n\nএখানে **প্রতিযোগিতামূলক** শব্দটি গুরুত্বপূর্ণ। ফার্ম যেহেতু দাম নাড়াতে পারে না, অন্তরকলন করার সময় `p` ও `w` ধ্রুবক — একজন একচেটিয়া উৎপাদক ঠিক এই সুবিধাটাই পান না।\n\n## শর্তগুলো\n\n**প্রথম ক্রম শর্ত।** `p f′(x*) = w`, ভেক্টর আকারে `p Df(x*) = w`। বাঁ পাশ হলো {{Marginal Revenue Product}} — আরও এক একক উপকরণ যে অতিরিক্ত উৎপাদন আনে, বাজারদরে তার মূল্য। যতক্ষণ না এটি উপকরণের দামের সমান হয়, ততক্ষণ নিয়োগ চালিয়ে যান।\n\nজ্যামিতিকভাবে এটি একটি {{Tangency}}। {{Isoprofit}} রেখাগুলো সরলরেখা, ঢাল `w/p`; উপরের রেখা মানে বেশি মুনাফা। ফার্ম ততক্ষণ উপরে উঠতে থাকে যতক্ষণ সর্বোচ্চ রেখাটি উৎপাদন সেটকে স্পর্শ করে।\n\n**দ্বিতীয় ক্রম শর্ত।** `f″(x*) ≤ 0` — অর্থাৎ অনুকূল বিন্দুতে {{Diminishing Marginal Product}}। `n` মাত্রায় `D²f(x*)` কে {{Negative Semidefinite}} হতে হবে। লক্ষ করুন, ভোক্তার সমস্যার মতো এখানে **কোনো সীমাবদ্ধতা নেই**, তাই শর্তটি *সব* দিকের জন্য প্রযোজ্য — কেবল বাজেট তলের দিকগুলোর জন্য নয়।\n\n> **এই শর্তটি নিছক কারিগরি নয়।** `f` উত্তল হলে, অর্থাৎ {{Increasing Returns}} থাকলে, স্থিতিশীল বিন্দুটি আসলে মুনাফার *সর্বনিম্ন* এবং মুনাফা সীমাহীনভাবে বাড়তে থাকে। এজন্যই {{IRS}}-এর অধীনে কোনো মুনাফা-সর্বোচ্চকারী পরিকল্পনা **থাকে না**, যদি কোনো পরিকল্পনা ধনাত্মক মুনাফা দেয়। প্রশ্নপত্রে এটি আলাদা প্রশ্ন হিসেবেও আসে।\n\n## {{Profit Function}}\n\n`π(p, w)` হলো দামের ফাংশন হিসেবে সর্বোচ্চ মুনাফা। এর দুটি ধর্ম প্রায় সব কাজ করে দেয়।\n\n**দামের সাপেক্ষে উত্তল।** পরিকল্পনা স্থির রাখলে মুনাফা দামের একটি *সরলরেখা*; ফার্মকে পুনরায় সেরাটা বেছে নিতে দিলে সে অন্তত ততটা ভালো করে। তাই `π` অসংখ্য সরলরেখার উপরের আবরণ — এবং সেজন্যই উত্তল।\n\nএখান থেকেই আরেকটি প্রিয় প্রশ্নের উত্তর এক লাইনে আসে। {{Jensen's Inequality}} অনুযায়ী `E[π(p)] ≥ π(E[p])`, অর্থাৎ **ওঠানামা করা দামে গড় মুনাফা স্থিতিশীল গড় দামের মুনাফার চেয়ে কম নয়**। ফার্ম অনিশ্চয়তা থেকে লাভবান হয়, কারণ সে *মানিয়ে নিতে* পারে — দাম বেশি হলে বেশি উৎপাদন, কম হলে কম।\n\n**{{Hotelling's Lemma}}।** যেখানে `π` অন্তরকলনযোগ্য, সেখানে তার ঢালই অনুকূল পরিকল্পনা: `∂π/∂p = y(p, w)` এবং `−∂π/∂wᵢ = xᵢ(p, w)`। মুনাফা ফাংশন অন্তরকলন করেই সরবরাহ ও উপকরণ চাহিদা পাওয়া যায় — ভোক্তা-পক্ষের {{Shephard's Lemma}}-র যমজ।\n\n## {{WAPM}}: ক্যালকুলাস ছাড়াই একই তত্ত্ব\n\n{{Revealed Profitability}} বলে, প্রতিটি পর্যবেক্ষিত পছন্দ তখনকার দামে অন্য বিকল্পগুলোর চেয়ে অন্তত সমান লাভজনক ছিল:\n\n$$p^{t}y^{t}\\ge p^{t}y^{s}\\qquad\\text{এবং}\\qquad p^{s}y^{s}\\ge p^{s}y^{t}$$\n\nদুটি যোগ করে সাজালে পাওয়া যায় `Δp Δy ≥ 0`।\n\nএই একটিমাত্র অসমতায় সব তুলনামূলক-স্থিতি ভবিষ্যদ্বাণী ধরা আছে: **সরবরাহ রেখা ঊর্ধ্বগামী**, আর উপকরণ যেহেতু ঋণাত্মক নিট উৎপাদ, তাই **উপকরণ চাহিদা রেখা নিম্নগামী**। কোনো অন্তরকলনযোগ্যতা লাগেনি, উত্তলতা লাগেনি, নির্দিষ্ট ফাংশনরূপ লাগেনি — কেবল এই অনুমান যে ফার্ম সেরা বিকল্পটাই বেছেছে।\n\n**{{Recoverability}}।** প্রতিটি পর্যবেক্ষণ একটি অর্ধ-তল বাদ দেয়, ফলে উপাত্ত অদৃশ্য প্রযুক্তিকে বাইরে থেকে বেঁধে ফেলে। তবে কেবল তার {{Convex Monotonic Hull}} পর্যন্তই — দাম-গ্রহীতা ফার্মকে কখনো কোনো খাঁজের ভিতরের বিন্দু বেছে নিতে দেখা যায় না, তাই কোনো উপাত্তই অ-উত্তলতা প্রকাশ করতে পারে না।",
+      "en": "## The core idea\n\nA competitive firm takes prices as given and chooses the plan that makes the most money:\n\n$$\\max_{x\\ge0}\\;\\pi=p\\,f(x)-w\\cdot x$$\n\nThe word *competitive* is load-bearing. Because the firm cannot move prices, $p$ and $w$ are constants when we differentiate — which is exactly what a monopolist cannot assume.\n\n## The conditions\n\n**First order.** $p\\,f'(x^{*})=w$, or in vector form $p\\,Df(x^{*})=w$. The left side is the **marginal revenue product**: what one more unit of input is worth in output, valued at the market price. Hire until it equals what that unit costs.\n\nGeometrically this is a **tangency**. Isoprofit lines $y=\\pi/p+(w/p)x$ are straight, with slope $w/p$; higher lines mean more profit. The firm climbs to the highest one still touching the production set.\n\n**Second order.** $f''(x^{*})\\le0$ — diminishing marginal product at the optimum. In $n$ dimensions, $D^{2}f(x^{*})$ must be negative semidefinite. Note there is **no constraint** here, unlike the consumer's problem, so the condition holds for *all* directions rather than only those in a budget plane.\n\n> **Why the SOC is not a technicality.** Where $f$ is convex — increasing returns — the stationary point is a profit *minimum* and profit grows without bound. That is why **no profit-maximising plan exists under IRS** if any plan yields positive profit. The same question appears on the papers in its own right.\n\n## The profit function\n\n$\\pi(p,w)$ is maximised profit as a function of prices. Two properties do most of the work.\n\n**Convex in prices.** Hold the plan fixed and profit is a *straight line* in prices; let the firm re-optimise and it does at least as well. $\\pi$ is the upper envelope of a family of straight lines, hence convex.\n\nThis immediately gives another exam favourite. By Jensen's inequality,\n\n$$\\mathbb{E}[\\pi(p)]\\;\\ge\\;\\pi(\\mathbb{E}[p])$$\n\nso **average profit under a fluctuating price is at least as large as profit at the stabilised average price**. The firm gains from variability because it can adapt.\n\n**Hotelling's lemma.** Where $\\pi$ is differentiable, its slope *is* the optimal plan:\n\n$$\\frac{\\partial\\pi}{\\partial p}=y(p,w),\\qquad -\\frac{\\partial\\pi}{\\partial w_i}=x_i(p,w)$$\n\nSupply and factor demand are recovered by differentiation — the firm-side twin of Shephard's lemma.\n\n## WAPM: the same theory without calculus\n\nRevealed profitability says each observed choice must have beaten the alternatives at the prices then ruling:\n\n$$p^{t}y^{t}\\ge p^{t}y^{s}\\qquad\\text{and}\\qquad p^{s}y^{s}\\ge p^{s}y^{t}$$\n\nAdd them and factor:\n\n$$\\Delta p\\,\\Delta y\\ge0$$\n\nThat single inequality contains every comparative-static prediction: **supply slopes upward**, and since inputs enter as negative net outputs, **factor demand slopes downward**. No differentiability, no convexity, no functional form — just the assumption that the firm chose the best available plan.\n\n**Recoverability.** Each observation rules out a half-space, so the data bound the unobservable technology from outside:\n\n$$\\hat Y=\\{y:p^{t}y\\le p^{t}y^{t}\\ \\text{for all }t\\}$$\n\nBut only up to the **convex, monotonic hull**: a price-taking firm is never seen choosing a point inside a dent, so no data can ever reveal a non-convexity.",
+      "recall": [
+        {
+          "q": "State the FOC for profit maximisation and say what it means economically.",
+          "a": "$p\\,f'(x^{*})=w$, in vectors $p\\,Df(x^{*})=w$. The left side is the **marginal revenue product** — what one more unit of input is worth in output at market prices. Hire until it equals the input's cost.",
+          "difficulty": "beginner"
+        },
+        {
+          "q": "Why does no profit-maximising plan exist under increasing returns to scale?",
+          "a": "The SOC needs $f''\\le0$. Under IRS $f$ is convex, so the stationary point is a profit **minimum** and profit rises without bound as the firm expands. If any plan yields positive profit, scaling it up yields more, forever — so no maximum exists.",
+          "difficulty": "advanced"
+        },
+        {
+          "q": "Prove in one line that a competitive firm prefers a fluctuating price to a stabilised one.",
+          "a": "$\\pi(p)$ is **convex** in prices, so by Jensen's inequality $\\mathbb{E}[\\pi(p)]\\ge\\pi(\\mathbb{E}[p])$. The firm gains from variability because it can adapt — produce more when price is high, less when low.",
+          "difficulty": "intermediate"
+        },
+        {
+          "q": "State Hotelling's lemma and say what it is the twin of.",
+          "a": "$\\partial\\pi/\\partial p=y(p,w)$ and $-\\partial\\pi/\\partial w_i=x_i(p,w)$ — differentiate the profit function to recover supply and factor demand. It is the firm-side twin of **Shephard's lemma**, $h_i=\\partial e/\\partial p_i$.",
+          "difficulty": "intermediate"
+        },
+        {
+          "q": "What does WAPM deliver that calculus does not, and what is its limit?",
+          "a": "Adding the two revealed-profitability inequalities gives $\\Delta p\\,\\Delta y\\ge0$ — upward-sloping supply and downward-sloping factor demand — with **no** differentiability, convexity or functional form assumed. Its limit: recoverability only reaches the **convex, monotonic hull** of $Y$, since a price-taker is never observed choosing inside a dent.",
+          "difficulty": "advanced"
+        }
+      ]
     },
     {
       "id": "th-cost",
       "chapterId": "ch4",
       "title": "Cost Minimization, the Cost Function and Shephard's Lemma",
-      "summary": "",
-      "body": "",
-      "bodyBn": "",
+      "titleBn": "ব্যয় সর্বনিম্নকরণ, ব্যয় ফাংশন ও শেফার্ডের উপপাদ্য",
+      "difficulty": "intermediate",
+      "importance": 5,
+      "tags": [
+        "cost",
+        "firm",
+        "Shephard",
+        "WACM"
+      ],
       "questionIds": [
         "q-2023-f-6a",
         "q-2023-f-6b",
         "q-2025-f-6a"
       ],
-      "source": ""
+      "exerciseIds": [],
+      "keyTerms": [
+        {
+          "en": "Conditional factor demand",
+          "bn": "শর্তাধীন উপকরণ চাহিদা",
+          "def": "x(w, y) — the cost-minimising input bundle, conditional on producing a given output y."
+        },
+        {
+          "en": "Cost function",
+          "bn": "ব্যয় ফাংশন",
+          "def": "c(w, y) — the minimum cost of producing y at factor prices w. Concave and homogeneous of degree one in w."
+        },
+        {
+          "en": "Isocost line",
+          "bn": "সম-ব্যয় রেখা",
+          "def": "Input bundles costing the same amount: w·x = c, with slope −w₁/w₂."
+        },
+        {
+          "en": "Shephard's lemma",
+          "bn": "শেফার্ডের উপপাদ্য",
+          "def": "∂c/∂wᵢ = xᵢ(w, y): differentiating the cost function returns the conditional factor demand."
+        },
+        {
+          "en": "WACM",
+          "bn": "ব্যয় সর্বনিম্নকরণের দুর্বল স্বতঃসিদ্ধ",
+          "def": "The chosen bundle must be no more expensive, at the prices then ruling, than any other bundle producing the same output."
+        }
+      ],
+      "formulas": [
+        "min w·x  s.t.  f(x) = y        FOC:  |TRS| = w₁/w₂",
+        "SOC:  hᵀ D²f(x*) h < 0  for all h ≠ 0 with w·h = 0",
+        "Cobb-Douglas y = A x₁^a x₂^b :   c = (a+b)(y/A)^(1/(a+b)) (w₁/a)^(a/(a+b)) (w₂/b)^(b/(a+b))",
+        "Leontief  f = min{ax₁, bx₂} :    c(w, y) = y ( w₁/a + w₂/b )",
+        "Shephard:  ∂c/∂wᵢ = xᵢ(w, y)      WACM:  Δw Δx ≤ 0"
+      ],
+      "bn": "## মূল ধারণা\n\n{{Cost Minimisation}} মুনাফা সর্বাধিকীকরণের চেয়ে সংকীর্ণ একটি প্রশ্ন করে: **উৎপাদনের পরিমাণ দেওয়া আছে, সেটি যত সস্তায় সম্ভব উৎপাদন করো।**\n\n$$c(w,y)=\\min_{x}\\;w\\cdot x\\qquad\\text{শর্ত:}\\quad f(x)=y$$\n\nএখানে উৎপাদন একটি *সীমাবদ্ধতা*, পছন্দ নয়। সেজন্যই সমাধানগুলোকে বলা হয় {{Conditional Factor Demand}} — `y` উৎপাদনের শর্তাধীন। এই পৃথকীকরণ সত্যিই কাজে লাগে: প্রতিটি ফার্মকেই এই সমস্যা সমাধান করতে হয়, এমনকি একচেটিয়া উৎপাদককেও। তাই এর ফলাফল সেখানেও টেকে যেখানে মুনাফা সর্বাধিকীকরণের ফলাফল ভেঙে পড়ে।\n\n## প্রথম ক্রম শর্ত\n\n$$\\frac{w_1}{w_2}=\\frac{MP_1}{MP_2}=|TRS|$$\n\n**সমোৎপাদন রেখা সম-ব্যয় রেখাকে স্পর্শ করে।** দুটি ভিন্ন হলে ফার্ম সমোৎপাদন রেখা ধরে সরে গিয়ে একই উৎপাদন কম খরচে করতে পারত — অর্থাৎ সে ব্যয় সর্বনিম্ন করছিল না।\n\nএকই কথা অন্যভাবে: **প্রতি টাকায় প্রান্তিক উৎপাদন** সব উপকরণে সমান হতে হবে, `MP₁/w₁ = MP₂/w₂`। যেখানে অসমান, সেখানে যে উপকরণ প্রতি টাকায় বেশি উৎপাদন দেয় তার দিকে ব্যয় সরানো লাভজনক।\n\n## এখানে দ্বিতীয় ক্রম শর্ত কেন গুরুত্বপূর্ণ\n\nসম-ব্যয় রেখা ধরে সামান্য সরুন, যাতে `w·dx = 0`। তখন উৎপাদনের পরিবর্তন:\n\n$$dy=Df(x^{*})\\cdot dx=\\tfrac{1}{\\lambda}\\,w\\cdot dx=0$$\n\n**প্রথম ক্রমে উৎপাদন অপরিবর্তিত** — কারণ দুটি রেখা স্পর্শক, তাই প্রথম ক্রমে তারা মিলে যায়। ঠিক এই কারণেই কেবল প্রথম ক্রম শর্ত দেখে বলা যায় না যে আপনি সর্বনিম্ন বিন্দুতে আছেন।\n\nসিদ্ধান্ত নেয় দ্বিতীয় ক্রমের পদটি: `f(x*+h) − y ≈ ½ hᵀ D²f(x*) h < 0`, অর্থাৎ **দ্বিতীয় ক্রমের সরণ উৎপাদন কমিয়ে দেয়**।\n\nকথাটা উল্টে দেখুন: একই সম-ব্যয় রেখার অন্য প্রতিটি বিন্দু `y`-এর চেয়ে *কম* উৎপাদন করে; সুতরাং যে গুচ্ছ সত্যিই `y` উৎপাদন করে তাকে অবশ্যই উঁচু সম-ব্যয় রেখায় থাকতে হবে, অর্থাৎ বেশি খরচ করতে হবে। এটাই প্রমাণ যে `x*` ব্যয় সর্বনিম্ন করে।\n\n## দুটি ব্যয় ফাংশন মুখস্থ থাকা দরকার\n\n**কব-ডগলাস**, `y = A x₁^a x₂^b`:\n\n$$c(w,y)=(a+b)\\left(\\frac{y}{A}\\right)^{\\frac{1}{a+b}}\\left(\\frac{w_1}{a}\\right)^{\\frac{a}{a+b}}\\left(\\frac{w_2}{b}\\right)^{\\frac{b}{a+b}}$$\n\n`y`-এর উপরের ঘাতটিই পুরো {{Returns to Scale}} গল্প বহন করে: `a+b = 1` হলে ব্যয় `y`-এর সরলরৈখিক, গড় ব্যয় সমতল; `a+b > 1` হলে গড় ব্যয় কমতে থাকে; `a+b < 1` হলে বাড়তে থাকে।\n\n**লিওনতিয়েফ**, `f = min{ax₁, bx₂}`: সমোৎপাদন রেখার একটি **কোণ** আছে, তাই {{TRS}} অসংজ্ঞায়িত এবং ব্যয় ফাংশন **অন্তরকলন করে বের করা যায় না**। বদলে কোণ থেকে সরাসরি পড়ে নিন: `x₁ = y/a`, `x₂ = y/b`, ফলে `c(w, y) = y(w₁/a + w₂/b)`।\n\n## ধর্মাবলি ও পিছনের স্বতঃসিদ্ধ\n\n`c(w, y)` হলো `w`-এর সাপেক্ষে **এক ঘাতের সমমাত্রিক** (সব উপকরণ-দাম দ্বিগুণ হলে ব্যয়ও ঠিক দ্বিগুণ) এবং **অবতল** — যে কারণে `e(p, u)` অবতল, ঠিক সেই কারণেই: গুচ্ছ স্থির রাখলে ব্যয় একটি সরলরেখা, আর যা দামি হয়ে গেছে তা থেকে সরে গিয়ে ফার্ম প্রকৃত ব্যয়কে সেই রেখার নিচে রাখে।\n\nএরপর {{Shephard's Lemma}} দেয় `∂c/∂wᵢ = xᵢ(w, y)`।\n\n{{WACM}} একই তুলনামূলক-স্থিতি ফল দেয়, ক্যালকুলাস ছাড়াই। নির্বাচিত গুচ্ছ তখনকার দামে একই উৎপাদনকারী অন্য কোনো গুচ্ছের চেয়ে দামি হতে পারে না; দুটি অসমতা যোগ করলে পাওয়া যায় `Δw Δx ≤ 0`, অর্থাৎ **শর্তাধীন উপকরণ চাহিদা রেখা নিম্নগামী** — {{WAPM}}-এর `Δp Δy ≥ 0`-এর ব্যয়-পক্ষের প্রতিরূপ।",
+      "en": "## The core idea\n\nCost minimisation asks a narrower question than profit maximisation: **take the output level as given, and produce it as cheaply as possible.**\n\n$$c(w,y)=\\min_{x}\\;w\\cdot x\\quad\\text{s.t.}\\quad f(x)=y$$\n\nOutput is a *constraint*, not a choice. That is why the solutions are called **conditional** factor demands — conditional on producing $y$. It is a genuinely useful separation: every firm must solve this problem, including a monopolist, so the results survive where profit maximisation's do not.\n\n## The first-order condition\n\n$$\\frac{w_1}{w_2}=\\frac{MP_1}{MP_2}=|TRS|$$\n\n**The isoquant is tangent to the isocost line.** If the two differed, the firm could slide along the isoquant — same output, lower cost — so it was not minimising.\n\nEquivalently, the **marginal product per taka is equalised** across inputs: $MP_1/w_1=MP_2/w_2$. Wherever they differ, shift spending to the input delivering more output per taka.\n\n## Why the second-order condition matters here\n\nMove a little way along the isocost line, so $w\\cdot dx=0$. The change in output is\n\n$$dy=Df(x^{*})\\cdot dx=\\tfrac{1}{\\lambda}\\,w\\cdot dx=0$$\n\n**Output is unchanged to first order** — the isoquant and isocost are tangent, so to first order they coincide. This is precisely why the FOC alone cannot tell you that you are at a minimum.\n\nThe second-order term decides it:\n\n$$f(x^{*}+h)-y\\approx\\tfrac{1}{2}h^{\\mathsf T}D^{2}f(x^{*})h<0$$\n\nso **a second-order movement reduces output**. Turn that round: every other bundle on the same isocost produces *less* than $y$, so anything that does produce $y$ must lie on a higher isocost and cost more. That is the claim that $x^{*}$ minimises cost.\n\n## Two cost functions worth knowing cold\n\n**Cobb-Douglas**, $y=Ax_1^{a}x_2^{b}$:\n\n$$c(w,y)=(a+b)\\left(\\frac{y}{A}\\right)^{\\frac{1}{a+b}}\\left(\\frac{w_1}{a}\\right)^{\\frac{a}{a+b}}\\left(\\frac{w_2}{b}\\right)^{\\frac{b}{a+b}}$$\n\nThe exponent on $y$ carries the entire returns-to-scale story: $a+b=1$ gives cost linear in $y$ and flat average cost; $a+b>1$ gives falling average cost; $a+b<1$ rising.\n\n**Leontief**, $f=\\min\\{ax_1,bx_2\\}$: the isoquant has a **corner**, so the TRS is undefined and the cost function **cannot be found by differentiation**. Read it off the corner instead:\n\n$$x_1=\\frac{y}{a},\\quad x_2=\\frac{y}{b}\\quad\\Longrightarrow\\quad c(w,y)=y\\left(\\frac{w_1}{a}+\\frac{w_2}{b}\\right)$$\n\n## Properties, and the axiom behind them\n\n$c(w,y)$ is **homogeneous of degree one in $w$** (double all factor prices, double the cost) and **concave in $w$** — for the same reason $e(p,u)$ is concave: holding the bundle fixed gives a straight line, and substituting away from whatever became expensive keeps actual cost below it.\n\n**Shephard's lemma** then gives $\\partial c/\\partial w_i=x_i(w,y)$.\n\n**WACM** delivers the same comparative statics without calculus. The chosen bundle must be no dearer than any alternative producing the same output; adding the two inequalities gives\n\n$$\\Delta w\\,\\Delta x\\le0$$\n\nso **conditional factor demand curves slope downward** — the cost-side analogue of WAPM's $\\Delta p\\,\\Delta y\\ge0$.",
+      "recall": [
+        {
+          "q": "Why are the solutions to the cost-minimisation problem called *conditional* factor demands?",
+          "a": "Because output is a **constraint, not a choice** — the demands are conditional on producing a given $y$. This makes them more general than profit-maximising demands: every firm must minimise cost, including a monopolist, so the results survive where profit maximisation's do not.",
+          "difficulty": "beginner"
+        },
+        {
+          "q": "At the cost-minimising point, what happens to output under a first-order and a second-order movement along the isocost?",
+          "a": "**First order: output is unchanged.** $dy=Df(x^{*})\\cdot dx=\\tfrac{1}{\\lambda}w\\cdot dx=0$ — the isoquant and isocost are tangent, so to first order they coincide. **Second order: output falls**, since $h^{\\mathsf T}D^{2}f\\,h<0$. That is what makes $x^{*}$ a genuine minimum.",
+          "difficulty": "advanced"
+        },
+        {
+          "q": "Why can the Leontief cost function not be obtained by differentiation?",
+          "a": "The isoquant is a **right angle**, so the TRS is undefined at the corner — the tangency condition $|TRS|=w_1/w_2$ has no solution. Read the answer off the corner instead: $x_1=y/a$, $x_2=y/b$, so $c(w,y)=y(w_1/a+w_2/b)$.",
+          "difficulty": "intermediate"
+        },
+        {
+          "q": "In the Cobb-Douglas cost function, which single feature tells you the returns to scale?",
+          "a": "The exponent on $y$, namely $1/(a+b)$. If $a+b=1$ cost is linear in $y$ (flat average cost); if $a+b>1$ cost is concave in $y$ (falling average cost, increasing returns); if $a+b<1$ cost is convex (rising average cost).",
+          "difficulty": "intermediate"
+        },
+        {
+          "q": "State WACM and the comparative static it delivers.",
+          "a": "The chosen bundle must be no more expensive, at the prices then ruling, than any other bundle producing the same output: $w^{t}\\!\\cdot x^{t}\\le w^{t}\\!\\cdot x^{s}$. Adding the two inequalities gives $\\Delta w\\,\\Delta x\\le0$ — **conditional factor demands slope downward** — with no calculus assumed.",
+          "difficulty": "intermediate"
+        }
+      ]
     },
     {
       "id": "th-preferences",
       "chapterId": "ch7",
       "title": "Preferences, Utility and the Assumptions Behind Them",
-      "summary": "",
-      "body": "",
-      "bodyBn": "",
+      "titleBn": "পছন্দক্রম, উপযোগ ও তার পিছনের অনুমানসমূহ",
+      "difficulty": "beginner",
+      "importance": 4,
+      "tags": [
+        "preferences",
+        "utility",
+        "consumer",
+        "local nonsatiation"
+      ],
       "questionIds": [
         "q-2024-f-1b",
         "q-2025-f-1ab"
       ],
-      "source": ""
+      "exerciseIds": [],
+      "keyTerms": [
+        {
+          "en": "Completeness",
+          "bn": "পূর্ণতা",
+          "def": "Any two bundles can be compared: for all x, y either x ≿ y or y ≿ x (or both)."
+        },
+        {
+          "en": "Transitivity",
+          "bn": "সংক্রামকতা",
+          "def": "If x ≿ y and y ≿ z then x ≿ z. Without it a choice set may have no best element."
+        },
+        {
+          "en": "Continuity",
+          "bn": "ধারাবাহিকতা",
+          "def": "The sets {x : x ≿ y} and {x : x ≾ y} are closed. Rules out sudden jumps and guarantees a utility function exists."
+        },
+        {
+          "en": "Local nonsatiation",
+          "bn": "স্থানীয় অতৃপ্তি",
+          "def": "In every neighbourhood of any bundle there is a strictly preferred bundle. Makes the budget bind and rules out thick indifference curves."
+        },
+        {
+          "en": "Marginal rate of substitution",
+          "bn": "প্রান্তিক প্রতিস্থাপন হার",
+          "def": "MRS — the indifference curve's slope, equal to minus the ratio of marginal utilities."
+        },
+        {
+          "en": "Convexity of preferences",
+          "bn": "পছন্দের উত্তলতা",
+          "def": "Averages are preferred to extremes; makes indifference curves bow to the origin and the optimum unique."
+        }
+      ],
+      "formulas": [
+        "Complete · Reflexive · Transitive · Continuous  ⟹  a continuous u(x) exists",
+        "u represents ≿ ;  any increasing transformation f(u(x)) represents the same ≿",
+        "Local nonsatiation:  ∀x, ∀ε>0, ∃y with ‖y−x‖<ε and y ≻ x",
+        "MRS = dx₂/dx₁ |_u = − MU₁ / MU₂        at the optimum MRS = p₁/p₂",
+        "FOC (vectors):  Du(x*) = λp,  p·x* = m       SOC:  hᵀD²u(x*)h ≤ 0 for p·h = 0"
+      ],
+      "bn": "## মূল ধারণা\n\nচাহিদা তত্ত্ব উপযোগ ফাংশন দিয়ে শুরু হয় না। শুরু হয় একটি {{Preference Relation}} `≿` দিয়ে — \"অন্তত ততটা ভালো\" — এবং প্রশ্ন করে: এই সম্পর্কটির কী কী বৈশিষ্ট্য থাকলে তবেই আমরা তাকে একটি সংখ্যা দিয়ে প্রতিস্থাপন করতে পারি?\n\nএই ক্রমটাই আসল। উপযোগের **কোনো মনস্তাত্ত্বিক অর্থ নেই**; কেবল তার {{Ordinal}} চরিত্রটুকুই অর্থবহ। `u` যদি `≿`-কে প্রকাশ করে, তবে যেকোনো ঊর্ধ্বগামী রূপান্তর `f(u(x))`-ও ঠিক একই আচরণ প্রকাশ করে।\n\n## চারটি অনুমান, যেগুলো উপযোগ ফাংশন এনে দেয়\n\n- **{{Completeness}}** — যেকোনো দুটি গুচ্ছের তুলনা করা যায়। না হলে কিছু জোড়া অতুলনীয় থেকে যায় এবং পছন্দ অসংজ্ঞায়িত হয়ে পড়ে।\n- **{{Reflexivity}}** — `x ≿ x`। তুচ্ছ শোনালেও সম্পর্কটিকে একটি ক্রম হতে হলে এটি দরকার।\n- **{{Transitivity}}** — `x ≿ y` ও `y ≿ z` হলে `x ≿ z`। এটি না থাকলে কোনো গুচ্ছসমষ্টিতে **সেরা উপাদান নাও থাকতে পারে**, আর তখন সর্বাধিকীকরণ অর্থহীন — `x ≻ y ≻ z ≻ x` চক্রে কোনো বিজয়ী নেই।\n- **{{Continuity}}** — `{x : x ≿ y}` ও `{x : x ≾ y}` বদ্ধ সেট। এটি পছন্দে আকস্মিক লাফ বাদ দেয়; {{Lexicographic Preferences}} এই শর্ত মানে না, আর তাই তার কোনো উপযোগ ফাংশনই নেই।\n\nএই চারটি একসাথে দেয় উপস্থাপন উপপাদ্য: **পূর্ণ, স্বসম্পর্কিত, সংক্রামক ও ধারাবাহিক পছন্দক্রমকে একটি ধারাবাহিক উপযোগ ফাংশন দিয়ে প্রকাশ করা যায়।**\n\n## {{Local Nonsatiation}}: ছোট অনুমান, সবচেয়ে ভারী কাজ\n\n$$\\forall x,\\;\\forall\\varepsilon>0,\\;\\exists y:\\;\\lVert y-x\\rVert<\\varepsilon\\ \\text{ and }\\ y\\succ x$$\n\n*অর্থাৎ, যেকোনো গুচ্ছের যত ছোট প্রতিবেশই নিন, তার ভিতরেই কঠোরভাবে বেশি পছন্দের কিছু একটা পাওয়া যাবে।*\n\n**আপনি যেখানেই দাঁড়ান, হাতের নাগালেই আরও ভালো কিছু আছে।** এটি ইচ্ছাকৃতভাবে {{Monotonicity}}-র চেয়ে দুর্বল: এটি দাবি করে না যে সবকিছু বেশি হলেই ভালো, এবং উন্নত গুচ্ছটিতে কোনো কিছু *কম*ও থাকতে পারে। এই দুর্বলতাই এর শক্তি — পুরো তত্ত্ব যে দুটি সত্যের উপর দাঁড়িয়ে, তা পেতে এর চেয়ে কম অনুমান করা যায় না।\n\n**এটি বাজেট রেখাকে বাধ্যতামূলক করে।** আয়ের কিছু অংশ অব্যয়িত থাকলে {{Local Nonsatiation}} কাছেই একটি কঠোরভাবে ভালো *সাধ্যের মধ্যে থাকা* গুচ্ছ হাজির করবে, যা অনুকূলতার সাথে সাংঘর্ষিক। এজন্যই সর্বত্র `p·x ≤ m` না লিখে `p·x = m` লেখা যায়।\n\n**এটি পুরু নিরপেক্ষ রেখা বাদ দেয়।** ধরুন একটি পুরু ব্যান্ডের সব গুচ্ছ `x`-এর প্রতি নিরপেক্ষ। {{Local Nonsatiation}} সেই ব্যান্ডের ভিতরেই একটি কঠোরভাবে পছন্দের `y` দেয়; অথচ ব্যান্ডের সবকিছু `x`-এর প্রতি নিরপেক্ষ। একটি গুচ্ছ একসাথে দুটোই হতে পারে না — তাই পুরু ব্যান্ড অসম্ভব, নিরপেক্ষ রেখা **সরু**।\n\n> কেন গুরুত্বপূর্ণ: পুরু রেখা থাকলে অনুকূল বিন্দু একটি বিন্দু না হয়ে পুরো অঞ্চল হতো, `e(p, u)`-এর সুনির্দিষ্ট সর্বনিম্ন থাকত না, এবং {{Duality}} ভেঙে পড়ত।\n\n## উত্তলতা এবং অনুকূল বিন্দুর আকৃতি\n\n{{Convex Preferences}} — চরমের চেয়ে গড় বেশি পছন্দ — নিরপেক্ষ রেখাকে মূলবিন্দুর দিকে বাঁকিয়ে দেয়। কঠোর উত্তলতা অনুকূল গুচ্ছকে **অনন্য** করে, আর সেজন্যই চাহিদা একটি *ফাংশন*, {{Correspondence}} নয়।\n\nঅভ্যন্তরীণ অনুকূল বিন্দুতে নিরপেক্ষ রেখা বাজেট রেখাকে স্পর্শ করে:\n\n$$MRS=\\frac{MU_1}{MU_2}=\\frac{p_1}{p_2}\\qquad\\Longleftrightarrow\\qquad\\frac{MU_1}{p_1}=\\frac{MU_2}{p_2}=\\lambda$$\n\nপ্রতি টাকায় প্রান্তিক উপযোগ সব পণ্যে সমান। ভেক্টর আকারে `Du(x*) = λp`: উপযোগ ফাংশনের নতি ভেক্টর দামের ভেক্টর বরাবর নির্দেশ করে। আর লক্ষ করুন `λ = ∂v/∂m` — গুণকটিই আসলে **আয়ের প্রান্তিক উপযোগ**।",
+      "en": "## The core idea\n\nDemand theory does not begin with a utility function. It begins with a **preference relation** $\\succsim$ — \"at least as good as\" — and asks what has to be true of it before we may replace it with a number.\n\nThat order matters. Utility has **no psychological content**: only its *ordinal* character is meaningful. If $u$ represents $\\succsim$, so does any increasing transformation $f(u(x))$, and the two describe exactly the same behaviour.\n\n## The four assumptions that buy us a utility function\n\n- **Complete.** Any two bundles can be compared. Without it, some pairs are simply incomparable and choice is undefined.\n- **Reflexive.** $x\\succsim x$. Trivial, but needed for the relation to be an ordering.\n- **Transitive.** If $x\\succsim y$ and $y\\succsim z$ then $x\\succsim z$. Without it a set of bundles may have **no best element**, and maximisation becomes meaningless — the standard cycle $x\\succ y\\succ z\\succ x$ has no winner.\n- **Continuous.** $\\{x:x\\succsim y\\}$ and $\\{x:x\\precsim y\\}$ are closed. This rules out sudden jumps in preference — lexicographic preferences fail it, and admit no utility representation at all.\n\nTogether these deliver the representation theorem: **a complete, reflexive, transitive and continuous preference ordering can be represented by a continuous utility function.**\n\n## Local nonsatiation: the small assumption doing the heavy lifting\n\n$$\\forall x,\\;\\forall\\varepsilon>0,\\;\\exists y:\\;\\lVert y-x\\rVert<\\varepsilon\\ \\text{ and }\\ y\\succ x$$\n\n**Wherever you stand, something better is within arm's reach.** It is deliberately weaker than monotonicity: it does *not* require more of everything to be better, and the improving bundle may contain *less* of something. That weakness is the point — it is the least we can assume and still get the two facts the whole theory rests on.\n\n**It makes the budget bind.** If income were left unspent, local nonsatiation would supply a strictly better *affordable* bundle nearby, contradicting optimality. That is what licenses writing $p\\cdot x=m$ rather than $p\\cdot x\\le m$ everywhere.\n\n**It rules out thick indifference curves.** Suppose a band of bundles were all indifferent to $x$. Local nonsatiation puts a strictly preferred $y$ inside that band; but everything in the band is indifferent to $x$. A bundle cannot be both, so no thick band exists. Indifference curves are **thin**.\n\n> Why that matters: with a thick curve the optimum would be a whole region rather than a point, $e(p,u)$ would have no well-defined minimum, and duality would collapse.\n\n## Convexity, and the shape of the optimum\n\n**Convex preferences** — averages preferred to extremes — bow indifference curves towards the origin. Strict convexity makes the utility-maximising bundle **unique**, which is what makes demand a *function* rather than a correspondence.\n\nAt an interior optimum the indifference curve is tangent to the budget line:\n\n$$MRS=\\frac{MU_1}{MU_2}=\\frac{p_1}{p_2} \\qquad\\Longleftrightarrow\\qquad \\frac{MU_1}{p_1}=\\frac{MU_2}{p_2}=\\lambda$$\n\nthe marginal utility per taka equalised across goods. In vectors, $Du(x^{*})=\\lambda p$: the gradient points along the price vector. And note $\\lambda=\\partial v/\\partial m$ — the multiplier **is** the marginal utility of income.",
+      "recall": [
+        {
+          "q": "Why is transitivity needed, and what goes wrong without it?",
+          "a": "Without transitivity a set of bundles may have **no best element** — the cycle $x\\succ y\\succ z\\succ x$ has no winner — so maximisation is undefined. It is what makes $\\succsim$ an *ordering* rather than just a set of pairwise comparisons.",
+          "difficulty": "beginner"
+        },
+        {
+          "q": "Which assumption does lexicographic preference violate, and what is the consequence?",
+          "a": "**Continuity.** The upper and lower contour sets are not closed. The consequence is severe: lexicographic preferences admit **no utility representation at all**, so they cannot be handled by the usual machinery.",
+          "difficulty": "advanced"
+        },
+        {
+          "q": "State local nonsatiation and give the two things it buys us.",
+          "a": "For every $x$ and every $\\varepsilon>0$ there is $y$ with $\\lVert y-x\\rVert<\\varepsilon$ and $y\\succ x$. It (1) **makes the budget bind**, licensing $p\\cdot x=m$ instead of $\\le$, and (2) **rules out thick indifference curves**, so the optimum is a point and $e(p,u)$ has a well-defined minimum.",
+          "difficulty": "intermediate"
+        },
+        {
+          "q": "Why is local nonsatiation preferred to monotonicity as an assumption?",
+          "a": "It is **weaker** and still sufficient. Monotonicity requires more of *everything* to be better; local nonsatiation only requires *something* better nearby, and that bundle may contain less of some good. Assuming the least that still delivers the result is the point.",
+          "difficulty": "advanced"
+        },
+        {
+          "q": "If $u$ represents preferences, what else represents the same preferences — and what does that tell you about utility?",
+          "a": "Any **increasing (monotonic) transformation** $f(u(x))$. Utility is purely **ordinal**: only the ranking is meaningful, never the numbers themselves or differences between them. This is also why the MRS is unchanged by a monotonic transformation.",
+          "difficulty": "beginner"
+        }
+      ]
     }
   ],
   "questions": [

@@ -41,8 +41,13 @@ export function loadKatex() {
  * Replace every `.math` placeholder inside `root` with rendered output.
  * Safe to call repeatedly — nodes already rendered are skipped.
  */
-export async function hydrateMath(root = document) {
-  const nodes = Array.from(root.querySelectorAll('.math:not([data-rendered])'));
+export async function hydrateMath(target = document) {
+  // `target` may be a root to search, or an explicit list of nodes. The list
+  // form matters: wireMath renders only what is on screen, and passing a root
+  // here would sweep up the collapsed cards it is deliberately deferring.
+  const nodes = Array.isArray(target)
+    ? target.filter((n) => !n.hasAttribute('data-rendered'))
+    : Array.from(target.querySelectorAll('.math:not([data-rendered])'));
   if (!nodes.length) return;
 
   const katex = await loadKatex();
@@ -106,7 +111,9 @@ export function wireMath(root = document) {
     if (host) deferred.set(host, true); else visible.push(n);
   }
 
-  if (visible.length) hydrateMath(root);
+  // Render the visible nodes only — not the root, or the deferral below is
+  // pointless the moment a single formula happens to be on screen.
+  if (visible.length) hydrateMath(visible);
 
   for (const host of deferred.keys()) {
     if (host.dataset.mathWired) continue;
