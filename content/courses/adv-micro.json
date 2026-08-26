@@ -785,7 +785,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "Monotonicity",
+        "Technology",
+        "Free disposal",
+        "Input requirement set"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -794,7 +797,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-5a"
     },
     {
       "id": "q-2025-i2a-4-2",
@@ -857,18 +860,25 @@
       "batch": "16th",
       "qNo": "4(A)",
       "marks": 2.0,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
-        "General"
+        "Cobb-Douglas",
+        "Returns to scale",
+        "Diminishing marginal product",
+        "Technology"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-technology"
+      ],
       "text": "For what values of a and $1-\\alpha$ is the production function legitimate? [2]",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "State the restriction $0<\\alpha<1$ — 1 mark",
+        "Say what each boundary case would break — 1 mark"
+      ],
+      "answer": "$$f(x_1,x_2)=A\\,x_1^{\\alpha}\\,x_2^{1-\\alpha}$$\n\n## The condition\n\n$$\\boxed{\\;0<\\alpha<1\\;}\\qquad\\text{equivalently}\\qquad 0<1-\\alpha<1$$\n\nBoth exponents must be **strictly between zero and one**, and by construction they sum to one.\n\n## Why the strict inequalities are needed\n\n**Positive marginal products.** $MP_1=\\alpha A x_1^{\\alpha-1}x_2^{1-\\alpha}$, which is positive only if $\\alpha>0$. Were $\\alpha<0$, input 1 would *reduce* output — it would be a \"bad\" input, and **monotonicity** would fail.\n\n**Diminishing marginal products.** $\\dfrac{\\partial^{2}f}{\\partial x_1^{2}}=\\alpha(\\alpha-1)Ax_1^{\\alpha-2}x_2^{1-\\alpha}$, which is negative exactly when $0<\\alpha<1$. This is what makes the isoquants **convex** and the tangency conditions valid second-order conditions.\n\n## The two boundary cases\n\n**$\\alpha=0$:** $f=Ax_2$ — input 1 disappears entirely and the technology is linear in $x_2$ alone. It is no longer a two-input technology.\n\n**$\\alpha=1$:** $f=Ax_1$ — the same failure mirrored.\n\nIn either case the marginal product of the vanished input is zero, the isoquants become straight lines rather than convex curves, and the TRS is no longer defined in the usual way.\n\n**One more remark.** Because the exponents sum to one, this form is **constant returns to scale**: $f(tx)=t\\,f(x)$. The more general $Ax_1^{a}x_2^{b}$ is legitimate for any $a,b>0$ and has returns to scale governed by $a+b$ — the restriction to $\\alpha$ and $1-\\alpha$ is what imposes CRS.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §1.3 (the Cobb-Douglas technology)"
     },
     {
       "id": "q-2025-f-4c",
@@ -944,7 +954,7 @@
     },
     {
       "id": "q-2024-i2-0",
-      "chapterId": "ch1",
+      "chapterId": "ch8",
       "examType": "incourse",
       "year": 2024,
       "batch": "15th",
@@ -952,10 +962,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Cobb-Douglas",
-        "Elasticity of substitution",
-        "TRS",
-        "Input requirement set"
+        "Properties of demand",
+        "Homogeneity",
+        "Budget balance",
+        "Slutsky equation"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -964,7 +974,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-3a"
     },
     {
       "id": "q-2024-i1-2",
@@ -998,18 +1008,27 @@
       "batch": "15th",
       "qNo": "4",
       "marks": 5.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "General"
+        "Homogeneous functions",
+        "Homothetic",
+        "Returns to scale",
+        "Expansion path"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-technology"
+      ],
       "text": "Show and explain, the differences between the homogenous functions and the homothetic functions. (5)",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Define a homogeneous function of degree k — 1.25 marks",
+        "Define a homothetic function and show it is the wider class — 1.5 marks",
+        "Give the shared property: the expansion path is a ray — 1.5 marks",
+        "Give an example that is homothetic but not homogeneous — 0.75 marks"
+      ],
+      "answer": "## Homogeneous functions\n\n$f$ is **homogeneous of degree $k$** if scaling every input by $t$ scales output by $t^{k}$:\n\n$$f(t\\,x)=t^{k}\\,f(x)\\qquad\\text{for all }t>0$$\n\nThe degree **is** the returns to scale: $k=1$ constant, $k>1$ increasing, $k<1$ decreasing.\n\n**Example.** Cobb-Douglas $f=Ax_1^{a}x_2^{b}$ is homogeneous of degree $a+b$, since\n\n$$A(tx_1)^{a}(tx_2)^{b}=t^{a+b}Ax_1^{a}x_2^{b}$$\n\n## Homothetic functions\n\n$f$ is **homothetic** if it is a strictly increasing transformation of a function homogeneous of degree one:\n\n$$f(x)=g\\big(h(x)\\big),\\qquad h\\ \\text{homogeneous of degree }1,\\qquad g'>0$$\n\n**Homothetic is the wider class.** Every homogeneous function is homothetic — take $g(z)=z^{k}$ applied to a degree-one $h$. But not every homothetic function is homogeneous, because $g$ may be any increasing transformation, and most destroy the clean scaling property.\n\n## What the two share\n\n**The technical rate of substitution depends only on the input *ratio*, not on the scale.** Along any ray from the origin, $|TRS|$ is constant.\n\nFor a homogeneous function this follows because the marginal products are homogeneous of degree $k-1$, so the $t^{k-1}$ factors cancel in their ratio:\n\n$$|TRS(tx)|=\\frac{t^{k-1}\\,\\partial f/\\partial x_1}{t^{k-1}\\,\\partial f/\\partial x_2}=|TRS(x)|$$\n\nFor a homothetic function the transformation $g$ multiplies **both** marginal products by $g'(h)$, which cancels for the same reason.\n\n**The economic consequence, and the reason we care:** the **expansion path is a straight line through the origin**. A cost-minimising firm facing fixed input prices uses the inputs in the *same proportion* whatever its scale of output. Isoquants are radial blow-ups of one another.\n\nOn the consumer side the same property gives **linear Engel curves** and demands of the form $x_i=m\\cdot\\phi_i(p)$ — income elasticities all equal to one, and budget shares independent of income. That is exactly why homotheticity is the standard assumption when a model needs a representative consumer.\n\n## The difference, and an example\n\nHomogeneity is a statement about **output levels**; homotheticity only about the **shape of the isoquant map**. Homotheticity says nothing about returns to scale.\n\n**An example that is homothetic but not homogeneous:**\n\n$$f(x_1,x_2)=\\ln\\big(x_1^{1/2}x_2^{1/2}\\big)$$\n\nHere $h=x_1^{1/2}x_2^{1/2}$ is homogeneous of degree one and $g=\\ln$ is strictly increasing, so $f$ is **homothetic**. But\n\n$$f(tx)=\\ln\\!\\big(t\\,h(x)\\big)=\\ln t+f(x)$$\n\nwhich is $f(x)$ *plus a constant*, not $t^{k}f(x)$ for any $k$. So $f$ is **not homogeneous** of any degree.\n\nIts isoquants are identical in shape to Cobb-Douglas ones — the expansion path is still a ray — but the output labels attached to them have been stretched non-linearly, and returns to scale are no longer constant.\n\n| | Says | Determines returns to scale? | Expansion path a ray? |\n|---|---|---|---|\n| **Homogeneous** | $f(tx)=t^{k}f(x)$ | yes, $k$ | yes |\n| **Homothetic** | $f=g(h)$, $h$ degree 1 | no | yes |",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §1.4 (homogeneous and homothetic technologies)"
     },
     {
       "id": "q-2024-f-4a",
@@ -1119,7 +1138,10 @@
       "difficulty": "intermediate",
       "topics": [
         "CES",
-        "Cobb-Douglas"
+        "Elasticity of substitution",
+        "Cobb-Douglas",
+        "Leontief",
+        "Perfect substitutes"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1128,7 +1150,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2018-f-2"
     },
     {
       "id": "q-2024-f-5a",
@@ -1946,7 +1968,10 @@
       "marks": 3.33,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "Monotonicity",
+        "Technology",
+        "Free disposal",
+        "Input requirement set"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1955,7 +1980,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-5a"
     },
     {
       "id": "q-2019-m-6b",
@@ -1989,18 +2014,26 @@
       "batch": "10th",
       "qNo": "6(C)",
       "marks": 3.33,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
-        "General"
+        "Capital",
+        "Technology",
+        "Stock and flow",
+        "Factors of production"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-technology"
+      ],
       "text": "What is capital? Explain. $13.5+4=7.5|$",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Define capital as a produced means of production — 1.25 marks",
+        "Distinguish the stock from the flow of services — 1.25 marks",
+        "Separate physical capital from finance, and note the measurement problem — 0.83 marks"
+      ],
+      "answer": "## What capital is\n\n**Capital is a produced input** — a factor of production that is itself the output of some earlier production process. Machines, buildings, tools, vehicles, infrastructure.\n\nThat is what separates it from the other two classical factors. **Labour** and **land** are *primary* inputs, supplied by people and by nature; capital has to be **made**, which means using resources now to raise output later. Capital is therefore inseparable from **time**: accumulating it means consuming less today.\n\n## Stock versus flow — the distinction that matters\n\nThis is where most answers go wrong.\n\n**The stock** is the quantity of capital in existence at a point in time — a lathe, a factory. It is measured in units, at a date.\n\n**The flow** is the *service* the stock provides over a period — machine-hours used this month. It is measured per unit of time.\n\n**The production function takes the flow, not the stock.** When we write $f(K,L)$, $K$ means capital *services* used during the period, and its price $w_K$ is the **rental rate**, not the purchase price of the machine. That is why capital sits alongside labour-hours in the same expression: both are flows.\n\nA firm that owns its machinery still faces this cost — as the **opportunity cost** of not renting the machine out or selling it. This is exactly the implicit cost that separates economic profit from accounting profit.\n\n## Two further distinctions\n\n**Physical capital is not finance.** In ordinary speech \"capital\" often means money. In production theory it never does: money is not an input to any technology. Finance is a *claim* on capital goods, a way of acquiring them, not a factor of production.\n\n**Fixed in the short run, variable in the long run.** The standard short-run/long-run split is defined by whether capital can be varied. Holding $K$ fixed is what produces diminishing marginal product of labour, and it is why a constant-returns technology appears to show decreasing returns in the short run — one input has not been scaled.\n\n**A measurement caveat worth a line.** Aggregating heterogeneous capital goods — a lathe and a lorry — into a single number $K$ requires valuing them, and their value depends on the interest rate, which is itself supposed to be determined by the marginal product of capital. This circularity was the substance of the Cambridge capital controversy, and it is why aggregate capital is a far less innocent variable than aggregate labour-hours.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §1.1 (inputs and the description of technology)"
     },
     {
       "id": "q-2018-f-1a",
@@ -2168,7 +2201,9 @@
       "difficulty": "intermediate",
       "topics": [
         "Monotonicity",
-        "Convexity"
+        "Technology",
+        "Free disposal",
+        "Input requirement set"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2177,7 +2212,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-5a"
     },
     {
       "id": "q-2017-f-2a",
@@ -2626,16 +2661,23 @@
       "marks": 6.0,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "Cost function",
+        "Cobb-Douglas",
+        "Cost minimization"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-cost"
+      ],
       "text": "A firm has a production function $y=x_{1}x_{2}$ If the minimum cost of production at $w_{1}=w_{2}=1$ (6)",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Set up cost minimisation and get the tangency condition — 2 marks",
+        "Solve for the conditional factor demands — 2 marks",
+        "Build the cost function and solve for $y$ — 2 marks"
+      ],
+      "answer": "$$y=x_1x_2,\\qquad w_1=w_2=1,\\qquad c=4.\\qquad\\text{Find } y.$$\n\n## Step 1 — The tangency condition\n\n$$\\min_{x_1,x_2}\\;w_1x_1+w_2x_2\\quad\\text{s.t.}\\quad x_1x_2=y$$\n\nMarginal products are $MP_1=x_2$ and $MP_2=x_1$, so\n\n$$|TRS|=\\frac{MP_1}{MP_2}=\\frac{x_2}{x_1}=\\frac{w_1}{w_2}=1 \\qquad\\Longrightarrow\\qquad x_1=x_2$$\n\nWith equal input prices and a symmetric technology, the firm uses the two inputs in equal amounts.\n\n## Step 2 — Conditional factor demands\n\nSubstituting $x_1=x_2$ into the constraint:\n\n$$x_1x_2=x_1^{2}=y\\qquad\\Longrightarrow\\qquad x_1=x_2=\\sqrt{y}$$\n\n## Step 3 — The cost function, and solving for $y$\n\n$$c(w,y)=1\\cdot\\sqrt{y}+1\\cdot\\sqrt{y}=2\\sqrt{y}$$\n\nSetting this equal to the given minimum cost of 4:\n\n$$2\\sqrt{y}=4\\quad\\Longrightarrow\\quad\\sqrt{y}=2\\quad\\Longrightarrow\\quad\\boxed{\\;y=4\\;}$$\n\n## Check, and a remark\n\nAt $y=4$ the firm uses $x_1=x_2=2$, costing $2+2=4$ ✓, and producing $2\\times2=4$ ✓.\n\n**Worth noticing:** $y=x_1x_2$ is Cobb-Douglas with exponents summing to $2>1$, so the technology has **increasing returns to scale**. That shows in the cost function: $c=2\\sqrt{y}$ is **concave** in output, so average cost $c/y=2/\\sqrt{y}$ **falls** as output rises. Doubling output from 4 to 8 raises cost only from 4 to about 5.66, not to 8.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., cost-function chapter.\n\n⚠ The supplied *Selected Chapters* PDF holds only ch. 1, 2, 7 and 8; this material sits in ch. 3–6 and needs the full text."
     },
     {
       "id": "q-2012-f-1a",
@@ -2649,7 +2691,9 @@
       "topics": [
         "Leontief",
         "Input requirement set",
-        "Transformation function"
+        "Isoquant",
+        "Transformation function",
+        "Production possibilities set"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2658,7 +2702,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2016-f-1b"
     },
     {
       "id": "q-2012-f-1b",
@@ -2718,7 +2762,10 @@
       "marks": 4.17,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "Technical rate of substitution",
+        "Elasticity of substitution",
+        "Elasticity of scale",
+        "Cobb-Douglas"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2727,7 +2774,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2019-f-2b"
     },
     {
       "id": "q-2012-f-2b",
@@ -2787,7 +2834,10 @@
       "marks": 4.0,
       "difficulty": "intermediate",
       "topics": [
-        "Preferences"
+        "Homogeneous functions",
+        "Homothetic",
+        "Returns to scale",
+        "Expansion path"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2796,7 +2846,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-i2-4"
     },
     {
       "id": "q-2011-f-4a",
@@ -2832,16 +2882,24 @@
       "marks": 3.0,
       "difficulty": "intermediate",
       "topics": [
-        "Input requirement set"
+        "Input requirement set",
+        "Regularity condition",
+        "Technology",
+        "Existence"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-technology"
+      ],
       "text": "One regularity condition regarding technology is that \"the input requirement set $V(y)$ is a closed, nonempty set for all $y\\ge0.$\" Explain this regularity condition.",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Explain what non-emptiness rules out — 1 mark",
+        "Explain what closedness means and rules out — 1.25 marks",
+        "Say why the pair is needed: a cost-minimising bundle must exist — 0.75 marks"
+      ],
+      "answer": "> **The condition.** $V(y)$ is a **closed, non-empty** set for all $y\\ge0$.\n\nThese are *regularity* conditions rather than economic assumptions: they do not describe how a technology behaves, they guarantee that the problems we pose about it have answers.\n\n## Non-empty\n\n$V(y)\\ne\\emptyset$ says **some** input bundle can produce $y$ — the output level is technologically attainable.\n\n**What it rules out.** Asking the firm to minimise the cost of producing an output it simply cannot produce. If $V(y)$ were empty, $c(w,y)=\\min\\{w\\cdot x:x\\in V(y)\\}$ would be a minimum over nothing, and the cost function would be undefined at that $y$.\n\nIt is a mild condition: it says only that the question makes sense before we start answering it.\n\n## Closed\n\n$V(y)$ is **closed** if it contains all its own boundary points: whenever a sequence $x^{n}\\in V(y)$ converges to some $x$, that limit $x$ is in $V(y)$ too.\n\n**What it rules out.** A technology that can produce $y$ with bundles *arbitrarily close* to $x$, but not with $x$ itself. Then the isoquant would be a boundary the firm could approach without ever reaching, and the minimum cost would be a value the firm could get within a hair of but never attain.\n\nIn that case the cost-minimisation problem has an **infimum but no minimum** — there is a greatest lower bound on cost, but no bundle achieving it. The firm has no optimal plan to choose.\n\n## Why the pair is needed\n\nTogether they make the cost-minimisation problem well posed:\n\n- **non-emptiness** gives something to minimise over;\n- **closedness**, with the continuity of $w\\cdot x$, means the minimum is actually **attained** — the standard existence argument, Weierstrass's theorem, needs a closed feasible set.\n\nAdding monotonicity bounds the problem from the relevant side and completes the guarantee that $c(w,y)$ exists and is well defined.\n\n**The distinction worth drawing.** Monotonicity and convexity are **economic** assumptions with content — they say inputs are freely disposable, and that mixtures are feasible, and either could be false of a real technology. Closedness and non-emptiness are **mathematical housekeeping**: they carry almost no economic content, and their role is to ensure the machinery of optimisation applies at all.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §1.2 (regularity conditions on technology)"
     },
     {
       "id": "q-2011-f-4c",
@@ -2853,7 +2911,10 @@
       "marks": 3.0,
       "difficulty": "intermediate",
       "topics": [
-        "CES"
+        "Returns to scale",
+        "CRS",
+        "IRS",
+        "Technology"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2862,7 +2923,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-5b"
     },
     {
       "id": "q-2011-f-5a",
@@ -3089,7 +3150,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "Returns to scale",
+        "Profit maximization",
+        "Existence",
+        "Uniqueness"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3098,7 +3162,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2018-f-3b"
     },
     {
       "id": "q-2024-f-6a",
@@ -3349,7 +3413,10 @@
       "marks": 2.5,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "Economic profit",
+        "Opportunity cost",
+        "Profit maximization",
+        "Technology"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3358,7 +3425,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2022-f-5ab"
     },
     {
       "id": "q-2022-i2-2",
@@ -3396,7 +3463,9 @@
       "difficulty": "intermediate",
       "topics": [
         "WAPM",
-        "Cost function"
+        "Revealed profitability",
+        "Recoverability",
+        "Profit maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3405,7 +3474,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-6b"
     },
     {
       "id": "q-2022-f-5a",
@@ -3633,7 +3702,10 @@
       "marks": 4.0,
       "difficulty": "intermediate",
       "topics": [
-        "Factor demand"
+        "Substitution matrix",
+        "Profit maximization",
+        "Symmetry",
+        "Hotelling's lemma"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3642,7 +3714,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2011-f-6b"
     },
     {
       "id": "q-2019-f-3b",
@@ -3905,7 +3977,10 @@
       "marks": 4.0,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "Returns to scale",
+        "Profit maximization",
+        "Existence",
+        "Uniqueness"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3914,7 +3989,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2018-f-3b"
     },
     {
       "id": "q-2014-f-4c",
@@ -3926,7 +4001,10 @@
       "marks": 4.0,
       "difficulty": "intermediate",
       "topics": [
-        "Economic profit"
+        "Economic profit",
+        "Opportunity cost",
+        "Profit maximization",
+        "Technology"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3935,7 +4013,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2022-f-5ab"
     },
     {
       "id": "q-2014-f-5a",
@@ -4042,18 +4120,27 @@
       "batch": "5th",
       "qNo": "6(B)",
       "marks": 4.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Hotelling's lemma"
+        "Hotelling's lemma",
+        "Profit function",
+        "Envelope theorem",
+        "Supply"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-profit"
+      ],
       "text": "State and prove the \"Hotelling's lemma\". (4)",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "State the lemma for both output and inputs — 1 mark",
+        "Prove it by the envelope theorem, saying why the indirect terms vanish — 2 marks",
+        "Give the alternative proof from the definition of a maximum — 0.5 marks",
+        "Say what it is used for — 0.5 marks"
+      ],
+      "answer": "## Statement\n\nFor a competitive firm with profit function $\\pi(p,w)=\\max\\{p\\,y-w\\cdot x\\}$, the optimal plan is recovered by **differentiating the profit function**:\n\n$$\\boxed{\\;\\frac{\\partial\\pi(p,w)}{\\partial p}=y(p,w),\\qquad\\qquad -\\frac{\\partial\\pi(p,w)}{\\partial w_i}=x_i(p,w)\\;}$$\n\nOutput supply is the price-derivative; factor demand is *minus* the wage-derivative.\n\n## Proof by the envelope theorem\n\nWrite the profit function with the optimal plan substituted in:\n\n$$\\pi(p,w)=p\\,y(p,w)-w\\cdot x(p,w)$$\n\nDifferentiate with respect to $p$, remembering that $y$ and $x$ both depend on $p$:\n\n$$\\frac{\\partial\\pi}{\\partial p}=y+\\underbrace{\\left[p\\frac{\\partial y}{\\partial p}-w\\cdot\\frac{\\partial x}{\\partial p}\\right]}_{\\text{indirect effect}}$$\n\n**The bracket is zero.** It is the derivative of profit with respect to the firm's own choices, evaluated at the optimum — and at an optimum the first-order conditions make exactly that vanish. Concretely, $p\\,\\partial f/\\partial x_i=w_i$ for each input, so\n\n$$p\\frac{\\partial y}{\\partial p}-w\\cdot\\frac{\\partial x}{\\partial p} =\\sum_i\\Big(p\\frac{\\partial f}{\\partial x_i}-w_i\\Big)\\frac{\\partial x_i}{\\partial p}=0$$\n\nHence $\\partial\\pi/\\partial p=y(p,w)$. The same argument on $w_i$ gives $\\partial\\pi/\\partial w_i=-x_i(p,w)$. $\\blacksquare$\n\n**The economic content of \"the bracket is zero\".** The firm was already doing the best it could. When the price nudges up, it *will* adjust its plan — but that adjustment is worth nothing **to first order**, precisely because it was already optimising. Only the direct effect, selling the existing output at a better price, counts.\n\n## A proof without calculus\n\nThe result also follows from the definition of a maximum, which is worth knowing because it needs no differentiability of the technology. Fix the plan at $(y^{*},x^{*})$ optimal for $(p^{0},w)$ and define\n\n$$g(p)=\\pi(p,w)-\\big[p\\,y^{*}-w\\cdot x^{*}\\big]$$\n\n$g(p)\\ge0$ everywhere, since the true maximum is at least as good as one fixed plan, and $g(p^{0})=0$. So $g$ attains a minimum at $p^{0}$, giving $g'(p^{0})=0$, which rearranges to $\\partial\\pi/\\partial p=y^{*}$.\n\nGeometrically: $\\pi$ is the **upper envelope** of the straight lines traced by fixed plans, and it is tangent to one of them at each price. The slope of that tangent line is the plan's own output.\n\n## What it is for\n\n**It saves the whole comparative-static exercise.** Instead of re-solving the maximisation at every price, write down $\\pi$ once and differentiate. Differentiating once more gives the substitution matrix $\\Sigma=-D^{2}\\pi$, from which symmetry and negative definiteness follow immediately.\n\n**It is one of a family.** Shephard's lemma ($\\partial c/\\partial w_i=x_i$) and Roy's identity are the same envelope argument applied to the cost-minimisation and utility-maximisation problems. Recognising that turns three memorised results into one.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §2.2 (Hotelling's lemma)\n\n⚠ The supplied *Selected Chapters* PDF holds only ch. 1, 2, 7 and 8; this material sits in ch. 3–6 and needs the full text."
     },
     {
       "id": "q-2014-f-6c",
@@ -4190,18 +4277,27 @@
       "batch": "3rd",
       "qNo": "3(B)",
       "marks": 6.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "General"
+        "Profit maximization",
+        "Existence",
+        "Corner solution",
+        "Returns to scale"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-profit"
+      ],
       "text": "Refer to the question in Section (A). Now explain some particular cases where our profit-maximization solution in Section (A) would not be appropriate. And briefly discuss how we address these types of cases.",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Case 1: no maximum under increasing or constant returns — 2 marks",
+        "Case 2: corner solutions where the tangency fails — 2 marks",
+        "Case 3: non-uniqueness, and kinked or non-smooth technologies — 1.5 marks",
+        "Say how each is handled — 0.5 marks"
+      ],
+      "answer": "The tangency of an isoprofit line with the production set is the standard solution. It can fail in three distinct ways.\n\n## Case 1 — No maximum exists at all\n\nUnder **constant or increasing returns to scale** the production set is a cone or better, so scaling a plan up by $t$ scales profit by at least $t$:\n\n$$\\pi(t)\\ \\ge\\ t\\,\\pi(1)$$\n\nIf any feasible plan earns positive profit, then $\\pi\\to\\infty$ as $t\\to\\infty$ and **no plan is optimal** — whatever you name, doubling it beats it. The isoprofit lines simply never stop finding a higher point in the production set.\n\n**How it is handled.** Under CRS the only case admitting a solution is zero maximum profit, which is exactly the long-run competitive equilibrium condition. Under IRS the price-taking assumption itself must be abandoned: the firm grows until it is large relative to the market, and the model is replaced by one with market power — natural monopoly in the limit.\n\n## Case 2 — The optimum is at a corner\n\nThe FOC $p\\,f'(x)=w$ assumes an **interior** solution. If the input price is so high that even the first unit loses money —\n\n$$p\\,f'(0)\\le w$$\n\n— then $x^{*}=0$ and the tangency never occurs. The condition holds as an **inequality**, not an equality.\n\nThe example on these papers is $f(x)=20x-x^{2}$ with $p=1$: since $f'(0)=20$, any $w\\ge20$ shuts the firm down.\n\n**How it is handled.** State the Kuhn–Tucker conditions instead: $p\\,f'(x^{*})\\le w$, with equality whenever $x^{*}>0$.\n\n## Case 3 — A solution exists but is not unique\n\nUnder **constant returns** with zero maximum profit, every scaling of an optimal plan is also optimal:\n\n$$\\pi(t)=t\\cdot0=0\\quad\\text{for all }t$$\n\nThe solution is a **whole ray**, so supply is a *correspondence*, not a function, and the individual firm's scale is indeterminate even though industry output is pinned down by demand.\n\nThe same happens where the production set has a **flat segment**: an isoprofit line can lie along it, making every point on the segment equally profitable.\n\n**A related failure: kinks.** A **Leontief** technology has no tangency anywhere, because the isoquant has a corner and the slope is undefined there. The optimum still exists — it sits at the corner — but it must be read off directly rather than found by differentiation.\n\n## The common thread\n\nThe tangency method needs three things the general problem does not guarantee: a **concave** technology so the stationary point is a maximum, an **interior** solution so the FOC binds with equality, and **strict** concavity so the answer is unique. When any fails, fall back on the definition — compare profits across the whole feasible set — rather than on the derivative.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §2.1 (when the standard solution fails)"
     },
     {
       "id": "q-2012-f-4a",
@@ -4261,8 +4357,10 @@
       "marks": 4.0,
       "difficulty": "intermediate",
       "topics": [
+        "Hotelling's lemma",
         "Profit function",
-        "Factor demand"
+        "Envelope theorem",
+        "Supply"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4271,7 +4369,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2014-f-6b"
     },
     {
       "id": "q-2012-f-6b",
@@ -4684,7 +4782,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Second-order condition"
+        "Cost minimization",
+        "Second-order condition",
+        "Isoquant",
+        "TRS"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4693,7 +4794,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-6a"
     },
     {
       "id": "q-2022-f-6a",
@@ -4753,7 +4854,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "First-order condition"
+        "Cost minimization",
+        "Second-order condition",
+        "Isoquant",
+        "TRS"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4762,7 +4866,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-6a"
     },
     {
       "id": "q-2021-i-5",
@@ -4838,7 +4942,7 @@
     },
     {
       "id": "q-2019-f-4a",
-      "chapterId": "ch4",
+      "chapterId": "ch1",
       "examType": "final",
       "year": 2019,
       "batch": "10th",
@@ -4847,7 +4951,10 @@
       "difficulty": "intermediate",
       "topics": [
         "Leontief",
-        "Cost function"
+        "Input requirement set",
+        "Isoquant",
+        "Transformation function",
+        "Production possibilities set"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4856,7 +4963,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2016-f-1b"
     },
     {
       "id": "q-2019-f-4b-2",
@@ -5137,18 +5244,26 @@
       "batch": "3rd",
       "qNo": "5(C)",
       "marks": 4.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Convexity"
+        "Convex monotonic hull",
+        "Recoverability",
+        "WAPM",
+        "Production set"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-profit"
+      ],
       "text": "What is a \"convex monotonic hull\"? Explain.",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Define the convex hull and the monotonic (free-disposal) hull — 2 marks",
+        "Say why it is the object recovered from data — 1.5 marks",
+        "Note that it is observationally indistinguishable from the true set — 0.5 marks"
+      ],
+      "answer": "## The two operations\n\n**The convex hull** of a set is the smallest convex set containing it — the result of filling in every dent, by adding all weighted averages of points already in the set.\n\n**The monotonic hull** — better called the *free-disposal hull* — adds every plan that uses more inputs to produce the same or less output. It fills the set downward and to the left in input-output space, on the grounds that a firm can always waste.\n\nThe **convex monotonic hull** of a production set $Y$ applies both: the smallest set containing $Y$ that is both convex and satisfies free disposal.\n\n## Why this is the object that matters\n\nIt is exactly what can be **recovered** from a firm's observed behaviour.\n\nEach observation of a profit-maximising firm — plan $y^{t}$ chosen at prices $p^{t}$ — tells us, by WAPM, that nothing better was available at those prices. Any plan more profitable than $y^{t}$ at $p^{t}$ must have been infeasible. Intersecting those conclusions over all observations gives\n\n$$\\hat Y=\\bigl\\{\\,y\\;:\\;p^{t}\\!\\cdot y\\le p^{t}\\!\\cdot y^{t}\\ \\text{ for all } t\\,\\bigr\\}$$\n\n**$\\hat Y$ is an intersection of half-spaces**, so it is automatically convex, and with free disposal it is monotonic. Therefore what the data deliver is precisely the convex monotonic hull of $Y$ — never the true $Y$ itself, if $Y$ has dents.\n\n## Why no more can be recovered\n\nA price-taking firm maximises a **linear** objective, $p\\cdot y$, and a linear function attains its maximum at an **extreme point** of the feasible set. A point lying inside a dent is never an extreme point at any price vector, so the firm is **never observed choosing one**.\n\nNo quantity of data can reveal a feature that behaviour never visits.\n\n## The conclusion worth stating\n\nA non-convex technology and its convex monotonic hull are **observationally indistinguishable** to anyone watching a competitive firm. That is why assuming convexity costs nothing empirically: it is not a claim that real technologies have no indivisibilities, but a recognition that price-taking behaviour could not tell us either way.\n\nThe same logic runs on the consumer side, where revealed preference recovers an indifference curve only up to the region the observed choices bracket.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §2.3 (recoverability)"
     },
     {
       "id": "q-2012-f-6a",
@@ -5278,18 +5393,26 @@
       "batch": "1st",
       "qNo": "8(A)",
       "marks": 6.25,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Cost function"
+        "Cost function",
+        "Homogeneity",
+        "Concavity",
+        "Shephard's lemma"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-cost"
+      ],
       "text": "Prove the following properties of the cost function: the cost function is homogenous of degree 1 in w. (i) (ii) the cost function is concave in w. And explain this concavity of the cost function property ((ii)).",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Prove homogeneity of degree one, arguing that the chosen bundle does not change — 2.5 marks",
+        "Prove concavity with the fixed-bundle argument — 2.5 marks",
+        "Explain what the concavity means economically — 1.25 marks"
+      ],
+      "answer": "$$c(w,y)=\\min_{x}\\;\\{w\\cdot x\\;:\\;f(x)\\ge y\\}$$\n\n## (i) The cost function is homogeneous of degree one in $w$\n\n**Claim.** $c(t\\,w,y)=t\\,c(w,y)$ for every $t>0$.\n\n**Proof.** The constraint set $\\{x:f(x)\\ge y\\}$ does not mention prices at all, so scaling $w$ leaves the *feasible bundles* untouched. Only the objective is scaled:\n\n$$c(tw,y)=\\min_{x}\\;\\{t\\,w\\cdot x\\;:\\;f(x)\\ge y\\} =t\\cdot\\min_{x}\\;\\{w\\cdot x\\;:\\;f(x)\\ge y\\}=t\\,c(w,y)$$\n\npulling the positive constant $t$ out of the minimisation, which is legitimate because multiplying an objective by a positive number does not change **which** $x$ minimises it. $\\blacksquare$\n\n**The point to state.** Not only does cost scale by $t$ — the **cost-minimising bundle is unchanged**, $x(tw,y)=x(w,y)$. Conditional factor demands are homogeneous of degree **zero**. Doubling every input price changes no real decision; it merely doubles the money value of the same plan. This is the firm-side counterpart of the consumer's no-money-illusion property.\n\n## (ii) The cost function is concave in $w$\n\n**Claim.** For $w^{t}=t\\,w'+(1-t)\\,w''$ with $t\\in[0,1]$,\n\n$$c(w^{t},y)\\;\\ge\\;t\\,c(w',y)+(1-t)\\,c(w'',y)$$\n\n**Proof.** Let $x^{t}$ be the bundle that minimises cost at prices $w^{t}$. By definition of $w^{t}$ and linearity of the inner product,\n\n$$c(w^{t},y)=w^{t}\\!\\cdot x^{t}=t\\,(w'\\!\\cdot x^{t})+(1-t)\\,(w''\\!\\cdot x^{t})$$\n\nNow $x^{t}$ produces $y$, so it is **feasible** at $w'$ and at $w''$ — but not necessarily **optimal** there. Its cost therefore cannot be below the minimum:\n\n$$w'\\!\\cdot x^{t}\\ge c(w',y),\\qquad\\qquad w''\\!\\cdot x^{t}\\ge c(w'',y)$$\n\nSubstituting these in gives the claim. $\\blacksquare$\n\n## Explaining the concavity\n\n![The straight line is the cost of a fixed bundle; the true cost function bends below it.](content/figures/expenditure-concave.svg)\n\n**The economic content is the value of being able to substitute.**\n\nSuppose the firm were **locked into** the bundle $x^{*}$. Its cost would then be $w\\cdot x^{*}$ — a **straight line** in $w$, rising at a constant rate as any input price rose.\n\nBut the firm is not locked in. When $w_1$ rises it **substitutes away** from input 1 towards the now-relatively-cheaper inputs. So its actual cost rises **more slowly** than that straight line. The two coincide only at the price where $x^{*}$ happens to be the optimal choice, and elsewhere the true cost lies strictly below.\n\nA function that lies below its tangent lines everywhere is exactly a **concave** function. Concavity *is* the flexibility, drawn.\n\n**Two consequences worth naming.**\n\nBy Shephard's lemma $\\partial c/\\partial w_i=x_i(w,y)$, so the second derivative $\\partial^{2}c/\\partial w_i^{2}=\\partial x_i/\\partial w_i$. Concavity makes that non-positive: **conditional factor demand curves slope downward** — the same result WACM delivers without calculus.\n\nAnd because $c$ is homogeneous of degree one, Euler's theorem makes its Hessian **singular**. The cost function is concave and its Hessian negative *semi*definite, never negative definite: the zero eigenvalue corresponds to scaling all prices at once, which changes no real quantity.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., cost-function chapter.\n\n⚠ The supplied *Selected Chapters* PDF holds only ch. 1, 2, 7 and 8; this material sits in ch. 3–6 and needs the full text."
     },
     {
       "id": "q-2010-f-8b",
@@ -5299,39 +5422,27 @@
       "batch": "1st",
       "qNo": "8(B)",
       "marks": 6.25,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Factor demand"
+        "Conditional factor demand",
+        "Symmetry",
+        "Substitutes",
+        "Cost function"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-cost"
+      ],
       "text": "Consider a firm with conditional factor demand functions of the form $x_{1}=1+3w_{1}^{-1/2}w_{2}^{1/2}$ $x_{2}=1+3w_{1}^{1/2}w_{2}^{-1/2}$ 6.5 9.5 What can we tell about the own-price effects and the cross-price effects of these conditional factor demand functions?",
-      "answerPoints": [],
-      "answer": "",
-      "answerBn": "",
-      "source": "",
-      "sameAs": ""
-    },
-    {
-      "id": "q-2025-m-0",
-      "chapterId": "ch7",
-      "examType": "midterm",
-      "year": 2025,
-      "batch": "16th",
-      "qNo": "0",
-      "marks": 7.5,
-      "difficulty": "intermediate",
-      "topics": [
-        "General"
+      "answerPoints": [
+        "Compute the two own-price derivatives and sign them — 2 marks",
+        "Compute the two cross-price derivatives and note they are equal — 2 marks",
+        "Interpret the signs: downward-sloping demands, and substitutes — 1.5 marks",
+        "Check the theoretical restrictions the functions must satisfy — 0.75 marks"
       ],
-      "repeats": [],
-      "theoryIds": [],
-      "text": "$7.5^{*}4=30$, time 90 Minutes)",
-      "answerPoints": [],
-      "answer": "",
+      "answer": "$$x_1=1+3\\,w_1^{-1/2}w_2^{1/2},\\qquad\\qquad x_2=1+3\\,w_1^{1/2}w_2^{-1/2}$$\n\n## Own-price effects\n\n$$\\frac{\\partial x_1}{\\partial w_1}=3\\left(-\\tfrac12\\right)w_1^{-3/2}w_2^{1/2} =-\\frac{3}{2}\\cdot\\frac{\\sqrt{w_2}}{w_1^{3/2}}\\;<\\;0$$\n\n$$\\frac{\\partial x_2}{\\partial w_2}=-\\frac{3}{2}\\cdot\\frac{\\sqrt{w_1}}{w_2^{3/2}}\\;<\\;0$$\n\n**Both are strictly negative** for all positive prices. **Conditional factor demand curves slope downward** — exactly what the concavity of the cost function requires, since these derivatives are the diagonal elements of its Hessian.\n\n## Cross-price effects\n\n$$\\frac{\\partial x_1}{\\partial w_2}=3\\left(\\tfrac12\\right)w_1^{-1/2}w_2^{-1/2} =\\frac{3}{2\\sqrt{w_1w_2}}\\;>\\;0$$\n\n$$\\frac{\\partial x_2}{\\partial w_1}=\\frac{3}{2\\sqrt{w_1w_2}}\\;>\\;0$$\n\n**They are identical.** That is not a coincidence of this example but a theorem:\n\n$$\\frac{\\partial x_1}{\\partial w_2}=\\frac{\\partial^{2}c}{\\partial w_2\\partial w_1} =\\frac{\\partial^{2}c}{\\partial w_1\\partial w_2}=\\frac{\\partial x_2}{\\partial w_1}$$\n\nby Shephard's lemma and Young's theorem. Finding the two cross-effects equal is the **symmetry** restriction, and had the given functions produced different values they could not have come from any cost-minimising firm.\n\n## What the signs mean\n\nBoth cross-effects are **positive**: a rise in one input's price raises demand for the other. The two inputs are **substitutes** — dearer labour sends the firm towards capital, and vice versa.\n\nNote this is a statement about *conditional* demands, output held fixed. There is no scale effect here to muddy it: the firm is not producing less, only producing the same $y$ a different way. That is precisely why conditional demands are the clean object for this question.\n\n**A numerical check.** At $w=(4,9)$:\n\n$$\\frac{\\partial x_1}{\\partial w_1}=-0.563,\\qquad \\frac{\\partial x_2}{\\partial w_2}=-0.111,\\qquad \\frac{\\partial x_1}{\\partial w_2}=\\frac{\\partial x_2}{\\partial w_1}=0.250$$\n\nOwn-effects negative, cross-effects positive and equal.\n\n## Do these functions pass the theory's tests?\n\n| Restriction | Verdict |\n|---|---|\n| Own-price effects $\\le0$ | ✓ both strictly negative |\n| Symmetry $\\partial x_1/\\partial w_2=\\partial x_2/\\partial w_1$ | ✓ identical |\n| Homogeneous of degree zero in $w$ | ✓ only the ratio $w_2/w_1$ appears |\n| Substitution matrix negative semidefinite | ✓ negative diagonal, and $\\det\\Sigma=0$ |\n\nThe determinant vanishing is required, not a defect: homogeneity of degree zero means scaling all prices changes nothing, so the matrix must be **singular**. A \"negative definite\" substitution matrix would actually contradict the theory.\n\n**Conclusion.** These conditional factor demands are fully consistent with cost-minimising behaviour: downward-sloping, symmetric, homogeneous of degree zero, and describing two inputs that substitute for one another.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., cost-function chapter.\n\n⚠ The supplied *Selected Chapters* PDF holds only ch. 1, 2, 7 and 8; this material sits in ch. 3–6 and needs the full text."
     },
     {
       "id": "q-2025-i1a-1",
@@ -5607,7 +5718,10 @@
       "difficulty": "intermediate",
       "topics": [
         "Preferences",
-        "Continuity"
+        "Completeness",
+        "Transitivity",
+        "Continuity",
+        "Utility function"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5616,7 +5730,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-1a"
     },
     {
       "id": "q-2025-m-2b",
@@ -5629,7 +5743,8 @@
       "difficulty": "intermediate",
       "topics": [
         "Local nonsatiation",
-        "Preferences"
+        "Preferences",
+        "Indifference curves"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5638,7 +5753,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-1ab"
     },
     {
       "id": "q-2025-m-3a",
@@ -5674,16 +5789,24 @@
       "marks": 3.75,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "Bad goods",
+        "Inferior good",
+        "Preferences",
+        "Income effect"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-preferences"
+      ],
       "text": "Are the \"bad goods\" also called \"inferior goods\"? Explain your answer. $(5+2.5=7.5)$",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Say no, and define a bad — 1.25 marks",
+        "Define an inferior good — 1.25 marks",
+        "Draw the distinction: level of consumption versus response to income — 1.25 marks"
+      ],
+      "answer": "**No — they are entirely different concepts, and the terms are not interchangeable.**\n\n## A \"bad\"\n\nA **bad** is a commodity the consumer *dislikes*: more of it makes them worse off.\n\n$$\\frac{\\partial u}{\\partial x_i}<0$$\n\nPollution, noise, rubbish, risk. The defining feature is the sign of the **marginal utility**.\n\n**Consequences.** Indifference curves involving a bad slope **upward**: to accept more of the bad, the consumer must be compensated with more of the good. Monotonicity fails for that commodity, and a consumer would need to be *paid* to take it.\n\nThe usual repair is to redefine the variable — measure *clean air* instead of pollution, or *safety* instead of risk — which converts the bad into a good and restores the standard machinery.\n\n## An \"inferior good\"\n\nAn **inferior good** is one the consumer buys **less** of as income rises, prices held constant:\n\n$$\\frac{\\partial x_i}{\\partial m}<0$$\n\nCoarse grain, bus travel, cheap staples. The defining feature is the sign of the **income effect**.\n\n**Consequences.** The Engel curve slopes downward over some income range, and by the Slutsky equation the income term works *against* the substitution effect — which is what makes the Giffen case possible.\n\n## The distinction\n\n| | Defined by | Sign | Indifference curves |\n|---|---|---|---|\n| **Bad** | marginal utility | $\\partial u/\\partial x_i<0$ | slope **upward** |\n| **Inferior** | income effect | $\\partial x_i/\\partial m<0$ | slope downward, normally |\n\n**The key point:** an inferior good is still a **good**. The consumer genuinely wants it and is made better off by more of it at constant income — they simply prefer *substitutes* once they can afford them. Someone eating coarse grain does not dislike it; they switch to rice when richer.\n\nSo the two ideas answer different questions. *Bad* is about whether the commodity is **wanted at all**; *inferior* is about how demand for a wanted good **responds to income**. A bad has negative marginal utility; an inferior good has positive marginal utility and a negative income derivative.\n\n**One connection worth noting.** No good can be inferior at *every* income level — if it were, demand would eventually go negative. Inferiority is always a property of a range of incomes, not of the good in the abstract, which is another way in which it differs from being a bad.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §7.1 and §8.5"
     },
     {
       "id": "q-2025-i1a-4",
@@ -5723,8 +5846,12 @@
       "difficulty": "intermediate",
       "topics": [
         "Cobb-Douglas",
+        "Duality",
+        "Marshallian demand",
+        "Hicksian demand",
         "Indirect utility",
-        "Expenditure function"
+        "Expenditure function",
+        "Money metric utility"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5733,11 +5860,11 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-2"
     },
     {
       "id": "q-2025-f-4b",
-      "chapterId": "ch7",
+      "chapterId": "ch1",
       "examType": "final",
       "year": 2025,
       "batch": "16th",
@@ -5745,7 +5872,10 @@
       "marks": 3.5,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "Technical rate of substitution",
+        "Elasticity of substitution",
+        "Elasticity of scale",
+        "Cobb-Douglas"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5754,7 +5884,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2019-f-2b"
     },
     {
       "id": "q-2025-m-6a",
@@ -5998,7 +6128,7 @@
     },
     {
       "id": "q-2024-i1-3",
-      "chapterId": "ch7",
+      "chapterId": "ch8",
       "examType": "incourse",
       "year": 2024,
       "batch": "15th",
@@ -6006,9 +6136,9 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Marshallian demand",
-        "Hicksian demand",
-        "Compensation"
+        "Hicks compensation",
+        "Slutsky compensation",
+        "Substitution effect"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6017,7 +6147,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2023-f-3c"
     },
     {
       "id": "q-2024-m-3",
@@ -6130,7 +6260,11 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Convexity"
+        "Consumer equilibrium",
+        "MRS",
+        "First-order condition",
+        "Second-order condition",
+        "Utility maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6139,7 +6273,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-1b"
     },
     {
       "id": "q-2023-m-1a",
@@ -6151,7 +6285,11 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "Preferences",
+        "Completeness",
+        "Transitivity",
+        "Continuity",
+        "Utility function"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6160,7 +6298,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-1a"
     },
     {
       "id": "q-2023-m-1b",
@@ -6486,7 +6624,7 @@
     },
     {
       "id": "q-2022-f-2a",
-      "chapterId": "ch7",
+      "chapterId": "ch8",
       "examType": "final",
       "year": 2022,
       "batch": "13th",
@@ -6494,7 +6632,11 @@
       "marks": 4.5,
       "difficulty": "intermediate",
       "topics": [
-        "Marshallian demand"
+        "Giffen good",
+        "Slutsky equation",
+        "Inferior good",
+        "Law of demand",
+        "Market equilibrium"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6503,7 +6645,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-3a"
     },
     {
       "id": "q-2022-i1-3",
@@ -6562,7 +6704,11 @@
       "marks": 2.5,
       "difficulty": "intermediate",
       "topics": [
-        "Convexity"
+        "Consumer equilibrium",
+        "MRS",
+        "First-order condition",
+        "Second-order condition",
+        "Utility maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6571,7 +6717,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-1b"
     },
     {
       "id": "q-2021-i1-1",
@@ -6666,7 +6812,11 @@
       "marks": 6.25,
       "difficulty": "intermediate",
       "topics": [
-        "Local nonsatiation"
+        "Preferences",
+        "Completeness",
+        "Transitivity",
+        "Continuity",
+        "Utility function"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6675,7 +6825,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-1a"
     },
     {
       "id": "q-2021-f-2",
@@ -6731,7 +6881,11 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Second-order condition"
+        "Consumer equilibrium",
+        "MRS",
+        "First-order condition",
+        "Second-order condition",
+        "Utility maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6740,7 +6894,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-1b"
     },
     {
       "id": "q-2021-m-2a",
@@ -6861,7 +7015,9 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Local nonsatiation"
+        "Local nonsatiation",
+        "Preferences",
+        "Indifference curves"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6870,7 +7026,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-1ab"
     },
     {
       "id": "q-2019-m-1",
@@ -6907,7 +7063,11 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Second-order condition"
+        "Consumer equilibrium",
+        "MRS",
+        "First-order condition",
+        "Second-order condition",
+        "Utility maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6916,7 +7076,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-1b"
     },
     {
       "id": "q-2019-m-4",
@@ -7061,7 +7221,10 @@
       "marks": 1.25,
       "difficulty": "intermediate",
       "topics": [
-        "MRS"
+        "MRS",
+        "Marginal utility",
+        "Ordinal utility",
+        "Monotonic transformation"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7070,7 +7233,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2013-f-7ab"
     },
     {
       "id": "q-2019-f-6c",
@@ -7105,7 +7268,13 @@
       "marks": 6.0,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "Cobb-Douglas",
+        "Duality",
+        "Marshallian demand",
+        "Hicksian demand",
+        "Indirect utility",
+        "Expenditure function",
+        "Money metric utility"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7114,28 +7283,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
-    },
-    {
-      "id": "q-2018-f-0",
-      "chapterId": "ch7",
-      "examType": "final",
-      "year": 2018,
-      "batch": "9th",
-      "qNo": "0",
-      "marks": 12.5,
-      "difficulty": "intermediate",
-      "topics": [
-        "General"
-      ],
-      "repeats": [],
-      "theoryIds": [],
-      "text": "Course: ECON 401 (Advanced Microeconomics 1)",
-      "answerPoints": [],
-      "answer": "",
-      "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-2"
     },
     {
       "id": "q-2018-i1-1",
@@ -7196,7 +7344,13 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Hicksian demand"
+        "Cobb-Douglas",
+        "Duality",
+        "Marshallian demand",
+        "Hicksian demand",
+        "Indirect utility",
+        "Expenditure function",
+        "Money metric utility"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7205,7 +7359,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-2"
     },
     {
       "id": "q-2018-f-5a",
@@ -7313,7 +7467,11 @@
       "marks": 4.0,
       "difficulty": "intermediate",
       "topics": [
-        "Continuity"
+        "Preferences",
+        "Completeness",
+        "Transitivity",
+        "Continuity",
+        "Utility function"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7322,7 +7480,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-1a"
     },
     {
       "id": "q-2017-f-6c",
@@ -7386,7 +7544,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "Duality",
+        "Expenditure function",
+        "Indirect utility",
+        "Inverse"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7395,7 +7556,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2014-f-1b"
     },
     {
       "id": "q-2014-f-1a",
@@ -7432,20 +7593,27 @@
       "batch": "5th",
       "qNo": "1(B)",
       "marks": 6.25,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Indirect utility",
+        "Duality",
         "Expenditure function",
-        "Duality"
+        "Indirect utility",
+        "Inverse"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-duality"
+      ],
       "text": "Explain that, the \"expenditure function\" is simply the dual problem of the \"indirect utility function\". How are they connected with each other? Explain.",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Set out the two problems and say what makes them dual — 2 marks",
+        "State the two identities that connect them — 2 marks",
+        "Show they are inverses in their last argument, with a worked example — 1.5 marks",
+        "Say what duality buys — 0.75 marks"
+      ],
+      "answer": "## The two problems\n\n**Utility maximisation (UMP).** Income is fixed; buy the most satisfaction it will reach.\n\n$$v(p,m)=\\max_{x}\\;\\{u(x)\\;:\\;p\\cdot x\\le m\\}$$\n\n**Expenditure minimisation (EMP).** Utility is fixed; reach it as cheaply as possible.\n\n$$e(p,u)=\\min_{x}\\;\\{p\\cdot x\\;:\\;u(x)\\ge u\\}$$\n\n**What makes them dual.** The objective of one is the constraint of the other, with the roles of $m$ and $u$ swapped. They are the same optimisation seen from opposite sides — like asking *\"how high can I climb on this budget?\"* versus *\"what is the cheapest way to reach that height?\"* Under local nonsatiation the two questions have the **same answer bundle**.\n\n## The identities that connect them\n\n$$\\boxed{\\;e\\big(p,\\;v(p,m)\\big)=m\\;}\\qquad\\qquad\\boxed{\\;v\\big(p,\\;e(p,u)\\big)=u\\;}$$\n\n**Read the first.** Take income $m$, find the best utility it buys, then ask what that utility costs — and you are back to $m$. It holds because local nonsatiation makes the budget bind, so nothing is wasted.\n\n**Read the second.** Take utility $u$, find its minimum cost, then ask what utility that money buys — and you are back to $u$.\n\n**Together these say $e$ and $v$ are inverse functions of each other in their last argument**, holding prices fixed. Invert $v$ in $m$ and you get $e$; invert $e$ in $u$ and you get $v$. That is the precise sense in which the expenditure function is \"simply the dual problem\" of the indirect utility function.\n\n## A worked example\n\nFor Cobb-Douglas $u=x_1^{a}x_2^{1-a}$:\n\n$$v(p,m)=\\frac{m}{p_1^{a}p_2^{1-a}}\\qquad\\text{and}\\qquad e(p,u)=u\\,p_1^{a}p_2^{1-a}$$\n\nSubstituting one into the other:\n\n$$e\\big(p,v(p,m)\\big)=\\frac{m}{p_1^{a}p_2^{1-a}}\\cdot p_1^{a}p_2^{1-a}=m\\qquad✓$$\n\nThe price terms cancel exactly, which is the algebraic signature of the inversion.\n\n## The demands are connected the same way\n\nThe bundles solving the two problems coincide once the arguments are matched:\n\n$$x_i(p,m)=h_i\\big(p,\\;v(p,m)\\big),\\qquad\\qquad h_i(p,u)=x_i\\big(p,\\;e(p,u)\\big)$$\n\nDifferentiating the second of these is exactly how the **Slutsky equation** is derived.\n\n## What duality buys\n\n**Whichever function is convenient will do.** Roy's identity gets demand out of $v$; Shephard's lemma gets compensated demand out of $e$. Since each function can be converted into the other, there is never a need to solve the original constrained problem twice.\n\n**It makes welfare analysis routine.** Compensating and equivalent variation are differences in $e$ evaluated at different prices — and if you have estimated $v$, you already have $e$.\n\n**And it is why applied work specifies $v$ or $e$ directly.** A researcher can posit a flexible functional form for the indirect utility function, differentiate to get an estimable demand system, and know that the system is automatically consistent with *some* underlying preference ordering — without ever writing down $u$.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §7.4 (duality)"
     },
     {
       "id": "q-2013-f-6b",
@@ -7633,19 +7801,28 @@
       "year": 2012,
       "batch": "3rd",
       "qNo": "8",
-      "marks": 2.25,
-      "difficulty": "intermediate",
+      "marks": 12.5,
+      "difficulty": "advanced",
       "topics": [
-        "Indirect utility"
+        "Indirect utility",
+        "Expenditure function",
+        "Roy's identity",
+        "Shephard's lemma"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-duality"
+      ],
       "text": "Consider a consumer whose indirect utility function is $v(p_{1},p_{2},m)=m/p_{1}+m/p_{2}$ where pl and p2 are the prices of goods 1 and 2 and m is income.",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "(A) Invert $v$ to obtain the expenditure function — 3 marks",
+        "(B) Apply Roy's identity for both ordinary demands — 3 marks",
+        "(C) Verify the identity between ordinary and compensated demand — 3.5 marks",
+        "(D) State the general recipes in both directions — 3 marks"
+      ],
+      "answer": "$$v(p_1,p_2,m)=\\frac{m}{p_1}+\\frac{m}{p_2}=m\\left(\\frac{1}{p_1}+\\frac{1}{p_2}\\right)$$\n\n## (A) The expenditure function\n\nUse $e(p,v(p,m))=m$: set $v=u$ and solve for $m$.\n\n$$u=m\\cdot\\frac{p_1+p_2}{p_1p_2}\\qquad\\Longrightarrow\\qquad \\boxed{\\;e(p_1,p_2,u)=\\frac{u\\,p_1p_2}{p_1+p_2}\\;}$$\n\nHomogeneous of degree one in $p$ — the numerator carries $t^{2}$ and the denominator $t$ — as an expenditure function must be.\n\n## (B) The ordinary demand functions\n\nBy **Roy's identity**, $x_i=-\\dfrac{\\partial v/\\partial p_i}{\\partial v/\\partial m}$.\n\n$$\\frac{\\partial v}{\\partial p_1}=-\\frac{m}{p_1^{2}},\\qquad \\frac{\\partial v}{\\partial p_2}=-\\frac{m}{p_2^{2}},\\qquad \\frac{\\partial v}{\\partial m}=\\frac{1}{p_1}+\\frac{1}{p_2}=\\frac{p_1+p_2}{p_1p_2}$$\n\n$$x_1=\\frac{m/p_1^{2}}{(p_1+p_2)/(p_1p_2)}=\\boxed{\\;\\frac{m\\,p_2}{p_1(p_1+p_2)}\\;}$$\n\n$$x_2=\\boxed{\\;\\frac{m\\,p_1}{p_2(p_1+p_2)}\\;}$$\n\n**Check adding-up:** $p_1x_1+p_2x_2=\\dfrac{mp_2}{p_1+p_2}+\\dfrac{mp_1}{p_1+p_2}=m$ ✓ — the budget is exhausted, as local nonsatiation requires.\n\n## (C) The identities between ordinary and compensated demand\n\n**Compensated demand by Shephard's lemma**, $h_i=\\partial e/\\partial p_i$:\n\n$$h_1=\\frac{\\partial}{\\partial p_1}\\left[\\frac{u\\,p_1p_2}{p_1+p_2}\\right] =u\\,p_2\\cdot\\frac{(p_1+p_2)-p_1}{(p_1+p_2)^{2}} =\\frac{u\\,p_2^{2}}{(p_1+p_2)^{2}}$$\n\n**Now verify $x_1(p,e(p,u))=h_1(p,u)$.** Substitute $m=e(p,u)=\\dfrac{up_1p_2}{p_1+p_2}$ into $x_1$:\n\n$$x_1\\big(p,e(p,u)\\big)=\\frac{p_2}{p_1(p_1+p_2)}\\cdot\\frac{u\\,p_1p_2}{p_1+p_2} =\\frac{u\\,p_2^{2}}{(p_1+p_2)^{2}}=h_1(p,u)\\qquad✓$$\n\nThe identity holds exactly. The reverse direction, $h_1(p,v(p,m))=x_1(p,m)$, follows by substituting $u=v(p,m)$ and cancelling in the same way.\n\n## (D) The general recipes\n\n**From compensated demands to the expenditure function, then to $v$.** Integrate Shephard's lemma. Since $h_i=\\partial e/\\partial p_i$, recovering $e$ from the $h_i$ is a matter of integrating them up with respect to prices — the constant of integration is pinned down by $e(p,u)=0$ at the utility level of the zero bundle. Then **invert $e$ in its last argument** to obtain $v$, using $v(p,e(p,u))=u$.\n\n**From ordinary demands to the indirect utility function, then to $e$.** This is the **integrability problem**. Roy's identity is a partial differential equation in $v$,\n\n$$\\frac{\\partial v}{\\partial p_i}+x_i(p,m)\\,\\frac{\\partial v}{\\partial m}=0$$\n\nand solving it recovers $v$ up to a monotonic transformation. It has a solution precisely when the demands satisfy the integrability conditions — homogeneity of degree zero, budget balance, and a symmetric negative semidefinite Slutsky matrix. Then **invert $v$ in $m$** to obtain $e$, as in part (A).\n\n**The point of the whole question.** Any one of $u$, $v$, $e$, $x$ or $h$ determines all the others. They are five descriptions of a single preference ordering, and duality supplies the translation in every direction.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §7.3–7.4 (the fundamental identities)"
     },
     {
       "id": "q-2012-f-8a",
@@ -7681,7 +7858,10 @@
       "marks": 3.5,
       "difficulty": "intermediate",
       "topics": [
-        "Compensation"
+        "Indirect utility",
+        "Expenditure function",
+        "Roy's identity",
+        "Shephard's lemma"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7690,7 +7870,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2012-f-8"
     },
     {
       "id": "q-2012-f-8d",
@@ -7704,7 +7884,8 @@
       "topics": [
         "Indirect utility",
         "Expenditure function",
-        "Compensation"
+        "Roy's identity",
+        "Shephard's lemma"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7713,7 +7894,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2012-f-8"
     },
     {
       "id": "q-2011-f-1a",
@@ -7723,19 +7904,26 @@
       "batch": "2nd",
       "qNo": "1(A)",
       "marks": 4.17,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
         "Indirect utility",
-        "Expenditure function"
+        "Perfect substitutes",
+        "Expenditure function",
+        "Corner solution"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-duality"
+      ],
       "text": "A consumer has an indirect utility function of the form: $v(p_{1},p_{2},m)=m/min\\{p_{1},p_{2}\\}$ What is the form of the expenditure function for this consumer? What is the form of a (quasiconcave) utility function for this consumer? What is the form of the demand function for good 1? Explain your answer.",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Invert $v$ to get the expenditure function — 1.5 marks",
+        "Identify the underlying utility function as perfect substitutes — 1.5 marks",
+        "Give the demand for good 1, including the corner and the tie — 1.17 marks"
+      ],
+      "answer": "$$v(p_1,p_2,m)=\\frac{m}{\\min\\{p_1,p_2\\}}$$\n\n## The expenditure function\n\nUse the duality identity $e(p,v(p,m))=m$: set $v=u$ and solve for $m$.\n\n$$u=\\frac{m}{\\min\\{p_1,p_2\\}}\\qquad\\Longrightarrow\\qquad \\boxed{\\;e(p_1,p_2,u)=u\\cdot\\min\\{p_1,p_2\\}\\;}$$\n\n**Sanity checks.** It is increasing in $u$, non-decreasing in each price, homogeneous of degree one in $p$ (scaling both prices scales the minimum, hence $e$), and concave in $p$ — the minimum of two linear functions is always concave, which is the shape the theory demands.\n\n## The utility function behind it\n\nRead the indirect utility function as a story: **the consumer spends their whole income on whichever good is cheaper, and utility is simply the number of units obtained.** Buying $m/p_1$ units when good 1 is cheaper yields utility $m/p_1$.\n\nThat is exactly the behaviour of **perfect substitutes**:\n\n$$\\boxed{\\;u(x_1,x_2)=x_1+x_2\\;}$$\n\n**Verify it.** Maximising $x_1+x_2$ subject to $p_1x_1+p_2x_2=m$: since the two goods are interchangeable unit for unit, put everything into the cheaper one. Utility is $m/\\min\\{p_1,p_2\\}$ — which is the given $v$. ✓\n\n**Is it quasiconcave, as asked?** Yes. $u=x_1+x_2$ is linear, and every linear function is both concave and convex, hence quasiconcave. Its upper contour sets $\\{x:x_1+x_2\\ge k\\}$ are half-planes, which are convex. Note the indifference curves are **straight lines of slope $-1$** — convex, but not *strictly* so, and that is what produces the corner solutions below.\n\n## The demand function for good 1\n\n$$x_1(p,m)=\\begin{cases} \\dfrac{m}{p_1} & \\text{if } p_1<p_2\\\\[8pt] 0 & \\text{if } p_1>p_2\\\\[6pt] \\text{any } x_1\\in\\left[0,\\dfrac{m}{p_1}\\right] & \\text{if } p_1=p_2 \\end{cases}$$\n\n**Explaining the three branches.** With a constant $MRS=1$ and a budget line of slope $-p_1/p_2$, tangency is impossible unless the slopes happen to coincide. So the optimum sits at a **corner**: all of the cheaper good, none of the dearer.\n\nAt $p_1=p_2$ the budget line lies **flat along an indifference curve**. Every bundle on it is equally good, so demand is a **correspondence**, not a function — the whole segment is optimal.\n\n**The instructive feature.** Demand is **discontinuous** at $p_1=p_2$: an arbitrarily small change in the price ratio moves the consumer from spending everything on good 1 to spending nothing on it. This is the price of preferences that are convex but not *strictly* convex — the same phenomenon as the non-convex case, arriving by a different route, and a reminder that strict convexity is what buys a well-behaved single-valued demand function.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §7.3–7.4"
     },
     {
       "id": "q-2011-f-1b",
@@ -7780,18 +7968,25 @@
       "batch": "2nd",
       "qNo": "3(A)",
       "marks": 4.5,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Hicksian demand"
+        "Hicksian separability",
+        "Composite commodity",
+        "Aggregation"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-duality"
+      ],
       "text": "Briefly explain the idea of the \"Hicksian separability\". 4.5",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "State the condition: a group of prices moving in fixed proportion — 1.5 marks",
+        "Show the group can be treated as one good with one price — 2 marks",
+        "Say why it matters, and where it fails — 1 mark"
+      ],
+      "answer": "## The idea\n\nConsumer theory in $n$ goods is unwieldy, and data rarely arrive good by good. **Hicksian separability** — the *composite commodity theorem* — gives a condition under which a whole group of goods can be collapsed into a single \"good\" without distorting the analysis.\n\n## The condition\n\nSuppose the prices of a group of goods $x_2,\\dots,x_n$ all move **in fixed proportion** to one another. Write them as\n\n$$p_i=t\\,p_i^{0},\\qquad i=2,\\dots,n$$\n\nwhere $p^{0}$ is a fixed base vector and only the **scalar** $t$ varies. Their *relative* prices within the group never change; only the group's overall price level does.\n\n## Why the group collapses to one good\n\nDefine the composite quantity and its price:\n\n$$X=\\sum_{i\\ge2}p_i^{0}x_i\\qquad\\text{(the group valued at base prices)},\\qquad P=t$$\n\nThen the group's contribution to the budget is\n\n$$\\sum_{i\\ge2}p_ix_i=\\sum_{i\\ge2}t\\,p_i^{0}x_i=t\\sum_{i\\ge2}p_i^{0}x_i=P\\cdot X$$\n\nso the budget constraint becomes an ordinary **two-good** constraint:\n\n$$p_1x_1+P\\,X=m$$\n\n**And the consumer's choice within the group is unaffected by $t$.** Because relative prices inside the group are fixed, the optimal *composition* of the group does not change when $t$ moves — only how much is spent on the group as a whole. So $(x_1,X)$ can be analysed exactly as a two-good problem, and every result — Slutsky, Roy, the demand properties — carries over unchanged.\n\n## Why it matters, and where it fails\n\n**Why it matters.** It is the formal justification for almost every applied demand study: \"food versus all other goods\", \"housing versus non-housing\", or the treatment of a price index as the price of a composite good. Without it, writing down a two-good model would be an unexamined simplification rather than a theorem.\n\nIt is also what licenses the standard diagrams. Drawing \"good 1\" against \"all other goods\" on the vertical axis is legitimate **only** under this condition.\n\n**Where it fails.** If relative prices *within* the group change — food prices rising while clothing prices fall, say — the composite is no longer well defined, because the consumer will substitute inside the group and the index $X$ no longer tracks a stable object. In practice the theorem is an approximation, and it is a good one exactly when the goods grouped together have prices that tend to move together.\n\n**A related notion worth distinguishing.** *Functional* separability is a restriction on **preferences** — the marginal rate of substitution within a group being independent of goods outside it. Hicksian separability is a restriction on **prices** and needs no assumption about tastes at all.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §7.5 (the composite commodity theorem)"
     },
     {
       "id": "q-2011-f-3b",
@@ -7801,19 +7996,27 @@
       "batch": "2nd",
       "qNo": "3(B)",
       "marks": 4.0,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
         "Convexity",
-        "Preferences"
+        "Uniqueness",
+        "Demand function",
+        "Correspondence"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-preferences"
+      ],
       "text": "Prove that, if preferences are strictly convex, then for each p>0 there is a unique bundle x that maximizes utility on the consumer's budget set, B (p, m). Explain, what may happen to the demand function is preferences are nonconvex. $\\partial x_{i}(p,m)/\\partial p_{j}=\\partial x_{j}(p,m)/\\partial p_{i}$ State this \"convexity\" property and explain it.",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Set up the proof by contradiction with two distinct optima — 1.5 marks",
+        "Show their average is affordable — 1 mark",
+        "Apply strict convexity to reach the contradiction — 1 mark",
+        "Say what happens when preferences are not convex — 0.5 marks"
+      ],
+      "answer": "## The proposition\n\nIf preferences are **strictly convex**, then for each $p\\gg0$ there is a **unique** bundle $x$ maximising utility on the budget set $B(p,m)$.\n\n*Strictly convex* means: for any two **distinct** bundles $x\\ne x'$ with $x'\\succsim x$, and any $t\\in(0,1)$,\n\n$$t\\,x+(1-t)\\,x'\\;\\succ\\;x$$\n\n— a strict mixture is *strictly* better than the worse of the two. Averages beat extremes.\n\n## The proof\n\n**Suppose not.** Let $x$ and $x'$ both maximise utility on $B(p,m)$, with $x\\ne x'$. Being both optimal, they are indifferent: $x\\sim x'$.\n\n**Step 1 — Their average is affordable.** The budget set is convex, being defined by a linear inequality. Since $p\\cdot x\\le m$ and $p\\cdot x'\\le m$, for $t\\in(0,1)$\n\n$$p\\cdot\\big[t\\,x+(1-t)\\,x'\\big]=t\\,(p\\cdot x)+(1-t)(p\\cdot x')\\le t\\,m+(1-t)\\,m=m$$\n\nSo $x^{t}=t\\,x+(1-t)\\,x'$ lies in $B(p,m)$ — it is a genuine option.\n\n**Step 2 — But it is strictly better.** Strict convexity applies, since $x\\ne x'$ and $x'\\succsim x$:\n\n$$x^{t}\\;\\succ\\;x$$\n\n**Step 3 — Contradiction.** We have found an **affordable** bundle strictly preferred to $x$. But $x$ was assumed to maximise utility over the budget set. Contradiction.\n\nHence no two distinct maximisers exist, and the optimum is unique. $\\blacksquare$\n\n*(Existence is separate and comes from continuity of $u$ together with compactness of $B(p,m)$ — Weierstrass's theorem. Strict convexity supplies uniqueness only.)*\n\n## Why the result matters\n\nUniqueness is exactly what makes demand a **function** $x(p,m)$ rather than a *correspondence*. Everything downstream depends on it: differentiating demand, the Slutsky equation, comparative statics, and the existence proofs for competitive equilibrium.\n\n## Without convexity\n\nIf preferences are merely convex but **not strictly** so — perfect substitutes, whose indifference curves are straight lines — Step 2 gives only $x^{t}\\succsim x$, not strict preference. The contradiction fails, and indeed when the budget line lies along an indifference curve every point on it is optimal: demand is a **correspondence**.\n\nIf preferences are **non-convex**, worse follows: the optimum may switch discontinuously from one side of a concave stretch to the other as prices move, so demand jumps.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §7.2 (existence and uniqueness of demand)"
     },
     {
       "id": "q-2010-f-1a",
@@ -7873,18 +8076,27 @@
       "batch": "1st",
       "qNo": "3(B)",
       "marks": 6.25,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "General"
+        "Labour supply",
+        "Slutsky equation",
+        "Endowment",
+        "Consumption-leisure"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-slutsky"
+      ],
       "text": "Suppose that a consumer chooses two goods, consumption and labor. And the consumer has some nonlabor income m. Let $v(c,l)$ be the utility of consumption and labor and we write the utility maximization problem as: max $v(c,l)$ c,l such that $pc=wl+m$ (here p is the price of consumption per unit and w is the wage rate). Show that, an increase in the wage rate can lead to either an increase or a decrease in the labor supply.",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Set up the problem and identify the endowment — 1.5 marks",
+        "State the Slutsky equation in its endowment form — 2 marks",
+        "Sign the substitution effect and show the income effect is ambiguous — 2 marks",
+        "Conclude that either outcome is possible, and say what decides — 0.75 marks"
+      ],
+      "answer": "## The problem\n\n$$\\max_{c,\\ell}\\;v(c,\\ell)\\qquad\\text{s.t.}\\qquad p\\,c=w\\,L+m,\\qquad L=T-\\ell$$\n\nwith $T$ the total hours available, $\\ell$ leisure consumed, $L=T-\\ell$ hours worked, and $m$ non-labour income.\n\n**Rewrite the constraint in full-income form**, which is what makes the analysis work:\n\n$$p\\,c+w\\,\\ell=\\underbrace{w\\,T+m}_{\\text{full income}}$$\n\nNow leisure looks like an ordinary good with price $w$ — but with a crucial difference: **the consumer is endowed with $T$ units of it**. That endowment is what makes the wage effect ambiguous.\n\n## Why a wage rise does two things\n\nA rise in $w$ changes **two** things at once, and they pull in opposite directions.\n\n1. **Leisure becomes more expensive** relative to consumption. Every hour off now costs more forgone wages — this pushes towards *less* leisure, more work.\n2. **The consumer becomes richer.** Full income $wT+m$ rises, because they are endowed with the very thing whose price went up. If leisure is a normal good, this pushes towards *more* leisure, less work.\n\n## The Slutsky equation with an endowment\n\n$$\\frac{\\partial \\ell}{\\partial w} =\\underbrace{\\frac{\\partial \\ell^{h}}{\\partial w}}_{\\text{substitution}} \\;+\\;\\underbrace{(T-\\ell)\\frac{\\partial \\ell}{\\partial m}}_{\\text{income}} =\\frac{\\partial \\ell^{h}}{\\partial w}+L\\,\\frac{\\partial \\ell}{\\partial m}$$\n\nNote the **plus** sign, unlike the textbook form. The consumer is a net **seller** of leisure, selling $L=T-\\ell$ hours, so a higher price for it raises their real income rather than lowering it.\n\n## Signing the terms\n\n**Substitution effect: unambiguously negative.** $\\partial\\ell^{h}/\\partial w\\le0$, since compensated demand for a good falls when its price rises. This follows from the concavity of the expenditure function and is a theorem, not an assumption. On its own it says: **higher wage, less leisure, more work.**\n\n**Income effect: sign depends on leisure.** The multiplier $L>0$ for anyone who works at all, so the term takes the sign of $\\partial\\ell/\\partial m$:\n\n- **leisure normal** ($\\partial\\ell/\\partial m>0$): the term is **positive**, pushing towards more leisure and *less* work;\n- **leisure inferior** ($\\partial\\ell/\\partial m<0$): the term is **negative**, reinforcing the substitution effect.\n\n## The conclusion\n\n$$\\frac{\\partial L}{\\partial w}=-\\frac{\\partial \\ell}{\\partial w} =\\underbrace{-\\frac{\\partial \\ell^{h}}{\\partial w}}_{\\ge\\,0}\\;-\\;L\\,\\frac{\\partial \\ell}{\\partial m}$$\n\nWith leisure **normal**, the two terms have **opposite signs** and the total is genuinely ambiguous:\n\n- substitution dominating $\\Rightarrow$ $\\partial L/\\partial w>0$, labour supply **rises**;\n- income dominating $\\Rightarrow$ $\\partial L/\\partial w<0$, labour supply **falls**.\n\n**So an increase in the wage rate can lead to either an increase or a decrease in labour supply.** $\\blacksquare$\n\n**What decides which.** The income term is scaled by $L$, the hours already worked. At low wages $L$ is small and the substitution effect wins, so hours rise. As the wage climbs, $L$ grows and the income term grows with it, until it can outweigh the substitution effect and hours fall. That is precisely the **backward-bending labour supply curve** — upward-sloping at low wages, bending back at high ones.\n\n![The bend needs leisure to be normal; inferior leisure rules it out.](content/figures/labour-supply.svg)\n\nNote the corollary: if leisure were **inferior**, both terms would be non-negative, $\\partial L/\\partial w>0$ always, and no bend could occur.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §9.4 (labour supply)\n\n⚠ The supplied *Selected Chapters* PDF holds only ch. 1, 2, 7 and 8; this material sits in ch. 3–6 and needs the full text."
     },
     {
       "id": "q-2025-f-2a",
@@ -7984,8 +8196,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Giffen good",
-        "Substitution effect"
+        "Slutsky equation",
+        "Substitution effect",
+        "Income effect",
+        "Giffen good"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7994,7 +8208,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-mid16-4"
     },
     {
       "id": "q-2025-f-3a",
@@ -8242,17 +8456,25 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
+        "Offer curve",
         "Giffen good",
-        "Offer curve"
+        "Price consumption curve",
+        "Law of demand"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-slutsky"
+      ],
       "text": "Show and explain the shape of the price consumption curve (offer curve) if (5) (5) (5) (a) good 1 (on the horizontal axis) is a normal good (and good 2 (on the vertical axis) is a normal good). (b) good 1 (on the horizontal axis) is a Giffen good (and good 2 (on the vertical axis) is a normal good). Also explain why we may consider case (b) as a problematic case in terms of the law of demand and the market equilibrium. (5)",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Define the offer curve and say how it is traced — 1.5 marks",
+        "Describe its shape when both goods are normal — 1.5 marks",
+        "Describe the Giffen case and where the curve doubles back — 1.5 marks",
+        "Say why the Giffen shape is a problem — 0.5 marks"
+      ],
+      "answer": "## What the offer curve is\n\nFix income $m$ and the price of good 2, then let $p_1$ fall through every value. Each price gives a budget line pivoting about the fixed $x_2$-intercept $m/p_2$, and on each line the consumer picks an optimum. The **offer curve**, or price consumption curve, is the locus those optima trace out.\n\nIt is the same information as the demand curve, plotted in bundle space rather than in price-quantity space — which is why the two shapes are linked so tightly.\n\n![Both goods normal on the left; good 1 Giffen over a range on the right.](content/figures/offer-curve.svg)\n\n## (a) Good 1 normal, good 2 normal\n\nAs $p_1$ falls the budget line swings outward and the optimum moves **steadily to the right**: $x_1$ rises at every step, without exception.\n\n$$p_1\\downarrow\\quad\\Longrightarrow\\quad x_1\\uparrow$$\n\nBoth Slutsky effects push the same way. The substitution effect favours the good that has become cheaper, and the income effect — the consumer is effectively richer — adds more of a normal good. The offer curve sweeps out and upward, and the corresponding **demand curve slopes downward** everywhere.\n\n## (b) Good 1 Giffen, good 2 normal\n\nNow the curve **doubles back on itself**. Over the Giffen range a *fall* in $p_1$ leaves the consumer buying **less** of good 1:\n\n$$p_1\\downarrow\\quad\\Longrightarrow\\quad x_1\\downarrow$$\n\nso the offer curve bends leftward before eventually resuming its outward path.\n\n**Why.** From the Slutsky equation,\n\n$$\\frac{\\partial x_1}{\\partial p_1}=\\underbrace{\\frac{\\partial h_1}{\\partial p_1}}_{\\le\\,0}-\\;x_1\\underbrace{\\frac{\\partial x_1}{\\partial m}}_{<\\,0\\ \\text{(inferior)}}$$\n\nThe substitution effect is non-positive always. For a Giffen good the income term is positive *and* large enough to dominate, which needs the good to be **strongly inferior** and to absorb a **large budget share** — the two conditions together.\n\nThe bend is local: at very low or very high $p_1$ the conditions fail, so the curve is well behaved at the extremes and reverses only over a middle range.\n\n## Why the Giffen shape is a problem\n\n**It breaks the law of demand.** The corresponding demand curve slopes **upward** over that range, so the one prediction consumer theory is popularly supposed to deliver fails. Only the compensated curve is guaranteed downward-sloping.\n\n**It threatens the stability of market equilibrium.** If demand slopes up more steeply than supply, excess demand raises price, which raises quantity demanded further, and the market moves *away* from equilibrium rather than back. Comparative statics done by shifting supply along such a curve then gives the wrong sign.\n\n**But it is not irrational.** The Giffen consumer is maximising utility perfectly well — which is exactly why the case is interesting rather than merely a curiosity: it shows the law of demand is a claim about income effects, not about rationality.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §8.5–8.6 (price offer curves)"
     },
     {
       "id": "q-2024-m-5",
@@ -8427,8 +8649,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
+        "Offer curve",
         "Giffen good",
-        "Offer curve"
+        "Price consumption curve",
+        "Law of demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8437,7 +8661,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-i1-4"
     },
     {
       "id": "q-2023-m-4b",
@@ -8521,7 +8745,10 @@
       "marks": 4.0,
       "difficulty": "intermediate",
       "topics": [
-        "Excise tax"
+        "Excise tax",
+        "Income tax",
+        "Welfare",
+        "Deadweight loss"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8530,7 +8757,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2023-f-3b"
     },
     {
       "id": "q-2022-f-2c",
@@ -8566,7 +8793,9 @@
       "difficulty": "intermediate",
       "topics": [
         "Slutsky equation",
-        "Substitution effect"
+        "Substitution effect",
+        "Income effect",
+        "Duality"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8575,7 +8804,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-2b"
     },
     {
       "id": "q-2022-m-3b",
@@ -8587,8 +8816,9 @@
       "marks": 3.75,
       "difficulty": "intermediate",
       "topics": [
-        "Slutsky equation",
-        "Compensation"
+        "Hicks compensation",
+        "Slutsky compensation",
+        "Substitution effect"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8597,7 +8827,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2023-f-3c"
     },
     {
       "id": "q-2022-i1-5",
@@ -8972,10 +9202,10 @@
       "marks": 6.0,
       "difficulty": "intermediate",
       "topics": [
-        "Slutsky equation",
         "GARP",
-        "Compensation",
-        "Preferences"
+        "Revealed preference",
+        "Slutsky compensation",
+        "Law of demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8984,7 +9214,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2019-m-5a"
     },
     {
       "id": "q-2017-f-5b",
@@ -9196,7 +9426,10 @@
       "marks": 4.17,
       "difficulty": "intermediate",
       "topics": [
-        "Compensation"
+        "Marshallian demand",
+        "Hicksian demand",
+        "Slutsky equation",
+        "Normal good"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -9205,7 +9438,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-2b"
     },
     {
       "id": "q-2011-f-2a",
@@ -9286,18 +9519,26 @@
       "batch": "1st",
       "qNo": "3(A)",
       "marks": 6.25,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Convexity"
+        "Convexity",
+        "Demand function",
+        "Discontinuity",
+        "Correspondence"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-preferences"
+      ],
       "text": "Explain that if the consumer indifference curve is nonconvex, the demand function may become discontinuous.",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Set up a non-convex indifference curve and the two tangencies — 2 marks",
+        "Show demand jumps as the price ratio passes the critical value — 2.5 marks",
+        "Say why convexity restores continuity, and what is lost without it — 1.75 marks"
+      ],
+      "answer": "## The claim\n\nIf indifference curves are **not convex to the origin**, the demand function may **jump** — a tiny change in price can produce a discrete change in the bundle chosen.\n\n## The construction\n\nDraw an indifference curve that is *concave* over a stretch — bowed **away** from the origin in the middle rather than towards it. A budget line touching such a curve can be tangent at **two separate points**, one on each side of the concave middle, call them $x^{A}$ (heavy in good 1) and $x^{B}$ (heavy in good 2).\n\n**The middle tangency is a trap.** Where the curve is concave, a tangency is a utility *minimum* along the budget line, not a maximum: moving away in either direction reaches a higher curve. So the optimum is never in the middle — it is always at one of the two outer tangencies.\n\n## Why demand jumps\n\nNow let $p_1/p_2$ fall slowly, so the budget line flattens.\n\n**Step 1.** At steep price ratios, $x^{B}$ lies on the higher indifference curve, and the consumer chooses it.\n\n**Step 2.** As the line flattens, $x^{A}$ becomes progressively more attractive. At some **critical ratio** $(p_1/p_2)^{*}$ the two tangencies lie on the *same* indifference curve — the consumer is exactly indifferent between them.\n\n**Step 3.** Nudge the price a hair past that critical value and $x^{A}$ becomes strictly better. The consumer switches — but $x^{A}$ and $x^{B}$ are **far apart**.\n\n$$\\lim_{p_1\\to(p_1)^{*-}}x_1(p,m)=x_1^{B} \\qquad\\neq\\qquad \\lim_{p_1\\to(p_1)^{*+}}x_1(p,m)=x_1^{A}$$\n\n**An infinitesimal price change produces a discrete jump in quantity.** Demand is discontinuous at $(p_1/p_2)^{*}$.\n\nAt the critical ratio itself, *both* bundles are optimal, so demand is not even single-valued — it is a **correspondence**, not a function.\n\n## Why convexity fixes it\n\n**Convex** preferences mean averages are weakly preferred to extremes, so indifference curves bow **towards** the origin. Then:\n\n- a tangency is a genuine **maximum**, not a minimum, so the second-order condition holds;\n- with **strict** convexity there is exactly **one** optimum on any budget line, so demand is single-valued;\n- and as prices move continuously, that unique optimum **slides** continuously along the curve. No jumps.\n\nThis is the theorem behind the assumption: *strictly convex, continuous preferences generate a continuous demand function.*\n\n## What is actually lost\n\n**Not efficiency, but tractability.** The consumer with non-convex preferences is behaving perfectly rationally — they choose the best bundle available at every price. Nothing is irrational about a jump.\n\nWhat breaks is the **machinery built on smoothness**: comparative statics via derivatives, the Slutsky equation as a statement about $\\partial x/\\partial p$, and — at the market level — the existence proofs for competitive equilibrium, which lean on demand being a continuous function of prices.\n\n**The redeeming argument.** With many consumers whose critical price ratios differ, the individual jumps occur at different prices and **average out**, so aggregate demand can be near-continuous even when no individual demand is. That is why non-convexity is treated as a manageable nuisance at the market level rather than a fatal one.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §7.2 (existence and continuity of demand)"
     }
   ],
   "exercises": [

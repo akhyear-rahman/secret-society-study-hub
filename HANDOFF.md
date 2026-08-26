@@ -32,15 +32,15 @@ cannot rot. Python 3.13 is used only for the local server and the tooling.
 
 | Course | Chapters | Theories | Questions | Answered | Notes | Recall cards |
 |---|---|---|---|---|---|---|
-| **ECON 401** Advanced Microeconomics-I | 5 | 6 | 343 | 276 | 1 | 28 |
+| **ECON 401** Advanced Microeconomics-I | 5 | 6 | **341** | **341** | 1 | 28 |
 | **ECON 403** Advanced Macroeconomics-I | 8 | 0 | 0 | 0 | 5 | 0 |
 | **ECON 405** Advanced Econometrics-I | 7 | 0 | 0 | 0 | 0 | 0 |
 | **ECON 409** Environmental Economics | 21 | 10 | **108** | 19 | 16 | 43 |
 | **ECON 412** Research Methodology | 13 | 0 | 0 | 0 | 0 | 0 |
 | Improvement ×2 | — | — | — | — | — | — |
-| **Total** | **54** | **16** | **451** | **295** | **22** | **71** |
+| **Total** | **54** | **16** | **449** | **360** | **22** | **71** |
 
-All 72 written answers carry a `source`; a further 223 questions share one via `sameAs`.
+All 91 written answers carry a `source`; a further 269 questions share one via `sameAs`.
 
 **ECON 401 is now built from 31 real papers, 2010–2025** — 15 finals, 10
 in-course tests and 6 midterms. The `sampleContent` flag is gone. The four
@@ -71,12 +71,12 @@ paper. They filter out cleanly when you want real past questions only.
    order you work in is the right one.
 3. **Confirm Perman is actually the ECON 409 textbook** before writing answers
    in its notation. It was inferred, not stated — see §4.
-4. **ECON 401 holds every question from the source archive** — 343 parts from
-   35 sittings, 2010–2025 (there is no 2015 paper in the file). 53 carry a
-   written answer, 223 share one through `sameAs`, and **67 are still
-   open** — 80% covered. What is left is the thin tail of
-   one-off in-course and midterm parts.
-   `python tools/build/frequency_micro.py` ranks it.
+4. **ECON 401 is complete.** All 341 question parts from 35 sittings,
+   2010–2025, every one with an answer: 72 written and 269 sharing one
+   through `sameAs`. There is no 2015 paper in the source. The course needs
+   nothing further unless new papers appear — at which point
+   `tools/build/` holds the parser, classifier and linking passes that
+   built this, and `python tools/build/frequency_micro.py` ranks any gap.
 
 **Coase theorem is done** — all 8 are answered as of `7ada69b`. The next
 band down is untouched: market failure, sustainable development and WTP vs
