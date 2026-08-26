@@ -1021,8 +1021,11 @@
       "marks": 4.75,
       "difficulty": "intermediate",
       "topics": [
-        "Cobb-Douglas",
-        "Input requirement set"
+        "Input requirement set",
+        "Isoquant",
+        "Production function",
+        "Transformation function",
+        "Cobb-Douglas"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1031,7 +1034,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2018-f-1a"
     },
     {
       "id": "q-2024-f-4b",
@@ -1320,8 +1323,11 @@
       "marks": 4.17,
       "difficulty": "intermediate",
       "topics": [
-        "Cobb-Douglas",
-        "Input requirement set"
+        "Input requirement set",
+        "Isoquant",
+        "Production function",
+        "Transformation function",
+        "Cobb-Douglas"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1330,7 +1336,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2018-f-1a"
     },
     {
       "id": "q-2023-f-4b",
@@ -1474,7 +1480,10 @@
       "marks": 6.5,
       "difficulty": "intermediate",
       "topics": [
-        "Elasticity of substitution"
+        "Elasticity of substitution",
+        "TRS",
+        "Cobb-Douglas",
+        "Elasticity"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -1483,7 +1492,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2013-f-2b"
     },
     {
       "id": "q-2022-m-5",
@@ -1638,18 +1647,27 @@
       "batch": "12th",
       "qNo": "5(B)",
       "marks": 6.25,
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "topics": [
-        "Returns to scale"
+        "Returns to scale",
+        "CRS",
+        "IRS",
+        "Technology"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-technology"
+      ],
       "text": "Explain the concepts of the constant returns to scale (CRS) and the increasing returns to scale (IRS). $(6.5+6=12.5)$",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Define returns to scale as proportional scaling of all inputs — 1.5 marks",
+        "Define and interpret CRS, with the replication argument — 2 marks",
+        "Define and interpret IRS, with its sources — 2 marks",
+        "Note what returns to scale is NOT — 0.75 marks"
+      ],
+      "answer": "## What returns to scale measures\n\nScale **every** input by the same factor $t>1$ and ask what happens to output. The comparison is always between $f(tx)$ and $t\\,f(x)$.\n\nNote the word *every*. Returns to scale is a **long-run** concept: if some input is held fixed, what you are measuring is a marginal product, not returns to scale.\n\n## Constant returns to scale\n\n$$f(t\\,x)=t\\,f(x)\\qquad\\text{for all }t>0$$\n\nDouble every input and output doubles exactly. Formally, $f$ is homogeneous of degree one.\n\n**The replication argument.** CRS is the natural benchmark because a firm can usually copy itself: build a second identical plant, hire an identical workforce, and output should double. Anything else needs explaining — which is why decreasing returns is usually the signature of a **fixed factor** left out of the input list, and why long-run technologies tend towards CRS as the horizon lengthens.\n\n**Consequences worth stating.** Under CRS the cost function is **linear in output**, $c(w,y)=y\\cdot c(w,1)$, so average cost is constant and equal to marginal cost. Profit is either zero at every scale or unbounded, which is why the competitive zero-profit condition is not an add-on but a requirement for the firm's problem to have a solution at all.\n\n## Increasing returns to scale\n\n$$f(t\\,x)>t\\,f(x)\\qquad\\text{for }t>1$$\n\nDouble every input and output **more** than doubles.\n\n**Where it comes from.** Specialisation, which a larger workforce permits; indivisibilities, where a machine or a rail line must be bought whole; and geometric relations, such as a pipeline whose capacity grows with the square of its radius while its material cost grows only linearly.\n\n**Consequences.** Average cost **falls** as output rises, which is the definition of economies of scale. This is what makes competition unsustainable: the largest firm has the lowest costs, so the industry tends to concentration, and **natural monopoly** is the limiting case. It is also why no profit-maximising plan exists for a price-taking firm with IRS — expansion always pays, so the firm grows until it is large enough to affect price and the price-taking assumption breaks down.\n\n## Two things returns to scale is not\n\n**Not the same as the elasticity of substitution.** $\\sigma$ describes movement *along* an isoquant — how easily the inputs replace each other. Returns to scale describes movement *between* isoquants — what happens to the level of output. A technology can have any combination of the two.\n\n**Not implied by convexity.** Cobb-Douglas with $a+b>1$ has perfectly convex input requirement sets *and* increasing returns. Convexity constrains the shape of an isoquant; it says nothing about how far apart the isoquants sit.\n\n**A compact test.** For Cobb-Douglas $f=Ax_1^{a}x_2^{b}$, the sum $a+b$ decides it: $a+b=1$ is CRS, $a+b>1$ is IRS, $a+b<1$ is DRS. More generally the **elasticity of scale** $e(x)=\\sum_i\\frac{\\partial f}{\\partial x_i}\\frac{x_i}{f}$ answers the same question locally, and returns to scale can differ at different output levels.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §1.4 (returns to scale)"
     },
     {
       "id": "q-2021-m-5b",
@@ -2559,10 +2577,10 @@
       "marks": 6.5,
       "difficulty": "intermediate",
       "topics": [
-        "CES",
-        "Cobb-Douglas",
-        "Leontief",
-        "Elasticity of substitution"
+        "Returns to scale",
+        "CRS",
+        "IRS",
+        "Technology"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2571,7 +2589,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-5b"
     },
     {
       "id": "q-2013-f-3b",
@@ -2981,10 +2999,10 @@
       "marks": 6.25,
       "difficulty": "intermediate",
       "topics": [
-        "CES",
-        "Cobb-Douglas",
-        "Leontief",
-        "Elasticity of substitution"
+        "Returns to scale",
+        "CRS",
+        "IRS",
+        "Technology"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -2993,7 +3011,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-5b"
     },
     {
       "id": "q-2025-f-5b",
@@ -3813,7 +3831,11 @@
       "marks": 6.25,
       "difficulty": "intermediate",
       "topics": [
-        "First-order condition"
+        "Profit maximization",
+        "First-order condition",
+        "Second-order condition",
+        "Isoprofit",
+        "Marginal revenue product"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3822,7 +3844,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-6a"
     },
     {
       "id": "q-2016-f-3b",
@@ -3834,7 +3856,10 @@
       "marks": 6.25,
       "difficulty": "intermediate",
       "topics": [
-        "WAPM"
+        "WAPM",
+        "Revealed profitability",
+        "Recoverability",
+        "Profit maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -3843,7 +3868,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-6b"
     },
     {
       "id": "q-2014-f-4a",
@@ -3954,18 +3979,27 @@
       "batch": "5th",
       "qNo": "5(B)",
       "marks": 6.5,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Slutsky equation"
+        "Labour supply",
+        "Inferior good",
+        "Slutsky equation",
+        "Endowment"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-slutsky"
+      ],
       "text": "If \"leisure\" is an inferior good, what is the slope of the supply function of leisure? Would backward-bending individual labor supply curve arise if \"leisure\" is simply an inferior good? (Explain your answer with the help of the Slutsky's equation). (6.5)",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Set up leisure as the good and the wage as its price, with an endowment — 1.5 marks",
+        "Write the Slutsky equation in its endowment form — 2 marks",
+        "Sign both terms when leisure is inferior — 2 marks",
+        "Conclude: no backward bend, and say what the bend actually requires — 1 mark"
+      ],
+      "answer": "## Setting the problem up correctly\n\nThe trick is to treat **leisure** $\\ell$ as the good and the **wage** $w$ as its price. The consumer holds an endowment of $T$ hours and sells what they do not consume:\n\n$$\\text{labour supplied}\\quad L=T-\\ell$$\n\nTwo consequences follow, and the second is the one usually missed.\n\n- The supply of labour is just the mirror of the demand for leisure: $\\dfrac{\\partial L}{\\partial w}=-\\dfrac{\\partial \\ell}{\\partial w}$.\n- A wage rise does **not** only make leisure dearer. It also makes the consumer **richer**, because they are endowed with the very thing whose price has gone up. That is why the ordinary Slutsky equation needs its endowment form.\n\n## The Slutsky equation with an endowment\n\n$$\\frac{\\partial \\ell}{\\partial w} =\\underbrace{\\frac{\\partial \\ell^{h}}{\\partial w}}_{\\text{substitution}} \\;+\\;\\underbrace{(T-\\ell)\\,\\frac{\\partial \\ell}{\\partial m}}_{\\text{income}}$$\n\nThe income term carries the factor $(T-\\ell)=L>0$, the hours actually sold. Note the **plus** sign: in the standard equation the income term is subtracted, but here the consumer is a *net seller* of the good whose price rose, so a higher $w$ raises real income.\n\n## Signing the two terms when leisure is inferior\n\n**The substitution effect is always negative.** $\\partial\\ell^{h}/\\partial w\\le0$ — compensated demand for leisure falls when leisure becomes more expensive. This is a theorem, from the concavity of $e(p,u)$.\n\n**The income effect now also negative.** Leisure inferior means $\\partial\\ell/\\partial m<0$. Multiplied by $L>0$, the whole term is negative.\n\n$$\\frac{\\partial \\ell}{\\partial w}=\\underbrace{(\\le0)}_{\\text{substitution}}+\\underbrace{(<0)}_{\\text{income}}\\;<\\;0$$\n\n**Both effects point the same way**, so there is no ambiguity to resolve.\n\n## The answer\n\n$$\\frac{\\partial L}{\\partial w}=-\\frac{\\partial \\ell}{\\partial w}\\;>\\;0$$\n\n**The supply of leisure slopes downward, and the supply of labour slopes upward — everywhere.**\n\n![Leisure normal allows the bend; leisure inferior forbids it.](content/figures/labour-supply.svg)\n\n**So no, a backward-bending labour supply curve cannot arise when leisure is inferior.** The question is a trap, and answering \"yes, inferiority causes the bend\" gets it exactly backwards.\n\n## What the backward bend actually requires\n\nThe bend needs the two effects to **conflict**, which happens only when leisure is a **normal** good:\n\n$$\\frac{\\partial \\ell}{\\partial w}=\\underbrace{(\\le0)}_{\\text{substitution}}+\\underbrace{(>0)}_{\\text{income, since }\\partial \\ell/\\partial m>0}$$\n\nAt low wages the substitution effect dominates and hours rise. As the wage climbs, $L$ is large, so the income term $(T-\\ell)\\,\\partial\\ell/\\partial m$ grows; once it outweighs the substitution effect, extra wage buys leisure instead of work, and hours **fall**. That is the backward bend.\n\n**The intuition to close on.** A rise in the wage says two things at once: *\"an hour off is now more expensive\"* — work more — and *\"you are richer\"* — and if leisure is a normal good, richer people buy more of it. The bend is the second message winning. If leisure is inferior, the second message reinforces the first instead, and the curve keeps rising.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §9.4 (labour supply)\n\n⚠ The supplied *Selected Chapters* PDF holds only ch. 1, 2, 7 and 8; this material sits in ch. 3–6 and needs the full text."
     },
     {
       "id": "q-2014-f-6a",
@@ -4133,8 +4167,11 @@
       "marks": 6.5,
       "difficulty": "intermediate",
       "topics": [
+        "Profit maximization",
+        "First-order condition",
         "Second-order condition",
-        "First-order condition"
+        "Isoprofit",
+        "Marginal revenue product"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4143,7 +4180,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-6a"
     },
     {
       "id": "q-2012-f-3b",
@@ -4293,18 +4330,27 @@
       "batch": "2nd",
       "qNo": "6(B)",
       "marks": 6.25,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "General"
+        "Substitution matrix",
+        "Profit maximization",
+        "Symmetry",
+        "Hotelling's lemma"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-profit"
+      ],
       "text": "Suppose a firm is maximizing profits with one output and two inputs $(x_{1}$ and $x_{2}$). Derive the result that the substitution matrix for this firm is a symmetric, negative definite matrix (assume we have a regular maximum and let output price to be 1).",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Define the substitution matrix from the factor demands — 1 mark",
+        "Prove symmetry via Young's theorem on the profit function — 2 marks",
+        "Prove negative definiteness from convexity of the profit function — 2 marks",
+        "Read off the sign of the own-price effect — 1.25 marks"
+      ],
+      "answer": "## The matrix in question\n\nWith output price normalised to 1, the firm maximises $\\pi=f(x_1,x_2)-w\\cdot x$ and produces factor demands $x_i(w)$. The **substitution matrix** collects their price responses:\n\n$$\\Sigma=\\begin{pmatrix} \\dfrac{\\partial x_1}{\\partial w_1} & \\dfrac{\\partial x_1}{\\partial w_2}\\\\[10pt] \\dfrac{\\partial x_2}{\\partial w_1} & \\dfrac{\\partial x_2}{\\partial w_2} \\end{pmatrix}$$\n\n## The key step: relate it to the profit function\n\nBy **Hotelling's lemma**, factor demand is minus the price-derivative of the profit function:\n\n$$x_i(w)=-\\frac{\\partial\\pi(w)}{\\partial w_i}$$\n\nDifferentiate once more:\n\n$$\\frac{\\partial x_i}{\\partial w_j}=-\\frac{\\partial^{2}\\pi(w)}{\\partial w_j\\,\\partial w_i} \\qquad\\Longrightarrow\\qquad \\boxed{\\;\\Sigma=-D^{2}\\pi(w)\\;}$$\n\n**The substitution matrix is minus the Hessian of the profit function.** Everything now follows from properties of $\\pi$, and stating this once saves proving two separate things.\n\n## Symmetry\n\n$\\pi$ is twice continuously differentiable, so by **Young's theorem** the order of differentiation does not matter:\n\n$$\\frac{\\partial^{2}\\pi}{\\partial w_j\\partial w_i}=\\frac{\\partial^{2}\\pi}{\\partial w_i\\partial w_j} \\qquad\\Longrightarrow\\qquad \\frac{\\partial x_i}{\\partial w_j}=\\frac{\\partial x_j}{\\partial w_i}$$\n\n**Economic content.** The effect of the second factor's price on demand for the first equals the effect of the first factor's price on demand for the second. This is a testable restriction on firm data, and its failure is evidence against profit maximisation itself — exactly parallel to Slutsky symmetry on the consumer side.\n\n## Negative definiteness\n\n**$\\pi(w)$ is convex in prices.** Holding the production plan fixed makes profit a straight line in $w$; letting the firm re-optimise can only do better, so $\\pi$ is the upper envelope of a family of linear functions and is therefore convex.\n\nA convex twice-differentiable function has a **positive** semidefinite Hessian:\n\n$$z^{\\mathsf T}D^{2}\\pi(w)\\,z\\ge0\\quad\\text{for all }z$$\n\nSince $\\Sigma=-D^{2}\\pi$, the sign flips:\n\n$$\\boxed{\\;z^{\\mathsf T}\\Sigma\\,z\\le0\\quad\\text{for all }z\\;}$$\n\nso $\\Sigma$ is **negative semidefinite**. It is negative *definite* at a regular maximum, where the second-order conditions hold strictly and the Hessian of $f$ is non-singular.\n\n## Reading off the own-price effect\n\nTake $z$ as the $i$-th unit vector:\n\n$$\\frac{\\partial x_i}{\\partial w_i}\\le0$$\n\n**Factor demand curves slope downward.** Every diagonal element is non-positive — a theorem, not an assumption, and the exact analogue of $s_{ii}\\le0$ for the consumer.\n\n**One asymmetry worth naming.** Nothing here signs the *off-diagonal* terms. Two inputs may be substitutes ($\\partial x_i/\\partial w_j>0$) or complements ($<0$); the theory permits both, and only symmetry ties the two cross-effects to each other. With just two inputs, negative definiteness plus symmetry forces them to be substitutes — but that is a two-good artefact, not a general result.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §2.2 (comparative statics of the firm)\n\n⚠ The supplied *Selected Chapters* PDF holds only ch. 1, 2, 7 and 8; this material sits in ch. 3–6 and needs the full text."
     },
     {
       "id": "q-2011-f-7a",
@@ -4394,19 +4440,28 @@
       "batch": "1st",
       "qNo": "5(A)",
       "marks": 9.5,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
+        "Factor demand",
         "Profit function",
-        "Factor demand"
+        "Corner solution",
+        "Hotelling's lemma"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-profit"
+      ],
       "text": "A firm's production function is given by $f(x)=20x-x^{2}$ and the price of output is normalized to 1. Let w be the price of the x-input. We must have $x\\ge0$. (i) What is the first order condition for profit maximization if $x>0?$ (ii) For what values of x will the optimal x be zero? (iii) For what values of w will the optimal x be 10? (iv) What is the factor demand function? (v) What is the profit function? (vi) What is the derivative of the profit function with respect to w? 9.5",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "State the first-order condition for an interior optimum — 1.5 marks",
+        "Find the values of $w$ that make $x^{*}=0$ and $x^{*}=10$ — 2 marks",
+        "Give the factor demand function, including the corner — 2 marks",
+        "Give the output supply and the profit function — 2 marks",
+        "Differentiate the profit function and recognise Hotelling's lemma — 2 marks"
+      ],
+      "answer": "$$f(x)=20x-x^{2},\\qquad p=1,\\qquad x\\ge0$$\n\n## (i) The first-order condition for $x>0$\n\n$$\\pi(x)=f(x)-wx=20x-x^{2}-wx$$\n\n$$\\frac{d\\pi}{dx}=20-2x-w=0\\qquad\\Longrightarrow\\qquad\\boxed{\\;20-2x^{*}=w\\;}$$\n\nThe left side is the **marginal product** $f'(x)=20-2x$, valued at $p=1$. So the condition is the usual one: hire until the marginal revenue product equals the input price.\n\n**Second order:** $d^{2}\\pi/dx^{2}=-2<0$ everywhere, so any solution to the FOC is a maximum, and the technology is globally concave.\n\n## (ii) For what values of $w$ is the optimal $x$ zero?\n\nSolving the FOC gives $x^{*}=10-\\tfrac{w}{2}$, which is non-negative only while $w\\le20$. Since $x\\ge0$ is required,\n\n$$\\boxed{\\;x^{*}=0\\ \\text{ for all }\\ w\\ge20\\;}$$\n\n**Why 20 is the threshold.** $f'(0)=20$ is the marginal product of the *first* unit of input. If the input costs more than that, even the first unit loses money and the firm uses none. This is a **corner solution** — the FOC does not hold with equality there, only as the inequality $f'(0)\\le w$.\n\n## (iii) For what value of $w$ is the optimal $x$ equal to 10?\n\n$$10-\\frac{w}{2}=10\\qquad\\Longrightarrow\\qquad\\boxed{\\;w=0\\;}$$\n\nAt $x=10$ the marginal product $20-2(10)=0$, so the firm pushes to the top of its production function only when the input is free.\n\n## (iv) The factor demand function\n\n$$x(w)=\\begin{cases}10-\\dfrac{w}{2} & 0\\le w<20\\\\[8pt] 0 & w\\ge20\\end{cases}$$\n\nIt slopes **downward**, as WAPM requires, and hits zero at $w=20$.\n\n## (v) The profit function\n\nFor $w<20$, substitute $x^{*}=10-\\tfrac{w}{2}$ back:\n\n$$y^{*}=20x^{*}-(x^{*})^{2}=\\frac{400-w^{2}}{4},\\qquad \\pi(w)=\\frac{(20-w)^{2}}{4}$$\n\n$$\\boxed{\\;\\pi(w)=\\begin{cases}\\dfrac{(20-w)^{2}}{4} & w<20\\\\[8pt] 0 & w\\ge20\\end{cases}\\;}$$\n\n| $w$ | 0 | 4 | 10 | 16 | 20 |\n|---|---|---|---|---|---|\n| $x^{*}$ | 10 | 8 | 5 | 2 | 0 |\n| $y^{*}$ | 100 | 96 | 75 | 36 | 0 |\n| $\\pi$ | 100 | 64 | 25 | 4 | 0 |\n\nNote $\\pi$ is **convex** in $w$ and decreasing, as a profit function must be.\n\n## (vi) The derivative of the profit function with respect to $w$\n\n$$\\frac{d\\pi}{dw}=\\frac{2(20-w)\\cdot(-1)}{4}=-\\frac{20-w}{2}=-\\left(10-\\frac{w}{2}\\right)=-\\,x^{*}(w)$$\n\n$$\\boxed{\\;\\frac{\\partial\\pi}{\\partial w}=-x(w)\\;}$$\n\nThis is **Hotelling's lemma**, and the question is really asking you to notice it. The factor demand function is recovered by differentiating the profit function — no need to re-solve the maximisation. The sign is negative because a rise in the input price reduces profit at a rate equal to the quantity being bought.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §2.1–2.2 (profit maximization)"
     },
     {
       "id": "q-2010-f-5b",
@@ -4467,7 +4522,10 @@
       "marks": 6.25,
       "difficulty": "intermediate",
       "topics": [
-        "Fluctuating prices"
+        "Profit function",
+        "Convexity",
+        "Fluctuating prices",
+        "Jensen's inequality"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4476,7 +4534,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2014-f-6a"
     },
     {
       "id": "q-2025-f-6b",
@@ -4672,7 +4730,8 @@
       "difficulty": "intermediate",
       "topics": [
         "WACM",
-        "Input requirement set",
+        "Cost minimization",
+        "Revealed preference",
         "Recoverability"
       ],
       "repeats": [],
@@ -4682,7 +4741,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2023-f-6b"
     },
     {
       "id": "q-2021-i-4",
@@ -4809,7 +4868,10 @@
       "marks": 6.5,
       "difficulty": "intermediate",
       "topics": [
-        "Second-order condition"
+        "Cost minimization",
+        "Second-order condition",
+        "Isoquant",
+        "TRS"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -4818,7 +4880,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-6a"
     },
     {
       "id": "q-2018-f-4a",
@@ -5170,7 +5232,10 @@
       "marks": 6.25,
       "difficulty": "intermediate",
       "topics": [
-        "Second-order condition"
+        "Cost minimization",
+        "Second-order condition",
+        "Isoquant",
+        "TRS"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -5179,7 +5244,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2025-f-6a"
     },
     {
       "id": "q-2010-f-7b",
@@ -5241,27 +5306,6 @@
       "repeats": [],
       "theoryIds": [],
       "text": "Consider a firm with conditional factor demand functions of the form $x_{1}=1+3w_{1}^{-1/2}w_{2}^{1/2}$ $x_{2}=1+3w_{1}^{1/2}w_{2}^{-1/2}$ 6.5 9.5 What can we tell about the own-price effects and the cross-price effects of these conditional factor demand functions?",
-      "answerPoints": [],
-      "answer": "",
-      "answerBn": "",
-      "source": "",
-      "sameAs": ""
-    },
-    {
-      "id": "q-2025-f-0",
-      "chapterId": "ch7",
-      "examType": "final",
-      "year": 2025,
-      "batch": "16th",
-      "qNo": "0",
-      "marks": 12.5,
-      "difficulty": "intermediate",
-      "topics": [
-        "General"
-      ],
-      "repeats": [],
-      "theoryIds": [],
-      "text": "your answers clearly.",
       "answerPoints": [],
       "answer": "",
       "answerBn": "",
@@ -6151,9 +6195,11 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Preferences",
+        "Consumer equilibrium",
+        "MRS",
+        "First-order condition",
         "Second-order condition",
-        "First-order condition"
+        "Utility maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6162,7 +6208,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-1b"
     },
     {
       "id": "q-2023-f-2a",
@@ -6492,7 +6538,10 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Indirect utility"
+        "Indirect utility",
+        "Roy's identity",
+        "Duality",
+        "Cobb-Douglas"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6501,7 +6550,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-3b"
     },
     {
       "id": "q-2022-m-5b",
@@ -6557,7 +6606,10 @@
       "marks": 7.5,
       "difficulty": "intermediate",
       "topics": [
-        "Roy's identity"
+        "Roy's identity",
+        "Indirect utility",
+        "Envelope theorem",
+        "Marshallian demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6566,7 +6618,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2011-f-1b"
     },
     {
       "id": "q-2021-f-1a",
@@ -6700,7 +6752,11 @@
       "marks": 2.5,
       "difficulty": "intermediate",
       "topics": [
-        "First-order condition"
+        "Consumer equilibrium",
+        "MRS",
+        "First-order condition",
+        "Second-order condition",
+        "Utility maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -6709,7 +6765,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-1b"
     },
     {
       "id": "q-2021-m-2b",
@@ -6719,21 +6775,26 @@
       "batch": "12th",
       "qNo": "2(B)",
       "marks": 7.5,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Cobb-Douglas",
-        "Indirect utility",
-        "Expenditure function",
-        "Marshallian demand"
+        "Substitution effect",
+        "Compensation",
+        "Slutsky equation",
+        "Law of demand"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-slutsky"
+      ],
       "text": "With the help of a graph, show and explain that, the own-price substitution effect (S. E.) is always negative. $|5+2.5=7.5|$ 3.Suppose the Cobb-Douglas utility function is given by $u(x_{1},x_{2})={x_{1}}^{a}{x_{2}}^{1-a}$ and the budget constraint is $p_{1}x_{1}+p_{2}x_{2}=m$ Derive the Marshallian demand functions, indirect utility function, expenditure function, and Hicksian demand functions from this. Explain your steps and also the terms. [7.5]",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Draw the compensated budget line and identify the substitution effect — 2 marks",
+        "Give the revealed-preference argument that its sign is fixed — 3 marks",
+        "State the algebraic counterpart and why it is a theorem — 2.5 marks"
+      ],
+      "answer": "## What is being claimed\n\nThe **own-price substitution effect is never positive**: when $p_1$ rises and income is compensated so the consumer is no better or worse off, demand for good 1 cannot rise.\n\n$$\\frac{\\partial h_1}{\\partial p_1}\\le0$$\n\n![The compensated line is steeper through the original bundle; the new choice can only lie down and to the right.](content/figures/slutsky-decomposition.svg)\n\n## The graph\n\nStart at prices $(p_1^{0},p_2)$ with income $m$, and let the consumer choose $x^{0}$.\n\nNow raise $p_1$ to $p_1^{1}$ and **compensate**: adjust income so the original bundle $x^{0}$ is *just* affordable at the new prices — the Slutsky version. The new budget line is **steeper** and passes exactly through $x^{0}$, pivoting about it.\n\nLet the new choice be $x^{1}$. The move from $x^{0}$ to $x^{1}$ is the **substitution effect**: relative prices have changed, purchasing power in the Slutsky sense has not.\n\n**Read the picture.** The compensated line pivots about $x^{0}$, so it lies below the old line to the right of $x^{0}$ and above it to the left. Any bundle the consumer now prefers to $x^{0}$ must lie on the new line — and the only region of that line that was *not* available before is to the **left** of $x^{0}$, where less of good 1 is bought.\n\n## Why the sign is fixed — the revealed-preference argument\n\nThis is the part worth writing out, because it needs no diagram and no calculus.\n\n**Step 1.** At the old prices, $x^{0}$ was chosen while $x^{1}$ was — by construction of the compensation — *not* more expensive. So\n\n$$p^{0}\\!\\cdot x^{0}\\;\\ge\\;p^{0}\\!\\cdot x^{1} \\qquad\\Longrightarrow\\qquad p^{0}\\!\\cdot(x^{1}-x^{0})\\le0$$\n\n**Step 2.** At the new prices with compensated income, $x^{0}$ is affordable by construction, and $x^{1}$ was chosen. Budget balance gives\n\n$$p^{1}\\!\\cdot x^{1}=p^{1}\\!\\cdot x^{0} \\qquad\\Longrightarrow\\qquad p^{1}\\!\\cdot(x^{1}-x^{0})=0$$\n\n**Step 3 — Subtract.**\n\n$$(p^{1}-p^{0})\\cdot(x^{1}-x^{0})\\le0 \\qquad\\text{that is}\\qquad \\Delta p\\,\\Delta x\\le0$$\n\nOnly $p_1$ changed, so $\\Delta p_2=0$ and the inner product collapses to a single term:\n\n$$\\Delta p_1\\,\\Delta x_1\\le0$$\n\nSince $\\Delta p_1>0$, it must be that $\\Delta x_1\\le0$. **Demand for good 1 falls, or at worst stays put.** $\\blacksquare$\n\n## The algebraic counterpart\n\nIn derivative form the same fact reads\n\n$$\\frac{\\partial h_1}{\\partial p_1}=\\frac{\\partial^{2}e(p,u)}{\\partial p_1^{2}}\\le0$$\n\nusing Shephard's lemma. It is non-positive because $e(p,u)$ is **concave in prices**, so every diagonal element of its Hessian is non-positive.\n\n**Why this deserves the word \"theorem\".** Nothing has been assumed about tastes beyond the axioms — no monotonicity of income effects, no functional form, no restriction on how the goods relate. The negativity of the own substitution effect is *forced* by optimisation itself.\n\nThat is why the law of demand is stated for compensated demand. The ordinary demand curve can slope upward — the Giffen case — but only because the income effect, which the compensation here removes, is free to work in the opposite direction.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §8.5 (the substitution effect)"
     },
     {
       "id": "q-2021-f-3b",
@@ -6743,18 +6804,27 @@
       "batch": "12th",
       "qNo": "3(B)",
       "marks": 6.25,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
-        "Indirect utility"
+        "Indirect utility",
+        "Roy's identity",
+        "Duality",
+        "Cobb-Douglas"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-duality"
+      ],
       "text": "Suppose that we have an indirect utility function given by $v(p_{1},p_{2})=-alnp_{1}-blnp_{2}.$ What is its associated direct utility function?",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Notice that $m$ is missing and restore it by homogeneity — 1.5 marks",
+        "Apply Roy's identity to get the demands — 2 marks",
+        "Invert the demands and substitute back — 1.75 marks",
+        "Identify the direct utility function and sanity-check it — 1 mark"
+      ],
+      "answer": "$$v(p_1,p_2)=-a\\ln p_1-b\\ln p_2$$\n\n## Step 1 — Restore the missing income\n\nAs printed, $v$ does not contain $m$ — which cannot be right, since indirect utility must be increasing in income. The resolution is **homogeneity of degree zero**: $v$ depends on $(p,m)$ only through $p/m$. Writing the function in the form it must take,\n\n$$v(p_1,p_2,m)=\\ln m-a\\ln p_1-b\\ln p_2,\\qquad a+b=1$$\n\nThe printed expression is this with $m$ suppressed (equivalently $m=1$). Saying so explicitly is worth a mark — the question is testing whether you notice.\n\n## Step 2 — Recover the demands by Roy's identity\n\n$$x_i(p,m)=-\\frac{\\partial v/\\partial p_i}{\\partial v/\\partial m}$$\n\nDifferentiating:\n\n$$\\frac{\\partial v}{\\partial p_1}=-\\frac{a}{p_1},\\qquad \\frac{\\partial v}{\\partial p_2}=-\\frac{b}{p_2},\\qquad \\frac{\\partial v}{\\partial m}=\\frac{1}{m}$$\n\nSo\n\n$$x_1=-\\frac{-a/p_1}{1/m}=\\frac{a\\,m}{p_1},\\qquad\\qquad x_2=\\frac{b\\,m}{p_2}$$\n\n**These are Cobb-Douglas demands** — constant expenditure shares $a$ and $b$. That is the recognition the whole question turns on.\n\n## Step 3 — Invert and substitute back\n\nFrom the demands,\n\n$$p_1=\\frac{a\\,m}{x_1},\\qquad p_2=\\frac{b\\,m}{x_2}$$\n\nSubstitute into $v$:\n\n$$v=\\ln m-a\\ln\\!\\left(\\frac{am}{x_1}\\right)-b\\ln\\!\\left(\\frac{bm}{x_2}\\right)$$\n\n$$=\\ln m-a\\ln a-a\\ln m+a\\ln x_1-b\\ln b-b\\ln m+b\\ln x_2$$\n\nCollect the $\\ln m$ terms: their coefficient is $1-a-b=0$, since $a+b=1$. The income terms **cancel exactly**, which is the check that the working is right — a direct utility function cannot depend on income.\n\n$$v=a\\ln x_1+b\\ln x_2-\\underbrace{(a\\ln a+b\\ln b)}_{\\text{a constant}}$$\n\n## Step 4 — The direct utility function\n\nDropping the additive constant, which is a harmless monotonic transformation:\n\n$$u(x_1,x_2)=a\\ln x_1+b\\ln x_2 \\qquad\\text{or equivalently}\\qquad \\boxed{\\;u(x_1,x_2)=x_1^{a}\\,x_2^{b}\\;}$$\n\nthe second obtained by exponentiating — again a monotonic transformation, so it represents the same preferences.\n\n## Checking it\n\nMaximising $u=x_1^{a}x_2^{b}$ subject to $p\\cdot x=m$ gives $x_1=am/p_1$ and $x_2=bm/p_2$, and substituting those back into $u$ and taking logs returns $\\ln m-a\\ln p_1-b\\ln p_2$ up to the same constant. The round trip closes.\n\n**The wider point.** This is duality doing real work: the indirect utility function contains **all** the information in preferences, so nothing is lost by working with $v$ instead of $u$. Roy's identity is the bridge in one direction, and inverting the demands is the bridge back — which is exactly why applied demand analysis is free to specify a flexible form for $v$ and never write down $u$ at all.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §7.3–7.4 (recovering preferences from $v$)"
     },
     {
       "id": "q-2020-fa-3",
@@ -6858,18 +6928,24 @@
       "marks": 10.0,
       "difficulty": "intermediate",
       "topics": [
-        "Cobb-Douglas",
+        "Expenditure function",
         "Indirect utility",
-        "Expenditure function"
+        "Duality",
+        "Slutsky equation"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-duality"
+      ],
       "text": "Suppose the expenditure function of the Cobb-Douglas function is given by: $e(p_{1},p_{2},u)=\\underline{up_{1}}^{2}{p_{2}}^{1-u}$ [7.5] [7.5] $|4+3.5=7.5|$ Now, find out the indirect utility function of this Cobb-Douglas function from the given expenditure function. And, also prove the following: $[\\partial x_{1}/cp_{1}]=[\\partial x_{1}/cp_{1}]-[\\partial x_{1}/\\overline{c}_{1}]-[\\partial x_{1}/\\overline{c}_{1}][x_{1}]$",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "Use the identity $e(p,v(p,m))=m$ to invert — 3 marks",
+        "Carry out the inversion and state $v$ — 3 marks",
+        "Prove the Slutsky equation from the duality identity — 4 marks"
+      ],
+      "answer": "## Part 1 — Recovering $v$ from $e$\n\nThe Cobb-Douglas expenditure function is\n\n$$e(p_1,p_2,u)=u\\,p_1^{a}\\,p_2^{1-a}$$\n\n(up to the constant $a^{-a}(1-a)^{-(1-a)}$, which some texts absorb into $u$; the method is unaffected.)\n\n**The tool is the duality identity.** The two value functions are inverses of each other in their last argument:\n\n$$e\\big(p,\\;v(p,m)\\big)=m \\qquad\\text{and}\\qquad v\\big(p,\\;e(p,u)\\big)=u$$\n\nThe first says: the cheapest way to reach the utility that income $m$ buys costs exactly $m$. It holds because of local nonsatiation, which makes the budget bind.\n\n**So invert.** Set $e(p,u)=m$ and solve for $u$:\n\n$$u\\,p_1^{a}p_2^{1-a}=m \\qquad\\Longrightarrow\\qquad \\boxed{\\;v(p_1,p_2,m)=\\frac{m}{p_1^{a}\\,p_2^{1-a}}\\;}$$\n\n**Sanity checks.** $v$ is increasing in $m$, decreasing in both prices, and homogeneous of degree zero — scaling $p$ and $m$ together leaves it unchanged, since the numerator and denominator scale by the same factor $t^{a+(1-a)}=t$.\n\n## Part 2 — Proving the Slutsky equation\n\n**Step 1 — Start from the identity that links the two demands.** Compensating income to $e(p,u)$ makes Marshallian and Hicksian demand coincide:\n\n$$x_i\\big(p,\\,e(p,u)\\big)=h_i(p,u)$$\n\nThis is an identity in $p$, true at every price vector, so it may be differentiated.\n\n**Step 2 — Differentiate with respect to $p_j$.** The left side depends on $p_j$ twice — directly, and through the compensated income — so the chain rule gives\n\n$$\\frac{\\partial x_i}{\\partial p_j}+\\frac{\\partial x_i}{\\partial m}\\cdot\\frac{\\partial e}{\\partial p_j} =\\frac{\\partial h_i}{\\partial p_j}$$\n\n**Step 3 — Apply Shephard's lemma.** $\\partial e/\\partial p_j=h_j(p,u)$, and at the point where the two demands agree, $h_j=x_j$. Substituting:\n\n$$\\frac{\\partial x_i}{\\partial p_j}+x_j\\,\\frac{\\partial x_i}{\\partial m}=\\frac{\\partial h_i}{\\partial p_j}$$\n\n**Step 4 — Rearrange.**\n\n$$\\boxed{\\;\\frac{\\partial x_i}{\\partial p_j}=\\underbrace{\\frac{\\partial h_i}{\\partial p_j}}_{\\text{substitution}}-\\;x_j\\underbrace{\\frac{\\partial x_i}{\\partial m}}_{\\text{income}}\\;}\\qquad\\blacksquare$$\n\n**Signing the substitution term.** For $i=j$, $\\partial h_i/\\partial p_i=\\partial^{2}e/\\partial p_i^{2}$, a diagonal element of the Hessian of $e$. Because $e$ is concave in prices that Hessian is negative semidefinite, so\n\n$$\\frac{\\partial h_i}{\\partial p_i}\\le0$$\n\nalways. The **income** term is what carries the ambiguity: negative for a normal good, positive for an inferior one, and large enough in the Giffen case to reverse the total effect.\n\n**Why the proof is worth knowing in this form.** Every step is an identity or a lemma already established — the duality identity, the chain rule, Shephard. Nothing is assumed about the shape of preferences, which is why the Slutsky equation holds for *any* well-behaved utility function, Cobb-Douglas or not.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §7.4 (the fundamental identities)"
     },
     {
       "id": "q-2019-f-5a",
@@ -7071,8 +7147,11 @@
       "marks": 5.0,
       "difficulty": "intermediate",
       "topics": [
-        "Preferences",
-        "Second-order condition"
+        "Consumer equilibrium",
+        "MRS",
+        "First-order condition",
+        "Second-order condition",
+        "Utility maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7081,7 +7160,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-1b"
     },
     {
       "id": "q-2018-i1-2",
@@ -7255,7 +7334,11 @@
       "marks": 4.5,
       "difficulty": "intermediate",
       "topics": [
-        "First-order condition"
+        "Consumer equilibrium",
+        "MRS",
+        "First-order condition",
+        "Second-order condition",
+        "Utility maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7264,7 +7347,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-1b"
     },
     {
       "id": "q-2016-f-5a",
@@ -7478,7 +7561,11 @@
       "marks": 5.5,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "Consumer equilibrium",
+        "MRS",
+        "First-order condition",
+        "Second-order condition",
+        "Utility maximization"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7487,7 +7574,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2024-f-1b"
     },
     {
       "id": "q-2012-f-7a",
@@ -7500,9 +7587,12 @@
       "difficulty": "intermediate",
       "topics": [
         "Cobb-Douglas",
+        "Duality",
+        "Marshallian demand",
+        "Hicksian demand",
         "Indirect utility",
         "Expenditure function",
-        "Marshallian demand"
+        "Money metric utility"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7511,7 +7601,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-f-2"
     },
     {
       "id": "q-2012-f-7b",
@@ -7567,7 +7657,10 @@
       "marks": 2.25,
       "difficulty": "intermediate",
       "topics": [
-        "Expenditure function"
+        "Expenditure function",
+        "Indirect utility",
+        "Duality",
+        "Slutsky equation"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -7576,7 +7669,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2019-m-4"
     },
     {
       "id": "q-2012-f-8c",
@@ -8163,7 +8256,7 @@
     },
     {
       "id": "q-2024-m-5",
-      "chapterId": "ch8",
+      "chapterId": "ch7",
       "examType": "midterm",
       "year": 2024,
       "batch": "15th",
@@ -8171,7 +8264,10 @@
       "marks": 7.5,
       "difficulty": "intermediate",
       "topics": [
-        "Substitution effect"
+        "Substitution effect",
+        "Compensation",
+        "Slutsky equation",
+        "Law of demand"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8180,7 +8276,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2021-m-2b"
     },
     {
       "id": "q-2024-m-6",
@@ -8655,8 +8751,10 @@
       "marks": 10.0,
       "difficulty": "intermediate",
       "topics": [
-        "Marshallian demand",
-        "Substitution effect"
+        "Slutsky equation",
+        "Substitution effect",
+        "Income effect",
+        "Giffen good"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -8665,7 +8763,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-mid16-4"
     },
     {
       "id": "q-2019-m-3b",
@@ -8698,19 +8796,27 @@
       "batch": "10th",
       "qNo": "5(A)",
       "marks": 7.5,
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "topics": [
         "GARP",
-        "Preferences"
+        "Revealed preference",
+        "Slutsky compensation",
+        "Law of demand"
       ],
       "repeats": [],
-      "theoryIds": [],
+      "theoryIds": [
+        "th-slutsky"
+      ],
       "text": "State the GARP (Generalized Axiom of Revealed Preference). And explain it. [7.5]",
-      "answerPoints": [],
-      "answer": "",
+      "answerPoints": [
+        "State GARP and how it differs from WARP and SARP — 2 marks",
+        "Set up the Slutsky compensation explicitly — 1.5 marks",
+        "Derive the two inequalities and subtract them — 3 marks",
+        "Interpret the result as the law of demand for compensated changes — 1 mark"
+      ],
+      "answer": "## Stating GARP\n\nWrite $x^{t}\\,R^{D}\\,x^{s}$ (\"directly revealed preferred\") when $p^{t}\\!\\cdot x^{t}\\ge p^{t}\\!\\cdot x^{s}$, and let $R$ be its transitive closure — $x\\,R\\,y$ if a chain of direct comparisons links them.\n\n**Generalized Axiom of Revealed Preference.** If $x^{t}\\,R\\,x^{s}$, then\n\n$$p^{s}\\!\\cdot x^{s}\\;\\le\\;p^{s}\\!\\cdot x^{t}$$\n\n**How it differs from the others.** WARP checks pairs only. SARP checks chains but forbids *any* cycle, which rules out indifference — two identical bundles chosen at different prices would violate it. GARP weakens the conclusion to a **weak** inequality, so indifference is permitted. That is why GARP, not SARP, is the condition actually tested against real data: Afriat's theorem says a finite data set satisfies GARP if and only if it can be rationalised by a well-behaved utility function.\n\n## Deriving $\\Delta p\\,\\Delta x\\le0$\n\nTake two observations, $(p^{0},x^{0})$ and $(p^{1},x^{1})$. To isolate the substitution effect we must compensate income, and here we use **Slutsky compensation**: give the consumer exactly enough at the new prices to afford the *old* bundle,\n\n$$m^{1}=p^{1}\\!\\cdot x^{0}$$\n\n**Step 1 — The new choice is affordable, and so was the old bundle.** At prices $p^{1}$ with income $m^{1}$, the consumer chooses $x^{1}$. Budget balance gives $p^{1}\\!\\cdot x^{1}=m^{1}=p^{1}\\!\\cdot x^{0}$, so\n\n$$p^{1}\\!\\cdot\\big(x^{1}-x^{0}\\big)\\le0 \\tag{1}$$\n\n(with equality under exact budget balance; the inequality is what survives if the compensated income only *permits* $x^{0}$).\n\n**Step 2 — Revealed preference at the old prices.** By construction $x^{0}$ was chosen at $p^{0}$. If $x^{1}$ had been affordable then, the consumer would have been free to take it and did not — so it cannot have cost less:\n\n$$p^{0}\\!\\cdot x^{1}\\ \\ge\\ p^{0}\\!\\cdot x^{0} \\qquad\\Longrightarrow\\qquad p^{0}\\!\\cdot\\big(x^{1}-x^{0}\\big)\\ge0 \\tag{2}$$\n\nThis is exactly where GARP is used: it is what licenses reading the unchosen-but-affordable bundle as not-better.\n\n**Step 3 — Subtract (2) from (1).**\n\n$$p^{1}\\!\\cdot\\big(x^{1}-x^{0}\\big)-p^{0}\\!\\cdot\\big(x^{1}-x^{0}\\big)\\ \\le\\ 0$$\n\n$$\\boxed{\\;\\big(p^{1}-p^{0}\\big)\\cdot\\big(x^{1}-x^{0}\\big)\\ \\le\\ 0 \\qquad\\text{that is}\\qquad \\Delta p\\,\\Delta x\\le0\\;}\\qquad\\blacksquare$$\n\n## What it means\n\nTaking one price at a time, with the others held fixed, $\\Delta p_i\\,\\Delta x_i\\le0$: **a compensated price rise never increases demand for that good.** The compensated demand curve slopes downward.\n\nThree things are worth saying about this result.\n\n**It needs no calculus.** No differentiability, no convexity, no utility function — only the assumption that each observed bundle was the best affordable one. It is the discrete counterpart of the negative semidefiniteness of the Slutsky matrix, and it holds for finite data where derivatives do not exist.\n\n**The compensation is essential.** Without it, the income effect is free to reverse the sign, and the Giffen case is exactly that reversal. The law of demand is a theorem about *compensated* changes only.\n\n**Slutsky rather than Hicks.** The compensation used here keeps the *old bundle* affordable, which is computable from data. Hicksian compensation would hold utility fixed, which is not observable — so this derivation could not be carried out on real data.",
       "answerBn": "",
-      "source": "",
-      "sameAs": ""
+      "source": "Varian, *Microeconomic Analysis*, 3rd ed., §8.3 (the generalized axiom)"
     },
     {
       "id": "q-2019-f-6a",
@@ -9058,7 +9164,7 @@
     },
     {
       "id": "q-2012-f-8b",
-      "chapterId": "ch8",
+      "chapterId": "ch7",
       "examType": "final",
       "year": 2012,
       "batch": "3rd",
@@ -9066,7 +9172,10 @@
       "marks": 2.25,
       "difficulty": "intermediate",
       "topics": [
-        "General"
+        "Expenditure function",
+        "Indirect utility",
+        "Duality",
+        "Slutsky equation"
       ],
       "repeats": [],
       "theoryIds": [],
@@ -9075,7 +9184,7 @@
       "answer": "",
       "answerBn": "",
       "source": "",
-      "sameAs": ""
+      "sameAs": "q-2019-m-4"
     },
     {
       "id": "q-2011-f-1c",
