@@ -24,7 +24,22 @@ PASS, FAIL = [], []
 
 
 def check(name: str, cond) -> None:
-    ok = bool(cond) if not hasattr(cond, "is_zero") else (sp.simplify(cond) == 0)
+    """Record a result. `cond` may be a bool, a SymPy Boolean, or an
+    expression that should be zero.
+
+    The Boolean case has to come first: SymPy's BooleanTrue inherits an
+    `is_zero` attribute from Basic, so an attribute test alone sends a
+    perfectly true comparison down the "simplify to zero" branch and reports
+    it as a failure.
+    """
+    if cond is True or cond is False:
+        ok = bool(cond)
+    elif isinstance(cond, sp.logic.boolalg.Boolean):
+        ok = bool(cond)
+    elif hasattr(cond, "is_zero"):
+        ok = sp.simplify(cond) == 0
+    else:
+        ok = bool(cond)
     (PASS if ok else FAIL).append(name)
     print(f"  {'OK  ' if ok else 'FAIL'}  {name}")
 
@@ -190,9 +205,63 @@ def firm():
                                            sp.simplify(sc[x1])))
 
 
+# ---------------------------------------------------------- second band ---
+
+def value_function_curvature():
+    print("\nCurvature of the value functions")
+    p1, p2, u, al, p, w, aa = sp.symbols("p1 p2 u alpha p w a", positive=True)
+
+    e = u * (p1 / al) ** al * (p2 / (1 - al)) ** (1 - al)
+    H = sp.hessian(e, (p1, p2))
+    at = {al: sp.Rational(1, 2), p1: 3, p2: 5, u: 2}
+    check("e(p,u): own second derivative <= 0 (concave in p)",
+          sp.N(H[0, 0].subs(at)) <= 0)
+    # e is homogeneous of degree one in p, so Euler makes the Hessian singular:
+    # negative SEMIdefinite, never negative definite.
+    check("e(p,u): Hessian is singular (homogeneity of degree 1 in p)",
+          sp.simplify(H.det()) == 0)
+
+    pi = (1 - aa) * p ** (1 / (1 - aa)) * (aa / w) ** (aa / (1 - aa))
+    check("pi(p,w): second derivative in p >= 0 (convex in p)",
+          sp.N(sp.diff(pi, p, 2).subs({aa: sp.Rational(1, 2), w: 1, p: 3})) >= 0)
+
+
+def leontief_and_returns():
+    print("\nLeontief cost, and DRS as restricted CRS")
+    w1, w2, y, a, b, t, x1, x2, z = sp.symbols("w1 w2 y a b t x1 x2 z", positive=True)
+
+    c = w1 * (y / a) + w2 * (y / b)          # corner: ax1 = bx2 = y
+    check("Leontief cost c(w,y) = y(w1/a + w2/b)", eq(c, y * (w1 / a + w2 / b)))
+    check("Leontief cost homogeneous of degree 1 in w",
+          eq(c.subs({w1: 2 * w1, w2: 2 * w2}), 2 * c))
+    check("Leontief cost linear in y (constant returns)", sp.diff(c, y, 2) == 0)
+
+    F = x1 ** sp.Rational(1, 3) * x2 ** sp.Rational(1, 3) * z ** sp.Rational(1, 3)
+    check("F(x1,x2,z) is CRS in all three inputs",
+          eq(F.subs({x1: t * x1, x2: t * x2, z: t * z}), t * F))
+    f = F.subs(z, 1)                          # hold the third input fixed
+    check("holding z fixed gives DRS: f(tx) = t^(2/3) f(x)",
+          eq(f.subs({x1: t * x1, x2: t * x2}), t ** sp.Rational(2, 3) * f))
+
+
+def wacm_table():
+    """The two-observation table set in 2016 Q4(B) and 2023 Q6(B)."""
+    print("\nWACM on the exam's own table")
+    A = dict(y=100, w=(2, 1), x=(10, 20))
+    B = dict(y=110, w=(1, 2), x=(14, 10))
+    dot = lambda w, x: w[0] * x[0] + w[1] * x[1]
+    # y_B > y_A, so under monotonicity x_B also produces at least y_A: it was
+    # an available way of reaching 100, and at A's prices it was cheaper.
+    check("table VIOLATES WACM at A's prices (40 > 38)",
+          dot(A["w"], A["x"]) > dot(A["w"], B["x"]))
+    check("table satisfies the inequality at B's prices (34 <= 50)",
+          dot(B["w"], B["x"]) <= dot(B["w"], A["x"]))
+
+
 def main() -> int:
     print("Verifying the algebra behind the ECON 401 answers")
     consumer(); technology(); firm()
+    value_function_curvature(); leontief_and_returns(); wacm_table()
     print(f"\n{len(PASS)} passed, {len(FAIL)} failed")
     for f in FAIL:
         print(f"  ! {f}")

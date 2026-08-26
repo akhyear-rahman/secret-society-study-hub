@@ -62,6 +62,22 @@ def answer_words(text):
     return len(t.split()) + n_display * DISPLAY_EQUATION_WORDS
 
 
+def checklist_marks(points):
+    """Total the "— N marks" tags on an answerPoints checklist.
+
+    Returns None when nothing is tagged, so a checklist written without
+    mark allocations is left alone rather than reported as summing to zero.
+    """
+    import re
+    total, seen = 0.0, False
+    for p in points or []:
+        m = re.search(r"—\s*([\d.]+)\s*marks?\s*$", str(p).strip())
+        if m:
+            total += float(m.group(1))
+            seen = True
+    return total if seen else None
+
+
 DIFFS = {"beginner", "intermediate", "advanced"}
 EXAM_TYPES = {"incourse", "midterm", "final", "tutorial", "viva", "assignment", "practice"}
 
@@ -187,6 +203,15 @@ def validate_course(path: Path, meta: dict) -> tuple[int, int, int, int]:
             # An answered question must also carry its rubric and its authority.
             if not q.get("answerPoints"):
                 warn(w, "answer has no answerPoints checklist", qid)
+            else:
+                # ANSWER-SPEC: the checklist must account for the full mark
+                # total. Re-anchoring a question to a different sitting changes
+                # its marks and silently leaves the old checklist behind, which
+                # is exactly how three of these drifted once.
+                claimed = checklist_marks(q["answerPoints"])
+                if claimed is not None and q.get("marks")                         and abs(claimed - float(q["marks"])) > 1e-9:
+                    warn(w, f"answerPoints sum to {claimed:g} but the question "
+                            f"is worth {q['marks']:g}", qid)
             if not q.get("source"):
                 warn(w, "answer does not name its source book", qid)
             band = target_words(q.get("marks"))
