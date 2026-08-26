@@ -72,6 +72,24 @@ function hydrate(raw, meta) {
   for (const n of c.notes) n.courseId = c.id;
   for (const x of c.exercises) x.courseId = c.id;
 
+  // `sameAs`: this question has been set before in almost the same words, so it
+  // shares the model answer rather than carrying a copy. The bank holds every
+  // question ever set, and duplicating ~600 words across each repeat would take
+  // the course file past a megabyte for no extra content.
+  for (const q of c.questions) {
+    if (!q.sameAs) continue;
+    const src = c.questionById.get(q.sameAs);
+    if (!src || src === q) { q.sameAsMissing = q.sameAs; continue; }
+    q.answer = src.answer;
+    q.answerPoints = src.answerPoints;
+    q.source = src.source;
+    q.theoryIds = (q.theoryIds || []).length ? q.theoryIds : src.theoryIds;
+    // shown on the card so the reader knows where the answer was written
+    q.sameAsLabel = [src.examType === 'final' ? '' : src.examType,
+                     src.year, src.qNo ? 'Q' + src.qNo : '']
+      .filter(Boolean).join(' ');
+  }
+
   // Recall cards: authored cards on theories, plus every question with an
   // answer becomes a card automatically. Card ids are stable across reloads.
   c.cards = [];

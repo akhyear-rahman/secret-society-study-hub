@@ -55,6 +55,9 @@ export function questionCard(q, opts = {}) {
     ? `<div class="answer">
         <div class="ansbar">
           <span class="tag accent">Model answer</span>
+          ${q.sameAsLabel
+            ? `<span class="tag" title="The same question, answered once and shared">↻ also set ${esc(q.sameAsLabel)}</span>`
+            : ''}
           ${q.answerBn ? '<button class="btn sm ans-lang" data-q="' + esc(q.id) + '">বাংলায় দেখুন</button>' : ''}
           <span class="muted" style="font-size:12px">${esc(plain(q.answer, 0).split(/\s+/).length)} words</span>
         </div>

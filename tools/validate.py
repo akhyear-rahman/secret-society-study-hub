@@ -183,6 +183,7 @@ def validate_course(path: Path, meta: dict) -> tuple[int, int, int, int]:
         if not t.get("recall"):
             warn(w, "theory has no recall cards", tid)
 
+    by_id = {q.get("id"): q for q in questions}
     for q in questions:
         qid = q.get("id", "?")
         w = where
@@ -198,7 +199,21 @@ def validate_course(path: Path, meta: dict) -> tuple[int, int, int, int]:
             if t not in theory_ids:
                 err(w, f"theoryIds references unknown theory {t!r}")
         if not q.get("answer"):
-            warn(w, "question has no model answer", qid)
+            # `sameAs` means this question was set before in almost the same
+            # words and shares that entry's answer, resolved at hydrate time.
+            # It counts as covered — but a pointer that goes nowhere, or at an
+            # entry with no answer of its own, would leave a silent blank.
+            ref = q.get("sameAs")
+            if ref:
+                target = by_id.get(ref)
+                if target is None:
+                    err(w, f"{qid}: sameAs points at unknown question {ref!r}")
+                elif ref == qid:
+                    err(w, f"{qid}: sameAs points at itself")
+                elif not target.get("answer"):
+                    err(w, f"{qid}: sameAs points at {ref!r}, which has no answer")
+            else:
+                warn(w, "question has no model answer", qid)
         else:
             # An answered question must also carry its rubric and its authority.
             if not q.get("answerPoints"):

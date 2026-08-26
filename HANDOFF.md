@@ -32,15 +32,15 @@ cannot rot. Python 3.13 is used only for the local server and the tooling.
 
 | Course | Chapters | Theories | Questions | Answered | Notes | Recall cards |
 |---|---|---|---|---|---|---|
-| **ECON 401** Advanced Microeconomics-I | 5 | 6 | 37 | 37 | 1 | 28 |
+| **ECON 401** Advanced Microeconomics-I | 5 | 6 | 347 | 96 | 1 | 28 |
 | **ECON 403** Advanced Macroeconomics-I | 8 | 0 | 0 | 0 | 5 | 0 |
 | **ECON 405** Advanced Econometrics-I | 7 | 0 | 0 | 0 | 0 | 0 |
 | **ECON 409** Environmental Economics | 21 | 10 | **108** | 19 | 16 | 43 |
 | **ECON 412** Research Methodology | 13 | 0 | 0 | 0 | 0 | 0 |
 | Improvement ×2 | — | — | — | — | — | — |
-| **Total** | **54** | **16** | **145** | **56** | **22** | **71** |
+| **Total** | **54** | **16** | **455** | **115** | **22** | **71** |
 
-All 56 answers carry a `source` naming the book and chapter they follow.
+All 56 written answers carry a `source`; a further 59 questions share one via `sameAs`.
 
 **ECON 401 is now built from 31 real papers, 2010–2025** — 15 finals, 10
 in-course tests and 6 midterms. The `sampleContent` flag is gone. The four
@@ -71,20 +71,12 @@ paper. They filter out cleanly when you want real past questions only.
    order you work in is the right one.
 3. **Confirm Perman is actually the ECON 409 textbook** before writing answers
    in its notation. It was inferred, not stated — see §4.
-4. **ECON 401: 37 of ~56 canonical question groups are answered** — every
-   group appearing on **3 or more** of the 31 papers is now done. All six
-   theories have bilingual bodies and recall cards (28 authored, plus one per
-   answered question = a 65-card deck).
-
-   What is left is the tail at one or two appearances: `f(x)=20x-x^2`, no
-   profit-max plan under CRS/IRS, the cost function's homogeneity and
-   concavity, SAC/LAC via the envelope theorem, direct utility from
-   `v = -a ln p1 - b ln p2`, GARP, the numeric revealed-preference pair,
-   offer curves, output elasticity, Hotelling standalone, the firm's
-   substitution matrix, the downward-sloping factor demand curve, conditional
-   factor demand cross-effects, the continuity assumption, and the two numeric
-   indirect-utility questions. Run `python tools/build/frequency_micro.py` to
-   regenerate the ranking.
+4. **ECON 401 now holds every question from the source archive** — all 347
+   parts from 35 sittings, 2010–2025 (there is no 2015 paper in the file).
+   37 carry a written answer, 59 share one through `sameAs`, and
+   **251 still have no answer**. That remainder is the
+   outstanding ECON 401 work, and `python tools/build/frequency_micro.py`
+   ranks it.
 5. **ECON 403, 405, 412 have a syllabus but no theories or questions.** No past
    papers sourced for any of them. The single biggest gap.
 6. **The two improvement courses** are registered placeholders.
@@ -251,6 +243,11 @@ tools/
 - **`answerPoints`** — the full-marks checklist; the rubric for self-marking.
 - **`source`** — the book and chapter an answer follows.
 - **`examType: "practice"`** — never actually sat. Leave `year`/`marks` empty.
+- **`sameAs`** — this question was set before in nearly the same words and
+  shares that entry's answer, resolved in `hydrate()` rather than copied.
+  Every question ever set is in the bank; copying ~600 words into each repeat
+  would push the course file past a megabyte. `validate.py` fails a pointer
+  that goes nowhere or lands on an entry with no answer.
 - **Recall card ids are positional** — `courseId:theoryId:r{index}`, built in
   `content.js`. Appending a card to a deck is safe, but **reordering or
   deleting one silently reassigns every later card's SRS history**. Add at the
