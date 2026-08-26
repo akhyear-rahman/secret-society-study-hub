@@ -856,6 +856,43 @@ body[data-reading="1"] h1{font-size:calc(30px * var(--read-scale));line-height:1
 body[data-reading="1"] .view > *{animation:none}
 body[data-reading="1"] .qcard,body[data-reading="1"] .card{box-shadow:none}
 
+/* ------------------------------------------- 6b reading comfort ---- */
+/* These answers are long, and a wall of dense text is exactly where
+   revision stops for a reader who finds sustained reading hard. Three
+   controls, all opt-in and all remembered.
+
+   FOCUS. The dim rule is written as "dim the siblings of the marked block"
+   and is guarded by :has(.focus-on), so a page with nothing marked dims
+   nothing. Content must never need script in order to be readable — see
+   HANDOFF bugs 3 and 4, which were both that mistake. */
+body[data-focus="1"] .prose:has(> .focus-on) > *:not(.focus-on){
+  opacity:.26;filter:saturate(.5);transition:opacity var(--med) var(--ease),filter var(--med)}
+body[data-focus="1"] .prose > .focus-on{
+  opacity:1;transition:opacity var(--med) var(--ease)}
+/* A quiet left rule marks where you are without shouting. */
+body[data-focus="1"] .prose > .focus-on{
+  box-shadow:-14px 0 0 -12px var(--accent);border-radius:2px}
+@media (prefers-reduced-motion: reduce){
+  body[data-focus="1"] .prose > *{transition:none}
+}
+/* Hovering a dimmed block brings it back, so scanning still works. */
+body[data-focus="1"] .prose:has(> .focus-on) > *:not(.focus-on):hover{opacity:.75}
+
+/* TYPEFACE. Serif reads well for long prose; the sans setting is the
+   high-legibility option — larger x-height and looser tracking. */
+body[data-readfont="sans"] .prose{font-family:var(--sans);letter-spacing:.006em}
+body[data-readfont="sans"][data-reading="1"] .prose{font-size:calc(18.5px * var(--read-scale))}
+
+/* SPACING. Loose adds leading and a touch of word spacing, which reduces
+   line-tracking errors. Paragraph gaps grow with it so blocks stay distinct. */
+body[data-readspacing="loose"] .prose{line-height:2.05;word-spacing:.055em}
+body[data-readspacing="loose"] .prose p{margin-bottom:1.5em}
+body[data-readspacing="loose"] .prose li{margin-bottom:11px}
+body[data-readspacing="loose"][data-reading="1"] .prose{line-height:2.15}
+
+/* A pressed toggle should look pressed. */
+.btn.sm.on{border-color:var(--accent);color:var(--accent);background:var(--bg-3)}
+
 /* the floating exit affordance */
 .read-exit{position:fixed;right:20px;bottom:20px;z-index:45;display:none;
   background:var(--bg-2);border:1px solid var(--line-2);box-shadow:var(--sh-2)}

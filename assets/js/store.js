@@ -14,6 +14,12 @@ const DEFAULTS = {
     showAnswers: false,    // question bank: expand model answers by default
     reading: false,        // distraction-free reading mode
     readScale: 1,          // reader type size, 0.85 … 1.4
+    // Reading-comfort controls. These exist because the answers in this app
+    // are long and dense, and a wall of text is where revision stops for a
+    // reader who finds sustained reading hard.
+    focus: false,          // spotlight the block being read, dim the rest
+    readFont: 'serif',     // 'serif' | 'sans' — sans is the high-legibility set
+    readSpacing: 'normal', // 'normal' | 'loose' — line height and tracking
   },
   examDates: {},           // courseId -> yyyy-mm-dd, drives the study plan
   // theoryId -> { read: bool, ts, confidence 0..3 }

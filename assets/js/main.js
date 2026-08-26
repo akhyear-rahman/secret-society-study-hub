@@ -5,7 +5,7 @@ import { $, $$, esc, debounce, highlight } from './util.js';
 import { route, start, resolve, go, setNotFound, onNavigate } from './router.js';
 import { siteIndex, buildSearchIndex, searchDocsFor, allCourses } from './content.js';
 import { state, setSetting, onChange, liveStreak, effectiveTheme, cardDue } from './store.js';
-import { applyReading, setReading, toggleReading, nudgeScale, updateProgress, isReading } from './reading.js';
+import { applyReading, setReading, toggleReading, toggleFocus, nudgeScale, updateProgress, isReading } from './reading.js';
 import { empty } from './ui.js';
 import { runSplash, enhance, viewOut, viewIn } from './motion.js';
 
@@ -142,6 +142,7 @@ function page(loader) {
       viewIn(view);
       if (mount) cleanup = mount(view) || null;
       enhance(view);
+      applyReading();          // re-arm focus mode against the new .prose nodes
       const anchor = location.hash.split('#')[2];
       if (anchor) document.getElementById(anchor)?.scrollIntoView();
       else if (!ctx.query.keepScroll) scrollTo({ top: 0 });
@@ -305,6 +306,7 @@ addEventListener('keydown', (e) => {
   else if (e.key === 't') $('#themeToggle').click();
   else if (e.key === 'l') setSetting('lang', state.settings.lang === 'bn' ? 'en' : 'bn') || resolve();
   else if (e.key === 'f') { toggleReading(); resolve(); }
+  else if (e.key === 'd') { toggleFocus(); resolve(); }
   else if (e.key === '+' || e.key === '=') nudgeScale(1);
   else if (e.key === '-') nudgeScale(-1);
 });

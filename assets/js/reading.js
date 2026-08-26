@@ -12,8 +12,13 @@ const MIN = 0.85, MAX = 1.45, STEP = 0.075;
 export const isReading = () => document.body.dataset.reading === '1';
 
 export function applyReading() {
-  document.body.dataset.reading = state.settings.reading ? '1' : '0';
+  const b = document.body;
+  b.dataset.reading = state.settings.reading ? '1' : '0';
+  b.dataset.focus = state.settings.focus ? '1' : '0';
+  b.dataset.readfont = state.settings.readFont || 'serif';
+  b.dataset.readspacing = state.settings.readSpacing || 'normal';
   document.documentElement.style.setProperty('--read-scale', String(state.settings.readScale || 1));
+  if (state.settings.focus) wireFocus(); else clearFocus();
   updateProgress();
 }
 
@@ -24,6 +29,92 @@ export function setReading(on) {
 }
 
 export function toggleReading() { setReading(!state.settings.reading); }
+
+export function toggleFocus() {
+  setSetting('focus', !state.settings.focus);
+  applyReading();
+}
+
+export function cycleReadFont() {
+  setSetting('readFont', state.settings.readFont === 'sans' ? 'serif' : 'sans');
+  applyReading();
+}
+
+export function cycleSpacing() {
+  setSetting('readSpacing', state.settings.readSpacing === 'loose' ? 'normal' : 'loose');
+  applyReading();
+}
+
+/* ------------------------------------------------------ focus mode ---- */
+// Spotlight the block being read and dim the rest, which makes a long answer
+// approachable one idea at a time instead of as a wall.
+//
+// The dimming is expressed as "dim the siblings of the marked block", never
+// as "start dimmed and undim the right one". If this code never runs, or an
+// observer misses, every block simply stays at full opacity. Content must
+// never depend on script to become readable — that mistake has been made in
+// this codebase before (see HANDOFF, bugs 3 and 4).
+
+let focusCleanup = null;
+
+function focusBlocks() {
+  const out = [];
+  for (const prose of document.querySelectorAll('.prose')) {
+    for (const el of prose.children) {
+      if (el.tagName === 'HR') continue;
+      out.push(el);
+    }
+  }
+  return out;
+}
+
+function clearFocus() {
+  if (focusCleanup) { focusCleanup(); focusCleanup = null; }
+  for (const el of document.querySelectorAll('.focus-on')) el.classList.remove('focus-on');
+}
+
+function wireFocus() {
+  clearFocus();
+  const blocks = focusBlocks();
+  if (!blocks.length) return;
+
+  let raf = false;
+  const mark = () => {
+    if (raf) return;
+    raf = true;
+    requestAnimationFrame(() => {
+      raf = false;
+      // The block whose top is nearest a line about a third down the viewport.
+      const line = window.scrollY + window.innerHeight * 0.34;
+      let best = null, bestD = Infinity;
+      for (const el of blocks) {
+        const top = el.getBoundingClientRect().top + window.scrollY;
+        const d = Math.abs(top - line);
+        if (d < bestD) { bestD = d; best = el; }
+      }
+      for (const el of blocks) el.classList.toggle('focus-on', el === best);
+    });
+  };
+
+  // Clicking a block pins it, which matters for touch, where there is no
+  // hover and scrolling to aim is fiddly.
+  const onClick = (e) => {
+    const el = e.target.closest('.prose > *');
+    if (!el) return;
+    for (const b of blocks) b.classList.toggle('focus-on', b === el);
+  };
+
+  addEventListener('scroll', mark, { passive: true });
+  addEventListener('resize', mark, { passive: true });
+  document.addEventListener('click', onClick);
+  mark();
+
+  focusCleanup = () => {
+    removeEventListener('scroll', mark);
+    removeEventListener('resize', mark);
+    document.removeEventListener('click', onClick);
+  };
+}
 
 export function nudgeScale(dir) {
   const next = clamp((state.settings.readScale || 1) + dir * STEP, MIN, MAX);
@@ -64,6 +155,16 @@ export function readerControls() {
       <button id="readSmaller" title="Smaller text (−)" aria-label="Smaller text">A−</button>
       <button id="readBigger" title="Larger text (+)" aria-label="Larger text">A+</button>
     </div>
+    <button class="btn sm ${state.settings.focus ? 'on' : ''}" id="focusToggle"
+      title="Focus one block at a time (D)" aria-pressed="${state.settings.focus ? 'true' : 'false'}">
+      ${state.settings.focus ? '🔦 Focus on' : '🔦 Focus'}
+    </button>
+    <button class="btn sm" id="fontToggle" title="Switch typeface">
+      ${state.settings.readFont === 'sans' ? 'Aa Sans' : 'Aa Serif'}
+    </button>
+    <button class="btn sm" id="spaceToggle" title="Line spacing">
+      ${state.settings.readSpacing === 'loose' ? '↕ Loose' : '↕ Normal'}
+    </button>
   </div>`;
 }
 
@@ -75,6 +176,9 @@ export function bindReaderControls(root, rerender) {
   });
   root.querySelector('#readSmaller')?.addEventListener('click', () => nudgeScale(-1));
   root.querySelector('#readBigger')?.addEventListener('click', () => nudgeScale(1));
+  root.querySelector('#focusToggle')?.addEventListener('click', () => { toggleFocus(); rerender?.(); });
+  root.querySelector('#fontToggle')?.addEventListener('click', () => { cycleReadFont(); rerender?.(); });
+  root.querySelector('#spaceToggle')?.addEventListener('click', () => { cycleSpacing(); rerender?.(); });
 }
 
 /**
