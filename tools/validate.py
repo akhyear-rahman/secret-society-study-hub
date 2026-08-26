@@ -43,11 +43,23 @@ def target_words(marks):
     return int(mid * 0.55), int(mid * 1.75)
 
 
+# A displayed equation is not prose, but it is not free either: writing one out
+# by hand costs roughly what a short sentence costs. Counting its LaTeX source
+# as prose overstates badly (one fraction is three 'words' and a moment's
+# writing), so each display block is charged a flat allowance instead, and
+# inline math is treated as the single symbol it renders to.
+DISPLAY_EQUATION_WORDS = 10
+
+
 def answer_words(text):
     import re
     t = re.sub(r"```.*?```", " ", text or "", flags=re.S)     # drop code blocks
+    n_display = len(re.findall(r"\$\$.*?\$\$", t, flags=re.S))
+    t = re.sub(r"\$\$.*?\$\$", " ", t, flags=re.S)
+    t = re.sub(r"\$(?!\s)[^$\n]+?(?<!\s)\$", " x ", t)
+    t = re.sub(r"!\[[^\]]*\]\([^)]*\)", " ", t)
     t = re.sub(r"[#*`|>_-]", " ", t)
-    return len(t.split())
+    return len(t.split()) + n_display * DISPLAY_EQUATION_WORDS
 
 
 DIFFS = {"beginner", "intermediate", "advanced"}
